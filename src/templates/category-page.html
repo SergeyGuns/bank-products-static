@@ -17,7 +17,7 @@
     <div class="grid grid-cols-2">
         {{#each products}}
         <article class="card card-hover" data-bank="{{bankName}}">
-            <img src="{{imageUrl}}" alt="{{title}}" class="mb-4" loading="lazy">
+            <img class="card-bank-logo" src="{{imageUrl}}" alt="{{title}}" class="mb-4" loading="lazy">
             <h2 class="mb-2">{{title}}</h2>
             <p class="text-light mb-2">{{bankName}}</p>
             <ul class="mb-4">
@@ -33,4 +33,4 @@
         {{/each}}
     </div>
 </div>
-{{/layout}} 
+{{/layout}}

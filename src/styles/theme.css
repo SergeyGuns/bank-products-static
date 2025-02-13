@@ -9,20 +9,20 @@
   --color-primary: #2563eb;
   --color-primary-dark: #1d4ed8;
   --color-primary-light: #60a5fa;
-  
+
   /* Нейтральные цвета */
   --color-text: #1f2937;
   --color-text-light: #6b7280;
   --color-background: #ffffff;
   --color-background-alt: #f9fafb;
   --color-border: #e5e7eb;
-  
+
   /* Семантические цвета */
   --color-success: #10b981;
   --color-warning: #f59e0b;
   --color-error: #ef4444;
   --color-info: #3b82f6;
-  
+
   /* Типографика */
   --font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font-size-xs: 0.75rem;
@@ -32,7 +32,7 @@
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
   --font-size-3xl: 1.875rem;
-  
+
   /* Отступы */
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
@@ -40,13 +40,13 @@
   --spacing-4: 1rem;
   --spacing-6: 1.5rem;
   --spacing-8: 2rem;
-  
+
   /* Скругления */
   --radius-sm: 0.25rem;
   --radius-md: 0.375rem;
   --radius-lg: 0.5rem;
   --radius-full: 9999px;
-  
+
   /* Тени */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
@@ -137,6 +137,13 @@ h4 { font-size: var(--font-size-lg); }
   box-shadow: var(--shadow-md);
 }
 
+.card-bank-logo {
+    width: 13%;
+    object-fit: cover;
+    aspect-ratio: 3 / 3;
+    border-radius: 10px;
+}
+
 /* Формы */
 .input {
   width: 100%;
@@ -214,7 +221,7 @@ h4 { font-size: var(--font-size-lg); }
   .grid-cols-3 {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   .grid-cols-4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -226,7 +233,7 @@ h4 { font-size: var(--font-size-lg); }
   .grid-cols-4 {
     grid-template-columns: 1fr;
   }
-  
+
   .container {
     padding: 0 var(--spacing-2);
   }
@@ -265,7 +272,7 @@ ul, ol {
     width: 100%;
     margin-bottom: var(--spacing-2);
   }
-  
+
   .card-actions {
     display: flex;
     flex-direction: column;
@@ -277,4 +284,4 @@ ul, ol {
 h1, h2, h3, h4, h5, h6, p {
   word-wrap: break-word;
   overflow-wrap: break-word;
-} 
+}
