@@ -69,5 +69,5 @@ node_modules/
 .dataconnect
 
 /dist
-
+/test-results
 /playwright-report
