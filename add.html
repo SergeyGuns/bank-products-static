@@ -156,7 +156,7 @@
                     </form>
                 </div>
             
-                <div id="result" class="card mt-4" style="display: none;">
+                <div id="result" class="card mt-4">
                     <h3 class="mb-2">Результат</h3>
                     <div class="result-actions mb-2">
                         <button class="btn btn-outline" onclick="copyToClipboard()">Копировать</button>
@@ -164,12 +164,6 @@
                     <pre><code id="jsonResult"></code></pre>
                 </div>
             
-                <!-- Добавим кнопку для сохранения в Google Sheets -->
-                <div class="text-center mt-4">
-                    <button type="button" class="btn btn-primary" onclick="saveToSheets()">
-                        Сохранить в Google Sheets
-                    </button>
-                </div>
             </div>
             
             <style>
@@ -425,7 +419,6 @@
             
                 const jsonResult = JSON.stringify(product, null, 2);
                 document.getElementById('jsonResult').textContent = jsonResult;
-                document.getElementById('result').style.display = 'block';
             });
             
             function copyToClipboard() {
@@ -517,32 +510,6 @@
                 // Восстанавливаем состояние
                 restoreFormState();
             });
-            
-            async function saveToSheets() {
-                const formData = new FormData(document.getElementById('productForm'));
-                const product = {
-                    // ... существующий код формирования продукта ...
-                };
-            
-                try {
-                    const response = await fetch('/api/products', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify(product)
-                    });
-            
-                    if (response.ok) {
-                        alert('Продукт успешно сохранен в Google Sheets');
-                    } else {
-                        throw new Error('Ошибка при сохранении');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('Ошибка при сохранении в Google Sheets');
-                }
-            }
             
             function banks() {
                 return [
