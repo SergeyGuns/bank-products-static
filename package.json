@@ -8,7 +8,14 @@
         "test": "playwright test",
         "test:ui": "playwright test --ui",
         "test:debug": "playwright test --debug",
-        "migrate": "node src/scripts/migrate-to-firebase.js"
+        "publish": "npm run build && node pg-publish.js",
+        "b": "npm run build",
+        "d": "npm run dev",
+        "w": "npm run watch",
+        "t": "npm run test",
+        "tu": "npm run test:ui",
+        "td": "npm run test:debug",
+        "p": "npm run publish"
     },
     "dependencies": {
         "express": "^4.18.2",
