@@ -5,6 +5,7 @@
   "scripts": {
       "build": "node src/scripts/generate.js",
       "dev": "npm run build && node src/scripts/server.js",
+      "serve": "node src/scripts/server.js",
       "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
       "test": "playwright test",
       "test:ui": "playwright test --ui",
