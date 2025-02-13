@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сравните Кредиты наличными от разных банков и выберите самое выгодное предложение">
+    <!-- Open Graph теги -->
+    <meta property="og:title" content="Сравнение Кредиты наличными | Выбор лучших предложений">
+    <meta property="og:description" content="Сравните Кредиты наличными от разных банков и выберите самое выгодное предложение">
+    <title>Сравнение Кредиты наличными | Выбор лучших предложений</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="main-nav">
+                <a href="/" class="logo">BankProducts</a>
+                <div class="nav-links">
+                    <a href="/category/credit-cards.html">Кредитные карты</a>
+                    <a href="/category/debit-cards.html">Дебетовые карты</a>
+                    <a href="/category/credits.html">Кредиты</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="compare-container">
+            <div class="compare-header">
+                <h1>Сравнение продуктов</h1>
+                <div class="compare-filters">
+                    <select id="productType" class="filter-select">
+                        <option value="credit-cards">Кредитные карты</option>
+                        <option value="debit-cards">Дебетовые карты</option>
+                        <option value="credits">Кредиты наличными</option>
+                    </select>
+                </div>
+            </div>
+        
+            <div class="compare-table-wrapper">
+                <table class="compare-table">
+                    <thead>
+                        <tr>
+                            <th class="param-name">Параметр</th>
+                            <th class="product-header">
+                                <img src="/images/products/vtb-credit.jpg" alt="Кредит наличными ВТБ" class="product-logo">
+                                <h3>Кредит наличными ВТБ</h3>
+                                <p class="bank-name">ВТБ</p>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Основные параметры -->
+                        <tr class="section-header">
+                            <td colspan="2">Основные параметры</td>
+                        </tr>
+        
+                        <!-- Кэшбэк и бонусы -->
+        
+                        <!-- Комиссии -->
+                        <tr class="section-header">
+                            <td colspan="2">Комиссии и обслуживание</td>
+                        </tr>
+        
+                        <!-- Требования -->
+                        <tr class="section-header">
+                            <td colspan="2">Требования</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <style>
+        .compare-container {
+            padding: 2rem 1rem;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        
+        .compare-header {
+            margin-bottom: 2rem;
+        }
+        
+        .compare-filters {
+            margin: 1rem 0;
+        }
+        
+        .filter-select {
+            padding: 0.5rem;
+            border-radius: 4px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .compare-table-wrapper {
+            overflow-x: auto;
+            margin: 0 -1rem;
+            padding: 0 1rem;
+        }
+        
+        .compare-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            min-width: 800px;
+        }
+        
+        .compare-table th,
+        .compare-table td {
+            padding: 1rem;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        
+        .param-name {
+            font-weight: 500;
+            background: #f8fafc;
+            min-width: 200px;
+        }
+        
+        .product-header {
+            min-width: 250px;
+            text-align: center;
+        }
+        
+        .product-logo {
+            width: 120px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+        }
+        
+        .bank-name {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+        
+        .section-header {
+            background: #f1f5f9;
+            font-weight: 600;
+        }
+        
+        .section-header td {
+            padding: 0.75rem 1rem;
+        }
+        
+        .compare-list {
+            margin: 0;
+            padding-left: 1.25rem;
+        }
+        
+        .compare-list li {
+            margin-bottom: 0.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .compare-container {
+                padding: 1rem 0;
+            }
+        }
+        </style>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 BankProducts. Все права защищены.</p>
+                <nav class="footer-nav">
+                    <a href="/about.html">О проекте</a>
+                    <a href="/contacts.html">Контакты</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
