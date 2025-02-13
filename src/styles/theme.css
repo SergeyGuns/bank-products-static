@@ -253,13 +253,6 @@ h4 { font-size: var(--font-size-lg); }
   width: 100%;
 }
 
-/* Обновим стили изображений в карточках */
-.card img {
-  width: 100%;
-  object-fit: cover;
-  aspect-ratio: 16/9;
-}
-
 /* Добавим стили для списков */
 ul, ol {
   list-style-position: inside;
