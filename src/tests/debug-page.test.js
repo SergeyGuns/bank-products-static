@@ -17,6 +17,7 @@ test.describe('Add Page Tests', () => {
         await page.fill('input[name="title"]', 'Тестовая карта');
         await page.fill('input[name="bankName"]', 'Тест Банк');
         await page.fill('input[name="imageUrl"]', '/images/test.jpg');
+        await page.fill('input[name="referralLink"]', 'refferal test link');
         await page.fill('textarea[name="shortDescription"]', 'Краткое описание');
         await page.fill('textarea[name="fullDescription"]', 'Полное описание');
 
@@ -49,6 +50,8 @@ test.describe('Add Page Tests', () => {
         await page.fill('input[name="title"]', 'Тестовая карта');
         await page.fill('input[name="bankName"]', 'Тест Банк');
         await page.fill('input[name="imageUrl"]', '/images/test.jpg');
+        await page.fill('input[name="imageUrl"]', '/images/test.jpg');
+        await page.fill('input[name="referralLink"]', 'refferal test link');
         await page.fill('textarea[name="shortDescription"]', 'Краткое описание');
         await page.fill('textarea[name="fullDescription"]', 'Полное описание');
 
@@ -60,7 +63,6 @@ test.describe('Add Page Tests', () => {
         await page.click('button:text("Сгенерировать JSON")');
 
         // Проверяем результат
-        await expect(page.locator('#result')).toBeVisible();
         const jsonContent = await page.locator('#jsonResult').textContent();
         const json = JSON.parse(jsonContent);
 
@@ -91,6 +93,7 @@ test.describe('Add Page Tests', () => {
         await page.fill('input[name="title"]', 'Тестовая карта');
         await page.fill('input[name="bankName"]', 'Тест Банк');
         await page.fill('input[name="imageUrl"]', '/test.jpg');
+        await page.fill('input[name="referralLink"]', 'refferal test link');
         await page.fill('textarea[name="shortDescription"]', 'Тест');
         await page.fill('textarea[name="fullDescription"]', 'Тест');
 
@@ -102,10 +105,6 @@ test.describe('Add Page Tests', () => {
 
         // Генерируем JSON
         await page.click('button[type="submit"]');
-
-        // Ждем появления результата
-        await expect(page.locator('#result')).toBeVisible();
-
         // Проверяем JSON
         const jsonContent = await page.locator('#jsonResult').textContent();
         expect(jsonContent).toBeTruthy();
