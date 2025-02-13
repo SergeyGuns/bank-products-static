@@ -28,7 +28,7 @@ module.exports = defineConfig({
     ],
     webServer: {
         command: 'npm run serve',
-        url: 'http://localhost:3000',
+        url: 'http://localhost:9999',
         reuseExistingServer: !process.env.CI,
     },
 });
