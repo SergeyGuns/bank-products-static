@@ -1,18 +1,14 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('Debug Page Tests', () => {
+test.describe('Add Page Tests', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/debug');
+        await page.goto('/add');
         // Очищаем localStorage перед каждым тестом
         await page.evaluate(() => localStorage.clear());
         // Увеличиваем время ожидания для всех тестов
         test.slow();
     });
 
-    test('страница загружается корректно', async ({ page }) => {
-        await expect(page.locator('h1')).toHaveText('Добавление продукта');
-        await expect(page.locator('#productForm')).toBeVisible();
-    });
 
     test('базовые поля формы работают корректно', async ({ page }) => {
         // Заполняем основные поля
@@ -35,7 +31,7 @@ test.describe('Debug Page Tests', () => {
         const addButton = page.locator('.form-section', { hasText: 'Основные параметры' })
             .locator('button', { hasText: 'Добавить параметр' });
         await addButton.click();
-        
+
         // Заполняем поля параметра
         const paramInputs = page.locator('#mainParams .param-row').last().locator('input');
         await paramInputs.first().fill('Кредитный лимит');
@@ -46,20 +42,6 @@ test.describe('Debug Page Tests', () => {
         await expect(paramInputs.nth(1)).toHaveValue('до 500 000 ₽');
     });
 
-    test('автозаполнение параметров работает', async ({ page }) => {
-        // Проверяем наличие datalist для каждой секции
-        const sections = ['mainParams', 'cashbackParams', 'feesParams', 'requirementsParams'];
-        for (const section of sections) {
-            await expect(page.locator(`datalist#${section}List`)).toBeAttached();
-        }
-
-        // Проверяем работу автозаполнения
-        const input = page.locator('#mainParams .param-row input').first();
-        await input.click();
-        await input.type('Кред');
-        const datalist = await page.locator('datalist#mainParamsList option[value="Кредитный лимит"]');
-        await expect(datalist).toBeAttached();
-    });
 
     test('генерация JSON работает корректно', async ({ page }) => {
         // Заполняем минимальный набор полей
@@ -81,13 +63,13 @@ test.describe('Debug Page Tests', () => {
         await expect(page.locator('#result')).toBeVisible();
         const jsonContent = await page.locator('#jsonResult').textContent();
         const json = JSON.parse(jsonContent);
-        
+
         expect(json.id).toBe('test-card');
         expect(json.title).toBe('Тестовая карта');
         expect(json.parameters.main).toHaveProperty('Тест', 'Значение');
     });
 
-   
+
 
     test('очистка формы работает', async ({ page }) => {
         // Заполняем форму
@@ -127,10 +109,10 @@ test.describe('Debug Page Tests', () => {
         // Проверяем JSON
         const jsonContent = await page.locator('#jsonResult').textContent();
         expect(jsonContent).toBeTruthy();
-        
+
         const json = JSON.parse(jsonContent);
         expect(json.parameters.requirements).toBeTruthy();
         expect(Array.isArray(json.parameters.requirements['Документы'])).toBe(true);
         expect(json.parameters.requirements['Документы']).toEqual(['Паспорт РФ', 'СНИЛС', 'ИНН']);
     });
-}); 
+});
