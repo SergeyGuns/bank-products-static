@@ -18,6 +18,7 @@
         "p": "npm run publish"
     },
     "dependencies": {
+        "axios": "^1.7.9",
         "express": "^4.18.2",
         "handlebars": "^4.7.8"
     },
