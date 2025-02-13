@@ -1,0 +1,75 @@
+{{#> layout}}
+<article class="container">
+    <div class="product-header text-center mb-8">
+        <h1 class="mb-2">{{product.title}}</h1>
+        <p class="text-light mb-4">{{product.bankName}}</p>
+        <img src="{{product.imageUrl}}" alt="{{product.title}}" class="mb-4">
+        <div class="badge badge-primary">{{product.type}}</div>
+    </div>
+
+    <div class="grid grid-cols-2 mb-8">
+        <div class="card">
+            <h2 class="mb-4">Основные параметры</h2>
+            {{#each product.parameters.main}}
+            <div class="mb-2">
+                <strong>{{@key}}:</strong> {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        {{#if product.parameters.cashback}}
+        <div class="card">
+            <h2 class="mb-4">Кэшбэк и бонусы</h2>
+            {{#each product.parameters.cashback}}
+            <div class="mb-2">
+                <strong>{{@key}}:</strong>
+                {{#if (isArray this)}}
+                <ul>
+                    {{#each this}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                {{else}}
+                {{this}}
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+
+    <div class="grid grid-cols-2 mb-8">
+        <div class="card">
+            <h2 class="mb-4">Комиссии и обслуживание</h2>
+            {{#each product.parameters.fees}}
+            <div class="mb-2">
+                <strong>{{@key}}:</strong> {{this}}
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="card">
+            <h2 class="mb-4">Требования</h2>
+            {{#each product.parameters.requirements}}
+            <div class="mb-2">
+                <strong>{{@key}}:</strong>
+                {{#if (isArray this)}}
+                <ul>
+                    {{#each this}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+                {{else}}
+                {{this}}
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+    <div class="text-center">
+        <a href="#" class="btn btn-primary">Оформить карту</a>
+        <a href="/compare/{{product.type}}.html" class="btn btn-outline ml-4">Сравнить с другими</a>
+    </div>
+</article>
+{{/layout}} 

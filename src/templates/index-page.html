@@ -1,0 +1,43 @@
+{{#> layout}}
+<section class="hero mb-8">
+    <div class="container text-center">
+        <h1 class="mb-4">Лучшие банковские продукты</h1>
+        <p class="text-light mb-4">Сравните и выберите подходящий банковский продукт</p>
+        <div class="grid grid-cols-3 gap-4">
+            <a href="/compare/credit-cards.html" class="btn btn-primary">Кредитные карты</a>
+            <a href="/compare/debit-cards.html" class="btn btn-primary">Дебетовые карты</a>
+            <a href="/compare/credits.html" class="btn btn-primary">Кредиты</a>
+        </div>
+    </div>
+</section>
+
+<section class="categories container mb-8">
+    <h2 class="text-center mb-6">Категории продуктов</h2>
+    <div class="grid grid-cols-3">
+        {{#each categories}}
+        <div class="card card-hover">
+            <h3 class="mb-2">{{title}}</h3>
+            <p class="mb-4">{{description}}</p>
+            <a href="/category/{{id}}.html" class="btn btn-outline">Смотреть все</a>
+        </div>
+        {{/each}}
+    </div>
+</section>
+
+<section class="featured container">
+    <h2 class="text-center mb-6">Популярные предложения</h2>
+    <div class="grid grid-cols-3">
+        {{#each products}}
+        {{#if featured}}
+        <article class="card card-hover">
+            <img src="{{imageUrl}}" alt="{{title}}" class="mb-4" loading="lazy">
+            <h3 class="mb-2">{{title}}</h3>
+            <p class="text-light mb-2">{{bankName}}</p>
+            <p class="mb-4">{{shortDescription}}</p>
+            <a href="/products/{{id}}.html" class="btn btn-primary">Подробнее</a>
+        </article>
+        {{/if}}
+        {{/each}}
+    </div>
+</section>
+{{/layout}} 

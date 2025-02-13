@@ -1,0 +1,36 @@
+{{#> layout}}
+<div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">{{category.title}}</h1>
+        <p class="text-light">{{category.description}}</p>
+    </div>
+
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            {{#each banks}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </div>
+
+    <div class="grid grid-cols-2">
+        {{#each products}}
+        <article class="card card-hover" data-bank="{{bankName}}">
+            <img src="{{imageUrl}}" alt="{{title}}" class="mb-4" loading="lazy">
+            <h2 class="mb-2">{{title}}</h2>
+            <p class="text-light mb-2">{{bankName}}</p>
+            <ul class="mb-4">
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <div class="card-actions">
+                <a href="/products/{{id}}.html" class="btn btn-primary">Подробнее</a>
+                <span class="badge badge-primary ml-2">{{type}}</span>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+</div>
+{{/layout}} 
