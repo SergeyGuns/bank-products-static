@@ -10,7 +10,7 @@
       "test": "playwright test",
       "test:ui": "playwright test --ui",
       "test:debug": "playwright test --debug",
-      "publish": "npm run build && node pg-publish.js",
+      "publish": "gh-pages -d dist",
       "b": "npm run build",
       "d": "npm run dev",
       "w": "npm run watch",
