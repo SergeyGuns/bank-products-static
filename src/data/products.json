@@ -8,7 +8,7 @@
       "bankName": "СберБанк",
       "shortDescription": "Кредитная карта с беспроцентным периодом 100 дней",
       "fullDescription": "Кредитная карта с беспроцентным периодом 100 дней на любые покупки и снятие наличных. Бесплатное обслуживание и повышенный кэшбэк за покупки в выбранных категориях.",
-      "imageUrl": "./img/bank-logos/sberbank_logo_icon.svg",
+      "imageUrl": "/img/bank-logos/sberbank_logo_icon.svg",
       "features": [
         "Беспроцентный период 100 дней",
         "Кэшбэк до 5%",
@@ -59,7 +59,7 @@
       "bankName": "Тинькофф Банк",
       "shortDescription": "Кредитная карта с кэшбэком до 15%",
       "fullDescription": "Современная кредитная карта с бесплатным обслуживанием, кэшбэком за покупки и начислением процентов на остаток по счету.",
-      "imageUrl": "./img/bank-logos/tbank-logo-icon.svg",
+      "imageUrl": "/img/bank-logos/tbank-logo-icon.svg",
       "features": [
         "Кэшбэк до 15%",
         "До 5% на остаток",
@@ -110,7 +110,7 @@
       "bankName": "Альфа-Банк",
       "shortDescription": "Кредитная карта с беспроцентным периодом 100 дней",
       "fullDescription": "Кредитная карта с беспроцентным периодом 100 дней на любые покупки и снятие наличных. Бесплатное обслуживание и повышенный кэшбэк за покупки в выбранных категориях.",
-      "imageUrl": "./img/bank-logos/alefbank_logo_icon.svg",
+      "imageUrl": "/img/bank-logos/alefbank_logo_icon.svg",
       "features": [
         "Беспроцентный период 100 дней",
         "Кэшбэк до 10%",
@@ -160,7 +160,7 @@
       "bankName": "Тинькофф Банк",
       "shortDescription": "Дебетовая карта с кэшбэком и процентом на остаток",
       "fullDescription": "Современная дебетовая карта с бесплатным обслуживанием, кэшбэком за покупки и начислением процентов на остаток по счету.",
-      "imageUrl": "./img/bank-logos/tbank-logo-icon.svg",
+      "imageUrl": "/img/bank-logos/tbank-logo-icon.svg",
       "features": [
         "Кэшбэк до 15%",
         "До 5% на остаток",
@@ -209,7 +209,7 @@
       "bankName": "СберБанк",
       "shortDescription": "Дебетовая карта с бонусами СберСпасибо",
       "fullDescription": "Дебетовая карта СберБанка с бонусами СберСпасибо",
-      "imageUrl": "./img/bank-logos/sberbank_logo_icon.svg",
+      "imageUrl": "/img/bank-logos/sberbank_logo_icon.svg",
       "features": [
         "Процент на остаток",
         "Стоимость обслуживания",
