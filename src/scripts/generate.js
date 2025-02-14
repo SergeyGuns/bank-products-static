@@ -185,6 +185,8 @@ async function main() {
             path.join(__dirname, '../../dist/robots.txt'),
             robotsTXT
         );
+        // Генерация CNAME
+        await fs.writeFile('dist/CNAME', "bank-select.ru", function(err) {})
 
         // Копирование img файлов
         try {
