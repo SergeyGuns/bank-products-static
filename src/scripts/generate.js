@@ -187,12 +187,23 @@ async function main() {
         );
 
         // Копирование img файлов
-        let files = []
         try {
-          files = await fs.readdir(path.join(__dirname,'../img/bank-logos'))
+          const files = await fs.readdir(path.join(__dirname,'../img/bank-logos'))
         for (const entry of files) {
           const src = path.join(__dirname, '../img/bank-logos/'+entry);
           const dest = path.join(__dirname, '../../dist/img/bank-logos', entry);
+          await fs.mkdir(path.dirname(dest), { recursive: true });
+          await fs.copyFile(src, dest);
+        }
+        } catch(e) {
+          console.log(e)
+        }
+        // Копирование static файлов
+        try {
+          const files = await fs.readdir(path.join(__dirname,'../static'))
+        for (const entry of files) {
+          const src = path.join(__dirname, '../static/'+entry);
+          const dest = path.join(__dirname, '../../dist', entry);
           await fs.mkdir(path.dirname(dest), { recursive: true });
           await fs.copyFile(src, dest);
         }
