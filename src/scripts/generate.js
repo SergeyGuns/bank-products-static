@@ -179,6 +179,12 @@ async function main() {
             path.join(__dirname, '../../dist/sitemap.xml'),
             sitemap
         );
+        // Генерация robots.txt
+        const robotsTXT = generateRobotsTXT();
+        await fs.writeFile(
+            path.join(__dirname, '../../dist/robots.txt'),
+            robotsTXT
+        );
 
         // Копирование img файлов
         let files = []
@@ -250,13 +256,19 @@ function generateSitemap(products, categories) {
 
     return sitemapXml;
 }
-function promisify(fn) {
-  /**
-   * @param {...Any} params The params to pass into *fn*
-   * @return {Promise<Any|Any[]>}
-   */
-  return function promisified(...params) {
-    return new Promise((resolve, reject) => fn(...params.concat([(err, ...args) => err ? reject(err) : resolve( args.length < 2 ? args[0] : args )])))
-  }
+function generateRobotsTXT() {
+  return `
+  User-Agent: *
+  Allow: *.html
+  Allow: *.css
+  Allow: *.js
+  Allow: *.jpeg
+  Allow: *.jpg
+  Allow: *.JPG
+  Allow: *.png
+  Allow: *.svg
+  Allow: *.webp
+  Sitemap: https://bank-select.ru/sitemap.xml
+  `
 }
 main().catch(console.error);
