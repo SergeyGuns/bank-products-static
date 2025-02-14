@@ -186,7 +186,7 @@ async function main() {
             robotsTXT
         );
         // Генерация CNAME
-        await fs.writeFile('dist/CNAME', "bank-select.ru/", function(err) {})
+        await fs.writeFile('dist/CNAME', "bank-select.ru", function(err) {})
 
         // Копирование img файлов
         try {
