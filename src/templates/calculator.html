@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кредитный калькулятор</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .calculator {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator input, .calculator select, .calculator button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calculator button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .calculator button:hover {
+            background-color: #45a049;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Кредитный калькулятор</h2>
+        <label for="loanAmount">Сумма кредита:</label>
+        <input type="number" id="loanAmount" placeholder="Введите сумму кредита" oninput="calculateLoan()">
+
+        <label for="interestRate">Процентная ставка (годовая):</label>
+        <input type="number" id="interestRate" placeholder="Введите процентную ставку" oninput="calculateLoan()">
+
+        <label for="loanTerm">Срок кредита (в месяцах):</label>
+        <input type="number" id="loanTerm" placeholder="Введите срок кредита" oninput="calculateLoan()">
+
+        <label for="lumpSumPayment">Сумма досрочного погашения:</label>
+        <input type="number" id="lumpSumPayment" placeholder="Введите сумму досрочного погашения" oninput="calculateLoan()">
+
+        <label for="lumpSumPaymentMonth">Месяц досрочного погашения:</label>
+        <input type="number" id="lumpSumPaymentMonth" placeholder="Введите месяц досрочного погашения" oninput="calculateLoan()">
+
+        <h3>Результаты:</h3>
+        <p id="monthlyPayment">Ежемесячный платеж: </p>
+        <p id="totalPayment">Общая сумма выплат: </p>
+        <p id="overpayment">Сумма переплаты: </p>
+
+        <h3>График платежей:</h3>
+        <table id="paymentSchedule">
+            <thead>
+                <tr>
+                    <th>Дата</th>
+                    <th>Платеж</th>
+                    <th>Проценты</th>
+                    <th>Основной долг</th>
+                    <th>Остаток</th>
+                </tr>
+            </thead>
+            <tbody id="paymentScheduleBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function getLang() {
+        if (navigator.languages != undefined)
+            return navigator.languages[0];
+        return navigator.language;
+        }
+        let formatterLocale = getLang()
+        let formatter = new Intl.NumberFormat(formatterLocale, {
+            style: 'decimal',
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+        function calculateLoan() {
+            const loanAmount = parseFloat(document.getElementById('loanAmount').value);
+            const interestRate = parseFloat(document.getElementById('interestRate').value) / 100 / 12;
+            const loanTerm = parseFloat(document.getElementById('loanTerm').value);
+            const lumpSumPayment = parseFloat(document.getElementById('lumpSumPayment').value) || 0;
+            const lumpSumPaymentMonth = parseInt(document.getElementById('lumpSumPaymentMonth').value) || 0;
+
+            if (isNaN(loanAmount) || isNaN(interestRate) || isNaN(loanTerm)) {
+                document.getElementById('monthlyPayment').innerText = 'Ежемесячный платеж: ';
+                document.getElementById('totalPayment').innerText = 'Общая сумма выплат: ';
+                document.getElementById('overpayment').innerText = 'Сумма переплаты: ';
+                document.getElementById('paymentScheduleBody').innerHTML = '';
+                return;
+            }
+
+            const monthlyPayment = loanAmount * interestRate * Math.pow(1 + interestRate, loanTerm) / (Math.pow(1 + interestRate, loanTerm) - 1);
+            let totalPayment = 0;
+            let balance = loanAmount;
+            const paymentScheduleBody = document.getElementById('paymentScheduleBody');
+            paymentScheduleBody.innerHTML = '';
+            const today = new Date();
+
+            for (let i = 0; i < loanTerm; i++) {
+                const interest = balance * interestRate;
+                let principal = monthlyPayment - interest;
+                let totalMonthlyPayment = monthlyPayment;
+
+                if (i + 1 === lumpSumPaymentMonth && lumpSumPayment > 0) {
+                    principal += lumpSumPayment;
+                    totalMonthlyPayment += lumpSumPayment;
+                }
+
+                balance -= principal;
+                totalPayment += totalMonthlyPayment;
+
+                if (balance < 0) {
+                    balance = 0;
+                }
+
+                const paymentDate = new Date(today);
+                paymentDate.setMonth(today.getMonth() + i);
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${paymentDate.toDateString()}</td>
+                    <td>${totalMonthlyPayment.toFixed(2)}</td>
+                    <td>${interest.toFixed(2)}</td>
+                    <td>${principal.toFixed(2)}</td>
+                    <td>${balance.toFixed(2)}</td>
+                `;
+                paymentScheduleBody.appendChild(row);
+
+                if (balance === 0) {
+                    break;
+                }
+            }
+
+            const overpayment = totalPayment - loanAmount;
+
+            document.getElementById('monthlyPayment').innerText = `Ежемесячный платеж: ${monthlyPayment.toFixed(2)}`;
+            document.getElementById('totalPayment').innerText = `Общая сумма выплат: ${totalPayment.toFixed(2)}`;
+            document.getElementById('overpayment').innerText = `Сумма переплаты: ${overpayment.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
