@@ -4,7 +4,8 @@
   "version": "1.0.1",
   "scripts": {
       "build": "node src/scripts/generate.js",
-      "dev": "npm run build && node src/scripts/server.js",
+      "build:v2": "node src/scripts/generate-v2.js",
+      "dev": "npm run build:v2 && node src/scripts/server.js",
       "serve": "node src/scripts/server.js",
       "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
       "test": "playwright test",

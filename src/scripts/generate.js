@@ -72,6 +72,10 @@ async function main() {
             path.join(__dirname, '../templates/add.html'),
             'utf-8'
         );
+        const calculatorTemplate = await fs.readFile(
+            path.join(__dirname, '../templates/calculator.html'),
+            'utf-8'
+        );
 
         // Регистрация частичных шаблонов
         Handlebars.registerPartial('layout', layout);
@@ -83,7 +87,7 @@ async function main() {
         const compiledCompareTemplate = Handlebars.compile(compareTemplate);
         const compiled404Template = Handlebars.compile(notFoundTemplate);
         const compiledAddProductTemplate = Handlebars.compile(addProductTemplate);
-
+        const compileCalculatorTemplate = Handlebars.compile(calculatorTemplate);
         // Генерация страниц продуктов
         for (const product of products) {
             const html = compiledProductTemplate({
@@ -219,17 +223,27 @@ async function main() {
           path.join(__dirname, '../../dist/css/theme.css')
         )
 
-        // Генерация страницы отладки
-        const debugHtml = compiledAddProductTemplate({
+        const calculatorHtml = compileCalculatorTemplate({
             meta: {
-                title: 'Отладка - Добавление продукта',
+                title: 'Кредитный калькулятор',
+                description: 'Кредитный калькулятор'
+            }
+        });
+
+        const addProductHtml = compiledAddProductTemplate({
+            meta: {
+                title: 'Добавление продукта',
                 description: 'Страница для добавления нового продукта'
             }
         });
 
         await fs.writeFile(
+            path.join(__dirname, '../../dist/calculator.html'),
+            calculatorHtml
+        );
+        await fs.writeFile(
             path.join(__dirname, '../../dist/add.html'),
-            debugHtml
+            addProductHtml
         );
 
         console.log('Сайт успешно сгенерирован!');
