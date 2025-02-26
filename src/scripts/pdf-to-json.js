@@ -4,7 +4,7 @@ const pdf = require('pdf-parse');
 const axios = require('axios');
 
 const folderPathCreditCardsTariffs = './src/data/pdfs';
-const folderPathLoan = './src/data/pdfs/loan'
+const folderPathLoan = './src/data/pdfs/loan-t-bank'
 
 const exampleFileName = 'example.txt'
 
@@ -22,8 +22,8 @@ async function sendToLMAPI(text, example) {
             "max_tokens": -1,
             "stream": false,
             "messages": [
-                { "role": "system", "content": "Всегда отвечай в виде JSON формате:" + example },
-                { "role": "user", "content": text }
+                { "role": "system", "content": "Всегда отвечай в виде JSON формате :" + example },
+                { "role": "user", "content":  "Все поля в JSON нужно заполнить из PDF файла ```PDF \n"+text+"```" }
             ],
         }, {
             headers: {
