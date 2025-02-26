@@ -22,15 +22,15 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npx install
 
       - name: Run build
-        run: npm run build
+        run: npx run build
 
       - name: Run tests
         run: npx run test
 
       - name: Publish
-        run: npm run publish
+        run: npx run publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
