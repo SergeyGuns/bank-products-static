@@ -25,12 +25,12 @@ jobs:
         run: npm ci
 
       - name: Run build
-        run: npx run build
+        run: npm run build
 
       - name: Run tests
-        run: npx run test
+        run: npm run test
 
       - name: Publish
-        run: npx run publish
+        run: npm run publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
