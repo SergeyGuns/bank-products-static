@@ -271,7 +271,7 @@ async function readReduceProducts(folderPath) {
 }
 
 function generateSitemap(products, categories) {
-    const baseUrl = 'https://your-site.ru';
+    const baseUrl = 'https://bank-select.ru';
     let urls = [];
 
     // Добавляем главную страницу
