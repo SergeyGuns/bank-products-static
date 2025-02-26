@@ -18,9 +18,10 @@ Handlebars.registerHelper('length', function(arr) {
 async function main() {
     try {
         // Получаем данные из Firebase
-        const products = JSON.parse(
-            await fs.readFile(path.join(__dirname, '../data/products-real.json'), 'utf-8')
-        ).products;
+        // const products = JSON.parse(
+        //     await fs.readFile(path.join(__dirname, '../data/products-real.json'), 'utf-8')
+        // ).products;
+        const products = [...await readReduceProducts('./src/data/pdfs'), ...await readReduceProducts('./src/data/pdfs/loan')]
         // Группируем продукты по типу
         const groupedProducts = products.reduce((acc, product) => {
             if (!acc[product.type]) {
@@ -251,6 +252,22 @@ async function main() {
         console.error('Error during generation:', error);
         process.exit(1);
     }
+}
+
+async function readReduceProducts(folderPath) {
+    console.log(folderPath, ' start');
+    const files = await fs.readdir(folderPath);
+    const results = [];
+    for (const file of files) {
+        if (path.extname(file).toLowerCase() === '.json') {
+            const filePath = path.join(folderPath, file);
+            console.log('|--',file)
+            const text = await fs.readFile(filePath)
+            const result = JSON.parse(text)
+            results.push(result)
+        }
+    }
+    return results
 }
 
 function generateSitemap(products, categories) {

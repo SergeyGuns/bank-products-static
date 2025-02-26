@@ -1,34 +1,34 @@
-
 {
   "name": "bank-products-static",
   "version": "1.0.1",
   "scripts": {
-      "build": "node src/scripts/generate.js",
-      "build:v2": "node src/scripts/generate-v2.js",
-      "dev": "npm run build:v2 && node src/scripts/server.js",
-      "serve": "node src/scripts/server.js",
-      "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
-      "test": "playwright test",
-      "test:ui": "playwright test --ui",
-      "test:debug": "playwright test --debug",
-      "publish": "npm run build && gh-pages -d dist --repo https://github.com/SergeyGuns/bank-products-static.git",
-      "b": "npm run build",
-      "d": "npm run dev",
-      "w": "npm run watch",
-      "t": "npm run test",
-      "tu": "npm run test:ui",
-      "td": "npm run test:debug",
-      "p": "npm run publish"
+    "build": "node src/scripts/generate.js",
+    "build:v2": "node src/scripts/generate-v2.js",
+    "dev": "npm run build:v2 && node src/scripts/server.js",
+    "serve": "node src/scripts/server.js",
+    "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "publish": "npm run build && gh-pages -d dist --repo https://github.com/SergeyGuns/bank-products-static.git",
+    "b": "npm run build",
+    "d": "npm run dev",
+    "w": "npm run watch",
+    "t": "npm run test",
+    "tu": "npm run test:ui",
+    "td": "npm run test:debug",
+    "p": "npm run publish"
   },
   "dependencies": {
-      "axios": "^1.7.9",
-      "express": "^4.18.2",
-      "glob-promise": "^6.0.7",
-      "handlebars": "^4.7.8"
+    "axios": "^1.7.9",
+    "express": "^4.18.2",
+    "glob-promise": "^6.0.7",
+    "handlebars": "^4.7.8",
+    "pdf-parse": "^1.1.1"
   },
   "devDependencies": {
-      "@playwright/test": "^1.49.1",
-      "gh-pages": "^6.3.0",
-      "nodemon": "^3.0.2"
+    "@playwright/test": "^1.49.1",
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.0.2"
   }
 }
