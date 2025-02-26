@@ -21,7 +21,7 @@ async function main() {
         // const products = JSON.parse(
         //     await fs.readFile(path.join(__dirname, '../data/products-real.json'), 'utf-8')
         // ).products;
-        const products = [...await readReduceProducts('./src/data/pdfs'), ...await readReduceProducts('./src/data/pdfs/loan')]
+        const products = [...await readReduceProducts('./src/data/pdfs'), ...await readReduceProducts('./src/data/pdfs/loan-t-bank')]
         // Группируем продукты по типу
         const groupedProducts = products.reduce((acc, product) => {
             if (!acc[product.type]) {
