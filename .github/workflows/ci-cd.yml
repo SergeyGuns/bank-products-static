@@ -22,7 +22,7 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npx install
+        run: npm ci
 
       - name: Run build
         run: npx run build
