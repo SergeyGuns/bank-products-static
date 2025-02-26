@@ -19,7 +19,7 @@ async function main() {
     try {
         // Получаем данные из Firebase
         const products = JSON.parse(
-            await fs.readFile(path.join(__dirname, '../data/products.json'), 'utf-8')
+            await fs.readFile(path.join(__dirname, '../data/products-real.json'), 'utf-8')
         ).products;
         // Группируем продукты по типу
         const groupedProducts = products.reduce((acc, product) => {
