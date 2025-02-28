@@ -3,15 +3,15 @@ const path = require('path');
 const Handlebars = require('handlebars');
 const glob = require('glob-promise');
 // Регистрируем все необходимые хелперы
-Handlebars.registerHelper('add', function(a, b) {
+Handlebars.registerHelper('add', function (a, b) {
     return a + b;
 });
 
-Handlebars.registerHelper('isArray', function(value) {
+Handlebars.registerHelper('isArray', function (value) {
     return Array.isArray(value);
 });
 
-Handlebars.registerHelper('length', function(arr) {
+Handlebars.registerHelper('length', function (arr) {
     return Array.isArray(arr) ? arr.length : 0;
 });
 
@@ -38,6 +38,7 @@ async function main() {
         await fs.mkdir(path.join(__dirname, '../../dist/compare'), { recursive: true });
         await fs.mkdir(path.join(__dirname, '../../dist/css'), { recursive: true });
         await fs.mkdir(path.join(__dirname, '../../dist/img'), { recursive: true });
+        await fs.mkdir(path.join(__dirname, `../../dist/articles`), { recursive: true });
 
         // Загрузка данных
         const categories = JSON.parse(
@@ -101,7 +102,22 @@ async function main() {
                 html
             );
         }
-
+        const log = (args) => {
+            console.log(args)
+            return args
+        }
+        // Генерация статей
+        const articles = await fs.readdir(path.join(__dirname, '../templates/articles'))
+        for (file of articles) {
+            if (path.extname(file).toLowerCase() === '.html') {
+                await fs.writeFile(
+                    path.join(__dirname, `../../dist/articles/${file}`),
+                    Handlebars.compile(await fs.readFile(
+                        path.join(__dirname, '../templates/articles/' + file),
+                        'utf-8'
+                    ))({ meta: JSON.parse(log(await fs.readFile(path.join(__dirname, '../templates/articles/' + file + '.meta.json'), { encoding: 'utf-8' }))) }))
+            }
+        }
         // Генерация страниц категорий и сравнения
         for (const category of categories.categories) {
             const categoryProducts = products.filter(
@@ -179,7 +195,7 @@ async function main() {
         );
 
         // Генерация sitemap
-        const sitemap = generateSitemap(products, categories.categories);
+        const sitemap = generateSitemap(products, categories.categories, articles);
         await fs.writeFile(
             path.join(__dirname, '../../dist/sitemap.xml'),
             sitemap
@@ -191,37 +207,37 @@ async function main() {
             robotsTXT
         );
         // Генерация CNAME
-        await fs.writeFile('dist/CNAME', "bank-select.ru", function(err) {})
+        await fs.writeFile('dist/CNAME', "bank-select.ru", function (err) { })
 
         // Копирование img файлов
         try {
-          const files = await fs.readdir(path.join(__dirname,'../img/bank-logos'))
-        for (const entry of files) {
-          const src = path.join(__dirname, '../img/bank-logos/'+entry);
-          const dest = path.join(__dirname, '../../dist/img/bank-logos', entry);
-          await fs.mkdir(path.dirname(dest), { recursive: true });
-          await fs.copyFile(src, dest);
-        }
-        } catch(e) {
-          console.log(e)
+            const files = await fs.readdir(path.join(__dirname, '../img/bank-logos'))
+            for (const entry of files) {
+                const src = path.join(__dirname, '../img/bank-logos/' + entry);
+                const dest = path.join(__dirname, '../../dist/img/bank-logos', entry);
+                await fs.mkdir(path.dirname(dest), { recursive: true });
+                await fs.copyFile(src, dest);
+            }
+        } catch (e) {
+            console.log(e)
         }
         // Копирование static файлов
         try {
-          const files = await fs.readdir(path.join(__dirname,'../static'))
-        for (const entry of files) {
-          const src = path.join(__dirname, '../static/'+entry);
-          const dest = path.join(__dirname, '../../dist', entry);
-          await fs.mkdir(path.dirname(dest), { recursive: true });
-          await fs.copyFile(src, dest);
-        }
-        } catch(e) {
-          console.log(e)
+            const files = await fs.readdir(path.join(__dirname, '../static'))
+            for (const entry of files) {
+                const src = path.join(__dirname, '../static/' + entry);
+                const dest = path.join(__dirname, '../../dist', entry);
+                await fs.mkdir(path.dirname(dest), { recursive: true });
+                await fs.copyFile(src, dest);
+            }
+        } catch (e) {
+            console.log(e)
         }
 
         // Копирование CSS файла
         await fs.cp(
-          path.join(__dirname, '../styles/theme.css'),
-          path.join(__dirname, '../../dist/css/theme.css')
+            path.join(__dirname, '../styles/theme.css'),
+            path.join(__dirname, '../../dist/css/theme.css')
         )
 
         const calculatorHtml = compileCalculatorTemplate({
@@ -261,7 +277,7 @@ async function readReduceProducts(folderPath) {
     for (const file of files) {
         if (path.extname(file).toLowerCase() === '.json') {
             const filePath = path.join(folderPath, file);
-            console.log('|--',file)
+            console.log('|--', file)
             const text = await fs.readFile(filePath)
             const result = JSON.parse(text)
             results.push(result)
@@ -270,7 +286,7 @@ async function readReduceProducts(folderPath) {
     return results
 }
 
-function generateSitemap(products, categories) {
+function generateSitemap(products, categories, articles) {
     const baseUrl = 'https://bank-select.ru';
     let urls = [];
 
@@ -287,6 +303,12 @@ function generateSitemap(products, categories) {
         urls.push(`${baseUrl}/category/${category.id}.html`);
     });
 
+    articles.forEach(article => {
+        if(path.extname(article) === '.html')
+            urls.push(`${baseUrl}/articles/${article}`);
+    });
+
+
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${urls.map(url => `
@@ -301,7 +323,7 @@ function generateSitemap(products, categories) {
     return sitemapXml;
 }
 function generateRobotsTXT() {
-  return `
+    return `
   User-Agent: *
   Allow: *.html
   Allow: *.css
