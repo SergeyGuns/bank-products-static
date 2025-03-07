@@ -7,7 +7,8 @@
     "dev": "npm run build:v2 && node src/scripts/server.js",
     "serve": "node src/scripts/server.js",
     "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
-    "test": "playwright test",
+    "test": "playwright test && jest",
+    "test:jest": "jest",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "publish": "npm run build && gh-pages -d dist --repo https://github.com/SergeyGuns/bank-products-static.git",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "@playwright/test": "^1.49.1",
     "gh-pages": "^6.3.0",
+    "jest": "^29.7.0",
     "nodemon": "^3.0.2"
   }
 }
