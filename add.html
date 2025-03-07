@@ -1,332 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Страница для добавления нового продукта">
-    <!-- Open Graph теги -->
-    <meta property="og:title" content="Добавление продукта">
-    <meta property="og:description" content="Страница для добавления нового продукта">
-    <title>Добавление продукта</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="/manifest.webmanifest" />
-    <link rel="stylesheet" href="/css/theme.css">
-</head>
-<body>
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-       m[i].l=1*new Date();
-       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Страница для добавления нового продукта" />
+        <!-- Open Graph теги -->
+        <meta property="og:title" content="Добавление продукта" />
+        <meta property="og:description" content="Страница для добавления нового продукта" />
+         [object Object] 
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <link rel="stylesheet" href="/css/theme.css" />
+    </head>
+    <body>
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                        return;
+                    }
+                }
+                (k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a);
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym",
+            );
 
-       ym(99922820, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true
-       });
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R9B0XCN9SK"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+            ym(99922820, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+            });
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-R9B0XCN9SK"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-      gtag('config', 'G-R9B0XCN9SK');
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/99922820" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <a href="/" class="nav-logo">Bank-Select.ru</a>
-
-                <button class="mobile-menu-toggle" aria-label="Меню">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <div class="nav-menu">
-                    <div class="nav-links">
-                        <a href="/category/credit-cards.html">Кредитные карты</a>
-                        <a href="/category/debit-cards.html">Дебетовые карты</a>
-                        <a href="/category/credits.html">Кредиты</a>
-                        <div class="dropdown">
-                            <button class="dropdown-toggle"> + Сравнение</button>
-                            <div class="dropdown-menu">
-                                <a href="/compare/credit-cards.html">Сравнить кредитные карты</a>
-                                <a href="/compare/debit-cards.html">Сравнить дебетовые карты</a>
-                                <a href="/compare/credits.html">Сравнить кредиты</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <div>
+            gtag("config", "G-R9B0XCN9SK");
+        </script>
+        <noscript
+            ><div>
+                <img
+                    src="https://mc.yandex.ru/watch/99922820"
+                    style="position: absolute; left: -9999px"
+                    alt=""
+                /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
+        <header class="header">
             <div class="container">
-                <h1 class="text-center mb-4">Добавление продукта</h1>
-            
-                <div class="card">
-                    <form id="productForm" class="product-form">
-                        <div class="form-group mb-4">
-                            <label>Тип продукта</label>
-                            <select name="type" class="select input" required>
-                                <option value="credit-cards">Кредитные карты</option>
-                                <option value="debit-cards">Дебетовые карты</option>
-                                <option value="credits">Кредиты</option>
-                            </select>
-                        </div>
-            
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label>ID продукта</label>
-                                <input type="text" name="id" class="input" required>
-                            </div>
-            
-                            <div class="form-group">
-                                <label>Реферальнная ссылка</label>
-                                <input type="text" name="referralLink" class="input" required>
-                            </div>
-            
-                            <div class="form-group">
-                                <label>Название</label>
-                                <input type="text" name="title" class="input" required>
-                            </div>
-            
-                            <div id="bankName" class="form-group">
-                                <label>Банк</label>
-                                <input list="bankNameList" autocomplete="on" type="text" name="bankName" class="input" required>
-                            </div>
-            
-                            <div class="form-group">
-                                <label>Изображение (URL)</label>
-                                <input type="text" name="imageUrl" class="input" required>
-                            </div>
-                        </div>
-            
-                        <div class="form-group mb-4">
-                            <label>Краткое описание</label>
-                            <textarea name="shortDescription" class="input" rows="2" required></textarea>
-                        </div>
-            
-                        <div class="form-group mb-4">
-                            <label>Полное описание</label>
-                            <textarea name="fullDescription" class="input" rows="3" required></textarea>
-                        </div>
-            
-                        <div class="form-section mb-4">
-                            <h3 class="mb-2">Основные параметры</h3>
-                            <div id="mainParams" class="dynamic-fields">
-                                <div class="param-row">
-                                    <input type="text" class="input" placeholder="Название параметра">
-                                    <input type="text" class="input" placeholder="Значение">
-                                    <button type="button" class="btn btn-outline remove-field">Удалить</button>
+                <nav class="nav">
+                    <a href="/" class="nav-logo">Bank-Select.ru</a>
+
+                    <button class="mobile-menu-toggle" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="nav-menu">
+                        <div class="nav-links">
+                            <a href="/category/credit-cards.html"
+                                >Кредитные карты</a
+                            >
+                            <a href="/category/debit-cards.html"
+                                >Дебетовые карты</a
+                            >
+                            <a href="/category/credits.html">Кредиты</a>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle">
+                                    + Сравнение
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="/compare/credit-cards.html"
+                                        >Сравнить кредитные карты</a
+                                    >
+                                    <a href="/compare/debit-cards.html"
+                                        >Сравнить дебетовые карты</a
+                                    >
+                                    <a href="/compare/credits.html"
+                                        >Сравнить кредиты</a
+                                    >
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-outline mt-2" onclick="addField('mainParams')">
-                                Добавить параметр
-                            </button>
                         </div>
-            
-                        <div class="form-section mb-4">
-                            <h3 class="mb-2">Кэшбэк</h3>
-                            <div id="cashbackParams" class="dynamic-fields">
-                                <div class="param-row">
-                                    <input type="text" class="input" placeholder="Название параметра">
-                                    <input type="text" class="input" placeholder="Значение">
-                                    <button type="button" class="btn btn-outline remove-field">Удалить</button>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-outline mt-2" onclick="addField('cashbackParams')">
-                                Добавить параметр
-                            </button>
-                        </div>
-            
-                        <div class="form-section mb-4">
-                            <h3 class="mb-2">Комиссии</h3>
-                            <div id="feesParams" class="dynamic-fields">
-                                <div class="param-row">
-                                    <input type="text" class="input" placeholder="Название параметра">
-                                    <input type="text" class="input" placeholder="Значение">
-                                    <button type="button" class="btn btn-outline remove-field">Удалить</button>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-outline mt-2" onclick="addField('feesParams')">
-                                Добавить параметр
-                            </button>
-                        </div>
-            
-                        <div class="form-section mb-4">
-                            <h3 class="mb-2">Требования</h3>
-                            <div id="requirementsParams" class="dynamic-fields">
-                                <div class="param-row">
-                                    <input type="text" class="input" placeholder="Название параметра">
-                                    <input type="text" class="input" placeholder="Значение">
-                                    <button type="button" class="btn btn-outline remove-field">Удалить</button>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-outline mt-2" onclick="addField('requirementsParams')">
-                                Добавить параметр
-                            </button>
-                        </div>
-            
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-primary">Сгенерировать JSON</button>
-                        </div>
-                    </form>
-                </div>
-            
-                <div id="result" class="card mt-4">
-                    <h3 class="mb-2">Результат</h3>
-                    <div class="result-actions mb-2">
-                        <button class="btn btn-outline" onclick="copyToClipboard()">Копировать</button>
                     </div>
-                    <pre><code id="jsonResult"></code></pre>
-                </div>
-            
+                </nav>
             </div>
-            
-            <style>
-            .product-form {
-                max-width: 800px;
-                margin: 0 auto;
-            }
-            
-            .form-group {
-                margin-bottom: 1rem;
-            }
-            
-            .form-group label {
-                display: block;
-                margin-bottom: 0.5rem;
-                font-weight: 500;
-            }
-            
-            .form-grid {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 1rem;
-                margin-bottom: 1rem;
-            }
-            
-            .dynamic-fields {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            
-            .param-row {
-                display: grid;
-                grid-template-columns: 1fr 1fr auto;
-                gap: 0.5rem;
-                align-items: start;
-            }
-            
-            .result-actions {
-                display: flex;
-                gap: 0.5rem;
-            }
-            
-            pre {
-                background: var(--color-background-alt);
-                padding: 1rem;
-                border-radius: var(--radius-md);
-                overflow-x: auto;
-            }
-            
-            code {
-                font-family: monospace;
-                white-space: pre-wrap;
-            }
-            
-            @media (max-width: 768px) {
-                .form-grid {
-                    grid-template-columns: 1fr;
-                }
-            
-                .param-row {
-                    grid-template-columns: 1fr;
-                }
-            }
-            
-            input[list]:focus {
-                outline: none;
-                border-color: var(--color-primary);
-            }
-            
-            /* Стилизация выпадающего списка в разных браузерах */
-            input[list]::-webkit-calendar-picker-indicator {
-                opacity: 0.6;
-                cursor: pointer;
-            }
-            
-            input[list]::-webkit-calendar-picker-indicator:hover {
-                opacity: 1;
-            }
-            </style>
-            
-            <script>
-            // Добавим в начало скрипта словарь параметров из products.json
-            const parameterSuggestions = {
-                bankName: new Set(banks()),
-                mainParams: new Set([
-                    "Кредитный лимит",
-                    "Льготный период",
-                    "Процентная ставка",
-                    "Годовое обслуживание",
-                    "Процент на остаток",
-                    "Стоимость обслуживания",
-                    "Снятие наличных",
-                    "Пополнение"
-                ]),
-                cashbackParams: new Set([
-                    "Базовый кэшбэк",
-                    "Повышенный кэшбэк",
-                    "Категории повышенного кэшбэка",
-                    "Максимальный кэшбэк в месяц"
-                ]),
-                feesParams: new Set([
-                    "Выпуск карты",
-                    "Обслуживание",
-                    "Снятие наличных",
-                    "Минимальный платеж",
-                    "СМС-информирование",
-                    "Снятие в банкоматах других банков"
-                ]),
-                requirementsParams: new Set([
-                    "Возраст",
-                    "Доход",
-                    "Стаж работы",
-                    "Документы"
-                ])
-            };
-            
-            // Функция для создания выпадающего списка
-            function createDatalist(containerId) {
-                const datalistId = `${containerId}List`;
-                if (!document.getElementById(datalistId)) {
-                    const datalist = document.createElement('datalist');
-                    datalist.id = datalistId;
-                    parameterSuggestions[containerId].forEach(param => {
-                        const option = document.createElement('option');
-                        option.value = param;
-                        datalist.appendChild(option);
-                    });
-                    document.body.appendChild(datalist);
-                }
-            }
-            
-            // Обновим функцию добавления поля с поддержкой автозаполнения
-            function addField(containerId) {
-                createDatalist(containerId);
-                const container = document.getElementById(containerId);
+        </header>
+
+        <main>
+            <div><div class="container">
+    <h1 class="text-center mb-4">Добавление продукта</h1>
+
+    <div class="card">
+        <form id="productForm" class="product-form">
+            <div class="form-group mb-4">
+                <label>Тип продукта</label>
+                <select name="type" class="select input" required>
+                    <option value="credit-cards">Кредитные карты</option>
+                    <option value="debit-cards">Дебетовые карты</option>
+                    <option value="credits">Кредиты</option>
+                </select>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>ID продукта</label>
+                    <input type="text" name="id" class="input" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Реферальнная ссылка</label>
+                    <input type="text" name="referralLink" class="input" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Название</label>
+                    <input type="text" name="title" class="input" required>
+                </div>
+
+                <div id="bankName" class="form-group">
+                    <label>Банк</label>
+                    <input list="bankNameList" autocomplete="on" type="text" name="bankName" class="input" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Изображение (URL)</label>
+                    <input type="text" name="imageUrl" class="input" required>
+                </div>
+            </div>
+
+            <div class="form-group mb-4">
+                <label>Краткое описание</label>
+                <textarea name="shortDescription" class="input" rows="2" required></textarea>
+            </div>
+
+            <div class="form-group mb-4">
+                <label>Полное описание</label>
+                <textarea name="fullDescription" class="input" rows="3" required></textarea>
+            </div>
+
+            <div class="form-section mb-4">
+                <h3 class="mb-2">Основные параметры</h3>
+                <div id="mainParams" class="dynamic-fields">
+                    <div class="param-row">
+                        <input type="text" class="input" placeholder="Название параметра">
+                        <input type="text" class="input" placeholder="Значение">
+                        <button type="button" class="btn btn-outline remove-field">Удалить</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline mt-2" onclick="addField('mainParams')">
+                    Добавить параметр
+                </button>
+            </div>
+
+            <div class="form-section mb-4">
+                <h3 class="mb-2">Кэшбэк</h3>
+                <div id="cashbackParams" class="dynamic-fields">
+                    <div class="param-row">
+                        <input type="text" class="input" placeholder="Название параметра">
+                        <input type="text" class="input" placeholder="Значение">
+                        <button type="button" class="btn btn-outline remove-field">Удалить</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline mt-2" onclick="addField('cashbackParams')">
+                    Добавить параметр
+                </button>
+            </div>
+
+            <div class="form-section mb-4">
+                <h3 class="mb-2">Комиссии</h3>
+                <div id="feesParams" class="dynamic-fields">
+                    <div class="param-row">
+                        <input type="text" class="input" placeholder="Название параметра">
+                        <input type="text" class="input" placeholder="Значение">
+                        <button type="button" class="btn btn-outline remove-field">Удалить</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline mt-2" onclick="addField('feesParams')">
+                    Добавить параметр
+                </button>
+            </div>
+
+            <div class="form-section mb-4">
+                <h3 class="mb-2">Требования</h3>
+                <div id="requirementsParams" class="dynamic-fields">
+                    <div class="param-row">
+                        <input type="text" class="input" placeholder="Название параметра">
+                        <input type="text" class="input" placeholder="Значение">
+                        <button type="button" class="btn btn-outline remove-field">Удалить</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-outline mt-2" onclick="addField('requirementsParams')">
+                    Добавить параметр
+                </button>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Сгенерировать JSON</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="result" class="card mt-4">
+        <h3 class="mb-2">Результат</h3>
+        <div class="result-actions mb-2">
+            <button class="btn btn-outline" onclick="copyToClipboard()">Копировать</button>
+        </div>
+        <pre><code id="jsonResult"></code></pre>
+    </div>
+
+</div>
+
+<style>
+.product-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dynamic-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.param-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.5rem;
+    align-items: start;
+}
+
+.result-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+pre {
+    background: var(--color-background-alt);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    overflow-x: auto;
+}
+
+code {
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .param-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+input[list]:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Стилизация выпадающего списка в разных браузерах */
+input[list]::-webkit-calendar-picker-indicator {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+input[list]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+</style>
+
+<script>
+// Добавим в начало скрипта словарь параметров из products.json
+const parameterSuggestions = {
+    bankName: new Set(banks()),
+    mainParams: new Set([
+        "Кредитный лимит",
+        "Льготный период",
+        "Процентная ставка",
+        "Годовое обслуживание",
+        "Процент на остаток",
+        "Стоимость обслуживания",
+        "Снятие наличных",
+        "Пополнение"
+    ]),
+    cashbackParams: new Set([
+        "Базовый кэшбэк",
+        "Повышенный кэшбэк",
+        "Категории повышенного кэшбэка",
+        "Максимальный кэшбэк в месяц"
+    ]),
+    feesParams: new Set([
+        "Выпуск карты",
+        "Обслуживание",
+        "Снятие наличных",
+        "Минимальный платеж",
+        "СМС-информирование",
+        "Снятие в банкоматах других банков"
+    ]),
+    requirementsParams: new Set([
+        "Возраст",
+        "Доход",
+        "Стаж работы",
+        "Документы"
+    ])
+};
+
+// Функция для создания выпадающего списка
+function createDatalist(containerId) {
+    const datalistId = `${containerId}List`;
+    if (!document.getElementById(datalistId)) {
+        const datalist = document.createElement('datalist');
+        datalist.id = datalistId;
+        parameterSuggestions[containerId].forEach(param => {
+            const option = document.createElement('option');
+            option.value = param;
+            datalist.appendChild(option);
+        });
+        document.body.appendChild(datalist);
+    }
+}
+
+// Обновим функцию добавления поля с поддержкой автозаполнения
+function addField(containerId) {
+    createDatalist(containerId);
+    const container = document.getElementById(containerId);
+    const newRow = document.createElement('div');
+    newRow.className = 'param-row';
+    newRow.innerHTML = `
+        <input type="text"
+               class="input"
+               placeholder="Название параметра"
+               list="${containerId}List"
+               autocomplete="off">
+        <input type="text" class="input" placeholder="Значение">
+        <button type="button" class="btn btn-outline remove-field">Удалить</button>
+    `;
+    container.appendChild(newRow);
+    saveFormState();
+}
+
+// Обновим функцию восстановления состояния
+function restoreFormState() {
+    const savedState = localStorage.getItem('productFormState');
+    if (savedState) {
+        console.log('Restoring form state:', savedState);
+        const formState = JSON.parse(savedState);
+
+        // Восстанавливаем базовые поля
+        Object.entries(formState.basicFields).forEach(([field, value]) => {
+            const element = document.querySelector(`[name="${field}"]`);
+            if (element) element.value = value;
+        });
+
+        // Создаем datalist для каждого контейнера
+        Object.keys(parameterSuggestions).forEach(createDatalist);
+
+        // Восстанавливаем динамические поля параметров
+        Object.entries(formState.paramFields).forEach(([containerId, params]) => {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            params.forEach(param => {
                 const newRow = document.createElement('div');
                 newRow.className = 'param-row';
                 newRow.innerHTML = `
@@ -334,850 +412,839 @@
                            class="input"
                            placeholder="Название параметра"
                            list="${containerId}List"
-                           autocomplete="off">
-                    <input type="text" class="input" placeholder="Значение">
+                           autocomplete="off"
+                           value="${param.key}">
+                    <input type="text"
+                           class="input"
+                           placeholder="Значение"
+                           value="${param.value}">
                     <button type="button" class="btn btn-outline remove-field">Удалить</button>
                 `;
                 container.appendChild(newRow);
-                saveFormState();
-            }
-            
-            // Обновим функцию восстановления состояния
-            function restoreFormState() {
-                const savedState = localStorage.getItem('productFormState');
-                if (savedState) {
-                    console.log('Restoring form state:', savedState);
-                    const formState = JSON.parse(savedState);
-            
-                    // Восстанавливаем базовые поля
-                    Object.entries(formState.basicFields).forEach(([field, value]) => {
-                        const element = document.querySelector(`[name="${field}"]`);
-                        if (element) element.value = value;
-                    });
-            
-                    // Создаем datalist для каждого контейнера
-                    Object.keys(parameterSuggestions).forEach(createDatalist);
-            
-                    // Восстанавливаем динамические поля параметров
-                    Object.entries(formState.paramFields).forEach(([containerId, params]) => {
-                        const container = document.getElementById(containerId);
-                        container.innerHTML = '';
-                        params.forEach(param => {
-                            const newRow = document.createElement('div');
-                            newRow.className = 'param-row';
-                            newRow.innerHTML = `
-                                <input type="text"
-                                       class="input"
-                                       placeholder="Название параметра"
-                                       list="${containerId}List"
-                                       autocomplete="off"
-                                       value="${param.key}">
-                                <input type="text"
-                                       class="input"
-                                       placeholder="Значение"
-                                       value="${param.value}">
-                                <button type="button" class="btn btn-outline remove-field">Удалить</button>
-                            `;
-                            container.appendChild(newRow);
-                        });
-                        if (params.length === 0) {
-                            addField(containerId);
-                        }
-                    });
-                } else {
-                    // Если нет сохраненного состояния, создаем datalist для каждого контейнера
-                    Object.keys(parameterSuggestions).forEach(containerId => {
-                        createDatalist(containerId);
-                        addField(containerId);
-                    });
-                }
-            }
-            
-            document.addEventListener('click', function(e) {
-                if (e.target.classList.contains('remove-field')) {
-                    e.target.closest('.param-row').remove();
-                    saveFormState();
-                }
             });
-            
-            function getParamsObject(containerId) {
-                const params = {};
-                const container = document.getElementById(containerId);
-                container.querySelectorAll('.param-row').forEach(row => {
-                    const inputs = row.querySelectorAll('input');
-                    const key = inputs[0].value.trim();
-                    const value = inputs[1].value.trim();
-                    if (key && value) {
-                        if (value.includes('|')) {
-                            params[key] = value.split('|').map(item => item.trim());
-                        } else {
-                            params[key] = value;
-                        }
-                    }
-                });
-                return params;
+            if (params.length === 0) {
+                addField(containerId);
             }
-            
-            document.getElementById('productForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-            
-                const formData = new FormData(e.target);
-                const product = {
-                    id: formData.get('id'),
-                    type: formData.get('type'),
-                    featured: false,
-                    title: formData.get('title'),
-                    referralLink: formData.get('referralLink'),
-                    bankName: formData.get('bankName'),
-                    shortDescription: formData.get('shortDescription'),
-                    fullDescription: formData.get('fullDescription'),
-                    imageUrl: formData.get('imageUrl'),
-                    parameters: {
-                        main: getParamsObject('mainParams'),
-                        cashback: getParamsObject('cashbackParams'),
-                        fees: getParamsObject('feesParams'),
-                        requirements: getParamsObject('requirementsParams')
-                    },
-                    meta: {
-                        title: `${formData.get('title')} от ${formData.get('bankName')}`,
-                        description: formData.get('shortDescription')
-                    }
-                };
-            
-                const jsonResult = JSON.stringify(product, null, 2);
-                document.getElementById('jsonResult').textContent = jsonResult;
-            });
-            
-            function copyToClipboard() {
-                const jsonText = document.getElementById('jsonResult').textContent;
-                navigator.clipboard.writeText(jsonText).then(() => {
-                    alert('JSON скопирован в буфер обмена');
-                }).catch(err => {
-                    console.error('Ошибка при копировании:', err);
-                });
-            }
-            
-            // Сохранение состояния формы
-            function saveFormState() {
-                const formState = {
-                    basicFields: {
-                        type: document.querySelector('[name="type"]').value,
-                        id: document.querySelector('[name="id"]').value,
-                        referralLink: document.querySelector('[name="referralLink"]').value,
-                        title: document.querySelector('[name="title"]').value,
-                        bankName: document.querySelector('[name="bankName"]').value,
-                        imageUrl: document.querySelector('[name="imageUrl"]').value,
-                        shortDescription: document.querySelector('[name="shortDescription"]').value,
-                        fullDescription: document.querySelector('[name="fullDescription"]').value
-                    },
-                    paramFields: {
-                        mainParams: getParamsArray('mainParams'),
-                        cashbackParams: getParamsArray('cashbackParams'),
-                        feesParams: getParamsArray('feesParams'),
-                        requirementsParams: getParamsArray('requirementsParams')
-                    }
-                };
-                console.log('Saving form state:', formState);
-                localStorage.setItem('productFormState', JSON.stringify(formState));
-            }
-            
-            // Получение параметров в виде массива для сохранения
-            function getParamsArray(containerId) {
-                const params = [];
-                const container = document.getElementById(containerId);
-                container.querySelectorAll('.param-row').forEach(row => {
-                    const inputs = row.querySelectorAll('input');
-                    params.push({
-                        key: inputs[0].value.trim(),
-                        value: inputs[1].value.trim()
-                    });
-                });
-                return params;
-            }
-            
-            // Добавляем кнопку для очистки формы
-            document.getElementById('productForm').insertAdjacentHTML('beforeend', `
-                <div class="text-center mt-4">
-                    <button type="button" class="btn btn-outline" onclick="clearForm()">Очистить форму</button>
-                </div>
-            `);
-            
-            function clearForm() {
-                if (confirm('Вы уверены, что хотите очистить форму? Все введенные данные будут удалены.')) {
-                    localStorage.removeItem('productFormState');
-                    document.getElementById('productForm').reset();
-                    ['mainParams', 'cashbackParams', 'feesParams', 'requirementsParams'].forEach(containerId => {
-                        const container = document.getElementById(containerId);
-                        container.innerHTML = '';
-                        addField(containerId);
-                    });
-                    document.getElementById('result').style.display = 'none';
-                }
-            }
-            
-            // Обновляем обработчики событий
-            document.addEventListener('DOMContentLoaded', () => {
-                const form = document.getElementById('productForm');
-            
-                // Используем делегирование событий для всей формы
-                form.addEventListener('input', (e) => {
-                    if (e.target.matches('input, textarea, select')) {
-                        console.log('Input changed:', e.target.name);
-                        saveFormState();
-                    }
-                });
-            
-                form.addEventListener('change', (e) => {
-                    if (e.target.matches('input, textarea, select')) {
-                        console.log('Change event:', e.target.name);
-                        saveFormState();
-                    }
-                });
-            
-                // Восстанавливаем состояние
-                restoreFormState();
-            });
-            
-            function banks() {
-                return [
-                    "Т-Банк (Тинькофф)",
-                    "Альфа-Банк",
-                    "Хоум Банк",
-                    "Открытие Банк (объединение с ВТБ)",
-                    "Сбербанк",
-                    "МТС Банк",
-                    "Райффайзенбанк",
-                    "Совкомбанк",
-                    "УБРиР",
-                    "Росбанк (присоединен к Т-Банку)",
-                    "Русский Стандарт Банк",
-                    "Газпромбанк",
-                    "АТБ",
-                    "ОТП Банк",
-                    "ПСБ",
-                    "Почта Банк",
-                    "Ренессанс Банк",
-                    "Локо-Банк",
-                    "УРАЛСИБ Банк",
-                    "ВТБ Банк",
-                    "Кредит Европа Банк",
-                    "Ситибанк",
-                    "МКБ",
-                    "Россельхозбанк",
-                    "Банк Синара",
-                    "ЗЕНИТ Банк",
-                    "ЮниКредит Банк",
-                    "Санкт-Петербург Банк",
-                    "Абсолют Банк",
-                    "Цифра Банк",
-                    "ФОРА-банк",
-                    "ВУЗ-Банк",
-                    "Газэнергобанк",
-                    "Ак Барс Банк",
-                    "ВБРР",
-                    "Таврический Банк",
-                    "Новиком Банк",
-                    "ТрансКапиталБанк",
-                    "РНКБ Банк",
-                    "Ингосстрах Банк",
-                    "Челиндбанк",
-                    "Пойдем! Банк",
-                    "Авангард Банк",
-                    "Левобережный Банк",
-                    "Металлинвестбанк",
-                    "Экспобанк",
-                    "СДМ-Банк",
-                    "АРЕСБАНК",
-                    "Точка Банк",
-                    "Кредит Урал Банк",
-                    "Гарант-Инвест Банк (лицензия отозвана)",
-                    "НИКО-БАНК",
-                    "Примсоцбанк",
-                    "Банк РОССИЯ",
-                    "Центр-инвест Банк",
-                    "КИВИ Банк (лицензия отозвана)",
-                    "Эс-Би-Ай Банк",
-                    "ДОМ.РФ Банк",
-                    "БыстроБанк",
-                    "ВладбизнесБанк",
-                    "Финам-Банк",
-                    "Бланк банк",
-                    "Кубань Кредит Банк",
-                    "Интеза Банк",
-                    "Солидарность Банк",
-                    "Росэксимбанк",
-                    "Алеф-Банк",
-                    "Акцепт Банк",
-                    "Траст Банк",
-                    "ББР Банк",
-                    "ПСКБ Банк",
-                    "Драйв Клик Банк",
-                    "Модульбанк",
-                    "Юнистрим Банк",
-                    "Сургутнефтегазбанк",
-                    "БКС Банк",
-                    "ИНГ Банк",
-                    "Пересвет Банк",
-                    "Инвестторгбанк",
-                    "МСП Банк",
-                    "Банк Финсервис",
-                    "Банк ЦентроКредит",
-                    "Банк Аверс",
-                    "Авто Финанс Банк",
-                    "Саровбизнесбанк",
-                    "Энерготрансбанк",
-                    "НБД-Банк",
-                    "Челябинвестбанк",
-                    "Севергазбанк",
-                    "Генбанк",
-                    "Дальневосточный банк",
-                    "Банк Национальный стандарт",
-                    "Интерпрогрессбанк",
-                    "Банк Приморье",
-                    "Алмазэргиэнбанк",
-                    "НС Банк",
-                    "Ланта-Банк",
-                    "Экономбанк",
-                    "Банк Урал ФД",
-                    "Банк Хлынов",
-                    "Акибанк",
-                    "Энергобанк",
-                    "Агропромкредит",
-                    "ПромТрансБанк",
-                    "Датабанк",
-                    "РЕАЛИСТ БАНК",
-                    "Углеметбанк",
-                    "Банк Снежинский",
-                    "Солид Банк",
-                    "Хакасский муниципальный банк",
-                    "Банк Оренбург",
-                    "Банк ЧБРР",
-                    "Банк РЕСО Кредит",
-                    "Кошелев-Банк",
-                    "Банк Венец",
-                    "Морской Банк",
-                    "Банк СКС",
-                    "НОКССБАНК",
-                    "БАЛТИНВЕСТБАНК",
-                    "Томскпромстройбанк",
-                    "Банк Развитие-Столица",
-                    "МБ Банк",
-                    "УРАЛПРОМБАНК",
-                    "Банк Форштадт",
-                    "Газтрансбанк",
-                    "ИК Банк",
-                    "Первый Инвестиционный Банк",
-                    "Международный финансовый клуб",
-                    "Братский Народный Банк",
-                    "Банк Кремлевский",
-                    "Кузнецкбизнесбанк",
-                    "Трансстройбанк",
-                    "ТАТСОЦБАНК",
-                    "Северный Народный Банк",
-                    "ПроБанк",
-                    "Москоммерцбанк",
-                    "Мидзухо Банк",
-                    "МЕТКОМБАНК",
-                    "РосДорБанк",
-                    "Ури Банк",
-                    "Автоторгбанк",
-                    "ТЕНДЕР-БАНК",
-                    "Банк Александровский",
-                    "Банк Заречье",
-                    "Банк Казани",
-                    "Белгородсоцбанк",
-                    "Горбанк",
-                    "Земский банк",
-                    "Яндекс Банк",
-                    "Банк РостФинанс",
-                    "Стройлесбанк",
-                    "Норвик Банк",
-                    "Сибсоцбанк",
-                    "Тойота Банк",
-                    "Тольяттихимбанк",
-                    "Банк Объединенный капитал",
-                    "Банк Раунд",
-                    "МС Банк Рус",
-                    "Прио-Внешторгбанк",
-                    "Банк Держава",
-                    "Банк Агророс",
-                    "Гута-Банк",
-                    "Крокус-Банк",
-                    "Новобанк",
-                    "Русьуниверсалбанк",
-                    "Еврофинанс Моснарбанк",
-                    "Контур.Банк",
-                    "Нацинвестпромбанк",
-                    "Руснарбанк",
-                    "Тимер Банк",
-                    "Инбанк",
-                    "ИШБАНК",
-                    "НРБанк",
-                    "Итуруп Банк",
-                    "Банк Новый век",
-                    "Синко-Банк",
-                    "Внешфинбанк",
-                    "Социум-Банк",
-                    "Банк Саратов",
-                    "ЭйчЭнБи Банк",
-                    "Банк БКФ (лицензия отозвана)",
-                    "Банк БЖФ",
-                    "СЛАВИЯ Банк",
-                    "Кубаньторгбанк",
-                    "БМ-Банк",
-                    "СЭБ Банк",
-                    "ЮГ-Инвестбанк",
-                    "Креди Агриколь КИБ",
-                    "Банк МБА-Москва",
-                    "Банк Москва-Сити",
-                    "Банк Йошкар-Ола",
-                    "Дойче Банк",
-                    "ИС Банк",
-                    "Москомбанк",
-                    "НК Банк",
-                    "Чайна Констракшн Банк",
-                    "Хвоя Банк",
-                    "БЭНК ОФ ЧАЙНА",
-                    "БМВ Банк",
-                    "Сити Инвест Банк",
-                    "Зираат Банк",
-                    "Банк Оранжевый",
-                    "Банк Кузнецкий",
-                    "Енисейский объединенный банк",
-                    "Роял Кредит Банк",
-                    "ФИНСТАР БАНК",
-                    "Банк Приобье",
-                    "Банк Евроальянс",
-                    "Банк Викинг",
-                    "Банк Долинск",
-                    "Алтайкапиталбанк",
-                    "Далена Банк",
-                    "Донкомбанк",
-                    "Банк Вологжанин",
-                    "Живаго Банк",
-                    "Камкомбанк",
-                    "Первоуральскбанк",
-                    "Первый Клиентский Банк",
-                    "Алтынбанк",
-                    "Сельмашбанк",
-                    "Банк Ноосфера",
-                    "Банк РУСБС",
-                    "Кузбассхимбанк",
-                    "Костромаселькомбанк",
-                    "Банк Калуга",
-                    "Банк Новокиб",
-                    "Вакобанк",
-                    "Крона-Банк",
-                    "Банк Торжок",
-                    "Примтеркомбанк",
-                    "Славянбанк",
-                    "Севзапинвестпромбанк",
-                    "Таганрогбанк",
-                    "Банк 131",
-                    "МВС Банк",
-                    "Эм-Ю-Эф-Джи Банк (Евразия)",
-                    "Фольксваген Банк РУС",
-                    "Ставропольпромстройбанк",
-                    "Камчатпрофитбанк",
-                    "Санкт-Петербургский банк инвестиций",
-                    "Банк Кетовский",
-                    "БСТ-БАНК",
-                    "Банк Глобус",
-                    "АвтоКредитБанк",
-                    "Банк Элита",
-                    "Яринтербанк",
-                    "ЭКСИ-Банк",
-                    "Банк Уралфинанс",
-                    "Банк Ермак",
-                    "Банк Пермь",
-                    "Тамбовкредитпромбанк",
-                    "Свой Банк",
-                    "Первый Дортрансбанк",
-                    "Великие Луки Банк",
-                    "Арзамас Банк",
-                    "Витабанк",
-                    "Курган Банк",
-                    "Банк Вятич",
-                    "Саммит Банк",
-                    "Банк Нальчик",
-                    "ЕАТПБанк",
-                    "Байкалкредобанк",
-                    "Почтобанк",
-                    "Национальный Банк Сбережений",
-                    "Классик Эконом Банк",
-                    "Дон-Тексбанк",
-                    "Балаково-Банк",
-                    "Дружба",
-                    "Земкомбанк",
-                    "Химик",
-                    "Банк НИБ",
-                    "Банк МСКБ",
-                    "Вайлдберриз Банк",
-                    "СеверСтройБанк",
-                    "Континенталь",
-                    "Банк Берейт",
-                    "Агора",
-                    "Азия-Инвест Банк",
-                    "АйСиБиСи Банк",
-                    "Банк Кредит Свисс",
-                    "Банк РМП",
-                    "Банк РСИ",
-                    "СПБ Банк",
-                    "Голдман Сакс Банк",
-                    "ДенизБанк Москва",
-                    "ИТ Банк",
-                    "Капитал",
-                    "Индо Банк",
-                    "Банк Космос",
-                    "Банк Максима",
-                    "МТИ Банк",
-                    "НДБанк",
-                    "Натиксис Банк",
-                    "Новый Московский Банк",
-                    "ПроКоммерцБанк",
-                    "Промсельхозбанк",
-                    "Банк РБА",
-                    "Вэйбанк",
-                    "Республиканский Кредитный Альянс",
-                    "РФК-банк",
-                    "Россита-Банк",
-                    "РусьРегионБанк",
-                    "Сервис Резерв",
-                    "Банк Система",
-                    "Банк Соколовский",
-                    "СПЕЦСТРОЙБАНК",
-                    "Столичный Кредит",
-                    "СМБСР Банк",
-                    "ЦМРБанк",
-                    "Чайнасельхозбанк",
-                    "ЭКО-ИНВЕСТ",
-                    "Ю Би Эс Банк",
-                    "Ozon Банк",
-                    "Дж.П. Морган Банк Интернешнл",
-                    "КОММЕРЦБАНК",
-                    "Унифондбанк"
-                ]
-            
-            }
-            
-            
-            </script>
-        </div>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-sections">
-                    <div class="footer-section">
-                        <h3>Инструменты</h3>
-                        <nav class="footer-nav">
-                            <a href="/calculator.html">Кредитный калькулятор</a>
-                        </nav>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Сравнение продуктов</h3>
-                        <nav class="footer-nav">
-                            <a href="/compare/credit-cards.html">Сравнить кредитные карты</a>
-                            <a href="/compare/debit-cards.html">Сравнить дебетовые карты</a>
-                            <a href="/compare/credits.html">Сравнить кредиты</a>
-                        </nav>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Категории</h3>
-                        <nav class="footer-nav">
-                            <a href="/category/credit-cards.html">Кредитные карты</a>
-                            <a href="/category/debit-cards.html">Дебетовые карты</a>
-                            <a href="/category/credits.html">Кредиты</a>
-                            <a href="/articles/credit-chose.html">Как правильно выбрать кредит</a>"
-                        </nav>
-                    </div>
-                    <div class="footer-section">
-                        <h3>О проекте</h3>
-                        <nav class="footer-nav">
-                            <a href="/about.html">О нас</a>
-                            <a href="/contacts.html">Контакты</a>
-                            <a href="/privacy.html">Политика конфиденциальности</a>
-                        </nav>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>&copy; 2024 BankProducts. Все права защищены.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <style>
-    .footer {
-        background: #1e293b;
-        color: #f8fafc;
-        padding: 3rem 0 1rem;
-        margin-top: 4rem;
+        });
+    } else {
+        // Если нет сохраненного состояния, создаем datalist для каждого контейнера
+        Object.keys(parameterSuggestions).forEach(containerId => {
+            createDatalist(containerId);
+            addField(containerId);
+        });
     }
+}
 
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('remove-field')) {
+        e.target.closest('.param-row').remove();
+        saveFormState();
     }
+});
 
-    .footer-sections {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-
-    .footer-section h3 {
-        color: #e2e8f0;
-        font-size: 1.125rem;
-        margin-bottom: 1rem;
-    }
-
-    .footer-nav {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .footer-nav a {
-        color: #cbd5e1;
-        text-decoration: none;
-        transition: color 0.2s;
-    }
-
-    .footer-nav a:hover {
-        color: #f8fafc;
-    }
-
-    .footer-bottom {
-        border-top: 1px solid #334155;
-        padding-top: 1rem;
-        text-align: center;
-        color: #94a3b8;
-    }
-
-    @media (max-width: 768px) {
-        .footer {
-            padding: 2rem 0 1rem;
-        }
-
-        .footer-sections {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-    }
-
-    .header {
-        background: var(--color-background);
-        border-bottom: 1px solid var(--color-border);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: var(--spacing-4) 0;
-        position: relative;
-    }
-
-    .nav-logo {
-        font-size: var(--font-size-xl);
-        font-weight: 600;
-        color: var(--color-primary);
-        text-decoration: none;
-    }
-
-    .nav-menu {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-links {
-        display: flex;
-        gap: var(--spacing-6);
-        align-items: center;
-    }
-
-    .nav-links a {
-        color: var(--color-text);
-        text-decoration: none;
-        font-weight: 500;
-    }
-
-    .nav-links a:hover {
-        color: var(--color-primary);
-    }
-
-    .mobile-menu-toggle {
-        display: none;
-        flex-direction: column;
-        gap: 6px;
-        background: none;
-        border: none;
-        padding: var(--spacing-2);
-        cursor: pointer;
-    }
-
-    .mobile-menu-toggle span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background-color: var(--color-text);
-        transition: all 0.3s;
-    }
-
-    .dropdown {
-        position: relative;
-    }
-
-    .dropdown-toggle {
-        background: none;
-        border: none;
-        font-weight: 500;
-        color: var(--color-text);
-        cursor: pointer;
-        padding: var(--spacing-2);
-    }
-
-    .dropdown-menu {
-        display: none;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        background: var(--color-background);
-        border: 1px solid var(--color-border);
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-md);
-        min-width: 200px;
-        padding: var(--spacing-2);
-    }
-
-    .dropdown-menu a {
-        display: block;
-        padding: var(--spacing-2);
-        color: var(--color-text);
-        text-decoration: none;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
-
-    @media (max-width: 768px) {
-        .mobile-menu-toggle {
-            display: flex;
-        }
-
-        .nav-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--color-background);
-            border-top: 1px solid var(--color-border);
-            padding: var(--spacing-4);
-            box-shadow: var(--shadow-md);
-        }
-
-        .nav-menu.active {
-            display: block;
-        }
-
-        .nav-links {
-            flex-direction: column;
-            gap: var(--spacing-4);
-            align-items: flex-start;
-        }
-
-        .dropdown {
-            width: 100%;
-        }
-
-        .dropdown-menu {
-            position: static;
-            display: none;
-            box-shadow: none;
-            border: none;
-            padding-left: var(--spacing-4);
-        }
-
-        .dropdown.active .dropdown-menu {
-            display: block;
-        }
-
-        .dropdown-toggle {
-            width: 100%;
-            text-align: left;
-            padding: 0;
-        }
-    }
-    </style>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const dropdowns = document.querySelectorAll('.dropdown');
-
-        // Переключение мобильного меню
-        menuToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-
-            // Анимация иконки бургер-меню
-            this.classList.toggle('active');
-            const spans = this.querySelectorAll('span');
-            if (this.classList.contains('active')) {
-                spans[0].style.transform = 'rotate(45deg) translate(6px, 6px)';
-                spans[1].style.opacity = '0';
-                spans[2].style.transform = 'rotate(-45deg) translate(6px, -6px)';
+function getParamsObject(containerId) {
+    const params = {};
+    const container = document.getElementById(containerId);
+    container.querySelectorAll('.param-row').forEach(row => {
+        const inputs = row.querySelectorAll('input');
+        const key = inputs[0].value.trim();
+        const value = inputs[1].value.trim();
+        if (key && value) {
+            if (value.includes('|')) {
+                params[key] = value.split('|').map(item => item.trim());
             } else {
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
+                params[key] = value;
             }
-        });
+        }
+    });
+    return params;
+}
 
-        // Обработка дропдаунов на мобильных
-        dropdowns.forEach(dropdown => {
-            const toggle = dropdown.querySelector('.dropdown-toggle');
-            toggle.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                }
-            });
-        });
+document.getElementById('productForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-        // Закрытие меню при клике вне его
-        document.addEventListener('click', function(e) {
-            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-            }
-        });
+    const formData = new FormData(e.target);
+    const product = {
+        id: formData.get('id'),
+        type: formData.get('type'),
+        featured: false,
+        title: formData.get('title'),
+        referralLink: formData.get('referralLink'),
+        bankName: formData.get('bankName'),
+        shortDescription: formData.get('shortDescription'),
+        fullDescription: formData.get('fullDescription'),
+        imageUrl: formData.get('imageUrl'),
+        parameters: {
+            main: getParamsObject('mainParams'),
+            cashback: getParamsObject('cashbackParams'),
+            fees: getParamsObject('feesParams'),
+            requirements: getParamsObject('requirementsParams')
+        },
+        meta: {
+            title: `${formData.get('title')} от ${formData.get('bankName')}`,
+            description: formData.get('shortDescription')
+        }
+    };
 
-        // Закрытие меню при изменении размера окна
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
-                const spans = menuToggle.querySelectorAll('span');
-                spans[0].style.transform = 'none';
-                spans[1].style.opacity = '1';
-                spans[2].style.transform = 'none';
-                dropdowns.forEach(dropdown => dropdown.classList.remove('active'));
-            }
+    const jsonResult = JSON.stringify(product, null, 2);
+    document.getElementById('jsonResult').textContent = jsonResult;
+});
+
+function copyToClipboard() {
+    const jsonText = document.getElementById('jsonResult').textContent;
+    navigator.clipboard.writeText(jsonText).then(() => {
+        alert('JSON скопирован в буфер обмена');
+    }).catch(err => {
+        console.error('Ошибка при копировании:', err);
+    });
+}
+
+// Сохранение состояния формы
+function saveFormState() {
+    const formState = {
+        basicFields: {
+            type: document.querySelector('[name="type"]').value,
+            id: document.querySelector('[name="id"]').value,
+            referralLink: document.querySelector('[name="referralLink"]').value,
+            title: document.querySelector('[name="title"]').value,
+            bankName: document.querySelector('[name="bankName"]').value,
+            imageUrl: document.querySelector('[name="imageUrl"]').value,
+            shortDescription: document.querySelector('[name="shortDescription"]').value,
+            fullDescription: document.querySelector('[name="fullDescription"]').value
+        },
+        paramFields: {
+            mainParams: getParamsArray('mainParams'),
+            cashbackParams: getParamsArray('cashbackParams'),
+            feesParams: getParamsArray('feesParams'),
+            requirementsParams: getParamsArray('requirementsParams')
+        }
+    };
+    console.log('Saving form state:', formState);
+    localStorage.setItem('productFormState', JSON.stringify(formState));
+}
+
+// Получение параметров в виде массива для сохранения
+function getParamsArray(containerId) {
+    const params = [];
+    const container = document.getElementById(containerId);
+    container.querySelectorAll('.param-row').forEach(row => {
+        const inputs = row.querySelectorAll('input');
+        params.push({
+            key: inputs[0].value.trim(),
+            value: inputs[1].value.trim()
         });
     });
-    </script>
-</body>
+    return params;
+}
+
+// Добавляем кнопку для очистки формы
+document.getElementById('productForm').insertAdjacentHTML('beforeend', `
+    <div class="text-center mt-4">
+        <button type="button" class="btn btn-outline" onclick="clearForm()">Очистить форму</button>
+    </div>
+`);
+
+function clearForm() {
+    if (confirm('Вы уверены, что хотите очистить форму? Все введенные данные будут удалены.')) {
+        localStorage.removeItem('productFormState');
+        document.getElementById('productForm').reset();
+        ['mainParams', 'cashbackParams', 'feesParams', 'requirementsParams'].forEach(containerId => {
+            const container = document.getElementById(containerId);
+            container.innerHTML = '';
+            addField(containerId);
+        });
+        document.getElementById('result').style.display = 'none';
+    }
+}
+
+// Обновляем обработчики событий
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('productForm');
+
+    // Используем делегирование событий для всей формы
+    form.addEventListener('input', (e) => {
+        if (e.target.matches('input, textarea, select')) {
+            console.log('Input changed:', e.target.name);
+            saveFormState();
+        }
+    });
+
+    form.addEventListener('change', (e) => {
+        if (e.target.matches('input, textarea, select')) {
+            console.log('Change event:', e.target.name);
+            saveFormState();
+        }
+    });
+
+    // Восстанавливаем состояние
+    restoreFormState();
+});
+
+function banks() {
+    return [
+        "Т-Банк (Тинькофф)",
+        "Альфа-Банк",
+        "Хоум Банк",
+        "Открытие Банк (объединение с ВТБ)",
+        "Сбербанк",
+        "МТС Банк",
+        "Райффайзенбанк",
+        "Совкомбанк",
+        "УБРиР",
+        "Росбанк (присоединен к Т-Банку)",
+        "Русский Стандарт Банк",
+        "Газпромбанк",
+        "АТБ",
+        "ОТП Банк",
+        "ПСБ",
+        "Почта Банк",
+        "Ренессанс Банк",
+        "Локо-Банк",
+        "УРАЛСИБ Банк",
+        "ВТБ Банк",
+        "Кредит Европа Банк",
+        "Ситибанк",
+        "МКБ",
+        "Россельхозбанк",
+        "Банк Синара",
+        "ЗЕНИТ Банк",
+        "ЮниКредит Банк",
+        "Санкт-Петербург Банк",
+        "Абсолют Банк",
+        "Цифра Банк",
+        "ФОРА-банк",
+        "ВУЗ-Банк",
+        "Газэнергобанк",
+        "Ак Барс Банк",
+        "ВБРР",
+        "Таврический Банк",
+        "Новиком Банк",
+        "ТрансКапиталБанк",
+        "РНКБ Банк",
+        "Ингосстрах Банк",
+        "Челиндбанк",
+        "Пойдем! Банк",
+        "Авангард Банк",
+        "Левобережный Банк",
+        "Металлинвестбанк",
+        "Экспобанк",
+        "СДМ-Банк",
+        "АРЕСБАНК",
+        "Точка Банк",
+        "Кредит Урал Банк",
+        "Гарант-Инвест Банк (лицензия отозвана)",
+        "НИКО-БАНК",
+        "Примсоцбанк",
+        "Банк РОССИЯ",
+        "Центр-инвест Банк",
+        "КИВИ Банк (лицензия отозвана)",
+        "Эс-Би-Ай Банк",
+        "ДОМ.РФ Банк",
+        "БыстроБанк",
+        "ВладбизнесБанк",
+        "Финам-Банк",
+        "Бланк банк",
+        "Кубань Кредит Банк",
+        "Интеза Банк",
+        "Солидарность Банк",
+        "Росэксимбанк",
+        "Алеф-Банк",
+        "Акцепт Банк",
+        "Траст Банк",
+        "ББР Банк",
+        "ПСКБ Банк",
+        "Драйв Клик Банк",
+        "Модульбанк",
+        "Юнистрим Банк",
+        "Сургутнефтегазбанк",
+        "БКС Банк",
+        "ИНГ Банк",
+        "Пересвет Банк",
+        "Инвестторгбанк",
+        "МСП Банк",
+        "Банк Финсервис",
+        "Банк ЦентроКредит",
+        "Банк Аверс",
+        "Авто Финанс Банк",
+        "Саровбизнесбанк",
+        "Энерготрансбанк",
+        "НБД-Банк",
+        "Челябинвестбанк",
+        "Севергазбанк",
+        "Генбанк",
+        "Дальневосточный банк",
+        "Банк Национальный стандарт",
+        "Интерпрогрессбанк",
+        "Банк Приморье",
+        "Алмазэргиэнбанк",
+        "НС Банк",
+        "Ланта-Банк",
+        "Экономбанк",
+        "Банк Урал ФД",
+        "Банк Хлынов",
+        "Акибанк",
+        "Энергобанк",
+        "Агропромкредит",
+        "ПромТрансБанк",
+        "Датабанк",
+        "РЕАЛИСТ БАНК",
+        "Углеметбанк",
+        "Банк Снежинский",
+        "Солид Банк",
+        "Хакасский муниципальный банк",
+        "Банк Оренбург",
+        "Банк ЧБРР",
+        "Банк РЕСО Кредит",
+        "Кошелев-Банк",
+        "Банк Венец",
+        "Морской Банк",
+        "Банк СКС",
+        "НОКССБАНК",
+        "БАЛТИНВЕСТБАНК",
+        "Томскпромстройбанк",
+        "Банк Развитие-Столица",
+        "МБ Банк",
+        "УРАЛПРОМБАНК",
+        "Банк Форштадт",
+        "Газтрансбанк",
+        "ИК Банк",
+        "Первый Инвестиционный Банк",
+        "Международный финансовый клуб",
+        "Братский Народный Банк",
+        "Банк Кремлевский",
+        "Кузнецкбизнесбанк",
+        "Трансстройбанк",
+        "ТАТСОЦБАНК",
+        "Северный Народный Банк",
+        "ПроБанк",
+        "Москоммерцбанк",
+        "Мидзухо Банк",
+        "МЕТКОМБАНК",
+        "РосДорБанк",
+        "Ури Банк",
+        "Автоторгбанк",
+        "ТЕНДЕР-БАНК",
+        "Банк Александровский",
+        "Банк Заречье",
+        "Банк Казани",
+        "Белгородсоцбанк",
+        "Горбанк",
+        "Земский банк",
+        "Яндекс Банк",
+        "Банк РостФинанс",
+        "Стройлесбанк",
+        "Норвик Банк",
+        "Сибсоцбанк",
+        "Тойота Банк",
+        "Тольяттихимбанк",
+        "Банк Объединенный капитал",
+        "Банк Раунд",
+        "МС Банк Рус",
+        "Прио-Внешторгбанк",
+        "Банк Держава",
+        "Банк Агророс",
+        "Гута-Банк",
+        "Крокус-Банк",
+        "Новобанк",
+        "Русьуниверсалбанк",
+        "Еврофинанс Моснарбанк",
+        "Контур.Банк",
+        "Нацинвестпромбанк",
+        "Руснарбанк",
+        "Тимер Банк",
+        "Инбанк",
+        "ИШБАНК",
+        "НРБанк",
+        "Итуруп Банк",
+        "Банк Новый век",
+        "Синко-Банк",
+        "Внешфинбанк",
+        "Социум-Банк",
+        "Банк Саратов",
+        "ЭйчЭнБи Банк",
+        "Банк БКФ (лицензия отозвана)",
+        "Банк БЖФ",
+        "СЛАВИЯ Банк",
+        "Кубаньторгбанк",
+        "БМ-Банк",
+        "СЭБ Банк",
+        "ЮГ-Инвестбанк",
+        "Креди Агриколь КИБ",
+        "Банк МБА-Москва",
+        "Банк Москва-Сити",
+        "Банк Йошкар-Ола",
+        "Дойче Банк",
+        "ИС Банк",
+        "Москомбанк",
+        "НК Банк",
+        "Чайна Констракшн Банк",
+        "Хвоя Банк",
+        "БЭНК ОФ ЧАЙНА",
+        "БМВ Банк",
+        "Сити Инвест Банк",
+        "Зираат Банк",
+        "Банк Оранжевый",
+        "Банк Кузнецкий",
+        "Енисейский объединенный банк",
+        "Роял Кредит Банк",
+        "ФИНСТАР БАНК",
+        "Банк Приобье",
+        "Банк Евроальянс",
+        "Банк Викинг",
+        "Банк Долинск",
+        "Алтайкапиталбанк",
+        "Далена Банк",
+        "Донкомбанк",
+        "Банк Вологжанин",
+        "Живаго Банк",
+        "Камкомбанк",
+        "Первоуральскбанк",
+        "Первый Клиентский Банк",
+        "Алтынбанк",
+        "Сельмашбанк",
+        "Банк Ноосфера",
+        "Банк РУСБС",
+        "Кузбассхимбанк",
+        "Костромаселькомбанк",
+        "Банк Калуга",
+        "Банк Новокиб",
+        "Вакобанк",
+        "Крона-Банк",
+        "Банк Торжок",
+        "Примтеркомбанк",
+        "Славянбанк",
+        "Севзапинвестпромбанк",
+        "Таганрогбанк",
+        "Банк 131",
+        "МВС Банк",
+        "Эм-Ю-Эф-Джи Банк (Евразия)",
+        "Фольксваген Банк РУС",
+        "Ставропольпромстройбанк",
+        "Камчатпрофитбанк",
+        "Санкт-Петербургский банк инвестиций",
+        "Банк Кетовский",
+        "БСТ-БАНК",
+        "Банк Глобус",
+        "АвтоКредитБанк",
+        "Банк Элита",
+        "Яринтербанк",
+        "ЭКСИ-Банк",
+        "Банк Уралфинанс",
+        "Банк Ермак",
+        "Банк Пермь",
+        "Тамбовкредитпромбанк",
+        "Свой Банк",
+        "Первый Дортрансбанк",
+        "Великие Луки Банк",
+        "Арзамас Банк",
+        "Витабанк",
+        "Курган Банк",
+        "Банк Вятич",
+        "Саммит Банк",
+        "Банк Нальчик",
+        "ЕАТПБанк",
+        "Байкалкредобанк",
+        "Почтобанк",
+        "Национальный Банк Сбережений",
+        "Классик Эконом Банк",
+        "Дон-Тексбанк",
+        "Балаково-Банк",
+        "Дружба",
+        "Земкомбанк",
+        "Химик",
+        "Банк НИБ",
+        "Банк МСКБ",
+        "Вайлдберриз Банк",
+        "СеверСтройБанк",
+        "Континенталь",
+        "Банк Берейт",
+        "Агора",
+        "Азия-Инвест Банк",
+        "АйСиБиСи Банк",
+        "Банк Кредит Свисс",
+        "Банк РМП",
+        "Банк РСИ",
+        "СПБ Банк",
+        "Голдман Сакс Банк",
+        "ДенизБанк Москва",
+        "ИТ Банк",
+        "Капитал",
+        "Индо Банк",
+        "Банк Космос",
+        "Банк Максима",
+        "МТИ Банк",
+        "НДБанк",
+        "Натиксис Банк",
+        "Новый Московский Банк",
+        "ПроКоммерцБанк",
+        "Промсельхозбанк",
+        "Банк РБА",
+        "Вэйбанк",
+        "Республиканский Кредитный Альянс",
+        "РФК-банк",
+        "Россита-Банк",
+        "РусьРегионБанк",
+        "Сервис Резерв",
+        "Банк Система",
+        "Банк Соколовский",
+        "СПЕЦСТРОЙБАНК",
+        "Столичный Кредит",
+        "СМБСР Банк",
+        "ЦМРБанк",
+        "Чайнасельхозбанк",
+        "ЭКО-ИНВЕСТ",
+        "Ю Би Эс Банк",
+        "Ozon Банк",
+        "Дж.П. Морган Банк Интернешнл",
+        "КОММЕРЦБАНК",
+        "Унифондбанк"
+    ]
+
+}
+
+
+</script>
+</div>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-sections">
+                        <div class="footer-section">
+                            <h3>Инструменты</h3>
+                            <nav class="footer-nav">
+                                <a href="/calculator.html"
+                                    >Кредитный калькулятор</a
+                                >
+                            </nav>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Сравнение продуктов</h3>
+                            <nav class="footer-nav">
+                                <a href="/compare/credit-cards.html"
+                                    >Сравнить кредитные карты</a
+                                >
+                                <a href="/compare/debit-cards.html"
+                                    >Сравнить дебетовые карты</a
+                                >
+                                <a href="/compare/credits.html"
+                                    >Сравнить кредиты</a
+                                >
+                            </nav>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Категории</h3>
+                            <nav class="footer-nav">
+                                <a href="/category/credit-cards.html"
+                                    >Кредитные карты</a
+                                >
+                                <a href="/category/debit-cards.html"
+                                    >Дебетовые карты</a
+                                >
+                                <a href="/category/credits.html">Кредиты</a>
+                                <a href="/articles/credit-chose.html"
+                                    >Как правильно выбрать кредит</a
+                                >"
+                            </nav>
+                        </div>
+                        <div class="footer-section">
+                            <h3>О проекте</h3>
+                            <nav class="footer-nav">
+                                <a href="/about.html">О нас</a>
+                                <a href="/contacts.html">Контакты</a>
+                                <a href="/privacy.html"
+                                    >Политика конфиденциальности</a
+                                >
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2024 BankProducts. Все права защищены.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <style>
+            .footer {
+                background: #1e293b;
+                color: #f8fafc;
+                padding: 3rem 0 1rem;
+                margin-top: 4rem;
+            }
+
+            .footer-content {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer-sections {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 2rem;
+            }
+
+            .footer-section h3 {
+                color: #e2e8f0;
+                font-size: 1.125rem;
+                margin-bottom: 1rem;
+            }
+
+            .footer-nav {
+                display: flex;
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .footer-nav a {
+                color: #cbd5e1;
+                text-decoration: none;
+                transition: color 0.2s;
+            }
+
+            .footer-nav a:hover {
+                color: #f8fafc;
+            }
+
+            .footer-bottom {
+                border-top: 1px solid #334155;
+                padding-top: 1rem;
+                text-align: center;
+                color: #94a3b8;
+            }
+
+            @media (max-width: 768px) {
+                .footer {
+                    padding: 2rem 0 1rem;
+                }
+
+                .footer-sections {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+            }
+
+            .header {
+                background: var(--color-background);
+                border-bottom: 1px solid var(--color-border);
+                position: sticky;
+                top: 0;
+                z-index: 100;
+            }
+
+            .nav {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: var(--spacing-4) 0;
+                position: relative;
+            }
+
+            .nav-logo {
+                font-size: var(--font-size-xl);
+                font-weight: 600;
+                color: var(--color-primary);
+                text-decoration: none;
+            }
+
+            .nav-menu {
+                display: flex;
+                align-items: center;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: var(--spacing-6);
+                align-items: center;
+            }
+
+            .nav-links a {
+                color: var(--color-text);
+                text-decoration: none;
+                font-weight: 500;
+            }
+
+            .nav-links a:hover {
+                color: var(--color-primary);
+            }
+
+            .mobile-menu-toggle {
+                display: none;
+                flex-direction: column;
+                gap: 6px;
+                background: none;
+                border: none;
+                padding: var(--spacing-2);
+                cursor: pointer;
+            }
+
+            .mobile-menu-toggle span {
+                display: block;
+                width: 24px;
+                height: 2px;
+                background-color: var(--color-text);
+                transition: all 0.3s;
+            }
+
+            .dropdown {
+                position: relative;
+            }
+
+            .dropdown-toggle {
+                background: none;
+                border: none;
+                font-weight: 500;
+                color: var(--color-text);
+                cursor: pointer;
+                padding: var(--spacing-2);
+            }
+
+            .dropdown-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--color-background);
+                border: 1px solid var(--color-border);
+                border-radius: var(--radius-md);
+                box-shadow: var(--shadow-md);
+                min-width: 200px;
+                padding: var(--spacing-2);
+            }
+
+            .dropdown-menu a {
+                display: block;
+                padding: var(--spacing-2);
+                color: var(--color-text);
+                text-decoration: none;
+            }
+
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+
+            @media (max-width: 768px) {
+                .mobile-menu-toggle {
+                    display: flex;
+                }
+
+                .nav-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    right: 0;
+                    background: var(--color-background);
+                    border-top: 1px solid var(--color-border);
+                    padding: var(--spacing-4);
+                    box-shadow: var(--shadow-md);
+                }
+
+                .nav-menu.active {
+                    display: block;
+                }
+
+                .nav-links {
+                    flex-direction: column;
+                    gap: var(--spacing-4);
+                    align-items: flex-start;
+                }
+
+                .dropdown {
+                    width: 100%;
+                }
+
+                .dropdown-menu {
+                    position: static;
+                    display: none;
+                    box-shadow: none;
+                    border: none;
+                    padding-left: var(--spacing-4);
+                }
+
+                .dropdown.active .dropdown-menu {
+                    display: block;
+                }
+
+                .dropdown-toggle {
+                    width: 100%;
+                    text-align: left;
+                    padding: 0;
+                }
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const menuToggle = document.querySelector(
+                    ".mobile-menu-toggle",
+                );
+                const navMenu = document.querySelector(".nav-menu");
+                const dropdowns = document.querySelectorAll(".dropdown");
+
+                // Переключение мобильного меню
+                menuToggle.addEventListener("click", function () {
+                    navMenu.classList.toggle("active");
+
+                    // Анимация иконки бургер-меню
+                    this.classList.toggle("active");
+                    const spans = this.querySelectorAll("span");
+                    if (this.classList.contains("active")) {
+                        spans[0].style.transform =
+                            "rotate(45deg) translate(6px, 6px)";
+                        spans[1].style.opacity = "0";
+                        spans[2].style.transform =
+                            "rotate(-45deg) translate(6px, -6px)";
+                    } else {
+                        spans[0].style.transform = "none";
+                        spans[1].style.opacity = "1";
+                        spans[2].style.transform = "none";
+                    }
+                });
+
+                // Обработка дропдаунов на мобильных
+                dropdowns.forEach((dropdown) => {
+                    const toggle = dropdown.querySelector(".dropdown-toggle");
+                    toggle.addEventListener("click", function (e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            dropdown.classList.toggle("active");
+                        }
+                    });
+                });
+
+                // Закрытие меню при клике вне его
+                document.addEventListener("click", function (e) {
+                    if (
+                        !navMenu.contains(e.target) &&
+                        !menuToggle.contains(e.target)
+                    ) {
+                        navMenu.classList.remove("active");
+                        menuToggle.classList.remove("active");
+                        const spans = menuToggle.querySelectorAll("span");
+                        spans[0].style.transform = "none";
+                        spans[1].style.opacity = "1";
+                        spans[2].style.transform = "none";
+                    }
+                });
+
+                // Закрытие меню при изменении размера окна
+                window.addEventListener("resize", function () {
+                    if (window.innerWidth > 768) {
+                        navMenu.classList.remove("active");
+                        menuToggle.classList.remove("active");
+                        const spans = menuToggle.querySelectorAll("span");
+                        spans[0].style.transform = "none";
+                        spans[1].style.opacity = "1";
+                        spans[2].style.transform = "none";
+                        dropdowns.forEach((dropdown) =>
+                            dropdown.classList.remove("active"),
+                        );
+                    }
+                });
+            });
+        </script>
+    </body>
 </html>
