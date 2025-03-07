@@ -28,6 +28,10 @@
     }
   },
   {
+    "tag": "title",
+    "children": ["Как выбрать кредитную карту: подробное руководство"]
+  },
+  {
     "tag": "meta",
     "attributes": {
       "name": "og:description",
