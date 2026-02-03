@@ -1,0 +1,64 @@
+{
+  "id": "vtb-deposit-capital-2024-02-03",
+  "type": "deposits",
+  "bankName": "ВТБ",
+  "title": "Вклад Капитал",
+  "featured": true,
+  "shortDescription": "Вклад с высокой ставкой и возможностью пополнения",
+  "fullDescription": "Накопительный вклад ВТБ с возможностью пополнения и частичного снятия. Проценты начисляются с капитализацией ежемесячно. Подходит для среднесрочного хранения средств с получением дохода.",
+  "imageUrl": "/img/bank-logos/vtb_logo_icon.svg",
+  "features": [
+    "Процент до 8.0%",
+    "Ежемесячная капитализация",
+    "Пополнение вклада",
+    "Частичное снятие"
+  ],
+  "conditions": [
+    "Минимальная сумма вклада: 10 000 ₽",
+    "Срок вклада: от 6 месяцев до 2 лет",
+    "Проценты начисляются ежемесячно",
+    "Возможность пополнения вклада"
+  ],
+  "referralLink": "https://vtb.ru/deposits",
+  "version": {
+    "date": "2024-02-03",
+    "source": "https://vtb.ru",
+    "updatedBy": "system"
+  },
+  "parameters": {
+    "main": {
+      "interest_rate": "до 8.0%",
+      "min_amount": "10 000 ₽",
+      "max_amount": "3 000 000 ₽",
+      "term": "от 6 до 24 месяцев"
+    },
+    "fees": {
+      "opening_fee": "Бесплатно",
+      "maintenance_fee": "Бесплатно",
+      "early_closure_fee": "2% от суммы вклада"
+    },
+    "requirements": {
+      "client_category": "Физические лица",
+      "documents_required": [
+        "Паспорт гражданина РФ",
+        "ИНН (при наличии)"
+      ],
+      "age_requirement": "от 18 лет"
+    },
+    "deposit_terms": {
+      "min_deposit_amount": "10000",
+      "max_deposit_amount": "3000000",
+      "interest_rate": "до 8.0%",
+      "capitalization": "да",
+      "withdrawal_options": "частичное снятие после 6 месяцев",
+      "replenishment_options": "возможно",
+      "term_months": "от 6 до 24"
+    }
+  },
+  "validFrom": "2024-02-03",
+  "status": "active",
+  "meta": {
+    "title": "Вклад Капитал от ВТБ | Bank Select",
+    "description": "Информация о вкладе Капитал от ВТБ. Условия, процентные ставки, требования."
+  }
+}

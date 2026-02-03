@@ -1,0 +1,59 @@
+{
+  "id": "gazprombank-mortgage-new-building-2024-02-03",
+  "type": "mortgage",
+  "bankName": "Газпромбанк",
+  "title": "Ипотека на новостройку",
+  "featured": true,
+  "shortDescription": "Ипотечный кредит на приобретение квартиры в новом строящемся доме",
+  "fullDescription": "Ипотечный продукт Газпромбанка для приобретения квартиры в новостройке. Предусматривает различные программы государственной поддержки, включая семейную ипотеку и ипотеку для молодых специалистов.",
+  "imageUrl": "/img/bank-logos/gazprombank_logo_icon.svg",
+  "features": [
+    "Ставка от 9.0%",
+    "Первоначальный взнос от 20%",
+    "Срок до 30 лет",
+    "Для новостроек"
+  ],
+  "conditions": [
+    "Первоначальный взнос: от 20%",
+    "Срок кредита: от 1 года до 30 лет",
+    "Сумма кредита: от 500 000 до 60 000 000 ₽",
+    "Требуемый доход: не менее 45 000 ₽ в месяц"
+  ],
+  "referralLink": "https://gazprombank.ru/mortgage",
+  "version": {
+    "date": "2024-02-03",
+    "source": "https://gazprombank.ru",
+    "updatedBy": "system"
+  },
+  "parameters": {
+    "main": {
+      "interest_rate": "от 9.0%",
+      "min_down_payment": "20%",
+      "loan_term": "от 1 до 30 лет",
+      "min_loan_amount": "500 000 ₽",
+      "max_loan_amount": "60 000 000 ₽"
+    },
+    "fees": {
+      "application_fee": "Бесплатно",
+      "issuance_fee": "0.7% от суммы кредита",
+      "early_repayment_fee": "Бесплатно"
+    },
+    "requirements": {
+      "client_category": "Физические лица",
+      "age_requirement": "от 21 до 65 лет",
+      "work_experience": "не менее 6 месяцев на последнем месте",
+      "documents_required": [
+        "Паспорт гражданина РФ",
+        "Справка 2-НДФЛ или по форме банка",
+        "ИНН",
+        "Трудовая книжка"
+      ]
+    }
+  },
+  "validFrom": "2024-02-03",
+  "status": "active",
+  "meta": {
+    "title": "Ипотека на новостройку от Газпромбанка | Bank Select",
+    "description": "Информация об ипотеке на новостройку от Газпромбанка. Условия, ставки, требования к заёмщику."
+  }
+}

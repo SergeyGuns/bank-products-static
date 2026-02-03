@@ -1,0 +1,59 @@
+{
+  "id": "gazprombank-auto-loan-premium-2024-02-03",
+  "type": "credits",
+  "bankName": "Газпромбанк",
+  "title": "Автокредит Премиум",
+  "featured": true,
+  "shortDescription": "Кредит на покупку нового автомобиля премиум-класса",
+  "fullDescription": "Автокредит Газпромбанка для приобретения нового автомобиля премиум-класса. Предусматривает минимальный первоначальный взнос и выгодную процентную ставку. Возможность досрочного погашения без штрафов.",
+  "imageUrl": "/img/bank-logos/gazprombank_logo_icon.svg",
+  "features": [
+    "Ставка от 7.9%",
+    "Первоначальный взнос от 10%",
+    "Срок до 7 лет",
+    "Для автомобилей премиум-класса"
+  ],
+  "conditions": [
+    "Первоначальный взнос: от 10%",
+    "Срок кредита: от 1 года до 7 лет",
+    "Сумма кредита: от 500 000 до 15 000 000 ₽",
+    "Возраст автомобиля: только новые"
+  ],
+  "referralLink": "https://gazprombank.ru/auto-loans",
+  "version": {
+    "date": "2024-02-03",
+    "source": "https://gazprombank.ru",
+    "updatedBy": "system"
+  },
+  "parameters": {
+    "main": {
+      "interest_rate": "от 7.9%",
+      "min_down_payment": "10%",
+      "loan_term": "от 1 до 7 лет",
+      "min_loan_amount": "500 000 ₽",
+      "max_loan_amount": "15 000 000 ₽"
+    },
+    "fees": {
+      "application_fee": "Бесплатно",
+      "issuance_fee": "0.5% от суммы кредита",
+      "early_repayment_fee": "Бесплатно"
+    },
+    "requirements": {
+      "client_category": "Физические лица",
+      "age_requirement": "от 21 до 65 лет",
+      "work_experience": "не менее 6 месяцев на последнем месте",
+      "documents_required": [
+        "Паспорт гражданина РФ",
+        "Водительское удостоверение",
+        "Справка 2-НДФЛ или по форме банка",
+        "ИНН"
+      ]
+    }
+  },
+  "validFrom": "2024-02-03",
+  "status": "active",
+  "meta": {
+    "title": "Автокредит Премиум от Газпромбанка | Bank Select",
+    "description": "Информация об автокредите Премиум от Газпромбанка. Условия, ставки, требования к заёмщику."
+  }
+}

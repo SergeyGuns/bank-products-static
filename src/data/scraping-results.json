@@ -1,0 +1,269 @@
+{
+  "scanDate": "2026-02-03T19:56:15.090Z",
+  "results": [
+    {
+      "bank": "sberbank",
+      "scrapedData": [
+        {
+          "bankName": "sberbank",
+          "productType": "unknown",
+          "url": "https://www.sberbank.ru/ru/person/common/creditCards",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:18.820Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "unknown",
+          "url": "https://www.sberbank.ru/ru/person/common/debitCards",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:19.869Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "credits",
+          "url": "https://www.sberbank.ru/ru/person/common/loans",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:20.913Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "mortgage",
+          "url": "https://www.sberbank.ru/ru/person/common/mortgage",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:21.957Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "deposits",
+          "url": "https://www.sberbank.ru/ru/person/common/deposits",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:22.993Z"
+        }
+      ],
+      "comparison": [
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "unknown",
+          "url": "https://www.sberbank.ru/ru/person/common/creditCards"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "unknown",
+          "url": "https://www.sberbank.ru/ru/person/common/debitCards"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "credits",
+          "url": "https://www.sberbank.ru/ru/person/common/loans"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "mortgage",
+          "url": "https://www.sberbank.ru/ru/person/common/mortgage"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "deposits",
+          "url": "https://www.sberbank.ru/ru/person/common/deposits"
+        }
+      ],
+      "timestamp": "2026-02-03T19:55:17.574Z"
+    },
+    {
+      "bank": "vtb",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:55:23.021Z"
+    },
+    {
+      "bank": "gazprombank",
+      "scrapedData": [
+        {
+          "bankName": "gazprombank",
+          "productType": "cards",
+          "url": "https://www.gazprombank.ru/personal/cards/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:30.805Z"
+        },
+        {
+          "bankName": "gazprombank",
+          "productType": "mortgage",
+          "url": "https://www.gazprombank.ru/personal/mortgage/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:35.258Z"
+        }
+      ],
+      "comparison": [
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "cards",
+          "url": "https://www.gazprombank.ru/personal/cards/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "mortgage",
+          "url": "https://www.gazprombank.ru/personal/mortgage/"
+        }
+      ],
+      "timestamp": "2026-02-03T19:55:27.859Z"
+    },
+    {
+      "bank": "alfabank",
+      "scrapedData": [
+        {
+          "bankName": "alfabank",
+          "productType": "cards",
+          "url": "https://alfabank.ru/retail/cards/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:36.489Z"
+        },
+        {
+          "bankName": "alfabank",
+          "productType": "credits",
+          "url": "https://alfabank.ru/retail/loans/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:37.554Z"
+        },
+        {
+          "bankName": "alfabank",
+          "productType": "deposits",
+          "url": "https://alfabank.ru/retail/deposits/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:38.637Z"
+        },
+        {
+          "bankName": "alfabank",
+          "productType": "mortgage",
+          "url": "https://alfabank.ru/retail/mortgage/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:39.684Z"
+        }
+      ],
+      "comparison": [
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "cards",
+          "url": "https://alfabank.ru/retail/cards/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "credits",
+          "url": "https://alfabank.ru/retail/loans/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "deposits",
+          "url": "https://alfabank.ru/retail/deposits/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "mortgage",
+          "url": "https://alfabank.ru/retail/mortgage/"
+        }
+      ],
+      "timestamp": "2026-02-03T19:55:35.301Z"
+    },
+    {
+      "bank": "psb",
+      "scrapedData": [
+        {
+          "bankName": "psb",
+          "productType": "cards",
+          "url": "https://psb.ru/personal/cards/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:42.046Z"
+        },
+        {
+          "bankName": "psb",
+          "productType": "credits",
+          "url": "https://psb.ru/personal/loans/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:43.766Z"
+        },
+        {
+          "bankName": "psb",
+          "productType": "mortgage",
+          "url": "https://psb.ru/personal/mortgage/",
+          "products": [],
+          "lastScraped": "2026-02-03T19:55:47.343Z"
+        }
+      ],
+      "comparison": [
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "cards",
+          "url": "https://psb.ru/personal/cards/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "credits",
+          "url": "https://psb.ru/personal/loans/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "mortgage",
+          "url": "https://psb.ru/personal/mortgage/"
+        }
+      ],
+      "timestamp": "2026-02-03T19:55:39.712Z"
+    },
+    {
+      "bank": "roselhozbank",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:55:47.425Z"
+    },
+    {
+      "bank": "mkb",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:55:52.322Z"
+    },
+    {
+      "bank": "sovcombank",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:56:03.218Z"
+    },
+    {
+      "bank": "tbank",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:56:07.413Z"
+    },
+    {
+      "bank": "domrf",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-03T19:56:11.953Z"
+    }
+  ]
+}

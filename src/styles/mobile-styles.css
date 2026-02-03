@@ -1,0 +1,325 @@
+/* 
+ * Мобильные стили для bank-products-static
+ * Улучшенная адаптация под мобильные устройства
+ */
+
+/* Основные настройки для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Общие стили для мобильных */
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Шапка сайта */
+  header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.2em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav li {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 8px 12px;
+    display: block;
+    width: 100%;
+  }
+
+  /* Поисковая строка */
+  .search-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .search-button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Основной контент */
+  .container {
+    padding: 15px;
+  }
+
+  /* Карточки продуктов */
+  .product-grid {
+    grid-template-columns: 1fr; /* Одна колонка на мобильных */
+    gap: 15px;
+  }
+
+  .product-card {
+    padding: 15px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+
+  .product-info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-title {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+  }
+
+  .product-description {
+    font-size: 0.9em;
+    margin-bottom: 12px;
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+
+  .feature-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-actions {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Страница категории */
+  .category-header {
+    text-align: center;
+  }
+
+  .category-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .category-description {
+    font-size: 0.9em;
+  }
+
+  /* Фильтры */
+  .filters-panel {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Скрыт по умолчанию */
+    width: 80%;
+    height: 100vh;
+    background: white;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+  }
+
+  .filters-panel.active {
+    left: 0; /* Отображается при активации */
+  }
+
+  .filters-toggle {
+    display: block;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+
+  .filter-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .filter-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  .filter-select, .filter-slider {
+    width: 100%;
+    padding: 8px;
+  }
+
+  /* Страница продукта */
+  .product-detail {
+    padding: 15px;
+  }
+
+  .product-detail-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .product-detail-image {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .product-detail-info {
+    width: 100%;
+  }
+
+  .product-detail-title {
+    font-size: 1.4em;
+  }
+
+  .product-parameters {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .parameter-group {
+    width: 100%;
+  }
+
+  /* Страница сравнения */
+  .comparison-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .comparison-row {
+    display: flex;
+    min-width: max-content;
+  }
+
+  .comparison-cell {
+    min-width: 250px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Футер */
+  footer {
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  .product-card {
+    padding: 10px;
+  }
+
+  .product-title {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 8px 12px;
+    font-size: 0.9em;
+  }
+
+  .category-title {
+    font-size: 1.3em;
+  }
+
+  .h1 {
+    font-size: 1.6em;
+  }
+
+  .h2 {
+    font-size: 1.4em;
+  }
+
+  .h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* Улучшенная адаптация для тач-устройств */
+@media screen and (hover: none) and (pointer: coarse) {
+  /* Увеличиваем размер элементов управления для тач-устройств */
+  .btn {
+    min-height: 44px; /* Минимальный размер для удобного нажатия */
+    min-width: 44px;
+  }
+
+  a, button, input, select, textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .product-card {
+    padding: 20px 15px; /* Добавляем больше места для нажатия */
+  }
+
+  .feature-item {
+    padding: 10px;
+  }
+}
+
+/* Оптимизация для горизонтальной ориентации */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  
+  .product-card {
+    min-width: 280px;
+  }
+}
+
+/* Улучшенная доступность для мобильных устройств */
+@media screen and (max-width: 768px) {
+  /* Увеличиваем размер текста для лучшей читаемости */
+  p, span, div {
+    font-size: 16px !important; /* Используем !important для переопределения */
+  }
+
+  /* Улучшаем контраст для лучшей видимости */
+  .btn-primary {
+    background-color: #0056b3;
+  }
+
+  /* Добавляем больше пространства между интерактивными элементами */
+  .product-actions .btn {
+    margin: 5px;
+  }
+}

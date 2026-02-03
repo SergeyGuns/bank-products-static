@@ -1,0 +1,325 @@
+/*
+ * Темная тема для bank-products-static
+ * Использует CSS переменные для легкого переключения между светлой и темной темой
+ */
+
+/* Определение переменных для темной темы */
+:root {
+  --dark-bg-primary: #121212;
+  --dark-bg-secondary: #1e1e1e;
+  --dark-bg-tertiary: #2d2d2d;
+  --dark-surface: #1e1e1e;
+  --dark-surface-hover: #2a2a2a;
+  --dark-text-primary: #e0e0e0;
+  --dark-text-secondary: #b0b0b0;
+  --dark-text-disabled: #808080;
+  --dark-border: #444444;
+  --dark-accent: #bb86fc;
+  --dark-accent-light: #d0b4ff;
+  --dark-accent-dark: #a367cb;
+  --dark-success: #4caf50;
+  --dark-warning: #ff9800;
+  --dark-error: #f44336;
+  --dark-overlay: rgba(0, 0, 0, 0.7);
+}
+
+/* Применение темной темы */
+[data-theme="dark"] body,
+body.dark-theme {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+/* Общие стили для темной темы */
+[data-theme="dark"] *,
+body.dark-theme * {
+  background-color: inherit !important;
+  color: var(--dark-text-primary) !important;
+  border-color: var(--dark-border) !important;
+}
+
+/* Специфические стили для темной темы */
+[data-theme="dark"] .container,
+body.dark-theme .container {
+  background-color: var(--dark-bg-primary);
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] header,
+body.dark-theme header {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] nav a,
+body.dark-theme nav a {
+  color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] nav a:hover,
+body.dark-theme nav a:hover {
+  color: var(--dark-accent-light);
+  background-color: var(--dark-surface-hover);
+}
+
+[data-theme="dark"] .product-card,
+body.dark-theme .product-card {
+  background-color: var(--dark-bg-secondary);
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .product-title,
+body.dark-theme .product-title {
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .product-description,
+body.dark-theme .product-description {
+  color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .btn,
+body.dark-theme .btn {
+  background-color: var(--dark-accent);
+  color: var(--dark-bg-primary);
+  border: 1px solid var(--dark-accent);
+}
+
+[data-theme="dark"] .btn:hover,
+body.dark-theme .btn:hover {
+  background-color: var(--dark-accent-dark);
+  border-color: var(--dark-accent-dark);
+}
+
+[data-theme="dark"] .btn-outline,
+body.dark-theme .btn-outline {
+  background-color: transparent;
+  color: var(--dark-accent);
+  border: 1px solid var(--dark-accent);
+}
+
+[data-theme="dark"] .btn-outline:hover,
+body.dark-theme .btn-outline:hover {
+  background-color: var(--dark-accent);
+  color: var(--dark-bg-primary);
+}
+
+[data-theme="dark"] .search-input,
+body.dark-theme .search-input {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .search-input:focus,
+body.dark-theme .search-input:focus {
+  border-color: var(--dark-accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
+}
+
+[data-theme="dark"] .filters-panel,
+body.dark-theme .filters-panel {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border-right: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .filter-group,
+body.dark-theme .filter-group {
+  border-bottom: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .filter-label,
+body.dark-theme .filter-label {
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] .filter-select,
+body.dark-theme .filter-select {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .feature-item,
+body.dark-theme .feature-item {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .comparison-table,
+body.dark-theme .comparison-table {
+  background-color: var(--dark-bg-secondary);
+}
+
+[data-theme="dark"] .comparison-cell,
+body.dark-theme .comparison-cell {
+  border-right: 1px solid var(--dark-border);
+  border-bottom: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .comparison-cell.header,
+body.dark-theme .comparison-cell.header {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] footer,
+body.dark-theme footer {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-secondary);
+  border-top: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] .footer-link,
+body.dark-theme .footer-link {
+  color: var(--dark-text-secondary);
+}
+
+[data-theme="dark"] .footer-link:hover,
+body.dark-theme .footer-link:hover {
+  color: var(--dark-accent-light);
+}
+
+/* Стили для элементов формы */
+[data-theme="dark"] input,
+[data-theme="dark"] select,
+[data-theme="dark"] textarea,
+body.dark-theme input,
+body.dark-theme select,
+body.dark-theme textarea {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus,
+body.dark-theme input:focus,
+body.dark-theme select:focus,
+body.dark-theme textarea:focus {
+  border-color: var(--dark-accent);
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.3);
+}
+
+/* Стили для карточек с рейтингом */
+[data-theme="dark"] .credibility-high,
+body.dark-theme .credibility-high {
+  border-left: 4px solid var(--dark-success);
+}
+
+[data-theme="dark"] .credibility-medium,
+body.dark-theme .credibility-medium {
+  border-left: 4px solid var(--dark-warning);
+}
+
+[data-theme="dark"] .credibility-low,
+body.dark-theme .credibility-low {
+  border-left: 4px solid var(--dark-error);
+}
+
+/* Стили для модальных окон */
+[data-theme="dark"] .modal,
+body.dark-theme .modal {
+  background-color: var(--dark-overlay);
+}
+
+[data-theme="dark"] .modal-content,
+body.dark-theme .modal-content {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+/* Стили для табличных данных */
+[data-theme="dark"] table,
+body.dark-theme table {
+  background-color: var(--dark-bg-secondary);
+  color: var(--dark-text-primary);
+  border: 1px solid var(--dark-border);
+}
+
+[data-theme="dark"] th,
+[data-theme="dark"] td,
+body.dark-theme th,
+body.dark-theme td {
+  border: 1px solid var(--dark-border);
+  color: var(--dark-text-primary);
+}
+
+[data-theme="dark"] th,
+body.dark-theme th {
+  background-color: var(--dark-bg-tertiary);
+  color: var(--dark-text-primary);
+}
+
+/* Стили для прогресс-баров и индикаторов */
+[data-theme="dark"] .progress-bar,
+body.dark-theme .progress-bar {
+  background-color: var(--dark-bg-tertiary);
+}
+
+[data-theme="dark"] .progress-value,
+body.dark-theme .progress-value {
+  background-color: var(--dark-accent);
+}
+
+/* Стили для тени и возвышения */
+[data-theme="dark"] .card,
+[data-theme="dark"] .elevated,
+body.dark-theme .card,
+body.dark-theme .elevated {
+  background-color: var(--dark-bg-secondary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Специальные цвета для состояний */
+[data-theme="dark"] .text-success,
+body.dark-theme .text-success {
+  color: var(--dark-success) !important;
+}
+
+[data-theme="dark"] .text-warning,
+body.dark-theme .text-warning {
+  color: var(--dark-warning) !important;
+}
+
+[data-theme="dark"] .text-error,
+body.dark-theme .text-error {
+  color: var(--dark-error) !important;
+}
+
+/* Стили для переключателя темы */
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--dark-text-secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.theme-toggle:hover {
+  background-color: var(--dark-surface-hover);
+  color: var(--dark-accent-light);
+}
+
+/* Адаптация для системной темной темы */
+@media (prefers-color-scheme: dark) {
+  body:not([data-theme="light"]) {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+  }
+  
+  body:not([data-theme="light"]) .container {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+  }
+}

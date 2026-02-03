@@ -24,7 +24,6 @@ async function main() {
     // ).products;
     const products = [
       ...(await readReduceProducts("./src/data/pdfs")),
-      ...(await readReduceProducts("./src/data/pdfs/loan-t-bank")),
     ];
     // Группируем продукты по типу
     const groupedProducts = products.reduce((acc, product) => {

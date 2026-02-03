@@ -1,0 +1,264 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Банковский продукт",
+  "description": "Схема для описания банковского продукта",
+  "required": [
+    "id",
+    "type",
+    "bankName",
+    "title",
+    "version",
+    "parameters",
+    "validFrom",
+    "status"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Уникальный идентификатор продукта",
+      "pattern": "^[a-zA-Z0-9_-]+$",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "type": {
+      "type": "string",
+      "description": "Тип банковского продукта",
+      "enum": [
+        "credit-cards",
+        "debit-cards",
+        "credits",
+        "deposits",  // Вклады и накопительные счета
+        "mortgage",
+        "auto-loans",
+        "business-loans",
+        "investment-products",
+        "insurance-products"
+      ]
+    },
+    "bankName": {
+      "type": "string",
+      "description": "Название банка",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "title": {
+      "type": "string",
+      "description": "Название продукта",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "featured": {
+      "type": "boolean",
+      "description": "Признак featured продукта",
+      "default": false
+    },
+    "shortDescription": {
+      "type": "string",
+      "description": "Краткое описание продукта",
+      "maxLength": 500
+    },
+    "fullDescription": {
+      "type": "string",
+      "description": "Полное описание продукта",
+      "maxLength": 2000
+    },
+    "imageUrl": {
+      "type": "string",
+      "description": "URL изображения продукта",
+      "format": "uri"
+    },
+    "features": {
+      "type": "array",
+      "description": "Список ключевых особенностей",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "maxItems": 20
+    },
+    "conditions": {
+      "type": "array",
+      "description": "Условия получения продукта",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 200
+      },
+      "maxItems": 20
+    },
+    "referralLink": {
+      "type": "string",
+      "description": "Реферальная ссылка на продукт",
+      "format": "uri"
+    },
+    "version": {
+      "type": "object",
+      "description": "Информация о версии",
+      "required": ["date", "source"],
+      "properties": {
+        "date": {
+          "type": "string",
+          "description": "Дата обновления информации",
+          "format": "date"
+        },
+        "source": {
+          "type": "string",
+          "description": "Источник информации",
+          "format": "uri"
+        },
+        "updatedBy": {
+          "type": "string",
+          "description": "Автор обновления",
+          "minLength": 1,
+          "maxLength": 100
+        }
+      }
+    },
+    "parameters": {
+      "type": "object",
+      "description": "Параметры продукта",
+      "properties": {
+        "main": {
+          "type": "object",
+          "description": "Основные параметры",
+          "additionalProperties": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "fees": {
+          "type": "object",
+          "description": "Комиссии и платежи",
+          "additionalProperties": {
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "requirements": {
+          "type": "object",
+          "description": "Требования к клиенту",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "maxItems": 20
+              }
+            ]
+          }
+        },
+        "deposit_terms": {
+          "type": "object",
+          "description": "Условия вклада (для депозитов)",
+          "properties": {
+            "min_deposit_amount": {
+              "type": "string",
+              "description": "Минимальная сумма вклада",
+              "maxLength": 50
+            },
+            "max_deposit_amount": {
+              "type": "string",
+              "description": "Максимальная сумма вклада",
+              "maxLength": 50
+            },
+            "interest_rate": {
+              "type": "string",
+              "description": "Процентная ставка",
+              "maxLength": 20
+            },
+            "capitalization": {
+              "type": "string",
+              "description": "Капитализация процентов (да/нет)",
+              "enum": ["да", "нет", "по выбору клиента"]
+            },
+            "withdrawal_options": {
+              "type": "string",
+              "description": "Возможность частичных снятий",
+              "maxLength": 100
+            },
+            "replenishment_options": {
+              "type": "string",
+              "description": "Возможность пополнения",
+              "maxLength": 100
+            },
+            "term_months": {
+              "type": "string",
+              "description": "Срок вклада в месяцах",
+              "maxLength": 10
+            }
+          },
+          "additionalProperties": false
+        },
+        "cashback": {
+          "type": "object",
+          "description": "Параметры кэшбэка (для карт)",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 200
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200
+                },
+                "maxItems": 20
+              }
+            ]
+          }
+        }
+      },
+      "required": ["main"]
+    },
+    "validFrom": {
+      "type": "string",
+      "description": "Дата начала действия продукта",
+      "format": "date"
+    },
+    "validUntil": {
+      "type": "string",
+      "description": "Дата окончания действия продукта (если прекращен)",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "description": "Статус продукта",
+      "enum": [
+        "active",
+        "discontinued",
+        "updated",
+        "pending"
+      ]
+    },
+    "meta": {
+      "type": "object",
+      "description": "Метаданные для SEO",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "SEO заголовок",
+          "maxLength": 100
+        },
+        "description": {
+          "type": "string",
+          "description": "SEO описание",
+          "maxLength": 300
+        }
+      },
+      "required": ["title", "description"]
+    }
+  }
+}
