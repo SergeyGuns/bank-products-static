@@ -1,43 +1,36 @@
 {
-  "scanDate": "2026-02-03T19:56:15.090Z",
+  "scanDate": "2026-02-05T02:21:50.756Z",
   "results": [
     {
       "bank": "sberbank",
       "scrapedData": [
         {
           "bankName": "sberbank",
-          "productType": "unknown",
-          "url": "https://www.sberbank.ru/ru/person/common/creditCards",
+          "productType": "cards",
+          "url": "https://www.sberbank.ru/ru/person/cards/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:18.820Z"
-        },
-        {
-          "bankName": "sberbank",
-          "productType": "unknown",
-          "url": "https://www.sberbank.ru/ru/person/common/debitCards",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:19.869Z"
-        },
-        {
-          "bankName": "sberbank",
-          "productType": "credits",
-          "url": "https://www.sberbank.ru/ru/person/common/loans",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:20.913Z"
-        },
-        {
-          "bankName": "sberbank",
-          "productType": "mortgage",
-          "url": "https://www.sberbank.ru/ru/person/common/mortgage",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:21.957Z"
+          "lastScraped": "2026-02-05T02:21:07.604Z"
         },
         {
           "bankName": "sberbank",
           "productType": "deposits",
-          "url": "https://www.sberbank.ru/ru/person/common/deposits",
+          "url": "https://www.sberbank.ru/ru/person/deposits/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:22.993Z"
+          "lastScraped": "2026-02-05T02:21:09.694Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "credits",
+          "url": "https://www.sberbank.ru/ru/person/credits/",
+          "products": [],
+          "lastScraped": "2026-02-05T02:21:11.777Z"
+        },
+        {
+          "bankName": "sberbank",
+          "productType": "mortgage",
+          "url": "https://www.sberbank.ru/ru/person/ipoteka/",
+          "products": [],
+          "lastScraped": "2026-02-05T02:21:13.865Z"
         }
       ],
       "comparison": [
@@ -45,45 +38,38 @@
           "outdatedProducts": [],
           "newProducts": [],
           "updatedProducts": [],
-          "productType": "unknown",
-          "url": "https://www.sberbank.ru/ru/person/common/creditCards"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "unknown",
-          "url": "https://www.sberbank.ru/ru/person/common/debitCards"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "credits",
-          "url": "https://www.sberbank.ru/ru/person/common/loans"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "mortgage",
-          "url": "https://www.sberbank.ru/ru/person/common/mortgage"
+          "productType": "cards",
+          "url": "https://www.sberbank.ru/ru/person/cards/"
         },
         {
           "outdatedProducts": [],
           "newProducts": [],
           "updatedProducts": [],
           "productType": "deposits",
-          "url": "https://www.sberbank.ru/ru/person/common/deposits"
+          "url": "https://www.sberbank.ru/ru/person/deposits/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "credits",
+          "url": "https://www.sberbank.ru/ru/person/credits/"
+        },
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "mortgage",
+          "url": "https://www.sberbank.ru/ru/person/ipoteka/"
         }
       ],
-      "timestamp": "2026-02-03T19:55:17.574Z"
+      "timestamp": "2026-02-05T02:21:05.505Z"
     },
     {
       "bank": "vtb",
       "scrapedData": [],
       "comparison": [],
-      "timestamp": "2026-02-03T19:55:23.021Z"
+      "timestamp": "2026-02-05T02:21:13.896Z"
     },
     {
       "bank": "gazprombank",
@@ -93,14 +79,14 @@
           "productType": "cards",
           "url": "https://www.gazprombank.ru/personal/cards/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:30.805Z"
+          "lastScraped": "2026-02-05T02:21:18.546Z"
         },
         {
           "bankName": "gazprombank",
           "productType": "mortgage",
           "url": "https://www.gazprombank.ru/personal/mortgage/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:35.258Z"
+          "lastScraped": "2026-02-05T02:21:23.256Z"
         }
       ],
       "comparison": [
@@ -119,7 +105,7 @@
           "url": "https://www.gazprombank.ru/personal/mortgage/"
         }
       ],
-      "timestamp": "2026-02-03T19:55:27.859Z"
+      "timestamp": "2026-02-05T02:21:14.514Z"
     },
     {
       "bank": "alfabank",
@@ -129,28 +115,14 @@
           "productType": "cards",
           "url": "https://alfabank.ru/retail/cards/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:36.489Z"
-        },
-        {
-          "bankName": "alfabank",
-          "productType": "credits",
-          "url": "https://alfabank.ru/retail/loans/",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:37.554Z"
+          "lastScraped": "2026-02-05T02:21:25.652Z"
         },
         {
           "bankName": "alfabank",
           "productType": "deposits",
           "url": "https://alfabank.ru/retail/deposits/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:38.637Z"
-        },
-        {
-          "bankName": "alfabank",
-          "productType": "mortgage",
-          "url": "https://alfabank.ru/retail/mortgage/",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:39.684Z"
+          "lastScraped": "2026-02-05T02:21:28.151Z"
         }
       ],
       "comparison": [
@@ -165,49 +137,33 @@
           "outdatedProducts": [],
           "newProducts": [],
           "updatedProducts": [],
-          "productType": "credits",
-          "url": "https://alfabank.ru/retail/loans/"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
           "productType": "deposits",
           "url": "https://alfabank.ru/retail/deposits/"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "mortgage",
-          "url": "https://alfabank.ru/retail/mortgage/"
         }
       ],
-      "timestamp": "2026-02-03T19:55:35.301Z"
+      "timestamp": "2026-02-05T02:21:23.304Z"
     },
     {
       "bank": "psb",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-05T02:21:28.384Z"
+    },
+    {
+      "bank": "roselhozbank",
+      "scrapedData": [],
+      "comparison": [],
+      "timestamp": "2026-02-05T02:21:28.572Z"
+    },
+    {
+      "bank": "mkb",
       "scrapedData": [
         {
-          "bankName": "psb",
-          "productType": "cards",
-          "url": "https://psb.ru/personal/cards/",
+          "bankName": "mkb",
+          "productType": "deposits",
+          "url": "https://www.mkb.ru/personal/deposits/",
           "products": [],
-          "lastScraped": "2026-02-03T19:55:42.046Z"
-        },
-        {
-          "bankName": "psb",
-          "productType": "credits",
-          "url": "https://psb.ru/personal/loans/",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:43.766Z"
-        },
-        {
-          "bankName": "psb",
-          "productType": "mortgage",
-          "url": "https://psb.ru/personal/mortgage/",
-          "products": [],
-          "lastScraped": "2026-02-03T19:55:47.343Z"
+          "lastScraped": "2026-02-05T02:21:31.530Z"
         }
       ],
       "comparison": [
@@ -215,55 +171,45 @@
           "outdatedProducts": [],
           "newProducts": [],
           "updatedProducts": [],
-          "productType": "cards",
-          "url": "https://psb.ru/personal/cards/"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "credits",
-          "url": "https://psb.ru/personal/loans/"
-        },
-        {
-          "outdatedProducts": [],
-          "newProducts": [],
-          "updatedProducts": [],
-          "productType": "mortgage",
-          "url": "https://psb.ru/personal/mortgage/"
+          "productType": "deposits",
+          "url": "https://www.mkb.ru/personal/deposits/"
         }
       ],
-      "timestamp": "2026-02-03T19:55:39.712Z"
-    },
-    {
-      "bank": "roselhozbank",
-      "scrapedData": [],
-      "comparison": [],
-      "timestamp": "2026-02-03T19:55:47.425Z"
-    },
-    {
-      "bank": "mkb",
-      "scrapedData": [],
-      "comparison": [],
-      "timestamp": "2026-02-03T19:55:52.322Z"
+      "timestamp": "2026-02-05T02:21:28.902Z"
     },
     {
       "bank": "sovcombank",
       "scrapedData": [],
       "comparison": [],
-      "timestamp": "2026-02-03T19:56:03.218Z"
+      "timestamp": "2026-02-05T02:21:31.693Z"
     },
     {
       "bank": "tbank",
-      "scrapedData": [],
-      "comparison": [],
-      "timestamp": "2026-02-03T19:56:07.413Z"
+      "scrapedData": [
+        {
+          "bankName": "tbank",
+          "productType": "unknown",
+          "url": "https://www.tbank.ru/finance/",
+          "products": [],
+          "lastScraped": "2026-02-05T02:21:50.034Z"
+        }
+      ],
+      "comparison": [
+        {
+          "outdatedProducts": [],
+          "newProducts": [],
+          "updatedProducts": [],
+          "productType": "unknown",
+          "url": "https://www.tbank.ru/finance/"
+        }
+      ],
+      "timestamp": "2026-02-05T02:21:47.108Z"
     },
     {
       "bank": "domrf",
       "scrapedData": [],
       "comparison": [],
-      "timestamp": "2026-02-03T19:56:11.953Z"
+      "timestamp": "2026-02-05T02:21:50.063Z"
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+  "id": "raiffeisen-credit-card-1",
+  "title": "Кредитная карта \"Халва\"",
+  "type": "credit-cards",
+  "bankName": "Райффайзенбанк",
+  "source": "manual-addition",
+  "featured": false,
+  "shortDescription": "Кредитная карта \"Халва\"",
+  "fullDescription": "Информация о продукте Кредитная карта \"Халва\" от Райффайзенбанк",
+  "imageUrl": "/img/products/.jpg",
+  "features": [
+    "Продукт credit-cards",
+    "От банка Райффайзенбанк"
+  ],
+  "conditions": [
+    "Условия зависят от продукта"
+  ],
+  "referralLink": "",
+  "parameters": {
+    "main": {},
+    "fees": {},
+    "requirements": {}
+  },
+  "meta": {
+    "title": "Кредитная карта \"Халва\"",
+    "description": "Информация о Кредитная карта \"Халва\""
+  },
+  "version": {
+    "date": "2026-02-05",
+    "source": "manual-addition",
+    "updatedBy": "aggregator-import"
+  },
+  "validFrom": "2026-02-05",
+  "status": "active"
+}

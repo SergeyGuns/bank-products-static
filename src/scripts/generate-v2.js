@@ -34,14 +34,26 @@ async function main() {
         ].map(dir => fs.mkdir(path.join(distDir, dir), { recursive: true })));
 
         // Загрузка шаблонов
-        const templateFiles = await Promise.all(templates.map(file =>
-            fs.readFile(path.join(baseDir, 'templates', file), 'utf-8')
-        ));
-
-        const templateMap = templates.reduce((acc, file, index) => {
-            acc[file] = Handlebars.compile(templateFiles[index]);
-            return acc;
-        }, {});
+        const templateMap = {};
+        for (const file of templates) {
+            const filePath = path.join(baseDir, 'templates', file);
+            const stat = await fs.stat(filePath);
+            
+            if (stat.isFile()) {
+                const content = await fs.readFile(filePath, 'utf-8');
+                templateMap[file] = Handlebars.compile(content);
+            } else if (stat.isDirectory()) {
+                // Обработка файлов в поддиректориях
+                const subFiles = await fs.readdir(filePath);
+                for (const subFile of subFiles) {
+                    if (path.extname(subFile) === '.html') {
+                        const subFilePath = path.join(filePath, subFile);
+                        const subContent = await fs.readFile(subFilePath, 'utf-8');
+                        templateMap[subFile] = Handlebars.compile(subContent);
+                    }
+                }
+            }
+        }
 
         // Регистрация частичных шаблонов
         Handlebars.registerPartial('layout', templateMap['layout.html']);
@@ -126,6 +138,22 @@ async function generateStaticPages(templateMap, distDir) {
     await Promise.all(staticPages.map(({ template, name, meta }) =>
         fs.writeFile(path.join(distDir, name), template({ meta }))
     ));
+
+    // Генерация страниц для статей
+    const articleTemplates = Object.keys(templateMap).filter(key => 
+        key.endsWith('.html') && !['404.html', 'add.html', 'calculator.html', 'layout.html', 'product-page.html', 'category-page.html', 'compare-page.html', 'index-page.html'].includes(key)
+    );
+
+    await Promise.all(articleTemplates.map(templateName => {
+        const template = templateMap[templateName];
+        const fileName = templateName.replace('.html', '.html');
+        const meta = { 
+            title: templateName.replace('.html', '').replace(/-/g, ' '), 
+            description: `Статья о ${templateName.replace('.html', '').replace(/-/g, ' ')}` 
+        };
+        
+        return fs.writeFile(path.join(distDir, fileName), template({ meta }));
+    }));
 }
 
 async function copyStaticFiles(baseDir, distDir) {
@@ -147,22 +175,48 @@ async function copyStaticFiles(baseDir, distDir) {
 }
 
 async function generateSitemap(products, categories, distDir) {
-    const baseUrl = 'https://your-site.ru';
+    const path = require('path');
+    const baseUrl = 'https://bank-select.ru';
+    
+    // Основные URL
     const urls = [
         `${baseUrl}/`,
+        // Страницы продуктов
         ...products.map(product => `${baseUrl}/products/${product.id}.html`),
-        ...categories.map(category => `${baseUrl}/category/${category.id}.html`)
+        // Страницы категорий
+        ...categories.map(category => `${baseUrl}/category/${category.id}.html`),
+        // Страницы сравнения
+        ...categories.map(category => `${baseUrl}/compare/${category.id}.html`),
+        // Статические страницы
+        `${baseUrl}/404.html`,
+        `${baseUrl}/add.html`,
+        `${baseUrl}/calculator.html`
     ];
+
+    // Также добавим статьи из templates/articles
+    const articlesDir = path.join(__dirname, '../templates', 'articles');
+    try {
+        await fs.access(articlesDir); // Проверяем существование директории
+        const articleFiles = await fs.readdir(articlesDir);
+        const articleUrls = articleFiles
+            .filter(file => path.extname(file) === '.html')
+            .map(file => `${baseUrl}/${file}`);
+        urls.push(...articleUrls);
+    } catch (err) {
+        // Если директории articles нет, просто продолжаем
+    }
+
+    // Убираем дубликаты
+    const uniqueUrls = [...new Set(urls)];
 
     const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls.map(url => `
+    ${uniqueUrls.map(url => `
     <url>
         <loc>${url}</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    `).join('')}
+    </url>`).join('')}
 </urlset>`;
 
     await fs.writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml);

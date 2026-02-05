@@ -1,0 +1,59 @@
+{
+  "lastUpdated": "2026-02-05T05:42:00.000Z",
+  "banks": [
+    {
+      "name": "vtb",
+      "urls": [
+        "https://www.vtb.ru/personal/cards/credit-cards/",
+        "https://www.vtb.ru/personal/cards/debit-cards/",
+        "https://www.vtb.ru/personal/deposits-and-accounts/",
+        "https://www.vtb.ru/personal/loans/",
+        "https://www.vtb.ru/personal/mortgage/"
+      ],
+      "lastUpdated": "2026-02-05T05:42:00.000Z"
+    },
+    {
+      "name": "psb",
+      "urls": [
+        "https://psb.ru/personal/cards/credit/",
+        "https://psb.ru/personal/cards/debit/",
+        "https://psb.ru/personal/deposits/",
+        "https://psb.ru/personal/credits/",
+        "https://psb.ru/personal/mortgage/"
+      ],
+      "lastUpdated": "2026-02-05T05:42:00.000Z"
+    },
+    {
+      "name": "roselhozbank",
+      "urls": [
+        "https://rshb.ru/natural/#/cards/credit",
+        "https://rshb.ru/natural/#/cards/debit",
+        "https://rshb.ru/natural/#/deposits",
+        "https://rshb.ru/natural/#/credits/personal",
+        "https://rshb.ru/natural/#/mortgage"
+      ],
+      "lastUpdated": "2026-02-05T05:42:00.000Z"
+    },
+    {
+      "name": "sovcombank",
+      "urls": [
+        "https://www.banki.ru/banks/bank/sovcombank/credit_cards/",
+        "https://www.banki.ru/banks/bank/sovcombank/debit_cards/",
+        "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+        "https://www.banki.ru/banks/bank/sovcombank/consumer_loans/",
+        "https://www.banki.ru/banks/bank/sovcombank/mortgage/"
+      ],
+      "lastUpdated": "2026-02-05T05:42:00.000Z"
+    },
+    {
+      "name": "domrf",
+      "urls": [
+        "https://domrfbank.ru/products/cards",
+        "https://domrfbank.ru/products/deposits",
+        "https://domrfbank.ru/products/credits",
+        "https://domrfbank.ru/products/mortgage"
+      ],
+      "lastUpdated": "2026-02-05T05:42:00.000Z"
+    }
+  ]
+}

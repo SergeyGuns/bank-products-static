@@ -1,0 +1,73 @@
+{{#> layout}}
+<div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Все продукты</h1>
+        <p class="text-light">Список всех банковских продуктов</p>
+    </div>
+
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            {{#each banks}}
+            <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+        
+        <select class="select input" id="typeFilter" style="margin-left: 1rem;">
+            <option value="all">Все типы</option>
+            <option value="credit-cards">Кредитные карты</option>
+            <option value="debit-cards">Дебетовые карты</option>
+            <option value="credits">Кредиты</option>
+        </select>
+    </div>
+
+    <div class="grid grid-cols-2">
+        {{#each products}}
+        <article class="card card-hover" data-bank="{{bankName}}" data-type="{{type}}">
+            <img class="card-bank-logo mb-4" src="{{imageUrl}}" alt="{{title}}" loading="lazy">
+            <h2 class="mb-2">{{title}}</h2>
+            <p class="text-light mb-2">{{bankName}}</p>
+            <ul class="mb-4">
+                {{#each features}}
+                <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <div class="card-actions">
+                <a href="/products/{{id}}.html" class="btn btn-primary">Подробнее</a>
+                <span class="badge badge-primary ml-2">{{type}}</span>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const bankFilter = document.getElementById('bankFilter');
+    const typeFilter = document.getElementById('typeFilter');
+    const cards = document.querySelectorAll('.card-hover');
+    
+    function filterCards() {
+        const selectedBank = bankFilter.value;
+        const selectedType = typeFilter.value;
+        
+        cards.forEach(card => {
+            const cardBank = card.getAttribute('data-bank');
+            const cardType = card.getAttribute('data-type');
+            
+            const bankMatch = selectedBank === 'all' || cardBank === selectedBank;
+            const typeMatch = selectedType === 'all' || cardType === selectedType;
+            
+            if (bankMatch && typeMatch) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+    
+    bankFilter.addEventListener('change', filterCards);
+    typeFilter.addEventListener('change', filterCards);
+});
+</script>
+{{/layout}}

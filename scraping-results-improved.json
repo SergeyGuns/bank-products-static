@@ -1,0 +1,303 @@
+{
+  "scanDate": "2026-02-05T21:50:42.644Z",
+  "configVersion": "improved-v1",
+  "results": [
+    {
+      "bank": "vtb",
+      "successfulUrls": [],
+      "failedUrls": [
+        {
+          "url": "https://www.vtb.ru/personal/cards/credit-cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/cards/debit-cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/deposits-and-accounts/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/loans/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/mortgage/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/deposits/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.vtb.ru/personal/credits/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:49:39.352Z"
+    },
+    {
+      "bank": "psb",
+      "successfulUrls": [],
+      "failedUrls": [
+        {
+          "url": "https://psb.ru/personal/cards/credit/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/cards/debit/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/deposits/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/credits/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/mortgage/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/bank-cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://psb.ru/personal/loans/consumer-loans/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:49:40.354Z"
+    },
+    {
+      "bank": "rshb",
+      "successfulUrls": [
+        {
+          "url": "https://rshb.ru/natural/#/cards/credit",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/cards/debit",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/deposits",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/credits/personal",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/mortgage",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/products",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/banking",
+          "status": "success",
+          "contentLength": 525258
+        },
+        {
+          "url": "https://rshb.ru/natural/#/credit",
+          "status": "success",
+          "contentLength": 525258
+        }
+      ],
+      "failedUrls": [],
+      "timestamp": "2026-02-05T21:49:40.740Z"
+    },
+    {
+      "bank": "sovcombank",
+      "successfulUrls": [
+        {
+          "url": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+          "status": "success",
+          "contentLength": 1075705
+        }
+      ],
+      "failedUrls": [
+        {
+          "url": "https://www.banki.ru/banks/bank/sovcombank/credit_cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.banki.ru/banks/bank/sovcombank/debit_cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.banki.ru/banks/bank/sovcombank/consumer_loans/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.banki.ru/banks/bank/sovcombank/mortgage/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://sravni.ru/bank/sovcombank/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://vbr.ru/banki/sovcombank/",
+          "reason": "Не удалось получить контент после всех попыток"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:05.745Z"
+    },
+    {
+      "bank": "domrf",
+      "successfulUrls": [],
+      "failedUrls": [
+        {
+          "url": "https://domrfbank.ru/products/cards",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/products/deposits",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/products/credits",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/products/mortgage",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/products/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/personal/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://domrfbank.ru/personal/products/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:16.980Z"
+    },
+    {
+      "bank": "sberbank",
+      "successfulUrls": [
+        {
+          "url": "https://www.sberbank.ru/ru/person/credits/",
+          "status": "success",
+          "contentLength": 6109
+        }
+      ],
+      "failedUrls": [
+        {
+          "url": "https://www.sberbank.ru/ru/person/cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.sberbank.ru/ru/person/deposits/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.sberbank.ru/ru/person/ipoteka/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:18.982Z"
+    },
+    {
+      "bank": "gazprombank",
+      "successfulUrls": [
+        {
+          "url": "https://www.gazprombank.ru/personal/cards/",
+          "status": "success",
+          "contentLength": 471999
+        },
+        {
+          "url": "https://www.gazprombank.ru/personal/mortgage/",
+          "status": "success",
+          "contentLength": 506926
+        }
+      ],
+      "failedUrls": [
+        {
+          "url": "https://www.gazprombank.ru/personal/loans/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.gazprombank.ru/personal/deposits/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:22.268Z"
+    },
+    {
+      "bank": "alfabank",
+      "successfulUrls": [
+        {
+          "url": "https://alfabank.ru/retail/cards/",
+          "status": "success",
+          "contentLength": 1697
+        },
+        {
+          "url": "https://alfabank.ru/retail/deposits/",
+          "status": "success",
+          "contentLength": 1700
+        }
+      ],
+      "failedUrls": [
+        {
+          "url": "https://alfabank.ru/retail/loans/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://alfabank.ru/retail/ipoteka/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:33.489Z"
+    },
+    {
+      "bank": "tbank",
+      "successfulUrls": [],
+      "failedUrls": [
+        {
+          "url": "https://www.tbank.ru/personal/cards/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.tbank.ru/personal/loans/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.tbank.ru/personal/deposits/",
+          "reason": "URL недоступен при проверке"
+        },
+        {
+          "url": "https://www.tbank.ru/personal/ipoteka/",
+          "reason": "URL недоступен при проверке"
+        }
+      ],
+      "timestamp": "2026-02-05T21:50:42.132Z"
+    }
+  ]
+}

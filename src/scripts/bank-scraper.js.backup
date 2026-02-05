@@ -1,0 +1,364 @@
+/**
+ * Скрипт для автоматического сканирования официальных сайтов банков
+ * с целью проверки актуальности информации о банковских продуктах
+ */
+
+const axios = require('axios');
+const fs = require('fs').promises;
+const path = require('path');
+const logger = require('./logger');
+const { ErrorHandler } = require('./error-handler');
+const BackupMethods = require('./backup-methods');
+const notificationSystem = require('./notification-system');
+const urlManager = require('./url-manager');
+const { extractProductInfo } = require('./product-parser');
+
+// Условная загрузка puppeteer (только при необходимости)
+let puppeteer;
+try {
+  puppeteer = require('puppeteer');
+} catch (err) {
+  logger.warn('Puppeteer не установлен. Установите его с помощью: npm install puppeteer');
+}
+
+// Список User-Agent строк для ротации
+const USER_AGENTS = [
+  // Chrome на Windows
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36',
+
+  // Chrome на macOS
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+
+  // Chrome на Linux
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+  'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+
+  // Firefox на Windows
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0',
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0',
+
+  // Firefox на macOS
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:121.0) Gecko/20100101 Firefox/121.0',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:120.0) Gecko/20100101 Firefox/120.0',
+
+  // Safari на macOS
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15',
+  'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+
+  // Мобильные User-Agent
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1',
+  'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+  'Mozilla/5.0 (Linux; Android 13; SM-S901B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36',
+  'Mozilla/5.0 (Linux; Android 13; SM-A546V) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Mobile Safari/537.36'
+];
+
+// Список прокси-серверов (можно обновлять по мере необходимости)
+const PROXY_LIST = [
+  // Пример формата: 'http://username:password@proxy-server:port'
+  // 'http://proxy1.example.com:8080',
+  // 'http://proxy2.example.com:8080',
+];
+
+// Индекс текущего прокси для ротации
+let currentProxyIndex = 0;
+
+// Функция для получения следующего прокси из списка
+function getNextProxy() {
+  if (PROXY_LIST.length === 0) {
+    return null;
+  }
+
+  const proxy = PROXY_LIST[currentProxyIndex];
+  currentProxyIndex = (currentProxyIndex + 1) % PROXY_LIST.length;
+  return proxy;
+}
+
+// Конфигурация для скрапинга
+const scrapingConfig = {
+  // Таймаут для запросов
+  timeout: 45000,
+
+  // Заголовки для имитации реального браузера
+  headers: {
+    'User-Agent': USER_AGENTS[0],
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'Accept-Language': 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate, br',
+    'Connection': 'keep-alive',
+    'Upgrade-Insecure-Requests': '1',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Cache-Control': 'max-age=0'
+  },
+
+  // Задержка между запросами (в миллисекундах)
+  delayBetweenRequests: 7000,
+
+  // Максимальное количество попыток для запроса
+  maxRetries: 7, // Увеличил количество попыток
+
+  // Базовая задержка для повторных попыток (в миллисекундах)
+  retryDelay: 3000,
+
+  // Максимальная задержка для повторных попыток (в миллисекундах)
+  maxRetryDelay: 25000,
+
+  // Список банков и их веб-сайтов
+  banks: [
+    {
+      name: 'sberbank',
+      url: 'https://www.sberbank.ru',
+      productEndpoints: [
+        // Обновленные URL для Сбербанка на основе поиска
+        'https://www.sberbank.ru/ru/person/cards/',
+        'https://www.sberbank.ru/ru/person/deposits/',
+        'https://www.sberbank.ru/ru/person/credits/',
+        'https://www.sberbank.ru/ru/person/ipoteka/'
+      ]
+    },
+    {
+      name: 'vtb',
+      url: 'https://www.vtb.ru',
+      productEndpoints: [\n        'https://online.vtb.ru/',\n        'https://www.vtb.ru/personal/',\n        'https://www.vtb.ru/personal/bank-products/',\n        'https://www.vtb.ru/personal/credit-cards/',\n        'https://www.vtb.ru/personal/debit-cards/',\n        'https://www.vtb.ru/personal/deposits/',\n        'https://www.vtb.ru/personal/loans/',\n        'https://www.vtb.ru/personal/mortgage/',
+    newProducts: [],
+    updatedProducts: [],
+    productType: scrapedData.productType,
+    url: scrapedData.url
+  };
+
+  // Логика сравнения будет реализована здесь
+  // ...
+
+  return comparisonResult;
+}
+
+/**
+ * Загрузка существующих данных о продуктах
+ */
+async function loadExistingProductData(dataPath) {
+  const results = [];
+  
+  try {
+    const files = await fs.readdir(dataPath);
+    
+    for (const file of files) {
+      const fullPath = path.join(dataPath, file);
+      const stat = await fs.stat(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Рекурсивная загрузка из поддиректорий
+        const subDirResults = await loadExistingProductData(fullPath);
+        results.push(...subDirResults);
+      } else if (file.endsWith('.json')) {
+        // Загрузка JSON файла
+        const fileContent = await fs.readFile(fullPath, 'utf8');
+        const productData = JSON.parse(fileContent);
+        results.push(productData);
+      }
+    }
+  } catch (error) {
+    await logger.error(`Ошибка при загрузке существующих данных:`, { errorMessage: error.message });
+  }
+  
+  return results;
+}
+
+/**
+ * Основная функция сканирования банковских сайтов
+ */
+async function scanBankWebsites() {
+  await logger.info('Начало сканирования банковских сайтов...');
+
+  const results = [];
+
+  for (const bank of scrapingConfig.banks) {
+    await logger.info(`Сканирование банка: ${bank.name}`, { bank: bank.name });
+
+    // Получаем URL для банка из динамической конфигурации
+    const dynamicUrls = await urlManager.getBankUrls(bank.name);
+    const allUrls = [...bank.productEndpoints]; // Начинаем с базовых URL
+
+    // Добавляем динамические URL, если они есть
+    if (dynamicUrls && dynamicUrls.length > 0) {
+      allUrls.push(...dynamicUrls);
+      await logger.info(`Добавлены динамические URL для банка ${bank.name}`, {
+        bank: bank.name,
+        dynamicUrlCount: dynamicUrls.length
+      });
+    }
+
+    const bankResults = {
+      bank: bank.name,
+      scrapedData: [],
+      comparison: [],
+      timestamp: new Date().toISOString()
+    };
+
+    // Обработка всех URL для банка (базовые и динамические)
+    for (const endpoint of allUrls) {
+      // Формирование полного URL
+      let fullUrl;
+      if (endpoint.startsWith('http')) {
+        fullUrl = endpoint; // Если URL уже полный
+      } else {
+        fullUrl = bank.url + endpoint; // Иначе добавляем к базовому URL
+      }
+
+      // Проверяем доступность URL перед скрапингом
+      const isAvailable = await checkUrlAvailability(fullUrl);
+      if (!isAvailable) {
+        await logger.info(`URL недоступен, пропускаем: ${fullUrl}`, { url: fullUrl, bank: bank.name });
+
+        // Отправляем уведомление о недоступности ресурса
+        await notificationSystem.notifyResourceUnavailable(
+          fullUrl,
+          bank.name,
+          'URL недоступен при проверке доступности',
+          'not_found'
+        );
+
+        continue;
+      }
+
+      // Задержка между запросами для снижения нагрузки
+      await new Promise(resolve => setTimeout(resolve, scrapingConfig.delayBetweenRequests));
+
+      // Получение страницы продукта
+      await logger.info(`Обработка: ${fullUrl}`, { url: fullUrl, bank: bank.name });
+      const pageContent = await fetchWebPage(fullUrl);
+
+      if (pageContent) {
+        // Извлечение информации о продуктах
+        const productInfo = extractProductInfo(pageContent, bank.name, fullUrl);
+
+        // Сравнение с существующими данными
+        const comparisonResult = await compareWithExistingData(productInfo);
+
+        bankResults.scrapedData.push(productInfo);
+        bankResults.comparison.push(comparisonResult);
+
+        await logger.info(`Данные успешно получены с: ${fullUrl}`, {
+          url: fullUrl,
+          bank: bank.name,
+          productType: productInfo.productType
+        });
+      } else {
+        await logger.warn(`Не удалось получить данные с: ${fullUrl}`, { url: fullUrl, bank: bank.name });
+      }
+    }
+
+    results.push(bankResults);
+  }
+
+  await logger.info('Завершено сканирование банковских сайтов');
+  return results;
+}
+
+/**
+ * Функция для сохранения результатов сканирования
+ */
+async function saveScanResults(results) {
+  const outputPath = path.join(__dirname, '../data/scraping-results.json');
+  const outputData = {
+    scanDate: new Date().toISOString(),
+    results: results
+  };
+
+  try {
+    await fs.writeFile(outputPath, JSON.stringify(outputData, null, 2), 'utf8');
+    await logger.info(`Результаты сканирования сохранены`, { outputPath, resultCount: results.length });
+  } catch (error) {
+    await logger.error('Ошибка при сохранении результатов:', { error: error.message, outputPath });
+  }
+}
+
+/**
+ * Запуск сканирования
+ */
+async function runScraping() {
+  try {
+    await logger.info('Запуск процесса сканирования банковских сайтов');
+    const results = await scanBankWebsites();
+    await saveScanResults(results);
+
+    // Вывод статистики
+    await logger.info('Статистика сканирования:');
+    for (const result of results) {
+      await logger.info(`${result.bank}:`, { bank: result.bank });
+      await logger.info(`  - Обработано страниц: ${result.scrapedData.length}`, {
+        bank: result.bank,
+        processedPages: result.scrapedData.length
+      });
+
+      // Подсчет продуктов по типам
+      const stats = {};
+      for (const data of result.scrapedData) {
+        if (!stats[data.productType]) {
+          stats[data.productType] = 0;
+        }
+        stats[data.productType]++;
+      }
+
+      for (const [type, count] of Object.entries(stats)) {
+        await logger.info(`    - ${type}: ${count} страниц`, {
+          bank: result.bank,
+          productType: type,
+          count
+        });
+      }
+    }
+
+    await logger.info('Процесс сканирования завершен успешно');
+    return results;
+  } catch (error) {
+    await logger.error('Ошибка при выполнении сканирования:', { error: error.message });
+    throw error;
+  }
+}
+
+// Если файл запускается напрямую
+if (require.main === module) {
+  runScraping().catch(async (error) => {
+    await logger.error('Ошибка при выполнении скрипта скрапинга', { errorMessage: error.message });
+    process.exit(1);
+  });
+}
+
+/**
+ * Извлекает имя банка из URL
+ * @param {string} url - URL для извлечения имени банка
+ * @returns {string} Имя банка
+ */
+function extractBankNameFromUrl(url) {
+  const urlLower = url.toLowerCase();
+
+  if (urlLower.includes('vtb')) return 'vtb';
+  if (urlLower.includes('psb')) return 'psb';
+  if (urlLower.includes('rshb')) return 'rshb';
+  if (urlLower.includes('sovcombank') || urlLower.includes('banki.ru')) return 'sovcombank'; // Совкомбанк теперь использует агрегатор
+  if (urlLower.includes('domrf')) return 'domrf';
+  if (urlLower.includes('sberbank')) return 'sberbank';
+  if (urlLower.includes('gazprombank')) return 'gazprombank';
+  if (urlLower.includes('alfabank')) return 'alfabank';
+  if (urlLower.includes('mkb')) return 'mkb';
+  if (urlLower.includes('tbank')) return 'tbank';
+
+  // Если не удалось определить, возвращаем hostname
+  try {
+    const hostname = new URL(url).hostname;
+    return hostname.replace('www.', '').split('.')[0];
+  } catch (e) {
+    return 'unknown';
+  }
+}
+
+module.exports = {
+  scanBankWebsites,
+  runScraping,
+  fetchWebPage,
+  extractBankNameFromUrl
+};

@@ -1,0 +1,16 @@
+{
+  "status": "What did you want to see here?",
+  "id": "tbank-1770255305331",
+  "type": "deposits",
+  "bankName": "tbank",
+  "version": {
+    "date": "2026-02-05",
+    "source": "API://tbank/deposits",
+    "updatedBy": "scraper"
+  },
+  "validFrom": "2026-02-05",
+  "meta": {
+    "title": "Unknown Product",
+    "description": "No description available"
+  }
+}

@@ -15,11 +15,10 @@
     "validate": "node src/scripts/validate-data.js",
     "migrate": "node src/scripts/migrate-data-structure.js",
     "restructure": "node src/scripts/restructure-data.js",
-    "rename-latin": "node src/scripts/rename-directories-latin.js both",
-    "convert-cyrillic": "node src/scripts/convert-cyrillic-to-latin.js",
-    "simple-cyrillic": "node src/scripts/simple-cyrillic-to-latin.js",
-    "rename-files-latin": "node src/scripts/rename-files-latin.js",
     "scrape": "node src/scripts/process-scraping-results.js",
+    "clean": "node src/scripts/clean-json-files.js",
+    "clean:enhanced": "node src/scripts/clean-json-files-enhanced.js",
+    "restore": "node src/scripts/restore-json-structure.js",
     "b": "npm run build",
     "d": "npm run dev",
     "w": "npm run watch",
@@ -35,7 +34,8 @@
     "express": "^4.18.2",
     "glob-promise": "^6.0.7",
     "handlebars": "^4.7.8",
-    "pdf-parse": "^1.1.1"
+    "pdf-parse": "^1.1.1",
+    "puppeteer": "^24.37.1"
   },
   "devDependencies": {
     "@playwright/test": "^1.49.1",

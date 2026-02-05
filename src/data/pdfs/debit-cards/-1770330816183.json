@@ -1,0 +1,35 @@
+{
+  "id": "rosbank-debit-card-1",
+  "title": "Дебетовая карта \"Свобода\"",
+  "type": "debit-cards",
+  "bankName": "Росбанк",
+  "source": "manual-addition",
+  "featured": false,
+  "shortDescription": "Дебетовая карта \"Свобода\"",
+  "fullDescription": "Информация о продукте Дебетовая карта \"Свобода\" от Росбанк",
+  "imageUrl": "/img/products/.jpg",
+  "features": [
+    "Продукт debit-cards",
+    "От банка Росбанк"
+  ],
+  "conditions": [
+    "Условия зависят от продукта"
+  ],
+  "referralLink": "",
+  "parameters": {
+    "main": {},
+    "fees": {},
+    "requirements": {}
+  },
+  "meta": {
+    "title": "Дебетовая карта \"Свобода\"",
+    "description": "Информация о Дебетовая карта \"Свобода\""
+  },
+  "version": {
+    "date": "2026-02-05",
+    "source": "manual-addition",
+    "updatedBy": "aggregator-import"
+  },
+  "validFrom": "2026-02-05",
+  "status": "active"
+}

@@ -1,1 +1,0 @@
-https://bank-select.ru

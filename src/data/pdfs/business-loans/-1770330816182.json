@@ -1,0 +1,35 @@
+{
+  "id": "raiffeisen-business-loan-1",
+  "title": "Бизнес-кредит",
+  "type": "business-loans",
+  "bankName": "Райффайзенбанк",
+  "source": "manual-addition",
+  "featured": false,
+  "shortDescription": "Бизнес-кредит",
+  "fullDescription": "Информация о продукте Бизнес-кредит от Райффайзенбанк",
+  "imageUrl": "/img/products/.jpg",
+  "features": [
+    "Продукт business-loans",
+    "От банка Райффайзенбанк"
+  ],
+  "conditions": [
+    "Условия зависят от продукта"
+  ],
+  "referralLink": "",
+  "parameters": {
+    "main": {},
+    "fees": {},
+    "requirements": {}
+  },
+  "meta": {
+    "title": "Бизнес-кредит",
+    "description": "Информация о Бизнес-кредит"
+  },
+  "version": {
+    "date": "2026-02-05",
+    "source": "manual-addition",
+    "updatedBy": "aggregator-import"
+  },
+  "validFrom": "2026-02-05",
+  "status": "active"
+}

@@ -92,6 +92,10 @@ async function main() {
       path.join(__dirname, "../templates/calculator.html"),
       "utf-8",
     );
+    const productsListTemplate = await fs.readFile(
+      path.join(__dirname, "../templates/products-page.html"),
+      "utf-8",
+    );
 
     // Регистрация частичных шаблонов
     Handlebars.registerPartial("layout", layout);
@@ -104,6 +108,7 @@ async function main() {
     const compiled404Template = Handlebars.compile(notFoundTemplate);
     const compiledAddProductTemplate = Handlebars.compile(addProductTemplate);
     const compileCalculatorTemplate = Handlebars.compile(calculatorTemplate);
+    const compiledProductsListTemplate = Handlebars.compile(productsListTemplate);
     // Генерация страниц продуктов
     for (const product of products) {
       const html = compiledProductTemplate({
@@ -219,6 +224,20 @@ async function main() {
       path.join(__dirname, "../../dist/index.html"),
       indexHtml,
     );
+
+    // Генерация страницы со списком всех продуктов
+    const uniqueBanks = [...new Set(products.map(p => p.bankName))];
+    const productsListHtml = compiledProductsListTemplate({
+      products,
+      banks: uniqueBanks,
+      meta: {
+        title: "Все банковские продукты | Выбор лучших предложений",
+        description: "Просмотрите все банковские продукты - кредитные карты, дебетовые карты и кредиты",
+      },
+    });
+
+    await fs.mkdir(path.join(__dirname, "../../dist/products"), { recursive: true });
+    await fs.writeFile(path.join(__dirname, "../../dist/products/index.html"), productsListHtml);
 
     // Генерация 404 страницы
     const html404 = compiled404Template({

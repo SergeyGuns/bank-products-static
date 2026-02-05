@@ -1,0 +1,777 @@
+{
+  "vtb": {
+    "currentLinks": [
+      {
+        "url": "https://www.vtb.ru/personal/cards/credit-cards/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/cards/credit-cards/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/cards/debit-cards/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/cards/debit-cards/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/deposits-and-accounts/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/deposits-and-accounts/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/loans/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/loans/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/mortgage/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/mortgage/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/cards/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/cards/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/deposits/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/deposits/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/credits/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/credits/"
+      }
+    ],
+    "potentialLinks": [
+      {
+        "url": "https://www.vtb.ru/personal/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/bank-products/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/bank-products/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/cards-new/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/cards-new/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/deposits-new/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/deposits-new/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/loans-new/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/loans-new/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/mortgage-new/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/mortgage-new/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/credit-cards/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/credit-cards/"
+      },
+      {
+        "url": "https://www.vtb.ru/personal/debit-cards/",
+        "status": 503,
+        "accessible": false,
+        "error": "Request failed with status code 503",
+        "redirected": false,
+        "finalUrl": "https://www.vtb.ru/personal/debit-cards/"
+      },
+      {
+        "url": "https://online.vtb.ru/",
+        "status": 200,
+        "accessible": true,
+        "redirected": false,
+        "finalUrl": "https://online.vtb.ru/"
+      },
+      {
+        "url": "https://api.vtb.ru/products",
+        "status": "ECONNABORTED",
+        "accessible": false,
+        "error": "timeout of 15000ms exceeded",
+        "redirected": false,
+        "finalUrl": "https://api.vtb.ru/products"
+      }
+    ],
+    "suggestions": [
+      {
+        "url": "https://online.vtb.ru/",
+        "status": 200,
+        "contentLength": 277173,
+        "productTypes": [
+          "cards",
+          "deposits",
+          "loans",
+          "mortgage"
+        ],
+        "isAccessible": true
+      }
+    ]
+  },
+  "psb": {
+    "currentLinks": [
+      {
+        "url": "https://psb.ru/personal/cards/credit/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/cards/credit/"
+      },
+      {
+        "url": "https://psb.ru/personal/cards/debit/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/cards/debit/"
+      },
+      {
+        "url": "https://psb.ru/personal/deposits/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/deposits/"
+      },
+      {
+        "url": "https://psb.ru/personal/credits/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/credits/"
+      },
+      {
+        "url": "https://psb.ru/personal/mortgage/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/mortgage/"
+      },
+      {
+        "url": "https://psb.ru/personal/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/"
+      },
+      {
+        "url": "https://psb.ru/personal/bank-cards/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/bank-cards/"
+      },
+      {
+        "url": "https://psb.ru/personal/loans/consumer-loans/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/loans/consumer-loans/"
+      }
+    ],
+    "potentialLinks": [
+      {
+        "url": "https://psb.ru/personal/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/"
+      },
+      {
+        "url": "https://psb.ru/personal/bank-products/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/bank-products/"
+      },
+      {
+        "url": "https://psb.ru/personal/cards/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/cards/"
+      },
+      {
+        "url": "https://psb.ru/personal/deposits/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/deposits/"
+      },
+      {
+        "url": "https://psb.ru/personal/loans/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/loans/"
+      },
+      {
+        "url": "https://psb.ru/personal/credit/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/credit/"
+      },
+      {
+        "url": "https://psb.ru/personal/debet/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/debet/"
+      },
+      {
+        "url": "https://psb.ru/personal/ipoteka/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/personal/ipoteka/"
+      },
+      {
+        "url": "https://psb.ru/products/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/products/"
+      },
+      {
+        "url": "https://psb.ru/services/",
+        "status": "HPE_CLOSED_CONNECTION",
+        "accessible": false,
+        "error": "Parse Error: Data after `Connection: close`",
+        "redirected": false,
+        "finalUrl": "https://psb.ru/services/"
+      },
+      {
+        "url": "https://api.psbank.ru/products",
+        "status": "ENOTFOUND",
+        "accessible": false,
+        "error": "getaddrinfo ENOTFOUND api.psbank.ru",
+        "redirected": false,
+        "finalUrl": "https://api.psbank.ru/products"
+      }
+    ],
+    "suggestions": []
+  },
+  "rshb": {
+    "currentLinks": [
+      {
+        "url": "https://rshb.ru/natural/#/cards/credit",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/cards/debit",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/deposits",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/credits/personal",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/mortgage",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/products",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/banking",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      },
+      {
+        "url": "https://rshb.ru/natural/#/credit",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/natural/"
+      }
+    ],
+    "potentialLinks": [
+      {
+        "url": "https://rshb.ru/",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/"
+      },
+      {
+        "url": "https://rshb.ru/personal/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal"
+      },
+      {
+        "url": "https://rshb.ru/personal/bank-products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal/bank-products"
+      },
+      {
+        "url": "https://rshb.ru/personal/cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal/cards"
+      },
+      {
+        "url": "https://rshb.ru/personal/deposits/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal/deposits"
+      },
+      {
+        "url": "https://rshb.ru/personal/loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal/loans"
+      },
+      {
+        "url": "https://rshb.ru/personal/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/personal/mortgage"
+      },
+      {
+        "url": "https://rshb.ru/private/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private"
+      },
+      {
+        "url": "https://rshb.ru/private/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private/products"
+      },
+      {
+        "url": "https://rshb.ru/private/cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private/cards"
+      },
+      {
+        "url": "https://rshb.ru/private/deposits/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private/deposits"
+      },
+      {
+        "url": "https://rshb.ru/private/loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private/loans"
+      },
+      {
+        "url": "https://rshb.ru/private/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.rshb.ru/private/mortgage"
+      }
+    ],
+    "suggestions": [
+      {
+        "url": "https://rshb.ru/",
+        "status": 200,
+        "contentLength": 58424,
+        "productTypes": [
+          "cards",
+          "deposits",
+          "loans",
+          "mortgage"
+        ],
+        "isAccessible": true
+      }
+    ]
+  },
+  "sovcombank": {
+    "currentLinks": [
+      {
+        "url": "https://www.banki.ru/banks/bank/sovcombank/credit_cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://www.banki.ru/banks/bank/sovcombank/credit_cards/"
+      },
+      {
+        "url": "https://www.banki.ru/banks/bank/sovcombank/debit_cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://www.banki.ru/banks/bank/sovcombank/debit_cards/"
+      },
+      {
+        "url": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.banki.ru/products/deposits/sovcombank/?_teams%5B0%5D=team-d"
+      },
+      {
+        "url": "https://www.banki.ru/banks/bank/sovcombank/consumer_loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://www.banki.ru/banks/bank/sovcombank/consumer_loans/"
+      },
+      {
+        "url": "https://www.banki.ru/banks/bank/sovcombank/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://www.banki.ru/banks/bank/sovcombank/mortgage/"
+      },
+      {
+        "url": "https://sravni.ru/bank/sovcombank/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://www.sravni.ru/bank/sovcombank/"
+      },
+      {
+        "url": "https://vbr.ru/banki/sovcombank/",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://www.vbr.ru/banki/catalog/"
+      }
+    ],
+    "potentialLinks": [
+      {
+        "url": "https://sovcombank.ru/",
+        "status": 200,
+        "accessible": true,
+        "redirected": false,
+        "finalUrl": "https://sovcombank.ru/"
+      },
+      {
+        "url": "https://sovcombank.ru/personal/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/personal"
+      },
+      {
+        "url": "https://sovcombank.ru/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/products"
+      },
+      {
+        "url": "https://sovcombank.ru/cards/",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/cards"
+      },
+      {
+        "url": "https://sovcombank.ru/deposits/",
+        "status": 200,
+        "accessible": true,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/deposits"
+      },
+      {
+        "url": "https://sovcombank.ru/loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/loans"
+      },
+      {
+        "url": "https://sovcombank.ru/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/mortgage"
+      },
+      {
+        "url": "https://sovcombank.ru/credit-cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/credit-cards"
+      },
+      {
+        "url": "https://sovcombank.ru/debit-cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/debit-cards"
+      },
+      {
+        "url": "https://sovcombank.ru/consumer-loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://sovcombank.ru/consumer-loans"
+      }
+    ],
+    "suggestions": []
+  },
+  "domrf": {
+    "currentLinks": [
+      {
+        "url": "https://domrfbank.ru/products/cards",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://domrfbank.ru/products/cards/"
+      },
+      {
+        "url": "https://domrfbank.ru/products/deposits",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://domrfbank.ru/products/deposits/"
+      },
+      {
+        "url": "https://domrfbank.ru/products/credits",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://domrfbank.ru/products/credits/"
+      },
+      {
+        "url": "https://domrfbank.ru/products/mortgage",
+        "status": 404,
+        "accessible": false,
+        "redirected": true,
+        "finalUrl": "https://domrfbank.ru/products/mortgage/"
+      },
+      {
+        "url": "https://domrfbank.ru/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/products/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/products/"
+      }
+    ],
+    "potentialLinks": [
+      {
+        "url": "https://domrfbank.ru/",
+        "status": 200,
+        "accessible": true,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/products/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/cards/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/deposits/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/deposits/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/loans/"
+      },
+      {
+        "url": "https://domrfbank.ru/personal/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/personal/mortgage/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/products/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/products/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/cards/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/cards/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/deposits/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/deposits/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/loans/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/loans/"
+      },
+      {
+        "url": "https://domrfbank.ru/bank/mortgage/",
+        "status": 404,
+        "accessible": false,
+        "redirected": false,
+        "finalUrl": "https://domrfbank.ru/bank/mortgage/"
+      }
+    ],
+    "suggestions": [
+      {
+        "url": "https://domrfbank.ru/",
+        "status": 200,
+        "contentLength": 63901,
+        "productTypes": [
+          "cards",
+          "deposits",
+          "loans",
+          "mortgage"
+        ],
+        "isAccessible": true
+      }
+    ]
+  }
+}

@@ -5,6 +5,7 @@
 const fs = require('fs').promises;
 const path = require('path');
 const { runScraping } = require('./bank-scraper');
+const { fetchProductsViaApi, checkApiAvailability, fetchProductsViaAggregator, fetchSovcombankProductsViaDVIZH } = require('./api-fetcher');
 
 /**
  * Сохранение продуктов в JSON-файлы в соответствии со структурой проекта
@@ -36,6 +37,8 @@ async function saveScrapedProducts(results) {
         
         // Добавляем обязательные поля, если они отсутствуют
         product.id = product.id || `${bankName}-${Date.now()}`;
+        product.type = product.type || productType || 'unknown';
+        product.bankName = product.bankName || bankName;
         product.version = product.version || {
           date: today,
           source: scrapedData.url,
@@ -44,8 +47,8 @@ async function saveScrapedProducts(results) {
         product.validFrom = product.validFrom || today;
         product.status = product.status || 'active';
         product.meta = product.meta || {
-          title: product.title,
-          description: product.shortDescription || product.title
+          title: product.title || 'Unknown Product',
+          description: product.shortDescription || product.description || product.title || 'No description available'
         };
         
         // Сохраняем продукт в JSON-файл
@@ -64,6 +67,10 @@ async function saveScrapedProducts(results) {
  * Нормализация строки для использования в именах файлов
  */
 function normalizeString(str) {
+  if (!str) {
+    return 'unknown'; // Возвращаем 'unknown' если строка отсутствует
+  }
+
   return str
     .toLowerCase()
     .replace(/[^\w\s-]/g, '') // Удаляем специальные символы
@@ -72,22 +79,127 @@ function normalizeString(str) {
 }
 
 /**
- * Запуск скрапинга и сохранение результатов
+ * Запуск получения данных (через API или скрапинг) и сохранение результатов
  */
 async function runScrapingAndSave() {
   try {
-    console.log('Запуск скрапинга банковских продуктов...');
-    const results = await runScraping();
-    
+    console.log('Запуск получения данных о банковских продуктах...');
+
+    // Получаем данные через API, где это возможно
+    const apiResults = await fetchViaApi();
+
+    // Запускаем веб-скрапинг для оставшихся банков
+    const scrapingResults = await runScraping();
+
+    // Объединяем результаты
+    const results = [...apiResults, ...scrapingResults];
+
     console.log('\nСохранение результатов в JSON-файлы...');
     await saveScrapedProducts(results);
-    
-    console.log('Скрапинг и сохранение завершены.');
+
+    console.log('Получение данных и сохранение завершены.');
     return results;
   } catch (error) {
-    console.error('Ошибка при выполнении скрапинга:', error.message);
+    console.error('Ошибка при выполнении получения данных:', error.message);
     throw error;
   }
+}
+
+/**
+ * Получение данных через API и агрегаторы
+ */
+async function fetchViaApi() {
+  const results = [];
+
+  // Список банков, для которых будем пытаться получить данные через API
+  const banks = ['vtb', 'mkb', 'tbank', 'domrf', 'sovcombank'];
+
+  for (const bankName of banks) {
+    console.log(`Проверка доступности API для банка: ${bankName}`);
+
+    const isApiAvailable = await checkApiAvailability(bankName);
+
+    if (isApiAvailable) {
+      console.log(`Получение данных через API для банка: ${bankName}`);
+
+      // Пробуем получить данные для разных типов продуктов
+      const productTypes = ['cards', 'deposits', 'loans', 'mortgages'];
+
+      for (const productType of productTypes) {
+        const data = await fetchProductsViaApi(bankName, productType);
+
+        if (data) {
+          // Получаем URL для логирования (пока используем заглушку, так как apiConfig не доступен напрямую)
+          const apiUrl = `API://${bankName}/${productType}`;
+
+          // Преобразуем полученные данные в формат, совместимый с результатами скрапинга
+          const apiResult = {
+            bank: bankName,
+            scrapedData: [{
+              bankName,
+              productType,
+              url: apiUrl,
+              products: Array.isArray(data) ? data : [data], // Если данные не массив, оборачиваем в массив
+              lastScraped: new Date().toISOString()
+            }],
+            comparison: [],
+            timestamp: new Date().toISOString()
+          };
+
+          results.push(apiResult);
+        }
+      }
+    } else {
+      console.log(`API для банка ${bankName} недоступно, пробуем использовать агрегаторы`);
+
+      // Для Совкомбанка используем специфический источник (платформа ДВИЖ)
+      if (bankName === 'sovcombank') {
+        const dvizhData = await fetchSovcombankProductsViaDVIZH();
+        if (dvizhData) {
+          const dvizhResult = {
+            bank: bankName,
+            scrapedData: [{
+              bankName,
+              productType: 'mortgages', // ДВИЖ主要用于 ипотеке
+              url: 'DVIZH://platform/mortgage',
+              products: Array.isArray(dvizhData) ? dvizhData : [dvizhData],
+              lastScraped: new Date().toISOString()
+            }],
+            comparison: [],
+            timestamp: new Date().toISOString()
+          };
+
+          results.push(dvizhResult);
+        }
+      } else {
+        // Для других банков пробуем использовать агрегаторы
+        const productTypes = ['cards', 'deposits', 'loans', 'mortgages'];
+
+        for (const productType of productTypes) {
+          const aggregatorData = await fetchProductsViaAggregator(bankName, productType);
+
+          if (aggregatorData) {
+            const aggregatorResult = {
+              bank: bankName,
+              scrapedData: [{
+                bankName,
+                productType,
+                url: `AGGREGATOR://${bankName}/${productType}`,
+                products: Array.isArray(aggregatorData) ? aggregatorData : [aggregatorData],
+                lastScraped: new Date().toISOString()
+              }],
+              comparison: [],
+              timestamp: new Date().toISOString()
+            };
+
+            results.push(aggregatorResult);
+          }
+        }
+      }
+    }
+  }
+
+  return results;
 }
 
 // Если файл запускается напрямую

@@ -1,0 +1,35 @@
+{
+  "id": "raiffeisen-deposit-1",
+  "title": "Вклад \"Максимальный\"",
+  "type": "deposits",
+  "bankName": "Райффайзенбанк",
+  "source": "manual-addition",
+  "featured": false,
+  "shortDescription": "Вклад \"Максимальный\"",
+  "fullDescription": "Информация о продукте Вклад \"Максимальный\" от Райффайзенбанк",
+  "imageUrl": "/img/products/.jpg",
+  "features": [
+    "Продукт deposits",
+    "От банка Райффайзенбанк"
+  ],
+  "conditions": [
+    "Условия зависят от продукта"
+  ],
+  "referralLink": "",
+  "parameters": {
+    "main": {},
+    "fees": {},
+    "requirements": {}
+  },
+  "meta": {
+    "title": "Вклад \"Максимальный\"",
+    "description": "Информация о Вклад \"Максимальный\""
+  },
+  "version": {
+    "date": "2026-02-05",
+    "source": "manual-addition",
+    "updatedBy": "aggregator-import"
+  },
+  "validFrom": "2026-02-05",
+  "status": "active"
+}

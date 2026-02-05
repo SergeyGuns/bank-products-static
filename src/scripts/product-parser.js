@@ -3,53 +3,69 @@
  */
 
 const cheerio = require('cheerio');
+const { ErrorHandler } = require('./error-handler');
 
 /**
  * Извлечение информации о продуктах с веб-страницы
  */
 function extractProductInfo(htmlContent, bankName, url) {
-  const $ = cheerio.load(htmlContent);
-  
-  // Определяем тип продукта на основе URL
-  let productType = 'unknown';
-  if (url.includes('/mortgage') || url.includes('/ipoteka')) {
-    productType = 'mortgage';
-  } else if (url.includes('/credits') || url.includes('/loans') || url.includes('/kredity')) {
-    productType = 'credits';
-  } else if (url.includes('/deposits') || url.includes('/vklady')) {
-    productType = 'deposits';
-  } else if (url.includes('/cards') || url.includes('/cart')) {
-    productType = 'cards';
-  }
+  try {
+    const $ = cheerio.load(htmlContent);
 
-  // Извлекаем информацию в зависимости от типа продукта
-  const products = [];
-  
-  switch (productType) {
-    case 'mortgage':
-      products.push(...parseMortgageProducts($, bankName));
-      break;
-    case 'credits':
-      products.push(...parseCreditProducts($, bankName));
-      break;
-    case 'deposits':
-      products.push(...parseDepositProducts($, bankName));
-      break;
-    case 'cards':
-      products.push(...parseCardProducts($, bankName));
-      break;
-    default:
-      // Пытаемся определить тип продукта по элементам на странице
-      products.push(...parseGenericProducts($, bankName));
-  }
+    // Определяем тип продукта на основе URL
+    let productType = 'unknown';
+    if (url.includes('/mortgage') || url.includes('/ipoteka')) {
+      productType = 'mortgage';
+    } else if (url.includes('/credits') || url.includes('/loans') || url.includes('/kredity')) {
+      productType = 'credits';
+    } else if (url.includes('/deposits') || url.includes('/vklady')) {
+      productType = 'deposits';
+    } else if (url.includes('/cards') || url.includes('/cart')) {
+      productType = 'cards';
+    }
 
-  return {
-    bankName,
-    productType,
-    url,
-    products,
-    lastScraped: new Date().toISOString()
-  };
+    // Извлекаем информацию в зависимости от типа продукта
+    const products = [];
+
+    switch (productType) {
+      case 'mortgage':
+        products.push(...parseMortgageProducts($, bankName));
+        break;
+      case 'credits':
+        products.push(...parseCreditProducts($, bankName));
+        break;
+      case 'deposits':
+        products.push(...parseDepositProducts($, bankName));
+        break;
+      case 'cards':
+        products.push(...parseCardProducts($, bankName));
+        break;
+      default:
+        // Пытаемся определить тип продукта по элементам на странице
+        products.push(...parseGenericProducts($, bankName));
+    }
+
+    return {
+      bankName,
+      productType,
+      url,
+      products,
+      lastScraped: new Date().toISOString()
+    };
+  } catch (error) {
+    // Обрабатываем ошибки парсинга
+    ErrorHandler.handleParsingError(error, url, htmlContent);
+
+    // Возвращаем минимальный объект с информацией об ошибке
+    return {
+      bankName,
+      productType: 'unknown',
+      url,
+      products: [],
+      lastScraped: new Date().toISOString(),
+      error: error.message
+    };
+  }
 }
 
 /**
@@ -57,29 +73,35 @@ function extractProductInfo(htmlContent, bankName, url) {
  */
 function parseMortgageProducts($, bankName) {
   const products = [];
-  
+
   // Поиск элементов, содержащих информацию об ипотечных продуктах
   $('.mortgage-product, .ipoteka-product, .product-mortgage, .product-item, .card, .offer').each((index, element) => {
     const title = $(element).find('h1, h2, h3, .title, .name, .product-title').first().text().trim();
-    
+
     if (!title) return; // Пропускаем элементы без названия
-    
+
+    // Очищаем описание от комментариев
+    let shortDescription = $(element).find('.description, .desc, .summary, .brief').first().text().trim();
+    if (shortDescription && shortDescription.includes('//')) {
+      shortDescription = '';
+    }
+
     const product = {
       id: `${bankName}-mortgage-${Date.now()}-${index}`,
       type: 'mortgage',
       bankName,
       title: title,
-      shortDescription: $(element).find('.description, .desc, .summary, .brief').first().text().trim(),
+      shortDescription: shortDescription,
       features: extractFeatures($(element)),
       conditions: extractConditions($(element)),
       parameters: extractParameters($(element), 'mortgage'),
       imageUrl: extractImageUrl($(element)),
       referralLink: extractReferralLink($(element))
     };
-    
+
     products.push(product);
   });
-  
+
   return products;
 }
 
@@ -88,29 +110,35 @@ function parseMortgageProducts($, bankName) {
  */
 function parseCreditProducts($, bankName) {
   const products = [];
-  
+
   // Поиск элементов, содержащих информацию о кредитных продуктах
   $('.credit-product, .kredit-product, .product-credit, .product-item, .card, .offer').each((index, element) => {
     const title = $(element).find('h1, h2, h3, .title, .name, .product-title').first().text().trim();
-    
+
     if (!title) return; // Пропускаем элементы без названия
-    
+
+    // Очищаем описание от комментариев
+    let shortDescription = $(element).find('.description, .desc, .summary, .brief').first().text().trim();
+    if (shortDescription && shortDescription.includes('//')) {
+      shortDescription = '';
+    }
+
     const product = {
       id: `${bankName}-credit-${Date.now()}-${index}`,
       type: 'credits',
       bankName,
       title: title,
-      shortDescription: $(element).find('.description, .desc, .summary, .brief').first().text().trim(),
+      shortDescription: shortDescription,
       features: extractFeatures($(element)),
       conditions: extractConditions($(element)),
       parameters: extractParameters($(element), 'credits'),
       imageUrl: extractImageUrl($(element)),
       referralLink: extractReferralLink($(element))
     };
-    
+
     products.push(product);
   });
-  
+
   return products;
 }
 
@@ -119,29 +147,35 @@ function parseCreditProducts($, bankName) {
  */
 function parseDepositProducts($, bankName) {
   const products = [];
-  
+
   // Поиск элементов, содержащих информацию о депозитных продуктах
   $('.deposit-product, .vklad-product, .product-deposit, .product-item, .card, .offer').each((index, element) => {
     const title = $(element).find('h1, h2, h3, .title, .name, .product-title').first().text().trim();
-    
+
     if (!title) return; // Пропускаем элементы без названия
-    
+
+    // Очищаем описание от комментариев
+    let shortDescription = $(element).find('.description, .desc, .summary, .brief').first().text().trim();
+    if (shortDescription && shortDescription.includes('//')) {
+      shortDescription = '';
+    }
+
     const product = {
       id: `${bankName}-deposit-${Date.now()}-${index}`,
       type: 'deposits',
       bankName,
       title: title,
-      shortDescription: $(element).find('.description, .desc, .summary, .brief').first().text().trim(),
+      shortDescription: shortDescription,
       features: extractFeatures($(element)),
       conditions: extractConditions($(element)),
       parameters: extractParameters($(element), 'deposits'),
       imageUrl: extractImageUrl($(element)),
       referralLink: extractReferralLink($(element))
     };
-    
+
     products.push(product);
   });
-  
+
   return products;
 }
 
@@ -150,29 +184,35 @@ function parseDepositProducts($, bankName) {
  */
 function parseCardProducts($, bankName) {
   const products = [];
-  
+
   // Поиск элементов, содержащих информацию о карточных продуктах
   $('.card-product, .product-card, .product-item, .card, .offer').each((index, element) => {
     const title = $(element).find('h1, h2, h3, .title, .name, .product-title').first().text().trim();
-    
+
     if (!title) return; // Пропускаем элементы без названия
-    
+
+    // Очищаем описание от комментариев
+    let shortDescription = $(element).find('.description, .desc, .summary, .brief').first().text().trim();
+    if (shortDescription && shortDescription.includes('//')) {
+      shortDescription = '';
+    }
+
     const product = {
       id: `${bankName}-card-${Date.now()}-${index}`,
       type: 'credit-cards', // или 'debit-cards' в зависимости от типа карты
       bankName,
       title: title,
-      shortDescription: $(element).find('.description, .desc, .summary, .brief').first().text().trim(),
+      shortDescription: shortDescription,
       features: extractFeatures($(element)),
       conditions: extractConditions($(element)),
       parameters: extractParameters($(element), 'cards'),
       imageUrl: extractImageUrl($(element)),
       referralLink: extractReferralLink($(element))
     };
-    
+
     products.push(product);
   });
-  
+
   return products;
 }
 
@@ -181,29 +221,35 @@ function parseCardProducts($, bankName) {
  */
 function parseGenericProducts($, bankName) {
   const products = [];
-  
+
   // Поиск универсальных элементов продукта
   $('.product, .product-item, .card, .offer, .item').each((index, element) => {
     const title = $(element).find('h1, h2, h3, .title, .name, .product-title').first().text().trim();
-    
+
     if (!title) return; // Пропускаем элементы без названия
-    
+
+    // Очищаем описание от комментариев
+    let shortDescription = $(element).find('.description, .desc, .summary, .brief').first().text().trim();
+    if (shortDescription && shortDescription.includes('//')) {
+      shortDescription = '';
+    }
+
     const product = {
       id: `${bankName}-generic-${Date.now()}-${index}`,
       type: 'unknown',
       bankName,
       title: title,
-      shortDescription: $(element).find('.description, .desc, .summary, .brief').first().text().trim(),
+      shortDescription: shortDescription,
       features: extractFeatures($(element)),
       conditions: extractConditions($(element)),
       parameters: extractParameters($(element), 'generic'),
       imageUrl: extractImageUrl($(element)),
       referralLink: extractReferralLink($(element))
     };
-    
+
     products.push(product);
   });
-  
+
   return products;
 }
 
@@ -212,15 +258,17 @@ function parseGenericProducts($, bankName) {
  */
 function extractFeatures(element) {
   const features = [];
-  
+
   // Поиск списков характеристик
-  element.find('li, .feature, .benefit, .advantage').each((index, el) => {
+  element.find('li, .feature, .benefit, .advantage, .highlight, .pros, .feature-item').each((index, el) => {
     const text = $(el).text().trim();
-    if (text && !features.includes(text)) {
+
+    // Исключаем короткие или некорректные значения
+    if (text && text.length > 3 && !features.includes(text) && !text.includes('//')) {
       features.push(text);
     }
   });
-  
+
   return features.slice(0, 20); // Ограничиваем количество характеристик
 }
 
@@ -229,15 +277,17 @@ function extractFeatures(element) {
  */
 function extractConditions(element) {
   const conditions = [];
-  
+
   // Поиск элементов с условиями
-  element.find('.condition, .requirement, .term, .info').each((index, el) => {
+  element.find('.condition, .requirement, .term, .info, .condition-item, .terms').each((index, el) => {
     const text = $(el).text().trim();
-    if (text && !conditions.includes(text)) {
+
+    // Исключаем короткие или некорректные значения
+    if (text && text.length > 3 && !conditions.includes(text) && !text.includes('//')) {
       conditions.push(text);
     }
   });
-  
+
   return conditions.slice(0, 20); // Ограничиваем количество условий
 }
 
@@ -318,19 +368,22 @@ function extractParameter(element, keywords) {
         const el = elements.eq(i);
         const text = el.text().trim();
 
-        // Ищем числовые значения или проценты в тексте
-        const matches = text.match(/(\d+[.,]?\d*)\s*(%|руб|₽|год|лет|мес|\.)/gi);
+        // Проверяем, что текст не содержит комментариев или некорректных значений
+        if (text && !text.includes('//')) {
+          // Ищем числовые значения или проценты в тексте
+          const matches = text.match(/(\d+[.,]?\d*)\s*(%|руб|₽|год|лет|мес|\.)/gi);
 
-        if (matches && matches.length > 0) {
-          // Возвращаем наиболее подходящее значение
-          return matches[0].trim().replace('.', '%'); // Заменяем точки на % если это процент
+          if (matches && matches.length > 0) {
+            // Возвращаем наиболее подходящее значение
+            return matches[0].trim().replace('.', '%'); // Заменяем точки на % если это процент
+          }
         }
 
         // Также проверяем атрибуты элемента
         const attrs = ['data-value', 'data-rate', 'data-percent', 'title', 'aria-label'];
         for (const attr of attrs) {
           const attrValue = el.attr(attr);
-          if (attrValue) {
+          if (attrValue && !attrValue.includes('//')) {
             const attrMatches = attrValue.match(/(\d+[.,]?\d*)\s*(%|руб|₽|год|лет|мес|\.)/gi);
             if (attrMatches && attrMatches.length > 0) {
               return attrMatches[0].trim().replace('.', '%');
