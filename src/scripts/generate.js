@@ -1,395 +1,244 @@
-const fs = require("fs").promises;
-const { jsonToHtml } = require("./json-to-html");
-const path = require("path");
-const Handlebars = require("handlebars");
-const glob = require("glob-promise");
-// Регистрируем все необходимые хелперы
-Handlebars.registerHelper("add", function (a, b) {
-  return a + b;
-});
+const fs = require('fs').promises;
+const path = require('path');
+const Handlebars = require('handlebars');
 
-Handlebars.registerHelper("isArray", function (value) {
-  return Array.isArray(value);
-});
-
-Handlebars.registerHelper("length", function (arr) {
-  return Array.isArray(arr) ? arr.length : 0;
-});
+// Регистрация хелперов
+Handlebars.registerHelper('add', (a, b) => a + b);
+Handlebars.registerHelper('isArray', value => Array.isArray(value));
+Handlebars.registerHelper('length', arr => Array.isArray(arr) ? arr.length : 0);
 
 async function main() {
-  try {
-    // Получаем данные из Firebase
-    // const products = JSON.parse(
-    //     await fs.readFile(path.join(__dirname, '../data/products-real.json'), 'utf-8')
-    // ).products;
-    const products = [
-      ...(await readReduceProducts("./src/data/pdfs")),
-    ];
-    // Группируем продукты по типу
-    const groupedProducts = products.reduce((acc, product) => {
-      if (!acc[product.type]) {
-        acc[product.type] = [];
-      }
-      acc[product.type].push(product);
-      return acc;
-    }, {});
+    try {
+        const baseDir = path.join(__dirname, '../');
+        const distDir = path.join(__dirname, '../../dist');
 
-    // Создаем все необходимые директории
-    await fs.mkdir(path.join(__dirname, "../../dist"), { recursive: true });
-    await fs.mkdir(path.join(__dirname, "../../dist/products"), {
-      recursive: true,
-    });
-    await fs.mkdir(path.join(__dirname, "../../dist/category"), {
-      recursive: true,
-    });
-    await fs.mkdir(path.join(__dirname, "../../dist/compare"), {
-      recursive: true,
-    });
-    await fs.mkdir(path.join(__dirname, "../../dist/css"), { recursive: true });
-    await fs.mkdir(path.join(__dirname, "../../dist/img"), { recursive: true });
-    await fs.mkdir(path.join(__dirname, `../../dist/articles`), {
-      recursive: true,
-    });
+        // Чтение данных
+        const [products, categories, templates] = await Promise.all([
+            fs.readFile(path.join(baseDir, 'data/products.json'), 'utf-8'),
+            fs.readFile(path.join(baseDir, 'data/categories.json'), 'utf-8'),
+            fs.readdir(path.join(baseDir, 'templates'))
+        ]);
 
-    // Загрузка данных
-    const categories = JSON.parse(
-      await fs.readFile(
-        path.join(__dirname, "../data/categories.json"),
-        "utf-8",
-      ),
-    );
+        const { products: productList } = JSON.parse(products);
+        const { categories: categoryList } = JSON.parse(categories);
 
-    // Загрузка всех шаблонов
-    const layout = await fs.readFile(
-      path.join(__dirname, "../templates/layout.html"),
-      "utf-8",
-    );
-    const productTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/product-page.html"),
-      "utf-8",
-    );
-    const categoryTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/category-page.html"),
-      "utf-8",
-    );
-    const indexTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/index-page.html"),
-      "utf-8",
-    );
-    const compareTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/compare-page.html"),
-      "utf-8",
-    );
-    const notFoundTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/404.html"),
-      "utf-8",
-    );
-    const addProductTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/add.html"),
-      "utf-8",
-    );
-    const calculatorTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/calculator.html"),
-      "utf-8",
-    );
-    const productsListTemplate = await fs.readFile(
-      path.join(__dirname, "../templates/products-page.html"),
-      "utf-8",
-    );
+        // Группировка продуктов по типу
+        const groupedProducts = productList.reduce((acc, product) => {
+            (acc[product.type] = acc[product.type] || []).push(product);
+            return acc;
+        }, {});
 
-    // Регистрация частичных шаблонов
-    Handlebars.registerPartial("layout", layout);
+        // Создание директорий
+        await Promise.all([
+            'products', 'category', 'compare', 'css', 'img'
+        ].map(dir => fs.mkdir(path.join(distDir, dir), { recursive: true })));
 
-    // Компи ляция всех шаблонов
-    const compiledProductTemplate = Handlebars.compile(productTemplate);
-    const compiledCategoryTemplate = Handlebars.compile(categoryTemplate);
-    const compiledIndexTemplate = Handlebars.compile(indexTemplate);
-    const compiledCompareTemplate = Handlebars.compile(compareTemplate);
-    const compiled404Template = Handlebars.compile(notFoundTemplate);
-    const compiledAddProductTemplate = Handlebars.compile(addProductTemplate);
-    const compileCalculatorTemplate = Handlebars.compile(calculatorTemplate);
-    const compiledProductsListTemplate = Handlebars.compile(productsListTemplate);
-    // Генерация страниц продуктов
-    for (const product of products) {
-      const html = compiledProductTemplate({
-        product,
-        meta: product.meta,
-      });
-
-      await fs.writeFile(
-        path.join(__dirname, `../../dist/products/${product.id}.html`),
-        html,
-      );
-    }
-    const log = (args) => {
-      console.log(args);
-      return args;
-    };
-    // Генерация статей
-    const articles = await fs.readdir(
-      path.join(__dirname, "../templates/articles"),
-    );
-    for (file of articles) {
-      if (path.extname(file).toLowerCase() === ".html") {
-        await fs.writeFile(
-          path.join(__dirname, `../../dist/articles/${file}`),
-          Handlebars.compile(
-            await fs.readFile(
-              path.join(__dirname, "../templates/articles/" + file),
-              "utf-8",
-            ),
-          )({
-            meta: jsonToHtml(
-              JSON.parse(
-                log(
-                  await fs.readFile(
-                    path.join(
-                      __dirname,
-                      "../templates/articles/" + file + ".meta.json",
-                    ),
-                    { encoding: "utf-8" },
-                  ),
-                ),
-              ),
-            ),
-          }),
-        );
-      }
-    }
-    // Генерация страниц категорий и сравнения
-    for (const category of categories.categories) {
-      const categoryProducts = products.filter((p) => p.type === category.id);
-
-      // Генерация страницы категории
-      const categoryHtml = compiledCategoryTemplate({
-        category,
-        products: categoryProducts,
-        meta: category.meta,
-      });
-
-      await fs.writeFile(
-        path.join(__dirname, `../../dist/category/${category.id}.html`),
-        categoryHtml,
-      );
-
-      // Генерация страницы сравнения
-      if (categoryProducts.length > 0) {
-        const parametersList = {
-          main: Object.keys(categoryProducts[0].parameters?.main || {}),
-          fees: Object.keys(categoryProducts[0].parameters?.fees || {}),
-          requirements: Object.keys(
-            categoryProducts[0].parameters?.requirements || {},
-          ),
-        };
-
-        if (
-          (category.id === "credit-cards" || category.id === "debit-cards") &&
-          categoryProducts[0].parameters?.cashback
-        ) {
-          parametersList.cashback = Object.keys(
-            categoryProducts[0].parameters.cashback,
-          );
+        // Загрузка шаблонов
+        const templateMap = {};
+        for (const file of templates) {
+            const filePath = path.join(baseDir, 'templates', file);
+            const stat = await fs.stat(filePath);
+            
+            if (stat.isFile()) {
+                const content = await fs.readFile(filePath, 'utf-8');
+                templateMap[file] = Handlebars.compile(content);
+            } else if (stat.isDirectory()) {
+                // Обработка файлов в поддиректориях
+                const subFiles = await fs.readdir(filePath);
+                for (const subFile of subFiles) {
+                    if (path.extname(subFile) === '.html') {
+                        const subFilePath = path.join(filePath, subFile);
+                        const subContent = await fs.readFile(subFilePath, 'utf-8');
+                        templateMap[subFile] = Handlebars.compile(subContent);
+                    }
+                }
+            }
         }
 
-        const compareHtml = compiledCompareTemplate({
-          products: categoryProducts,
-          parametersList,
-          isCreditOrDebitCard:
-            category.id === "credit-cards" || category.id === "debit-cards",
-          meta: {
-            title: `Сравнение ${category.title} | Выбор лучших предложений`,
-            description: `Сравните ${category.title} от разных банков и выберите самое выгодное предложение`,
-          },
-        });
+        // Регистрация частичных шаблонов
+        Handlebars.registerPartial('layout', templateMap['layout.html']);
 
-        await fs.writeFile(
-          path.join(__dirname, `../../dist/compare/${category.id}.html`),
-          compareHtml,
-        );
-      }
+        // Генерация страниц
+        await Promise.all([
+            generateProductPages(productList, templateMap['product-page.html'], distDir),
+            generateCategoryPages(categoryList, productList, templateMap['category-page.html'], templateMap['compare-page.html'], distDir),
+            generateIndexPage(productList, categoryList, templateMap['index-page.html'], distDir),
+            generateStaticPages(templateMap, distDir),
+            copyStaticFiles(baseDir, distDir),
+            generateSitemap(productList, categoryList, distDir),
+            generateRobotsTXT(distDir)
+        ]);
+
+        console.log('Сайт успешно сгенерирован!');
+    } catch (error) {
+        console.error('Ошибка во время генерации:', error);
+        process.exit(1);
     }
-
-    // Генерация главной страницы
-    const indexHtml = compiledIndexTemplate({
-      products,
-      categories: categories.categories,
-      meta: {
-        title: "Банковские продукты | Главная",
-        description:
-          "Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты",
-      },
-    });
-
-    await fs.writeFile(
-      path.join(__dirname, "../../dist/index.html"),
-      indexHtml,
-    );
-
-    // Генерация страницы со списком всех продуктов
-    const uniqueBanks = [...new Set(products.map(p => p.bankName))];
-    const productsListHtml = compiledProductsListTemplate({
-      products,
-      banks: uniqueBanks,
-      meta: {
-        title: "Все банковские продукты | Выбор лучших предложений",
-        description: "Просмотрите все банковские продукты - кредитные карты, дебетовые карты и кредиты",
-      },
-    });
-
-    await fs.mkdir(path.join(__dirname, "../../dist/products"), { recursive: true });
-    await fs.writeFile(path.join(__dirname, "../../dist/products/index.html"), productsListHtml);
-
-    // Генерация 404 страницы
-    const html404 = compiled404Template({
-      meta: {
-        title: "404 - Страница не найдена",
-        description: "Запрашиваемая страница не существует",
-      },
-    });
-
-    await fs.writeFile(path.join(__dirname, "../../dist/404.html"), html404);
-
-    // Генерация sitemap
-    const sitemap = generateSitemap(products, categories.categories, articles);
-    await fs.writeFile(path.join(__dirname, "../../dist/sitemap.xml"), sitemap);
-    // Генерация robots.txt
-    const robotsTXT = generateRobotsTXT();
-    await fs.writeFile(
-      path.join(__dirname, "../../dist/robots.txt"),
-      robotsTXT,
-    );
-    // Генерация CNAME
-    await fs.writeFile("dist/CNAME", "bank-select.ru", function (err) {});
-
-    // Копирование img файлов
-    try {
-      const files = await fs.readdir(path.join(__dirname, "../img/bank-logos"));
-      for (const entry of files) {
-        const src = path.join(__dirname, "../img/bank-logos/" + entry);
-        const dest = path.join(__dirname, "../../dist/img/bank-logos", entry);
-        await fs.mkdir(path.dirname(dest), { recursive: true });
-        await fs.copyFile(src, dest);
-      }
-    } catch (e) {
-      console.log(e);
-    }
-    // Копирование static файлов
-    try {
-      const files = await fs.readdir(path.join(__dirname, "../static"));
-      for (const entry of files) {
-        const src = path.join(__dirname, "../static/" + entry);
-        const dest = path.join(__dirname, "../../dist", entry);
-        await fs.mkdir(path.dirname(dest), { recursive: true });
-        await fs.copyFile(src, dest);
-      }
-    } catch (e) {
-      console.log(e);
-    }
-
-    // Копирование CSS файла
-    await fs.cp(
-      path.join(__dirname, "../styles/theme.css"),
-      path.join(__dirname, "../../dist/css/theme.css"),
-    );
-
-    const calculatorHtml = compileCalculatorTemplate({
-      meta: {
-        title: "Кредитный калькулятор",
-        description: "Кредитный калькулятор",
-      },
-    });
-
-    const addProductHtml = compiledAddProductTemplate({
-      meta: {
-        title: "Добавление продукта",
-        description: "Страница для добавления нового продукта",
-      },
-    });
-
-    await fs.writeFile(
-      path.join(__dirname, "../../dist/calculator.html"),
-      calculatorHtml,
-    );
-    await fs.writeFile(
-      path.join(__dirname, "../../dist/add.html"),
-      addProductHtml,
-    );
-
-    console.log("Сайт успешно сгенерирован!");
-  } catch (error) {
-    console.error("Error during generation:", error);
-    process.exit(1);
-  }
 }
 
-async function readReduceProducts(folderPath) {
-  console.log(folderPath, " start");
-  const files = await fs.readdir(folderPath);
-  const results = [];
-  for (const file of files) {
-    if (path.extname(file).toLowerCase() === ".json") {
-      const filePath = path.join(folderPath, file);
-      console.log("|--", file);
-      const text = await fs.readFile(filePath);
-      const result = JSON.parse(text);
-      results.push(result);
-    }
-  }
-  return results;
+async function generateProductPages(products, productTemplate, distDir) {
+    await Promise.all(products.map(product =>
+        fs.writeFile(path.join(distDir, 'products', `${product.id}.html`), productTemplate({ product, meta: product.meta }))
+    ));
 }
 
-function generateSitemap(products, categories, articles) {
-  const baseUrl = "https://bank-select.ru";
-  let urls = [];
+async function generateCategoryPages(categories, products, categoryTemplate, compareTemplate, distDir) {
+    await Promise.all(categories.map(async category => {
+        const categoryProducts = products.filter(p => p.type === category.id);
+        const categoryHtml = categoryTemplate({ category, products: categoryProducts, meta: category.meta });
 
-  // Добавляем главную страницу
-  urls.push(`${baseUrl}/`);
+        await fs.writeFile(path.join(distDir, 'category', `${category.id}.html`), categoryHtml);
 
-  // Добавляем страницы продуктов
-  products.forEach((product) => {
-    urls.push(`${baseUrl}/products/${product.id}.html`);
-  });
+        if (categoryProducts.length > 0) {
+            const parametersList = {
+                main: Object.keys(categoryProducts[0].parameters?.main || {}),
+                fees: Object.keys(categoryProducts[0].parameters?.fees || {}),
+                requirements: Object.keys(categoryProducts[0].parameters?.requirements || {})
+            };
 
-  // Добавляем страницы категорий
-  categories.forEach((category) => {
-    urls.push(`${baseUrl}/category/${category.id}.html`);
-  });
+            if (['credit-cards', 'debit-cards'].includes(category.id) && categoryProducts[0].parameters?.cashback) {
+                parametersList.cashback = Object.keys(categoryProducts[0].parameters.cashback);
+            }
 
-  articles.forEach((article) => {
-    if (path.extname(article) === ".html")
-      urls.push(`${baseUrl}/articles/${article}`);
-  });
+            const compareHtml = compareTemplate({
+                products: categoryProducts,
+                parametersList,
+                isCreditOrDebitCard: ['credit-cards', 'debit-cards'].includes(category.id),
+                meta: {
+                    title: `Сравнение ${category.title} | Выбор лучших предложений`,
+                    description: `Сравните ${category.title} от разных банков и выберите самое выгодное предложение`
+                }
+            });
 
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+            await fs.writeFile(path.join(distDir, 'compare', `${category.id}.html`), compareHtml);
+        }
+    }));
+}
+
+async function generateIndexPage(products, categories, indexTemplate, distDir) {
+    const indexHtml = indexTemplate({
+        products,
+        categories,
+        meta: {
+            title: 'Банковские продукты | Главная',
+            description: 'Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты'
+        }
+    });
+
+    await fs.writeFile(path.join(distDir, 'index.html'), indexHtml);
+}
+
+async function generateStaticPages(templateMap, distDir) {
+    const staticPages = [
+        { template: templateMap['404.html'], name: '404.html', meta: { title: '404 - Страница не найдена', description: 'Запрашиваемая страница не существует' } },
+        { template: templateMap['add.html'], name: 'add.html', meta: { title: 'Добавление продукта', description: 'Страница для добавления нового продукта' } },
+        { template: templateMap['calculator.html'], name: 'calculator.html', meta: { title: 'Кредитный калькулятор', description: 'Кредитный калькулятор' } }
+    ];
+
+    await Promise.all(staticPages.map(({ template, name, meta }) =>
+        fs.writeFile(path.join(distDir, name), template({ meta }))
+    ));
+
+    // Генерация страниц для статей
+    const articleTemplates = Object.keys(templateMap).filter(key => 
+        key.endsWith('.html') && !['404.html', 'add.html', 'calculator.html', 'layout.html', 'product-page.html', 'category-page.html', 'compare-page.html', 'index-page.html'].includes(key)
+    );
+
+    await Promise.all(articleTemplates.map(templateName => {
+        const template = templateMap[templateName];
+        const fileName = templateName.replace('.html', '.html');
+        const meta = { 
+            title: templateName.replace('.html', '').replace(/-/g, ' '), 
+            description: `Статья о ${templateName.replace('.html', '').replace(/-/g, ' ')}` 
+        };
+        
+        return fs.writeFile(path.join(distDir, fileName), template({ meta }));
+    }));
+}
+
+async function copyStaticFiles(baseDir, distDir) {
+    const copyFiles = async (srcDir, destDir) => {
+        const files = await fs.readdir(srcDir);
+        await Promise.all(files.map(async file => {
+            const src = path.join(srcDir, file);
+            const dest = path.join(destDir, file);
+            await fs.mkdir(path.dirname(dest), { recursive: true });
+            await fs.copyFile(src, dest);
+        }));
+    };
+
+    await Promise.all([
+        copyFiles(path.join(baseDir, 'img/bank-logos'), path.join(distDir, 'img/bank-logos')),
+        copyFiles(path.join(baseDir, 'static'), distDir),
+        fs.cp(path.join(baseDir, 'styles/theme.css'), path.join(distDir, 'css/theme.css'))
+    ]);
+}
+
+async function generateSitemap(products, categories, distDir) {
+    const path = require('path');
+    const baseUrl = 'https://bank-select.ru';
+    
+    // Основные URL
+    const urls = [
+        `${baseUrl}/`,
+        // Страницы продуктов
+        ...products.map(product => `${baseUrl}/products/${product.id}.html`),
+        // Страницы категорий
+        ...categories.map(category => `${baseUrl}/category/${category.id}.html`),
+        // Страницы сравнения
+        ...categories.map(category => `${baseUrl}/compare/${category.id}.html`),
+        // Статические страницы
+        `${baseUrl}/404.html`,
+        `${baseUrl}/add.html`,
+        `${baseUrl}/calculator.html`
+    ];
+
+    // Также добавим статьи из templates/articles
+    const articlesDir = path.join(__dirname, '../templates', 'articles');
+    try {
+        await fs.access(articlesDir); // Проверяем существование директории
+        const articleFiles = await fs.readdir(articlesDir);
+        const articleUrls = articleFiles
+            .filter(file => path.extname(file) === '.html')
+            .map(file => `${baseUrl}/${file}`);
+        urls.push(...articleUrls);
+    } catch (err) {
+        // Если директории articles нет, просто продолжаем
+    }
+
+    // Убираем дубликаты
+    const uniqueUrls = [...new Set(urls)];
+
+    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls
-      .map(
-        (url) => `
+    ${uniqueUrls.map(url => `
     <url>
         <loc>${url}</loc>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
-    </url>
-    `,
-      )
-      .join("")}
+    </url>`).join('')}
 </urlset>`;
 
-  return sitemapXml;
+    await fs.writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml);
 }
-function generateRobotsTXT() {
-  return `
-  User-Agent: *
-  Allow: *.html
-  Allow: *.css
-  Allow: *.js
-  Allow: *.jpeg
-  Allow: *.jpg
-  Allow: *.JPG
-  Allow: *.png
-  Allow: *.svg
-  Allow: *.webp
-  Sitemap: https://bank-select.ru/sitemap.xml
-  `;
+
+async function generateRobotsTXT(distDir) {
+    const robotsTxt = `
+User-Agent: *
+Allow: *.html
+Allow: *.css
+Allow: *.js
+Allow: *.jpeg
+Allow: *.jpg
+Allow: *.JPG
+Allow: *.png
+Allow: *.svg
+Allow: *.webp
+Sitemap: https://bank-select.ru/sitemap.xml
+`;
+
+    await fs.writeFile(path.join(distDir, 'robots.txt'), robotsTxt);
+    await fs.writeFile(path.join(distDir, 'CNAME'), 'bank-select.ru');
 }
+
 main().catch(console.error);
