@@ -1,0 +1,62 @@
+{{!< layout}}
+<h1>Сравнение Ипотека</h1>
+
+<p>На этой странице вы можете сравнить различные ипотека от разных банков.</p>
+
+<div class="comparison-table-container">
+  <table class="comparison-table">
+    <tr><th>Параметр</th><th>Ипотека на новостройку</th><th>Стандартная ипотека</th><th>Семейная ипотека</th><th>Ипотека на готовое жилье</th></tr>
+    <tr><td>interest_rate</td><td>от 9.0%</td><td>от 9.5%</td><td>от 8.5%</td><td>9.5%</td></tr><tr><td>min_down_payment</td><td>20%</td><td>15%</td><td>15%</td><td>15%</td></tr><tr><td>loan_term</td><td>от 1 до 30 лет</td><td>от 1 до 30 лет</td><td>от 1 до 30 лет</td><td>от 1 до 30 лет</td></tr><tr><td>min_loan_amount</td><td>500 000 ₽</td><td>300 000 ₽</td><td>300 000 ₽</td><td>300 000 ₽</td></tr><tr><td>max_loan_amount</td><td>60 000 000 ₽</td><td>60 000 000 ₽</td><td>12 000 000 ₽</td><td>60 000 000 ₽</td></tr><tr><td>application_fee</td><td>Бесплатно</td><td>Бесплатно</td><td>Бесплатно</td><td>Бесплатно</td></tr><tr><td>issuance_fee</td><td>0.7% от суммы кредита</td><td>1% от суммы кредита</td><td>0.5% от суммы кредита</td><td>1% от суммы кредита</td></tr><tr><td>early_repayment_fee</td><td>Бесплатно</td><td>Бесплатно</td><td>Бесплатно</td><td>Бесплатно</td></tr><tr><td>client_category</td><td>Физические лица</td><td>Физические лица</td><td>Физические лица</td><td>Физические лица</td></tr><tr><td>age_requirement</td><td>от 21 до 65 лет</td><td>от 21 до 65 лет</td><td>от 21 до 65 лет</td><td>от 21 до 65 лет</td></tr><tr><td>work_experience</td><td>не менее 6 месяцев на последнем месте</td><td>не менее 6 месяцев на последнем месте</td><td>не менее 6 месяцев на последнем месте</td><td>не менее 6 месяцев на последнем месте</td></tr><tr><td>documents_required</td><td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Трудовая книжка</td><td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Трудовая книжка</td><td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Свидетельства о рождении детей</td><td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Трудовая книжка</td></tr>
+  </table>
+</div>
+
+<style>
+.comparison-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-table thead tr {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.comparison-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.comparison-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1e40af;
+}
+
+.comparison-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1e40af;
+}
+</style>
+
+{{> footer}}

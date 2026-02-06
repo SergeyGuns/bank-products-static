@@ -1,0 +1,31 @@
+[
+  {
+    "status": "What did you want to see here?",
+    "id": "tbank-1770255305334",
+    "type": "mortgages",
+    "bankName": "tbank",
+    "version": {
+      "date": "2026-02-05",
+      "source": "API://tbank/mortgages",
+      "updatedBy": "scraper"
+    },
+    "validFrom": "2026-02-05",
+    "meta": {
+      "title": "Unknown Product",
+      "description": "No description available"
+    },
+    "__sourceFile": "src\\data\\pdfs\\mortgages\\tbank\\tbank-unknown-2026-02-05.json",
+    "title": "mortgages tbank",
+    "imageUrl": "/img/products/mortgages.jpg",
+    "features": [],
+    "conditions": [
+      "Условия могут отличаться в зависимости от категории клиента"
+    ],
+    "referralLink": "https://tbank.ru",
+    "parameters": {
+      "main": {},
+      "fees": {},
+      "requirements": {}
+    }
+  }
+]

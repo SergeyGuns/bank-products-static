@@ -1,0 +1,62 @@
+{{!< layout}}
+<h1>Сравнение Автокредиты</h1>
+
+<p>На этой странице вы можете сравнить различные автокредиты от разных банков.</p>
+
+<div class="comparison-table-container">
+  <table class="comparison-table">
+    <tr><th>Параметр</th><th>Автокредит "Выгодный старт"</th><th>Автокредит на новый автомобиль</th></tr>
+    <tr><td>Процентная ставка</td><td>от 7.9%</td><td>—</td></tr><tr><td>Первоначальный взнос</td><td>от 10%</td><td>—</td></tr><tr><td>Срок кредита</td><td>до 7 лет</td><td>—</td></tr><tr><td>Страхование</td><td>обязательно</td><td>—</td></tr><tr><td>Оформление</td><td>бесплатно</td><td>—</td></tr><tr><td>Возраст</td><td>от 21 года</td><td>—</td></tr><tr><td>Стаж</td><td>от 6 месяцев на последнем месте работы</td><td>—</td></tr><tr><td>interest_rate</td><td>—</td><td>8.9%</td></tr><tr><td>min_down_payment</td><td>—</td><td>10%</td></tr><tr><td>loan_term</td><td>—</td><td>от 1 до 7 лет</td></tr><tr><td>min_loan_amount</td><td>—</td><td>200 000 ₽</td></tr><tr><td>max_loan_amount</td><td>—</td><td>5 000 000 ₽</td></tr><tr><td>application_fee</td><td>—</td><td>Бесплатно</td></tr><tr><td>issuance_fee</td><td>—</td><td>0.5% от суммы кредита</td></tr><tr><td>early_repayment_fee</td><td>—</td><td>Бесплатно</td></tr><tr><td>client_category</td><td>—</td><td>Физические лица</td></tr><tr><td>age_requirement</td><td>—</td><td>от 21 до 65 лет</td></tr><tr><td>work_experience</td><td>—</td><td>не менее 6 месяцев на последнем месте</td></tr><tr><td>documents_required</td><td>—</td><td>Паспорт гражданина РФ,Водительское удостоверение,Справка 2-НДФЛ или по форме банка,ИНН</td></tr>
+  </table>
+</div>
+
+<style>
+.comparison-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-table thead tr {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.comparison-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.comparison-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1e40af;
+}
+
+.comparison-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1e40af;
+}
+</style>
+
+{{> footer}}

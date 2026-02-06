@@ -1,0 +1,62 @@
+{{!< layout}}
+<h1>Сравнение Потребительские кредиты</h1>
+
+<p>На этой странице вы можете сравнить различные потребительские кредиты от разных банков.</p>
+
+<div class="comparison-table-container">
+  <table class="comparison-table">
+    <tr><th>Параметр</th><th>Потребительский кредит "Универсальный"</th><th>Кредит "На любые цели"</th></tr>
+    <tr><td>Процентная ставка</td><td>от 12.9%</td><td>от 9.9%</td></tr><tr><td>Сумма кредита</td><td>до 5 000 000 ₽</td><td>до 10 000 000 ₽</td></tr><tr><td>Срок кредита</td><td>до 7 лет</td><td>до 10 лет</td></tr><tr><td>Выдача кредита</td><td>бесплатно</td><td>бесплатно</td></tr><tr><td>Обслуживание счёта</td><td>бесплатно при определенных условиях</td><td>бесплатно</td></tr><tr><td>Возраст</td><td>от 21 года</td><td>от 21 года</td></tr><tr><td>Стаж</td><td>от 6 месяцев на последнем месте работы</td><td>от 3 месяцев на последнем месте работы</td></tr>
+  </table>
+</div>
+
+<style>
+.comparison-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-table thead tr {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.comparison-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.comparison-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1e40af;
+}
+
+.comparison-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1e40af;
+}
+</style>
+
+{{> footer}}

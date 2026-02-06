@@ -4,59 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a5bee33-dd88-4716-ae10-068cdbb35487" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.ai/mcp/mcp.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/bank-products-static.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PROMPT_IMPROVE_DATA_COLLECTION.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/check_urls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/pdfs/deposits/tbank/tbank-unknown-2026-02-05.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/pdfs/loans/tbank/tbank-unknown-2026-02-05.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data/pdfs/mortgages/tbank/tbank-unknown-2026-02-05.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/api-fetcher.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/backup-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/clean-json-files-enhanced.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/clean-json-files.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/error-handler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/logger.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/restore-json-structure.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/stability-test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/test-bank-changes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/update-bank-urls.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/url-manager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/psb/psb-kreditnaya-karta-180-dney-bez-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/psb/psb-kreditnaya-karta-180-dney-bez-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-aliexpress-ot-t-banka-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-aliexpress-ot-t-banka-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-all-airlines-premium-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-all-airlines-premium-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-drive-ot-t-banka-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-drive-ot-t-banka-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-lukoyl-t-bank-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-lukoyl-t-bank-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-platinum-go-120-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-platinum-go-120-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-platinum-premium-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-platinum-premium-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-s7-ot-t-bank-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-s7-ot-t-bank-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-s7-t-bank-premium-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/t-bank/t-bank-kreditnaya-karta-s7-t-bank-premium-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/tbank/tbank-kreditnaya-karta-all-airlines-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/tbank/tbank-kreditnaya-karta-all-airlines-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/transabank/transabank-kreditnaya-karta-all-games-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/transabank/transabank-kreditnaya-karta-all-games-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credit-cards/transportnyy-kreditnyy-kompaniya/transportnyy-kreditnyy-kompaniya-kreditnaya-karta-lamoda-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credit-cards/transportnyy-kreditnyy-kompaniya/transportnyy-kreditnyy-kompaniya-kreditnaya-karta-lamoda-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credits/psb/psb-potrebitelьskiy-kredit-na-lyubye-tseli-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credits/psb/psb-potrebitelьskiy-kredit-na-lyubye-tseli-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-pod-zalog-avtomobilya-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-pod-zalog-avtomobilya-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-pod-zalog-nedvizhimosti-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/credits/t-bank/t-bank-kredit-nalichnymi-pod-zalog-nedvizhimosti-2026-02-03.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/pdfs/debit-cards/psb/psb-debetovaya-karta-tvoy-keshbek-2026-02-03.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/pdfs/debit-cards/psb/psb-debetovaya-karta-tvoy-keshbek-2026-02-03.json" afterDir="false" />
+    <list default="true" id="4a5bee33-dd88-4716-ae10-068cdbb35487" name="Changes" comment="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/scraping-results.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/scraping-results.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/bank-scraper.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/bank-scraper.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/generate-v2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/generate-v2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/generate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/generate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/notification-system.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/notification-system.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/process-scraping-results.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/process-scraping-results.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/product-parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/product-parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/validate-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/validate-data.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/templates/compare-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/compare-page.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="485" />
+    <option name="cachedIndexableFilesCount" value="475" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,12 +52,13 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs.jest.jest_package": "C:/Users/mcheg/projects/bank-products-static/node_modules/jest",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "ml.llm.LLMAIWorkflowsConfigurable",
+    "npm.p.executor": "Run",
+    "settings.editor.selected.configurable": "ml.llm.AcpAgentsConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.p">
     <configuration name="json-to-html.spec.js" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -131,8 +83,19 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="p" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="p" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.p" />
         <item itemvalue="Jest.json-to-html.spec.js" />
       </list>
     </recent_temporary>
@@ -155,12 +118,25 @@
       <workItem from="1770251524318" duration="1422000" />
       <workItem from="1770303411935" duration="3032000" />
       <workItem from="1770324510609" duration="953000" />
-      <workItem from="1770325862427" duration="6156000" />
+      <workItem from="1770325862427" duration="7653000" />
     </task>
+    <task id="LOCAL-00001" summary="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script.">
+      <option name="closed" value="true" />
+      <created>1770333009772</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770333009772</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

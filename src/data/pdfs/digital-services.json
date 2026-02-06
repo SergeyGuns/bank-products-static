@@ -1,0 +1,38 @@
+[
+  {
+    "id": "citibank-premium-account-1",
+    "title": "Премиальный банковский счет",
+    "type": "digital-services",
+    "bankName": "Ситибанк",
+    "source": "manual-addition",
+    "featured": false,
+    "shortDescription": "Премиальный банковский счет",
+    "fullDescription": "Информация о продукте Премиальный банковский счет от Ситибанк",
+    "imageUrl": "/img/products/.jpg",
+    "features": [
+      "Продукт digital-services",
+      "От банка Ситибанк"
+    ],
+    "conditions": [
+      "Условия зависят от продукта"
+    ],
+    "referralLink": "https://ситибанк.ru",
+    "parameters": {
+      "main": {},
+      "fees": {},
+      "requirements": {}
+    },
+    "meta": {
+      "title": "Премиальный банковский счет",
+      "description": "Информация о Премиальный банковский счет"
+    },
+    "version": {
+      "date": "2026-02-05",
+      "source": "manual-addition",
+      "updatedBy": "aggregator-import"
+    },
+    "validFrom": "2026-02-05",
+    "status": "active",
+    "__sourceFile": "src\\data\\pdfs\\digital-services\\-1770330816184.json"
+  }
+]

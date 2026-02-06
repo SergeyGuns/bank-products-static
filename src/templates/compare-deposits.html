@@ -1,0 +1,62 @@
+{{!< layout}}
+<h1>Сравнение Вклады</h1>
+
+<p>На этой странице вы можете сравнить различные вклады от разных банков.</p>
+
+<div class="comparison-table-container">
+  <table class="comparison-table">
+    <tr><th>Параметр</th><th>Вклад "Максимальный"</th><th>Вклад Процент Профи</th><th>Вклад Максимальный</th><th>Неизвестный продукт</th><th>Вклад Капитал</th><th>Накопительный вклад "Выгодный"</th></tr>
+    <tr><td>interest_rate</td><td>—</td><td>до 8.5%</td><td>до 8.5%</td><td>—</td><td>до 8.0%</td><td>8.5%</td></tr><tr><td>min_amount</td><td>—</td><td>50 000 ₽</td><td>10 000 ₽</td><td>—</td><td>10 000 ₽</td><td>10 000 ₽</td></tr><tr><td>max_amount</td><td>—</td><td>10 000 000 ₽</td><td>3 000 000 ₽</td><td>—</td><td>3 000 000 ₽</td><td>5 000 000 ₽</td></tr><tr><td>term</td><td>—</td><td>от 3 до 24 месяцев</td><td>от 3 до 36 месяцев</td><td>—</td><td>от 6 до 24 месяцев</td><td>от 3 до 36 месяцев</td></tr><tr><td>opening_fee</td><td>—</td><td>Бесплатно</td><td>Бесплатно</td><td>—</td><td>Бесплатно</td><td>Бесплатно</td></tr><tr><td>maintenance_fee</td><td>—</td><td>Бесплатно</td><td>Бесплатно</td><td>—</td><td>Бесплатно</td><td>Бесплатно</td></tr><tr><td>early_closure_fee</td><td>—</td><td>1% от суммы вклада</td><td>3% от суммы вклада</td><td>—</td><td>2% от суммы вклада</td><td>3% от суммы вклада</td></tr><tr><td>client_category</td><td>—</td><td>Физические лица</td><td>Физические лица</td><td>—</td><td>Физические лица</td><td>Физические лица</td></tr><tr><td>documents_required</td><td>—</td><td>Паспорт гражданина РФ,ИНН (при наличии)</td><td>Паспорт гражданина РФ,ИНН (при наличии)</td><td>—</td><td>Паспорт гражданина РФ,ИНН (при наличии)</td><td>Паспорт гражданина РФ,ИНН (при наличии)</td></tr><tr><td>age_requirement</td><td>—</td><td>от 18 лет</td><td>от 18 лет</td><td>—</td><td>от 18 лет</td><td>от 18 лет</td></tr>
+  </table>
+</div>
+
+<style>
+.comparison-table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.comparison-table thead tr {
+  background-color: #1e40af;
+  color: #ffffff;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 12px 15px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.comparison-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.comparison-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.comparison-table tbody tr:last-of-type {
+  border-bottom: 2px solid #1e40af;
+}
+
+.comparison-table tbody tr.active-row {
+  font-weight: bold;
+  color: #1e40af;
+}
+</style>
+
+{{> footer}}
