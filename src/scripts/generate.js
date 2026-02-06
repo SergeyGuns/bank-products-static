@@ -1,3 +1,8 @@
+/**
+ * Основной скрипт генерации статического сайта банковских продуктов
+ * Обновлен для поддержки partials и улучшенной обработки данных
+ */
+
 const fs = require('fs').promises;
 const path = require('path');
 const Handlebars = require('handlebars');
@@ -30,7 +35,7 @@ async function main() {
 
         // Создание директорий
         await Promise.all([
-            'products', 'category', 'compare', 'css', 'img'
+            'products', 'category', 'compare', 'css', 'img', 'articles', 'bank', 'calculator', 'compare'
         ].map(dir => fs.mkdir(path.join(distDir, dir), { recursive: true })));
 
         // Загрузка шаблонов
@@ -38,7 +43,7 @@ async function main() {
         for (const file of templates) {
             const filePath = path.join(baseDir, 'templates', file);
             const stat = await fs.stat(filePath);
-            
+
             if (stat.isFile()) {
                 const content = await fs.readFile(filePath, 'utf-8');
                 templateMap[file] = Handlebars.compile(content);
@@ -55,7 +60,23 @@ async function main() {
             }
         }
 
-        // Регистрация частичных шаблонов
+        // Загрузка и регистрация частичных шаблонов из директории partials
+        const partialsDir = path.join(baseDir, 'templates', 'partials');
+        try {
+            const partialsFiles = await fs.readdir(partialsDir);
+            for (const partialFile of partialsFiles) {
+                if (path.extname(partialFile) === '.html') {
+                    const partialName = path.basename(partialFile, '.html');
+                    const partialContent = await fs.readFile(path.join(partialsDir, partialFile), 'utf8');
+                    Handlebars.registerPartial(partialName, partialContent);
+                    console.log(`Зарегистрирован partial: ${partialName}`);
+                }
+            }
+        } catch (error) {
+            console.log('Директория partials не найдена или пуста, пропускаем регистрацию частичных шаблонов');
+        }
+
+        // Регистрация основного layout
         Handlebars.registerPartial('layout', templateMap['layout.html']);
 
         // Генерация страниц
@@ -138,107 +159,47 @@ async function generateStaticPages(templateMap, distDir) {
     await Promise.all(staticPages.map(({ template, name, meta }) =>
         fs.writeFile(path.join(distDir, name), template({ meta }))
     ));
-
-    // Генерация страниц для статей
-    const articleTemplates = Object.keys(templateMap).filter(key => 
-        key.endsWith('.html') && !['404.html', 'add.html', 'calculator.html', 'layout.html', 'product-page.html', 'category-page.html', 'compare-page.html', 'index-page.html'].includes(key)
-    );
-
-    await Promise.all(articleTemplates.map(templateName => {
-        const template = templateMap[templateName];
-        const fileName = templateName.replace('.html', '.html');
-        const meta = { 
-            title: templateName.replace('.html', '').replace(/-/g, ' '), 
-            description: `Статья о ${templateName.replace('.html', '').replace(/-/g, ' ')}` 
-        };
-        
-        return fs.writeFile(path.join(distDir, fileName), template({ meta }));
-    }));
 }
 
 async function copyStaticFiles(baseDir, distDir) {
-    const copyFiles = async (srcDir, destDir) => {
-        const files = await fs.readdir(srcDir);
-        await Promise.all(files.map(async file => {
-            const src = path.join(srcDir, file);
-            const dest = path.join(destDir, file);
-            await fs.mkdir(path.dirname(dest), { recursive: true });
-            await fs.copyFile(src, dest);
-        }));
-    };
-
-    await Promise.all([
-        copyFiles(path.join(baseDir, 'img/bank-logos'), path.join(distDir, 'img/bank-logos')),
-        copyFiles(path.join(baseDir, 'static'), distDir),
-        fs.cp(path.join(baseDir, 'styles/theme.css'), path.join(distDir, 'css/theme.css'))
-    ]);
+    try {
+        await fs.cp(path.join(baseDir, 'static'), distDir, { recursive: true });
+    } catch (error) {
+        console.log('Директория static не найдена, пропускаем копирование');
+    }
 }
 
 async function generateSitemap(products, categories, distDir) {
-    const path = require('path');
     const baseUrl = 'https://bank-select.ru';
-    
-    // Основные URL
     const urls = [
         `${baseUrl}/`,
-        // Страницы продуктов
-        ...products.map(product => `${baseUrl}/products/${product.id}.html`),
-        // Страницы категорий
-        ...categories.map(category => `${baseUrl}/category/${category.id}.html`),
-        // Страницы сравнения
-        ...categories.map(category => `${baseUrl}/compare/${category.id}.html`),
-        // Статические страницы
-        `${baseUrl}/404.html`,
-        `${baseUrl}/add.html`,
-        `${baseUrl}/calculator.html`
+        ...products.map(p => `${baseUrl}/products/${p.id}.html`),
+        ...categories.map(c => `${baseUrl}/category/${c.id}.html`),
+        ...categories.filter(c => products.some(p => p.type === c.id)).map(c => `${baseUrl}/compare/${c.id}.html`)
     ];
 
-    // Также добавим статьи из templates/articles
-    const articlesDir = path.join(__dirname, '../templates', 'articles');
-    try {
-        await fs.access(articlesDir); // Проверяем существование директории
-        const articleFiles = await fs.readdir(articlesDir);
-        const articleUrls = articleFiles
-            .filter(file => path.extname(file) === '.html')
-            .map(file => `${baseUrl}/${file}`);
-        urls.push(...articleUrls);
-    } catch (err) {
-        // Если директории articles нет, просто продолжаем
-    }
-
-    // Убираем дубликаты
-    const uniqueUrls = [...new Set(urls)];
-
-    const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${uniqueUrls.map(url => `
-    <url>
-        <loc>${url}</loc>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>`).join('')}
+${urls.map(url => `  <url>
+    <loc>${url}</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>`).join('\n')}
 </urlset>`;
 
-    await fs.writeFile(path.join(distDir, 'sitemap.xml'), sitemapXml);
+    await fs.writeFile(path.join(distDir, 'sitemap.xml'), sitemap);
 }
 
 async function generateRobotsTXT(distDir) {
-    const robotsTxt = `
-User-Agent: *
-Allow: *.html
-Allow: *.css
-Allow: *.js
-Allow: *.jpeg
-Allow: *.jpg
-Allow: *.JPG
-Allow: *.png
-Allow: *.svg
-Allow: *.webp
-Sitemap: https://bank-select.ru/sitemap.xml
-`;
+    const robots = `User-Agent: *
+Allow: /
+Sitemap: https://bank-select.ru/sitemap.xml`;
 
-    await fs.writeFile(path.join(distDir, 'robots.txt'), robotsTxt);
-    await fs.writeFile(path.join(distDir, 'CNAME'), 'bank-select.ru');
+    await fs.writeFile(path.join(distDir, 'robots.txt'), robots);
 }
 
-main().catch(console.error);
+if (require.main === module) {
+    main();
+}
+
+module.exports = { main };

@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4a5bee33-dd88-4716-ae10-068cdbb35487" name="Changes" comment="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/templates/compare-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/templates/compare-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/generate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/generate.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +117,7 @@
       <workItem from="1770251524318" duration="1422000" />
       <workItem from="1770303411935" duration="3032000" />
       <workItem from="1770324510609" duration="953000" />
-      <workItem from="1770325862427" duration="7653000" />
+      <workItem from="1770325862427" duration="8680000" />
     </task>
     <task id="LOCAL-00001" summary="Remove legacy `generate.js` in favor of the newer `generate-v2.js`, delete its reference from `package.json`, and clean up unused code. This consolidates site generation logic into a single, more maintainable script.">
       <option name="closed" value="true" />
