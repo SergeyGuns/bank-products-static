@@ -1,12 +1,11 @@
 {
-  "id": "tinkoff-credit-На_любые_цели",
+  "id": "tinkoff-credit-any-Any",
   "bankName": "Тинькофф Банк",
-  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит на любые цели",
   "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
   "conditions": {
-    "minAmount": 1000,
+    "minAmount": 0,
     "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 15,
@@ -14,12 +13,15 @@
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": "Сумма кредита от 1 000 до 30 000 000 ₽, срок до 15 лет. Поручители и справки не требуются."
+    "description": "Кредит без справок о доходах и поручителей. Требуется только паспорт."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
+    "maxAge": null,
+    "minIncome": null,
     "employmentType": "any",
+    "workExperience": null,
+    "registration": null,
     "documents": [
       "паспорт"
     ]
@@ -35,8 +37,8 @@
   "lastVerified": "2026-04-08T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Кредит на любые цели без справок и поручителей – Тинькофф Банк",
-  "seoDescription": "Получите кредит до 30 000 000 ₽ без справок о доходах и поручителей. Быстрое одобрение, онлайн оформление.",
+  "seoTitle": "Кредит на любые цели без справок и поручителей | Тинькофф Банк",
+  "seoDescription": "Получите кредит до 30 000 000 ₽ без справок о доходах и поручителей. Быстрое решение онлайн, расчёт в калькуляторе.",
   "seoKeywords": [
     "кредит",
     "без справок",

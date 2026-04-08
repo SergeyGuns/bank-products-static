@@ -3,12 +3,6 @@
   "bankName": "Сбербанк",
   "productType": "deposit",
   "productName": "Депозит",
-  "conditions": {
-    "minAmount": 1000,
-    "maxAmount": 2000000,
-    "currency": "RUB",
-    "description": "Суммы вкладов от 1 000 до 2 000 000 рублей"
-  },
   "sourceUrl": "https://bankiros.ru/bank/sberbank/deposits",
   "extractedAt": "2026-04-08T12:00:00Z",
   "isActive": true,
