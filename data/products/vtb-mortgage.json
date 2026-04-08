@@ -3,8 +3,53 @@
   "bankName": "ВТБ",
   "productType": "mortgage",
   "productName": "Ипотека",
+  "productDescription": "Покупка жилья с использованием НИС для военных от 5%Первый взнос до 25 летСрок до 2,125 млн ₽СуммаОформить ипотеку",
+  "conditions": {
+    "minAmount": 0,
+    "maxAmount": 100000000,
+    "minTerm": 1,
+    "maxTerm": 360,
+    "currency": "RUB",
+    "collateral": true,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Максимальная сумма заемных средств составляет 100 млн рублей, срок – до 30 лет. Для военных доступна программа с НИС."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "employmentType": "any",
+    "documents": [
+      "паспорт",
+      "свидетельство о доходах"
+    ]
+  },
+  "features": [
+    {
+      "name": "Эскроу-счет",
+      "description": "Для всех программ требуется открытие эскроу‑счета, где размещается первоначальный взнос и отчисляются средства продавцу после завершения строительства.",
+      "available": true
+    },
+    {
+      "name": "Скидка по ставке для зарплатных клиентов",
+      "description": "Для новых зарплатных клиентов ВТБ действует скидка 0,4% к процентной ставке по ипотеке.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Комиссия за перевод кредита не взимается."
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-08T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "metadata": {}
 }

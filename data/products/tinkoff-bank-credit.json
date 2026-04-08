@@ -1,65 +1,45 @@
 {
-  "id": "tinkoff-credit-kredit-nalichnymi",
+  "id": "tinkoff-credit-any-цели",
   "bankName": "Тинькофф Банк",
-  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
-  "bankWebsite": "https://www.tinkoff.ru",
   "productType": "credit",
-  "productName": "Кредит наличными",
-  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
-  "interestRates": [
-    {
-      "value": 0,
-      "type": "floating",
-      "conditions": ""
-    }
-  ],
+  "productName": "Кредиты на любые цели",
+  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
   "conditions": {
     "minAmount": 0,
     "maxAmount": 30000000,
-    "minTerm": 0,
-    "maxTerm": 15,
+    "minTerm": 1,
+    "maxTerm": 120,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": ""
+    "description": "Кредит без справок о доходах и поручителей. Максимальная сумма кредита – до 30 000 000 ₽, срок – до 15 лет."
   },
   "borrowerRequirements": {
     "minAge": 18,
     "maxAge": 65,
-    "minIncome": 0,
     "employmentType": "any",
-    "workExperience": 0,
-    "registration": "",
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Онлайн заявка",
-      "description": "Кредит можно оформить онлайн через сайт банка.",
+      "name": "Онлайн оформление",
+      "description": "Кредит оформляется полностью онлайн без посещения банка.",
+      "available": true
+    },
+    {
+      "name": "Бесплатно",
+      "description": "Нет платы за открытие кредита и обслуживание.",
       "available": true
     }
   ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": ""
-  },
-  "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
-  },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-08T12:00:00Z",
-  "lastVerified": "2026-04-08T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "",
-  "seoDescription": "",
-  "seoKeywords": [],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.7
+  }
 }
