@@ -1,72 +1,27 @@
 {
-  "id": "tinkoff-credit-На_любые_цели",
+  "id": "tinkoff-loan",
   "bankName": "Тинькофф Банк",
+  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.png",
+  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит на любые цели",
-  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
   "interestRates": [
     {
-      "value": 0,
-      "type": "floating",
-      "conditions": "Ставка определяется в зависимости от выбранного срока и суммы кредита."
+      "value": 15.9,
+      "type": "fixed",
+      "conditions": "Ставка фиксирована при условии наличия онлайн-заявки и отсутствии справок"
     }
   ],
   "conditions": {
-    "minAmount": 1,
+    "minAmount": 1000000,
     "maxAmount": 30000000,
-    "minTerm": 1,
-    "maxTerm": 180,
+    "minTerm": 3,
+    "maxTerm": 15,
     "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Кредит без справок о доходах и поручителей. Требуется только паспорт."
+    "description": "Максимальная сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется онлайн-заявка без справок и поручителей."
   },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "maxAge": 65,
-    "employmentType": "any",
-    "registration": "не требуется",
-    "documents": [
-      "паспорт"
-    ]
-  },
-  "features": [
-    {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс оформления кредита можно завершить онлайн.",
-      "available": true
-    },
-    {
-      "name": "Калькулятор платежей",
-      "description": "С помощью калькулятора можно быстро рассчитать примерный размер ежемесячного платежа.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "На момент извлечения не указаны комиссии за досрочное погашение."
-  },
-  "penalties": {
-    "latePayment": "При просрочке платежа начисляется штраф в размере 1% от суммы просроченного платежа.",
-    "overLimit": "",
-    "description": ""
-  },
-  "sourceUrl": "https://www.tinkoff.ru/loans/",
-  "extractedAt": "2026-04-08T12:00:00Z",
-  "lastVerified": "2026-04-08T12:00:00Z",
+  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "extractedAt": "2026-04-09T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Кредит на любые цели без справок и поручителей – Тинькофф Банк",
-  "seoDescription": "Получите кредит на любые цели в Тинькофф Банке без справок о доходах и поручителей. Онлайн оформление, быстрый расчёт платежей.",
-  "seoKeywords": [
-    "кредит на любые цели",
-    "трудоустройство без справок",
-    "тинькофф банк кредиты"
-  ],
-  "metadata": {
-    "confidence": 0.9
-  }
+  "priority": 50
 }

@@ -1,10 +1,13 @@
 {
-  "id": "sberbank-deposit-Deposit",
+  "id": "sberbank-deposit",
   "bankName": "Сбербанк",
   "productType": "deposit",
-  "productName": "Депозит",
+  "productName": "Вкладные продукты Сбербанка",
   "sourceUrl": "https://bankiros.ru/bank/sberbank/deposits",
-  "extractedAt": "2026-04-08T12:00:00Z",
+  "extractedAt": "2026-04-09T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "metadata": {
+    "confidence": 0.3
+  }
 }
