@@ -1,0 +1,10 @@
+{
+  "id": "bank-select-ru-deposit",
+  "bankName": "Bank Select",
+  "productType": "deposit",
+  "productName": "Deposit Product",
+  "sourceUrl": "https://www.bank-select.ru/deposit-product-page",
+  "extractedAt": "2026-04-08T12:00:00Z",
+  "isActive": true,
+  "priority": 50
+}

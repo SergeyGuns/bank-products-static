@@ -1,78 +1,10 @@
 {
-  "id": "sberbank-deposit-novye-dengi",
+  "id": "sberbank-deposit-Вклад",
   "bankName": "Сбербанк",
-  "bankLogoUrl": "https://www.sberbank.ru/static/img/logo.svg",
-  "bankWebsite": "https://www.sberbank.ru",
   "productType": "deposit",
-  "productName": "Новые деньги",
-  "productDescription": "Вклад «Новые деньги» в Сбербанке с онлайн заявкой, возможностью пополнения и досрочного расторжения на льготных условиях. Вклады до 1 400 000 ₽ застрахованы АСВ.",
-  "interestRates": [
-    {
-      "value": 14,
-      "type": "fixed",
-      "conditions": "до 1 400 000 ₽"
-    }
-  ],
-  "conditions": {
-    "minAmount": 10000,
-    "maxAmount": 1400000,
-    "minTerm": 3,
-    "maxTerm": 91,
-    "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": true,
-    "description": "Вклады до 1 400 000 ₽ застрахованы АСВ. Возможность пополнения и досрочного расторжения на льготных условиях."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "Физическое лицо, имеющее российский ИНН",
-    "documents": [
-      "паспорт",
-      "свидетельство о доходах"
-    ]
-  },
-  "features": [
-    {
-      "name": "Онлайн заявка",
-      "description": "Вклад можно открыть онлайн через сайт Банки.ру",
-      "available": true
-    },
-    {
-      "name": "Пополнение",
-      "description": "Возможность пополнения вклада в течение срока договора",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": true,
-    "description": "Досрочное расторжение возможно на льготных условиях, без комиссии."
-  },
-  "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
-  },
-  "sourceUrl": "https://www.banki.ru/products/deposits/sberbank/",
+  "productName": "Вклад",
+  "sourceUrl": "https://bankiros.ru/bank/sberbank/deposits",
   "extractedAt": "2026-04-08T12:00:00Z",
-  "lastVerified": "2026-04-08T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Вклад «Новые деньги» в Сбербанке – 14% годовых, онлайн заявка",
-  "seoDescription": "Откройте вклад «Новые деньги» в Сбербанке с доходностью 14% годовых. Вклады до 1 400 000 ₽ застрахованы АСВ. Онлайн заявка и возможность пополнения.",
-  "seoKeywords": [
-    "сбербанк",
-    "вклад новые деньги",
-    "депозит",
-    "14% годовых"
-  ],
-  "metadata": {
-    "confidence": 0.9
-  }
+  "priority": 50
 }
