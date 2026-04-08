@@ -1,6 +1,7 @@
 {
   "id": "sberbank-deposit-Deposit",
   "bankName": "Сбербанк",
+  "bankWebsite": "https://www.sberbank.ru/ru",
   "productType": "deposit",
   "productName": "Депозит",
   "sourceUrl": "https://bankiros.ru/bank/sberbank/deposits",

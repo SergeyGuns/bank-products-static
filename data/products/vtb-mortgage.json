@@ -1,70 +1,74 @@
 {
   "id": "vtb-mortgage-Ипотека",
   "bankName": "ВТБ",
+  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
   "productName": "Ипотека",
-  "productDescription": "Покупка жилья с использованием НИС для военных от 5%Первый взнос до 25 летСрок до 2,125 млн ₽СуммаОформить ипотеку…",
+  "productDescription": "Программа ипотечного кредитования на покупку жилья в новостройке, вторичном рынке и другие варианты с различными льготами.",
   "interestRates": [
-    {
-      "value": 10.1,
-      "type": "fixed",
-      "conditions": "Льготная ставка для новых территорий"
-    },
     {
       "value": 20.1,
       "type": "fixed",
-      "conditions": "Стандартные программы ипотеки от 20,1%"
+      "conditions": "Льготная ставка для всех граждан РФ старше 18 лет"
     }
   ],
   "conditions": {
-    "minAmount": 0,
+    "minAmount": 1000000,
     "maxAmount": 100000000,
-    "minTerm": 1,
-    "maxTerm": 30,
+    "minTerm": 12,
+    "maxTerm": 360,
     "currency": "RUB",
     "collateral": true,
     "guarantor": false,
-    "insurance": false,
-    "description": "Максимальная сумма заемных средств составляет 100 миллионов рублей, а срок — до 30 лет. При покупке другого объекта недвижимости не нужно платить первоначальный взнос: залогом будет выступать жилье, которое уже имеется у вас в собственности."
+    "insurance": true,
+    "description": "Максимальная сумма заемных средств составляет 100 млн ₽, срок до 30 лет. Для новых зарплатных клиентов ВТБ действует скидка 0,4% к процентной ставке по ипотеке."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": null,
-    "minIncome": null,
+    "maxAge": 65,
+    "minIncome": 0,
     "employmentType": "any",
-    "workExperience": null,
-    "registration": null,
+    "workExperience": 0,
+    "registration": "не требуется",
     "documents": [
       "паспорт",
-      "свидетельство о регистрации недвижимости"
+      "справка о доходах"
     ]
   },
+  "features": [
+    {
+      "name": "Эскроу-счет",
+      "description": "Используется для безопасного расчета и передачи средств подрядчику",
+      "available": true
+    },
+    {
+      "name": "Ипотечные каникулы",
+      "description": "Возможность оформить ипотечные каникулы или реструктуризацию кредита",
+      "available": true
+    }
+  ],
   "fees": {
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за перевод кредита не взимается."
+    "description": "Комиссия за перевод кредита не взимается"
   },
   "penalties": {
-    "latePayment": null,
-    "overLimit": null,
-    "description": null
+    "latePayment": "описание штрафа при просрочке платежей",
+    "overLimit": "не применимо",
+    "description": "штрафные санкции"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-08T12:00:00Z",
   "lastVerified": "2026-04-08T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека ВТБ – покупка жилья с НИС, льготные ставки",
-  "seoDescription": "Получите ипотеку до 100 000 000 ₽ с НИС для военных и льготными ставками. Быстрое решение онлайн, расчёт в калькуляторе.",
+  "seoTitle": "Ипотека ВТБ – выгодные условия и льготы",
+  "seoDescription": "Получите ипотеку в ВТБ с максимальной суммой 100 млн ₽, срок до 30 лет. Льготная ставка 20,1% и скидка для новых зарплатных клиентов.",
   "seoKeywords": [
     "ипотека",
     "ВТБ",
-    "НСИ",
-    "льготы",
-    "покупка жилья"
+    "льготы"
   ],
-  "metadata": {
-    "confidence": 0.85
-  }
+  "metadata": {}
 }
