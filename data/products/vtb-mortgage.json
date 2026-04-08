@@ -1,0 +1,10 @@
+{
+  "id": "vtb-mortgage-ипотека",
+  "bankName": "ВТБ",
+  "productType": "mortgage",
+  "productName": "Ипотека",
+  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "extractedAt": "2026-04-08T12:00:00Z",
+  "isActive": true,
+  "priority": 50
+}

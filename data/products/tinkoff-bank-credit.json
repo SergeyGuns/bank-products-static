@@ -1,0 +1,65 @@
+{
+  "id": "tinkoff-credit-kredit-nalichnymi",
+  "bankName": "Тинькофф Банк",
+  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.tinkoff.ru",
+  "productType": "credit",
+  "productName": "Кредит наличными",
+  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
+  "interestRates": [
+    {
+      "value": 0,
+      "type": "floating",
+      "conditions": ""
+    }
+  ],
+  "conditions": {
+    "minAmount": 0,
+    "maxAmount": 30000000,
+    "minTerm": 0,
+    "maxTerm": 15,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": ""
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "",
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Онлайн заявка",
+      "description": "Кредит можно оформить онлайн через сайт банка.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": ""
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
+  "sourceUrl": "https://www.tinkoff.ru/loans/",
+  "extractedAt": "2026-04-08T12:00:00Z",
+  "lastVerified": "2026-04-08T12:00:00Z",
+  "isActive": true,
+  "priority": 50,
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoKeywords": [],
+  "metadata": {}
+}
