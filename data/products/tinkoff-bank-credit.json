@@ -7,43 +7,27 @@
   "interestRates": [
     {
       "value": 0,
-      "type": "fixed",
-      "min": 0,
-      "max": 0,
-      "conditions": "Ставка зависит от суммы, срока и кредитной истории"
+      "type": "fixed"
     }
   ],
   "conditions": {
-    "minAmount": 10000,
+    "minAmount": 1,
     "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 15,
     "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Кредит без справок о доходах и поручителей, срок до 15 лет"
+    "description": "Сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется только паспорт."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "не требуется",
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Бесплатная карта",
-      "description": "Кредит будет выдан на карту, деньги будут переведены сразу",
-      "available": true
-    },
-    {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс оформления можно завершить онлайн",
+      "name": "Бесплатная выдача карты",
+      "description": "Кредит будет выдан на карту без посещения банка",
       "available": true
     }
   ],
@@ -54,9 +38,9 @@
     "description": "Нет комиссии за досрочное погашение"
   },
   "penalties": {
-    "latePayment": "штраф 1,5% от суммы просроченного платежа",
-    "overLimit": "не применимо",
-    "description": "Штрафы при просрочке платежей"
+    "latePayment": "описание штрафа",
+    "overLimit": "описание штрафа",
+    "description": "штрафные санкции при просрочке платежей"
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
@@ -64,14 +48,11 @@
   "isActive": true,
   "priority": 50,
   "seoTitle": "Кредит наличными Тинькофф Банк – без справок и поручителей",
-  "seoDescription": "Получите кредит наличными в Тинькофф Банке до 30 000 000 ₽, сроком до 15 лет. Онлайн оформление, бесплатная карта.",
+  "seoDescription": "Получите кредит наличными в Тинькофф Банке до 30 000 000 ₽ без справок о доходах. Быстрое одобрение онлайн.",
   "seoKeywords": [
     "кредит наличными",
     "тинькофф банк",
-    "без справок",
-    "поручитель"
+    "без справок"
   ],
-  "metadata": {
-    "confidence": 0.9
-  }
+  "metadata": {}
 }
