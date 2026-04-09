@@ -1,13 +1,19 @@
 {
-  "id": "tinkoff-credit-cash-any",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
-  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
   "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит наличными на любые цели",
   "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
+  "interestRates": [
+    {
+      "value": 0,
+      "type": "floating",
+      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы и срока кредита."
+    }
+  ],
   "conditions": {
-    "minAmount": 0,
+    "minAmount": 10000,
     "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 180,
@@ -19,8 +25,8 @@
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
     "employmentType": "any",
-    "registration": "Наличие российского ИНН и регистрации в РФ.",
     "documents": [
       "паспорт"
     ]
@@ -43,17 +49,23 @@
     "earlyRepayment": false,
     "description": "Нет комиссии за досрочное погашение."
   },
+  "penalties": {
+    "latePayment": "При просрочке начисляется штраф в размере 1% от суммы просроченного платежа.",
+    "overLimit": "",
+    "description": ""
+  },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Кредит наличными без справок | Тинькофф Банк",
-  "seoDescription": "Получите кредит на любые цели в Тинькофф Банке без справок и поручителей. Быстрое одобрение, онлайн оформление.",
+  "seoTitle": "Кредит наличными без справок и поручителей | Тинькофф Банк",
+  "seoDescription": "Получите кредит на любые цели в Тинькофф Банке без справок о доходах и поручителей. Быстрое одобрение, онлайн-заявка.",
   "seoKeywords": [
     "кредит наличными",
     "трудоустройство",
-    "без справок"
+    "поручитель",
+    "Тинькофф"
   ],
   "metadata": {
     "confidence": 0.9
