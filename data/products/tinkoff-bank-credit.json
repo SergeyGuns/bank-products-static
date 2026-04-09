@@ -1,10 +1,13 @@
 {
-  "id": "tinkoff-credit-Кредит-на-любые-цели",
+  "id": "tinkoff-credit",
   "bankName": "Тинькофф Банк",
   "productType": "credit",
-  "productName": "Кредит на любые цели",
+  "productName": "Кредиты на любые цели",
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "metadata": {
+    "confidence": 0.9
+  }
 }
