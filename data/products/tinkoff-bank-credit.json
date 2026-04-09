@@ -1,26 +1,9 @@
 {
-  "id": "tinkoff-loan",
+  "id": "tinkoff-credit-Кредит-на-любые-цели",
   "bankName": "Тинькофф Банк",
-  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.png",
-  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит на любые цели",
-  "interestRates": [
-    {
-      "value": 15.9,
-      "type": "fixed",
-      "conditions": "Ставка фиксирована при условии наличия онлайн-заявки и отсутствии справок"
-    }
-  ],
-  "conditions": {
-    "minAmount": 1000000,
-    "maxAmount": 30000000,
-    "minTerm": 3,
-    "maxTerm": 15,
-    "currency": "RUB",
-    "description": "Максимальная сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется онлайн-заявка без справок и поручителей."
-  },
-  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50
