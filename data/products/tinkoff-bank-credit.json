@@ -7,27 +7,42 @@
   "interestRates": [
     {
       "value": 0,
-      "type": "fixed"
+      "type": "fixed",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка зависит от суммы, срока и кредитной истории"
     }
   ],
   "conditions": {
-    "minAmount": 1,
+    "minAmount": 10000,
     "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 15,
     "currency": "RUB",
-    "description": "Сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется только паспорт."
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Кредит без справок о доходах и поручителей, до 30 000 000 ₽ на срок до 15 лет."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "не требуется",
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Бесплатная выдача карты",
-      "description": "Кредит будет выдан на карту без посещения банка",
+      "name": "Бесплатный расчёт",
+      "description": "Калькулятор показывает примерный размер ежемесячного платежа.",
+      "available": true
+    },
+    {
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления можно завершить онлайн без посещения банка.",
       "available": true
     }
   ],
@@ -35,12 +50,12 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Нет комиссии за досрочное погашение"
+    "description": "Комиссии зависят от условий договора"
   },
   "penalties": {
-    "latePayment": "описание штрафа",
-    "overLimit": "описание штрафа",
-    "description": "штрафные санкции при просрочке платежей"
+    "latePayment": "Штраф за просрочку платежа",
+    "overLimit": "Штраф за превышение лимита кредита",
+    "description": "Санкции применяются в случае несвоевременного погашения кредитных обязательств."
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
@@ -48,7 +63,7 @@
   "isActive": true,
   "priority": 50,
   "seoTitle": "Кредит наличными Тинькофф Банк – без справок и поручителей",
-  "seoDescription": "Получите кредит наличными в Тинькофф Банке до 30 000 000 ₽ без справок о доходах. Быстрое одобрение онлайн.",
+  "seoDescription": "Получите кредит наличными в Тинькофф Банке без справок о доходах. Оформление онлайн, быстрый расчёт.",
   "seoKeywords": [
     "кредит наличными",
     "тинькофф банк",

@@ -1,38 +1,59 @@
 {
-  "id": "vtb-mortgage",
+  "id": "vtb-mortgage-new-build",
   "bankName": "ВТБ",
   "productType": "mortgage",
-  "productName": "Ипотека на готовый дом",
-  "productDescription": "Дом, который уже ждет свою семью.",
+  "productName": "Ипотека на покупку жилья в новостройке",
+  "productDescription": "Ипотека для покупки квартиры, дома или таунхауса в аккредитованных новостройках. Ставка 20,1 % годовых, срок до 30 лет, максимальная сумма – 100 млн ₽.",
   "interestRates": [
     {
       "value": 20.1,
-      "type": "fixed"
+      "type": "fixed",
+      "min": 20.1,
+      "max": 20.1,
+      "conditions": "Ставка фиксирована для всех программ"
     }
   ],
   "conditions": {
-    "minAmount": 1000000,
+    "minAmount": 0,
     "maxAmount": 100000000,
-    "minTerm": 12,
-    "maxTerm": 360,
+    "minTerm": 1,
+    "maxTerm": 30,
     "currency": "RUB",
-    "description": "Сумма до 100 млн ₽, срок до 30 лет. Первый взнос до 20 лет."
+    "collateral": true,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Максимальная сумма кредита – 100 млн ₽, срок до 30 лет. Первоначальный взнос от 20 % (для некоторых программ)."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "не требуется",
     "documents": [
-      "паспорт"
+      "паспорт",
+      "справка о доходах"
     ]
   },
   "features": [
     {
-      "name": "Быстрое одобрение онлайн",
-      "description": "Решение от 2 минут",
+      "name": "Онлайн‑оформление",
+      "description": "Весь процесс оформления можно завершить онлайн без посещения банка.",
       "available": true
     },
     {
-      "name": "Эскроу-счет",
-      "description": "Средства перечисляются продавцу после завершения строительства и регистрации построенного дома",
+      "name": "Быстрое решение",
+      "description": "Решение от 2 минут после подачи заявки.",
+      "available": true
+    },
+    {
+      "name": "Эскроу‑счет",
+      "description": "Безопасная сделка по покупке недвижимости – деньги хранятся на спецсчете до выполнения всех условий договора.",
+      "available": true
+    },
+    {
+      "name": "Бесплатный расчёт",
+      "description": "Калькулятор показывает примерный размер ежемесячного платежа.",
       "available": true
     }
   ],
@@ -40,24 +61,19 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за перевод кредита не взимается"
+    "description": "Комиссии зависят от условий договора, но при онлайн‑оформлении они отсутствуют."
   },
   "penalties": {
-    "latePayment": "описание штрафа",
-    "overLimit": "описание штрафа",
-    "description": "штрафные санкции при просрочке платежей"
+    "latePayment": "Штраф за просрочку платежа",
+    "overLimit": "Штраф за превышение лимита кредита",
+    "description": "Санкции применяются в случае несвоевременного погашения обязательств по ипотеке."
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека на готовый дом ВТБ – 20,1% без справок",
-  "seoDescription": "Получите ипотеку на готовый дом в ВТБ с процентной ставкой 20,1%. Быстрое одобрение онлайн.",
-  "seoKeywords": [
-    "ипотека",
-    "готовый дом",
-    "ВТБ"
-  ],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.8
+  }
 }
