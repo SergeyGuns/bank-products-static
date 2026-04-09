@@ -1,13 +1,10 @@
 {
-  "id": "tinkoff-credit",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
   "productType": "credit",
-  "productName": "Кредиты на любые цели",
-  "sourceUrl": "https://www.tinkoff.ru/loans/",
+  "productName": "Кредит наличными на любые цели",
+  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "metadata": {
-    "confidence": 0.9
-  }
+  "priority": 50
 }
