@@ -1,18 +1,20 @@
 {
-  "id": "vtb-mortgage-regular",
+  "id": "vtb-mortgage-readyhome",
   "bankName": "ВТБ",
   "productType": "mortgage",
-  "productName": "Ипотека",
-  "productDescription": "Покупка жилья, которое находится в залоге у другого банка от 20,1%",
+  "productName": "Ипотека на готовый дом",
+  "productDescription": "Дом, который уже ждет свою семью.",
   "interestRates": [
     {
       "value": 20.1,
       "type": "fixed",
-      "conditions": "Ставка рассчитывается индивидуально"
+      "min": 20.1,
+      "max": 20.1,
+      "conditions": "Ставка 20,1% для всех программ"
     }
   ],
   "conditions": {
-    "minAmount": 1000000,
+    "minAmount": 0,
     "maxAmount": 100000000,
     "minTerm": 12,
     "maxTerm": 360,
@@ -20,7 +22,7 @@
     "collateral": true,
     "guarantor": false,
     "insurance": false,
-    "description": "Ипотека на покупку жилья в залоге другого банка, срок до 30 лет, сумма до 100 млн ₽"
+    "description": "Максимальная сумма 100 млн ₽, срок до 30 лет. Требуется первоначальный взнос и наличие жилья в качестве залога."
   },
   "borrowerRequirements": {
     "minAge": 18,
@@ -30,18 +32,19 @@
     "workExperience": 0,
     "registration": "не требуется",
     "documents": [
-      "паспорт"
+      "паспорт",
+      "свидетельство о собственности"
     ]
   },
   "features": [
     {
       "name": "Эскроу-счет",
-      "description": "Платежи застрахованы через эскроу",
+      "description": "Средства хранятся на эскроу до завершения сделки.",
       "available": true
     },
     {
       "name": "Онлайн оформление",
-      "description": "Весь процесс можно завершить онлайн",
+      "description": "Весь процесс доступен онлайн, решение в течение нескольких минут.",
       "available": true
     }
   ],
@@ -49,24 +52,25 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за досрочное погашение отсутствует"
+    "description": "Комиссия за досрочное погашение отсутствует."
   },
   "penalties": {
-    "latePayment": "штраф 1,5% от суммы просроченного платежа",
-    "overLimit": "нет",
-    "description": "Штрафы применяются при просрочке платежей"
+    "latePayment": "не указано",
+    "overLimit": "не указано",
+    "description": "Информация о штрафах не предоставлена"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека в ВТБ – покупка жилья с залогом другого банка",
-  "seoDescription": "Получите ипотеку до 100 млн ₽, срок до 30 лет. Онлайн оформление и эскроу-счет.",
+  "seoTitle": "Ипотека на готовый дом ВТБ – 20,1% без справок",
+  "seoDescription": "Получите ипотеку на готовый дом в ВТБ с выгодной ставкой 20,1%. Онлайн оформление и эскроу-счет.",
   "seoKeywords": [
     "ипотека",
+    "готовый дом",
     "ВТБ",
-    "залог",
-    "онлайн"
-  ]
+    "20,1%"
+  ],
+  "metadata": {}
 }
