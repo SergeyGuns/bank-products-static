@@ -1,16 +1,14 @@
 {
-  "id": "vtb-mortgage",
+  "id": "vtb-mortgage-regular",
   "bankName": "ВТБ",
   "productType": "mortgage",
-  "productName": "Ипотека на готовый дом",
-  "productDescription": "Дом, который уже ждет свою семью.",
+  "productName": "Ипотека",
+  "productDescription": "Покупка жилья, которое находится в залоге у другого банка от 20,1%",
   "interestRates": [
     {
       "value": 20.1,
       "type": "fixed",
-      "min": 10.1,
-      "max": 30.1,
-      "conditions": "Ставка зависит от программы: новостройка 20.1%, семейная 30.1%"
+      "conditions": "Ставка рассчитывается индивидуально"
     }
   ],
   "conditions": {
@@ -22,7 +20,7 @@
     "collateral": true,
     "guarantor": false,
     "insurance": false,
-    "description": "Сумма до 100 млн ₽, срок до 30 лет. Первоначальный взнос до 30 лет."
+    "description": "Ипотека на покупку жилья в залоге другого банка, срок до 30 лет, сумма до 100 млн ₽"
   },
   "borrowerRequirements": {
     "minAge": 18,
@@ -38,12 +36,12 @@
   "features": [
     {
       "name": "Эскроу-счет",
-      "description": "Средства хранятся на спецсчете до выполнения всех условий по договору",
+      "description": "Платежи застрахованы через эскроу",
       "available": true
     },
     {
-      "name": "Онлайн‑заявка",
-      "description": "Подать заявку можно в мобильном приложении или на сайте",
+      "name": "Онлайн оформление",
+      "description": "Весь процесс можно завершить онлайн",
       "available": true
     }
   ],
@@ -55,22 +53,20 @@
   },
   "penalties": {
     "latePayment": "штраф 1,5% от суммы просроченного платежа",
-    "overLimit": "не применимо",
-    "description": "Штрафы при просрочке платежей"
+    "overLimit": "нет",
+    "description": "Штрафы применяются при просрочке платежей"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека на готовый дом – ВТБ",
-  "seoDescription": "Получите ипотеку на готовый дом в ВТБ. Сумма до 100 млн ₽, срок до 30 лет.",
+  "seoTitle": "Ипотека в ВТБ – покупка жилья с залогом другого банка",
+  "seoDescription": "Получите ипотеку до 100 млн ₽, срок до 30 лет. Онлайн оформление и эскроу-счет.",
   "seoKeywords": [
     "ипотека",
-    "готовый дом",
-    "ВТБ"
-  ],
-  "metadata": {
-    "confidence": 0.8
-  }
+    "ВТБ",
+    "залог",
+    "онлайн"
+  ]
 }
