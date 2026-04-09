@@ -1,50 +1,46 @@
 {
-  "id": "vtb-mortgage-readyhome",
+  "id": "vtb-mortgage-ипотека",
   "bankName": "ВТБ",
+  "bankLogoUrl": "https://www.vtb.ru/img/logo.svg",
+  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека на готовый дом",
-  "productDescription": "Дом, который уже ждет свою семью.",
+  "productName": "Ипотека",
+  "productDescription": "Программа ипотеки от ВТБ с различными льготными ставками и условиями для разных типов недвижимости.",
   "interestRates": [
     {
       "value": 20.1,
       "type": "fixed",
-      "min": 20.1,
-      "max": 20.1,
-      "conditions": "Ставка 20,1% для всех программ"
+      "conditions": "Ставка зависит от типа программы (новостройка, вторичное жилье, семейная ипотека и т.д.)."
     }
   ],
   "conditions": {
     "minAmount": 0,
     "maxAmount": 100000000,
-    "minTerm": 12,
-    "maxTerm": 360,
+    "minTerm": 1,
+    "maxTerm": 30,
     "currency": "RUB",
     "collateral": true,
     "guarantor": false,
     "insurance": false,
-    "description": "Максимальная сумма 100 млн ₽, срок до 30 лет. Требуется первоначальный взнос и наличие жилья в качестве залога."
+    "description": "Максимальная сумма заемных средств составляет 100 миллионов рублей, срок — до 30 лет."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
     "employmentType": "any",
-    "workExperience": 0,
-    "registration": "не требуется",
     "documents": [
       "паспорт",
-      "свидетельство о собственности"
+      "свидетельство о доходах"
     ]
   },
   "features": [
     {
       "name": "Эскроу-счет",
-      "description": "Средства хранятся на эскроу до завершения сделки.",
+      "description": "Для каждой программы необходимо открыть эскроу-счет, на котором размещается первоначальный взнос и откуда перечисляются кредитные средства после завершения строительства.",
       "available": true
     },
     {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс доступен онлайн, решение в течение нескольких минут.",
+      "name": "Скидка для зарплатных клиентов",
+      "description": "При оформлении кредита в ВТБ можно снизить ставку на 0,4% при наличии зарплаты в банке.",
       "available": true
     }
   ],
@@ -52,25 +48,27 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за досрочное погашение отсутствует."
+    "description": "Комиссия за перевод кредита не взимается."
   },
   "penalties": {
-    "latePayment": "не указано",
-    "overLimit": "не указано",
-    "description": "Информация о штрафах не предоставлена"
+    "latePayment": "Штраф в размере 1% от просроченной суммы.",
+    "overLimit": "",
+    "description": "При просрочке начисляется штраф."
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-09T12:00:00Z",
   "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека на готовый дом ВТБ – 20,1% без справок",
-  "seoDescription": "Получите ипотеку на готовый дом в ВТБ с выгодной ставкой 20,1%. Онлайн оформление и эскроу-счет.",
+  "seoTitle": "Ипотека ВТБ – выгодные условия и льготы",
+  "seoDescription": "Получите ипотеку от ВТБ с гибкими ставками, эскроу-счетом и возможностью снижения процентной ставки для зарплатных клиентов.",
   "seoKeywords": [
     "ипотека",
-    "готовый дом",
     "ВТБ",
-    "20,1%"
+    "льготы",
+    "эскроу"
   ],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.85
+  }
 }
