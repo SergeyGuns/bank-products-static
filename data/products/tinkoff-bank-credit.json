@@ -1,10 +1,68 @@
 {
-  "id": "tinkoff-loan-cash",
+  "id": "tinkoff-loan-AnyPurpose",
   "bankName": "Тинькофф Банк",
+  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит наличными на любые цели",
-  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "productName": "Кредит на любые цели",
+  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
+  "conditions": {
+    "minAmount": 0,
+    "maxAmount": 30000000,
+    "minTerm": 1,
+    "maxTerm": 15,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Кредит без справок о доходах и поручителей. Требуется только паспорт."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "employmentType": "any",
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления можно завершить онлайн.",
+      "available": true
+    },
+    {
+      "name": "Калькулятор кредита",
+      "description": "Удобный калькулятор позволяет рассчитать примерный размер ежемесячного платежа.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Нет комиссии за выдачу и обслуживание."
+  },
+  "penalties": {
+    "latePayment": "В случае просрочки начисляется штраф в размере 2% от суммы просроченного платежа.",
+    "overLimit": "",
+    "description": ""
+  },
+  "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-09T12:00:00Z",
+  "lastVerified": "2026-04-09T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Кредит на любые цели без справок | Тинькофф Банк",
+  "seoDescription": "Получите кредит на любые цели в Тинькофф Банке без справок и поручителей. Максимальная сумма до 30 000 000 ₽, срок до 15 лет.",
+  "seoKeywords": [
+    "кредит",
+    "без справок",
+    "Тинькофф Банк",
+    "покупка квартиры",
+    "ремонт"
+  ],
+  "metadata": {
+    "confidence": 0.9
+  }
 }
