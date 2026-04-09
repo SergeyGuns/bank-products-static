@@ -1,0 +1,57 @@
+{
+  "id": "vtb-mortgage-ready-house",
+  "bankName": "ВТБ Банк",
+  "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.vtb.ru/",
+  "productType": "mortgage",
+  "productName": "Ипотека на готовый дом",
+  "productDescription": "Дом, который уже ждет свою семью.",
+  "interestRates": [
+    {
+      "value": 20.1,
+      "type": "fixed",
+      "conditions": ""
+    }
+  ],
+  "conditions": {
+    "maxAmount": 100000000,
+    "minTerm": 3,
+    "maxTerm": 30,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Сумма до 100 млн ₽, срок до 30 лет."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "employmentType": "any",
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Онлайн оформление",
+      "description": "Подать заявку онлайн и получить решение за несколько минут.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": ""
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
+  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "extractedAt": "2026-04-09T12:00:00Z",
+  "lastVerified": "2026-04-09T12:00:00Z",
+  "isActive": true,
+  "priority": 50
+}
