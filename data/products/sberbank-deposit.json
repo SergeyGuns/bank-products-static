@@ -1,10 +1,79 @@
 {
-  "id": "sberbank-deposit",
+  "id": "sberbank-deposit-лучший%",
   "bankName": "Сбербанк",
   "productType": "deposit",
-  "productName": "Сбербанк депозит",
-  "sourceUrl": "https://bankiros.ru/bank/sberbank/deposits",
-  "extractedAt": "2026-04-09T12:00:00Z",
+  "productName": "Лучший % (ежемесячно)",
+  "productDescription": "Вклад в СберБанке с лучшей процентной ставкой, открываемый онлайн через Банки.ру. Ставка начисляется ежемесячно.",
+  "interestRates": [
+    {
+      "value": 13.75,
+      "type": "fixed",
+      "min": 10.5,
+      "max": 21.9,
+      "conditions": "Ставка фиксирована и начисляется ежемесячно."
+    }
+  ],
+  "conditions": {
+    "minAmount": 100000,
+    "maxAmount": 30000000,
+    "minTerm": 30,
+    "maxTerm": 1095,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": true,
+    "description": "Вклад застрахован до 1,4 млн рублей. Минимальная сумма 100 000 ₽, срок от 30 дней до 3 лет."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "",
+    "documents": [
+      "паспорт",
+      "свидетельство о доходах"
+    ]
+  },
+  "features": [
+    {
+      "name": "Онлайн заявка",
+      "description": "Вклад можно открыть онлайн через Банки.ру.",
+      "available": true
+    },
+    {
+      "name": "Капитализация процентов",
+      "description": "Ставка начисляется ежемесячно и капитализируется.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": true,
+    "description": "Досрочное расторжение возможно на льготных условиях."
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
+  "sourceUrl": "https://www.banki.ru/products/deposits/sberbank/",
+  "extractedAt": "2026-04-10T12:00:00Z",
+  "lastVerified": "2026-04-10T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Лучший % в Сбербанке – депозит с фиксированной ставкой 13.75% годовых",
+  "seoDescription": "Откройте вклад «Лучший %» в Сбербанке онлайн и получите фиксированную ставку 13.75% годовых, начисление ежемесячно.",
+  "seoKeywords": [
+    "Сбербанк",
+    "депозит",
+    "лучший процент",
+    "13.75%",
+    "онлайн заявка"
+  ],
+  "metadata": {
+    "confidence": 0.9
+  }
 }

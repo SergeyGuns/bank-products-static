@@ -1,80 +1,10 @@
 {
-  "id": "vtb-mortgage-vtb-ипотека",
+  "id": "vtb-deposit-Ипотечный кредит",
   "bankName": "ВТБ",
-  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека ВТБ",
-  "productDescription": "Ипотечные программы от ВТБ с гибкими условиями, онлайн‑подтверждением и возможностью рефинансирования. Программы включают новостройки, вторичное жильё, семейную ипотеку, ИТ‑ипотеку, арктическую и военную ипотеки.",
-  "interestRates": [
-    {
-      "value": 20.1,
-      "type": "floating",
-      "conditions": "Ставка рассчитывается индивидуально в зависимости от программы, суммы и срока кредита. Для новых зарплатных клиентов возможна скидка 0,4%."
-    }
-  ],
-  "conditions": {
-    "minAmount": 100000,
-    "maxAmount": 100000000,
-    "minTerm": 1,
-    "maxTerm": 360,
-    "currency": "RUB",
-    "collateral": true,
-    "guarantor": false,
-    "insurance": true,
-    "description": "Максимальная сумма кредита – 100 млн ₽, срок до 30 лет. Требуется первоначальный взнос (от 10% в новостройках)."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "maxAge": 65,
-    "employmentType": "any",
-    "documents": [
-      "паспорт",
-      "свидетельство о доходах",
-      "документы на недвижимость"
-    ]
-  },
-  "features": [
-    {
-      "name": "Онлайн‑подтверждение",
-      "description": "Решение по заявке в течение нескольких минут.",
-      "available": true
-    },
-    {
-      "name": "Эскроу‑счёт",
-      "description": "Безопасная сделка: деньги хранятся на спецсчёте до выполнения всех условий договора.",
-      "available": true
-    },
-    {
-      "name": "Ипотечный калькулятор",
-      "description": "Расчёт ежемесячного платежа с учётом ставки, первоначального взноса и доходов заемщика.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Комиссия за досрочное погашение отсутствует."
-  },
-  "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
-  },
+  "productName": "Ипотечный кредит",
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
-  "extractedAt": "2026-04-09T12:00:00Z",
-  "lastVerified": "2026-04-09T12:00:00Z",
+  "extractedAt": "2026-04-10T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Ипотека ВТБ – онлайн‑подтверждение, эскроу, гибкие условия",
-  "seoDescription": "Получите ипотеку в ВТБ с быстрым одобрением, безопасным эскроу и возможностью рефинансирования. Ставки от 10%.",
-  "seoKeywords": [
-    "ипотека",
-    "ВТБ",
-    "онлайн‑подтверждение",
-    "эскроу"
-  ],
-  "metadata": {
-    "confidence": 0.7
-  }
+  "priority": 50
 }
