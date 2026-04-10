@@ -1,0 +1,10 @@
+{
+  "id": "sberbank-credit-krupnyy-kredit",
+  "bankName": "ПАО «Сбербанк»",
+  "productType": "credit",
+  "productName": "Кредит на покупку автомобиля (крупный кредит)",
+  "sourceUrl": "https://www.tinkoff.ru/loans/",
+  "extractedAt": "2026-04-11T12:00:00Z",
+  "isActive": true,
+  "priority": 50
+}
