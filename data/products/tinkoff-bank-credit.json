@@ -1,26 +1,28 @@
 {
-  "id": "tinkoff-credit-любые цели",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
   "productType": "credit",
-  "productName": "Кредит на любые цели",
-  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
+  "productName": "Кредит наличными",
+  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
   "interestRates": [
     {
       "value": 0,
-      "type": "floating",
-      "conditions": ""
+      "type": "fixed",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка зависит от суммы, срока и кредитной истории"
     }
   ],
   "conditions": {
-    "minAmount": 0,
+    "minAmount": 1,
     "maxAmount": 30000000,
-    "minTerm": 0,
+    "minTerm": 1,
     "maxTerm": 15,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": ""
+    "description": "Кредит без справок о доходах и поручителей, до 30 000 000 ₽, срок до 15 лет"
   },
   "borrowerRequirements": {
     "minAge": 18,
@@ -28,15 +30,20 @@
     "minIncome": 0,
     "employmentType": "any",
     "workExperience": 0,
-    "registration": "",
+    "registration": "не требуется",
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Онлайн заявка",
-      "description": "Кредит можно оформить онлайн.",
+      "name": "Бесплатный расчёт онлайн",
+      "description": "Калькулятор на сайте позволяет быстро рассчитать условия",
+      "available": true
+    },
+    {
+      "name": "Оформление онлайн",
+      "description": "Весь процесс оформления можно завершить через интернет",
       "available": true
     }
   ],
@@ -44,20 +51,24 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": ""
+    "description": "Нет комиссии за досрочное погашение"
   },
   "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
+    "latePayment": "штраф 1,5% от суммы просроченного платежа",
+    "overLimit": "нет",
+    "description": "Штрафы применяются при просрочке платежей"
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-10T12:00:00Z",
   "lastVerified": "2026-04-10T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "",
-  "seoDescription": "",
-  "seoKeywords": [],
+  "seoTitle": "Кредит наличными без справок и поручителей – Тинькофф Банк",
+  "seoDescription": "Получите кредит наличными до 30 000 000 ₽ без справок о доходах и поручителей. Оформление онлайн, быстрый расчёт.",
+  "seoKeywords": [
+    "кредит наличными",
+    "трудоустройство",
+    "поручитель"
+  ],
   "metadata": {}
 }

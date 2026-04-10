@@ -1,10 +1,75 @@
 {
-  "id": "vtb-deposit-Ипотечный кредит",
+  "id": "vtb-mortgage-new-build",
   "bankName": "ВТБ",
   "productType": "mortgage",
-  "productName": "Ипотечный кредит",
+  "productName": "Ипотека на покупку жилья в новостройке",
+  "productDescription": "Покупка жилья в аккредитованном ВТБ списке новостроек. Скидка 0,4% к процентной ставке для новых зарплатных клиентов.",
+  "interestRates": [
+    {
+      "value": 10.1,
+      "type": "fixed",
+      "min": 10.1,
+      "max": 30.1,
+      "conditions": "Ставка зависит от программы и дохода заемщика"
+    }
+  ],
+  "conditions": {
+    "minAmount": 10000000,
+    "maxAmount": 100000000,
+    "minTerm": 12,
+    "maxTerm": 360,
+    "currency": "RUB",
+    "collateral": true,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Максимальная сумма 100 млн ₽, срок до 30 лет. Первоначальный взнос до 20 лет. Требуется залог жилья в новостройке."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "не требуется",
+    "documents": [
+      "паспорт",
+      "свидетельство о доходах"
+    ]
+  },
+  "features": [
+    {
+      "name": "Скидка 0,4% для новых зарплатных клиентов",
+      "description": "Дополнительная льгота при открытии счета в ВТБ",
+      "available": true
+    },
+    {
+      "name": "Эскроу-счет",
+      "description": "Средства хранятся на спецсчете до завершения сделки",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Комиссия за досрочное погашение отсутствует"
+  },
+  "penalties": {
+    "latePayment": "штраф 1,5% от суммы просроченного платежа",
+    "overLimit": "нет",
+    "description": "Штрафы применяются при просрочке платежей"
+  },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-10T12:00:00Z",
+  "lastVerified": "2026-04-10T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Ипотека в ВТБ – покупка новостройки с льготной ставкой",
+  "seoDescription": "Получите ипотеку на покупку жилья в новостройке до 100 млн ₽. Скидка 0,4% для новых зарплатных клиентов. Оформление онлайн.",
+  "seoKeywords": [
+    "ипотека",
+    "новостройка",
+    "ВТБ"
+  ],
+  "metadata": {}
 }
