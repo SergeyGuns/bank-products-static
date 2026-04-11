@@ -1,19 +1,19 @@
 {
-  "id": "vtb-mortgage",
+  "id": "vtb-mortgage-secondary",
   "bankName": "ВТБ",
-  "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
   "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека на покупку жилья в новостройке",
-  "productDescription": "По программе ипотечного кредитования на покупку жилья в новостройке на сумму до 100 млн рублей на срок до 30 лет вы можете выбрать новостройку из аккредитованного ВТБ списка.",
+  "productName": "Ипотека на вторичном рынке",
+  "productDescription": "Покупка жилья, которое находится в залоге у другого банка.",
   "interestRates": [
     {
-      "value": 10.1,
+      "value": 20.1,
       "type": "fixed",
-      "conditions": "для новых зарплатных клиентов действует скидка 0,4% к процентной ставке"
+      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы и срока."
     }
   ],
   "conditions": {
+    "minAmount": 1000000,
     "maxAmount": 100000000,
     "minTerm": 12,
     "maxTerm": 360,
@@ -21,24 +21,38 @@
     "collateral": true,
     "guarantor": false,
     "insurance": false,
-    "description": "Сумма до 100 млн ₽, срок до 30 лет. Требуется залог жилья в новостройке."
+    "description": "Сумма до 100 млн ₽, срок до 30 лет. Требуется залог жилья в другом банке."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "",
     "documents": [
       "паспорт",
-      "свидетельство о праве собственности на жильё"
+      "документы по залогу"
     ]
   },
   "features": [
     {
-      "name": "скидка для новых зарплатных клиентов",
-      "description": "Скидка 0,4% к процентной ставке по ипотеке.",
+      "name": "Эскроу-счет",
+      "description": "Деньги хранятся на спецсчете до выполнения всех условий.",
       "available": true
     }
   ],
-  "fees": {},
-  "penalties": {},
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": ""
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
@@ -47,5 +61,7 @@
   "seoTitle": "",
   "seoDescription": "",
   "seoKeywords": [],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.85
+  }
 }

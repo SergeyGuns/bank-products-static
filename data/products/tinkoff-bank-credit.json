@@ -1,43 +1,74 @@
 {
-  "id": "tinkoff-credit-cash",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
   "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
   "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит наличными",
-  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
-  "interestRates": [],
+  "productName": "Кредит наличными на любые цели",
+  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
+  "interestRates": [
+    {
+      "value": 0,
+      "type": "floating",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы, срока и кредитной истории."
+    }
+  ],
   "conditions": {
+    "minAmount": 10000,
     "maxAmount": 30000000,
     "minTerm": 1,
-    "maxTerm": 15,
+    "maxTerm": 180,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
     "description": "Сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется только паспорт."
   },
-  "borrowerRequirements": {},
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "",
+    "documents": [
+      "паспорт"
+    ]
+  },
   "features": [
     {
-      "name": "без справок о доходах",
-      "description": "Кредит без справок о доходах.",
+      "name": "Бесплатная выдача на карту",
+      "description": "Деньги будут переведены на карту в течение дня.",
       "available": true
     },
     {
-      "name": "без поручителей",
-      "description": "Кредит без поручителей.",
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления можно завершить через интернет.",
       "available": true
     }
   ],
-  "fees": {},
-  "penalties": {},
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": ""
+  },
+  "penalties": {
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
+  },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
   "priority": 50,
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoKeywords": [],
   "metadata": {
-    "confidence": 0.8
+    "confidence": 0.9
   }
 }
