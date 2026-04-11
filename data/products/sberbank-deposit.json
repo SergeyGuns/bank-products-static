@@ -2,78 +2,59 @@
   "id": "sberbank-deposit-лучший%",
   "bankName": "Сбербанк",
   "productType": "deposit",
-  "productName": "Лучший % (ежемесячно)",
-  "productDescription": "Вклад в СберБанке с лучшей процентной ставкой, открываемый онлайн через Банки.ру. Ставка начисляется ежемесячно.",
+  "productName": "Лучший % (в конце срока)",
+  "productDescription": "Вклад «Лучший %» в рублях с фиксированной ставкой 14 % годовых, выплата процентов по окончанию срока. Минимальная сумма входа – 30 000 ₽. Вариант капитализации: ежемесячно или в конце срока.",
   "interestRates": [
     {
-      "value": 13.75,
+      "value": 14,
       "type": "fixed",
-      "min": 10.5,
-      "max": 21.9,
-      "conditions": "Ставка фиксирована и начисляется ежемесячно."
+      "conditions": "выплата процентов только в конце срока"
     }
   ],
   "conditions": {
-    "minAmount": 100000,
-    "maxAmount": 30000000,
-    "minTerm": 30,
-    "maxTerm": 1095,
+    "minAmount": 30000,
+    "maxTerm": 12,
     "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": true,
-    "description": "Вклад застрахован до 1,4 млн рублей. Минимальная сумма 100 000 ₽, срок от 30 дней до 3 лет."
+    "description": "Вклад доступен онлайн, возможна пополнения до 1 млн ₽. При превышении суммы ставка снижается."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "",
     "documents": [
-      "паспорт",
-      "свидетельство о доходах"
+      "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Онлайн заявка",
-      "description": "Вклад можно открыть онлайн через Банки.ру.",
+      "name": "капитализация процентов",
+      "description": "опция ежемесячной капитализации",
       "available": true
     },
     {
-      "name": "Капитализация процентов",
-      "description": "Ставка начисляется ежемесячно и капитализируется.",
+      "name": "пополнение",
+      "description": "можно пополнять до 1 млн ₽",
       "available": true
     }
   ],
   "fees": {
     "issuance": 0,
     "maintenance": 0,
-    "earlyRepayment": true,
-    "description": "Досрочное расторжение возможно на льготных условиях."
+    "earlyRepayment": false
   },
   "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
+    "latePayment": "не применимо",
+    "overLimit": "снижение ставки при превышении 1 млн ₽"
   },
-  "sourceUrl": "https://www.banki.ru/products/deposits/sberbank/",
-  "extractedAt": "2026-04-10T12:00:00Z",
-  "lastVerified": "2026-04-10T12:00:00Z",
+  "sourceUrl": "https://www.sravni.ru/vklady/",
+  "extractedAt": "2026-04-11T12:00:00Z",
+  "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Лучший % в Сбербанке – депозит с фиксированной ставкой 13.75% годовых",
-  "seoDescription": "Откройте вклад «Лучший %» в Сбербанке онлайн и получите фиксированную ставку 13.75% годовых, начисление ежемесячно.",
+  "seoTitle": "Вклад «Лучший %» в Сбербанке – 14 % годовых",
+  "seoDescription": "Откройте вклад «Лучший %» в Сбербанке и получите фиксированную ставку 14 % с возможностью капитализации. Минимальная сумма входа 30 000 ₽.",
   "seoKeywords": [
     "Сбербанк",
-    "депозит",
+    "вклад",
     "лучший процент",
-    "13.75%",
-    "онлайн заявка"
-  ],
-  "metadata": {
-    "confidence": 0.9
-  }
+    "14%"
+  ]
 }
