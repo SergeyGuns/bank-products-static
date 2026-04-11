@@ -1,64 +1,17 @@
 {
-  "id": "tinkoff-loan-cash",
+  "id": "tinkoff-credit-кредит-насчленные",
   "bankName": "Тинькофф Банк",
-  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
-  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит наличными на любые цели",
-  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
-  "interestRates": [
-    {
-      "value": 0,
-      "type": "floating",
-      "min": 0,
-      "max": 0,
-      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы, срока и кредитной истории."
-    }
-  ],
+  "productName": "Кредит наличными",
+  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
   "conditions": {
-    "minAmount": 10000,
     "maxAmount": 30000000,
-    "minTerm": 1,
-    "maxTerm": 180,
+    "maxTerm": 15,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": "Сумма кредита до 30 000 000 ₽, срок до 15 лет. Требуется только паспорт."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "",
-    "documents": [
-      "паспорт"
-    ]
-  },
-  "features": [
-    {
-      "name": "Бесплатная выдача на карту",
-      "description": "Деньги будут переведены на карту в течение дня.",
-      "available": true
-    },
-    {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс оформления можно завершить через интернет.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": ""
-  },
-  "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
+    "description": "Кредит без справок о доходах и поручителей. Нужен только паспорт."
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
@@ -69,6 +22,6 @@
   "seoDescription": "",
   "seoKeywords": [],
   "metadata": {
-    "confidence": 0.9
+    "confidence": 0.8
   }
 }

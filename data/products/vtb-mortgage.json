@@ -1,67 +1,24 @@
 {
-  "id": "vtb-mortgage-secondary",
+  "id": "vtb-mortgage-ипотека",
   "bankName": "ВТБ",
   "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека на вторичном рынке",
-  "productDescription": "Покупка жилья, которое находится в залоге у другого банка.",
+  "productName": "Ипотека",
   "interestRates": [
     {
       "value": 20.1,
-      "type": "fixed",
-      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы и срока."
+      "type": "floating",
+      "min": 10.1,
+      "max": 30.1,
+      "conditions": "Ставка зависит от выбранной программы: новостройка, вторичное жильё, семейная ипотека и др."
     }
   ],
   "conditions": {
-    "minAmount": 1000000,
-    "maxAmount": 100000000,
-    "minTerm": 12,
-    "maxTerm": 360,
     "currency": "RUB",
-    "collateral": true,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Сумма до 100 млн ₽, срок до 30 лет. Требуется залог жилья в другом банке."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "",
-    "documents": [
-      "паспорт",
-      "документы по залогу"
-    ]
-  },
-  "features": [
-    {
-      "name": "Эскроу-счет",
-      "description": "Деньги хранятся на спецсчете до выполнения всех условий.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": ""
-  },
-  "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
+    "collateral": true
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
-  "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "",
-  "seoDescription": "",
-  "seoKeywords": [],
-  "metadata": {
-    "confidence": 0.85
-  }
+  "priority": 50
 }
