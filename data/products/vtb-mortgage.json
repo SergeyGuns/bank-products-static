@@ -1,74 +1,36 @@
 {
-  "id": "vtb-mortgage-ипотека-на-готовый-дом",
+  "id": "vtb-mortgage-Ипотека на покупку жилья в новостройке",
   "bankName": "ВТБ",
+  "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека на готовый дом",
-  "productDescription": "Дом, который уже ждет свою семью.",
+  "productName": "Ипотека на покупку жилья в новостройке",
+  "productDescription": "Покупка жилья в аккредитованных новостройках. Скидка 0,4% к процентной ставке для новых зарплатных клиентов.",
   "interestRates": [
     {
-      "value": 20.1,
+      "value": 10.1,
       "type": "fixed",
-      "min": 20.1,
-      "max": 20.1,
-      "conditions": "Ставка 20,1% для всех программ ипотеки"
+      "conditions": "Ставка по программе \"Ипотека на новых территориях\""
     }
   ],
   "conditions": {
-    "minAmount": 1,
+    "minAmount": 0,
     "maxAmount": 100000000,
     "minTerm": 12,
     "maxTerm": 360,
     "currency": "RUB",
-    "collateral": true,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Максимальная сумма до 100 млн ₽, срок до 30 лет. Первоначальный взнос до 20 лет."
+    "description": "Максимальная сумма до 100 млн ₽, срок до 30 лет. Ставка доступна при покупке новостройки из аккредитованного списка ВТБ."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "не требуется",
     "documents": [
-      "паспорт"
+      "паспорт",
+      "справка о доходах"
     ]
-  },
-  "features": [
-    {
-      "name": "Эскроу-счет",
-      "description": "Средства зачисляются на эскроу после подписания договора и регистрации сделки.",
-      "available": true
-    },
-    {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс оформления можно завершить онлайн без посещения банка.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Комиссия за досрочное погашение отсутствует."
-  },
-  "penalties": {
-    "latePayment": "При просрочке платежа начисляется штраф в размере 2% от суммы долга",
-    "overLimit": "не предусмотрено",
-    "description": "Штрафы применяются при несвоевременном платеже"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Ипотека на готовый дом – ВТБ",
-  "seoDescription": "Получите ипотеку на готовый дом до 100 млн ₽ без первоначального взноса. Онлайн оформление, эскроу-счет.",
-  "seoKeywords": [
-    "ипотека",
-    "готовый дом",
-    "ВТБ"
-  ],
-  "metadata": {}
+  "priority": 50
 }

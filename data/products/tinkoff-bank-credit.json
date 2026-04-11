@@ -1,74 +1,33 @@
 {
-  "id": "tinkoff-deposit-credit",
+  "id": "tinkoff-credit-На любые цели",
   "bankName": "Тинькофф Банк",
+  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит наличными на любые цели",
+  "productName": "Кредиты на любые цели",
   "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
-  "interestRates": [
-    {
-      "value": 0,
-      "type": "floating",
-      "min": 0,
-      "max": 0,
-      "conditions": "Ставка рассчитывается индивидуально в зависимости от суммы, срока и кредитной истории заемщика"
-    }
-  ],
   "conditions": {
-    "minAmount": 1,
+    "minAmount": 0,
     "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 180,
     "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Сумма кредита до 30 000 000 ₽, срок до 15 лет. Кредит без справок о доходах и поручителей."
+    "description": "Кредит без справок о доходах, без поручителей. Максимальная сумма кредита до 30 000 000 ₽, срок до 15 лет."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "minIncome": 0,
+    "maxAge": null,
     "employmentType": "any",
-    "workExperience": 0,
-    "registration": "не требуется",
     "documents": [
       "паспорт"
     ]
-  },
-  "features": [
-    {
-      "name": "Бесплатная выдача карты",
-      "description": "Кредитные средства будут зачислены на карту Тинькофф Банк.",
-      "available": true
-    },
-    {
-      "name": "Онлайн оформление",
-      "description": "Весь процесс оформления можно завершить онлайн без посещения банка.",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Нет комиссии за досрочное погашение."
-  },
-  "penalties": {
-    "latePayment": "При просрочке платежа начисляется штраф в размере 2% от суммы долга",
-    "overLimit": "Не предусмотрено",
-    "description": "Штрафы применяются при несвоевременном платеже"
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Кредит наличными без справок и поручителей – Тинькофф Банк",
-  "seoDescription": "Получите кредит на любые цели до 30 000 000 ₽ без справок о доходах и поручителей. Онлайн оформление, быстрый расчёт.",
-  "seoKeywords": [
-    "кредит наличными",
-    "без справок",
-    "Тинькофф"
-  ],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.8
+  }
 }
