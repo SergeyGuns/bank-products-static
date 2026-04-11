@@ -1,11 +1,74 @@
 {
-  "id": "tinkoff-credit-Кредит-на-купку-авто",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
-  "bankWebsite": "https://www.tinkoff.ru",
   "productType": "credit",
   "productName": "Кредит наличными",
+  "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
+  "interestRates": [
+    {
+      "value": 0,
+      "type": "floating",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка рассчитывается индивидуально"
+    }
+  ],
+  "conditions": {
+    "minAmount": 10000,
+    "maxAmount": 30000000,
+    "minTerm": 1,
+    "maxTerm": 15,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Кредит без справок и поручителей, до 30 млн ₽, срок до 15 лет"
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "не требуется",
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Бесплатная карта",
+      "description": "Кредитные средства будут зачислены на карту",
+      "available": true
+    },
+    {
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления онлайн",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Нет комиссии за досрочное погашение"
+  },
+  "penalties": {
+    "latePayment": "описание штрафа",
+    "overLimit": "описание штрафа",
+    "description": "штрафные санкции при просрочке платежей"
+  },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
-  "extractedAt": "2026-04-12T12:00:00Z",
+  "extractedAt": "2026-04-12T00:00:00Z",
+  "lastVerified": "2026-04-12T00:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Кредит наличными Тинькофф Банк – без справок и поручителей",
+  "seoDescription": "Получите кредит наличными в Тинькофф Банке до 30 млн ₽, срок до 15 лет. Онлайн оформление, бесплатная карта.",
+  "seoKeywords": [
+    "кредит наличными",
+    "тинькофф банк",
+    "без справок"
+  ],
+  "metadata": {}
 }
