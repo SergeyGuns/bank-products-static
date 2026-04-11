@@ -2,59 +2,23 @@
   "id": "sberbank-deposit-лучший%",
   "bankName": "Сбербанк",
   "productType": "deposit",
-  "productName": "Лучший % (в конце срока)",
-  "productDescription": "Вклад «Лучший %» в рублях с фиксированной ставкой 14 % годовых, выплата процентов по окончанию срока. Минимальная сумма входа – 30 000 ₽. Вариант капитализации: ежемесячно или в конце срока.",
+  "productName": "Лучший %",
   "interestRates": [
     {
       "value": 14,
       "type": "fixed",
-      "conditions": "выплата процентов только в конце срока"
+      "conditions": "до конца срока"
     }
   ],
   "conditions": {
-    "minAmount": 30000,
-    "maxTerm": 12,
+    "minAmount": 300000,
+    "maxTerm": 4,
     "currency": "RUB",
-    "description": "Вклад доступен онлайн, возможна пополнения до 1 млн ₽. При превышении суммы ставка снижается."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "documents": [
-      "паспорт"
-    ]
-  },
-  "features": [
-    {
-      "name": "капитализация процентов",
-      "description": "опция ежемесячной капитализации",
-      "available": true
-    },
-    {
-      "name": "пополнение",
-      "description": "можно пополнять до 1 млн ₽",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false
-  },
-  "penalties": {
-    "latePayment": "не применимо",
-    "overLimit": "снижение ставки при превышении 1 млн ₽"
+    "description": "Выплата в конце срока, можно онлайн"
   },
   "sourceUrl": "https://www.sravni.ru/vklady/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Вклад «Лучший %» в Сбербанке – 14 % годовых",
-  "seoDescription": "Откройте вклад «Лучший %» в Сбербанке и получите фиксированную ставку 14 % с возможностью капитализации. Минимальная сумма входа 30 000 ₽.",
-  "seoKeywords": [
-    "Сбербанк",
-    "вклад",
-    "лучший процент",
-    "14%"
-  ]
+  "priority": 50
 }
