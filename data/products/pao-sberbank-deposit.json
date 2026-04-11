@@ -1,0 +1,75 @@
+{
+  "id": "sberbank-deposit-luchshiy",
+  "bankName": "ПАО «Сбербанк»",
+  "bankWebsite": "https://www.sberbank.ru/ru",
+  "productType": "deposit",
+  "productName": "Лучший % (срочный вклад)",
+  "productDescription": "Срочный депозит с возможностью пополнения и снятия только по окончании срока. При досрочном расторжении начисляются проценты до востребования.",
+  "interestRates": [
+    {
+      "value": 7.1,
+      "type": "floating",
+      "min": 7.1,
+      "max": 7.65,
+      "conditions": "срок 0,5–1,5 года"
+    }
+  ],
+  "conditions": {
+    "minAmount": 50000,
+    "maxAmount": null,
+    "minTerm": 6,
+    "maxTerm": 18,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Минимальная сумма вклада – 50 000 руб.; срок от 0,5 до 1,5 лет; пополнение/снятие возможны только по окончании срока."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": null,
+    "minIncome": null,
+    "employmentType": "any",
+    "workExperience": null,
+    "registration": "не требуется",
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Досрочное расторжение с льготой",
+      "description": "Возможность досрочного расторжения без потери процентов при условии сохранения суммы до конца срока.",
+      "available": true
+    },
+    {
+      "name": "Капитализация",
+      "description": "Проценты начисляются в конце срока, капитализация не предусмотрена.",
+      "available": false
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": true,
+    "description": "При досрочном расторжении проценты начисляются до востребования (0,01 %)."
+  },
+  "penalties": {
+    "latePayment": "не применимо",
+    "overLimit": "не применимо",
+    "description": "Досрочное расторжение без потери процентов при условии сохранения суммы до конца срока."
+  },
+  "sourceUrl": "https://www.sravni.ru/bank/sberbank-rossii/vklady/srochnye/",
+  "extractedAt": "2026-04-11T12:00:00Z",
+  "lastVerified": "2026-04-11T12:00:00Z",
+  "isActive": true,
+  "priority": 50,
+  "seoTitle": "Лучший % – срочный вклад в Сбербанке",
+  "seoDescription": "Срочный депозит «Лучший %» от Сбербанка. Минимальная сумма 50 000 руб., срок 0,5–1,5 года, ставка 7,1–7,65% годовых.",
+  "seoKeywords": [
+    "сбербанк",
+    "лучший процент",
+    "срочный вклад"
+  ],
+  "metadata": {}
+}
