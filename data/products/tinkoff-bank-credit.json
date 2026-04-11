@@ -1,22 +1,35 @@
 {
-  "id": "tinkoff-credit-nalichnymi",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
-  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит наличными",
   "productDescription": "Деньги на любые покупки без справок о доходах и поручителей. Нужен только паспорт.",
+  "interestRates": [
+    {
+      "value": 0,
+      "type": "fixed",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка не указана, но кредит предоставляется без справок и поручителей"
+    }
+  ],
   "conditions": {
+    "minAmount": 0,
+    "maxAmount": 30000000,
     "minTerm": 1,
     "maxTerm": 15,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": "Сумма кредита до 30 000 000 ₽, срок от 1 до 15 лет; требуется только паспорт."
+    "description": "Кредит наличными до 30 000 000 ₽, срок до 15 лет. Требуется только паспорт."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
     "employmentType": "any",
+    "workExperience": 0,
     "registration": "не требуется",
     "documents": [
       "паспорт"
@@ -24,27 +37,40 @@
   },
   "features": [
     {
-      "name": "Быстрое одобрение",
-      "description": "Решение за минуту при онлайн-заявке.",
+      "name": "Бесплатная карта",
+      "description": "Кредит можно получить на карту без посещения банка.",
       "available": true
     },
     {
-      "name": "Кредит без справок о доходах",
-      "description": "Не требуются справки о доходах и поручители.",
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления онлайн.",
       "available": true
     }
   ],
   "fees": {
     "issuance": 0,
-    "maintenance": 0
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Нет комиссии за досрочное погашение."
   },
   "penalties": {
-    "latePayment": "не применимо",
-    "overLimit": "не применимо"
+    "latePayment": "описание штрафа отсутствует",
+    "overLimit": "описание штрафа отсутствует",
+    "description": "Информация о штрафах не указана"
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Кредит наличными Тинькофф Банк – без справок и поручителей",
+  "seoDescription": "Получите кредит наличными в Тинькофф Банке до 30 000 000 ₽. Онлайн оформление, бесплатная карта, срок до 15 лет.",
+  "seoKeywords": [
+    "кредит наличными",
+    "тингкофф банк",
+    "без справок"
+  ],
+  "metadata": {
+    "confidence": 0.9
+  }
 }
