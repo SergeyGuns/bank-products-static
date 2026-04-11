@@ -1,24 +1,78 @@
 {
-  "id": "vtb-mortgage-ипотека",
+  "id": "vtb-mortgage-ипотека-на-покупку-жилья-в-новостройке",
   "bankName": "ВТБ",
   "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека",
+  "productName": "Ипотека на покупку жилья в новостройке",
+  "productDescription": "Кредит на покупку квартиры, дома или таунхауса в аккредитованном ВТБ списке новостроек. Ставка от 20,1 %. Максимальная сумма до 100 млн ₽, срок до 30 лет.",
   "interestRates": [
     {
       "value": 20.1,
-      "type": "floating",
-      "min": 10.1,
-      "max": 30.1,
-      "conditions": "Ставка зависит от выбранной программы: новостройка, вторичное жильё, семейная ипотека и др."
+      "type": "fixed",
+      "conditions": "Ставка от 20,1 % для всех граждан РФ старше 18 лет при покупке жилья в аккредитованных новостройках."
     }
   ],
   "conditions": {
+    "minAmount": 0,
+    "maxAmount": 100000000,
+    "minTerm": 1,
+    "maxTerm": 30,
     "currency": "RUB",
-    "collateral": true
+    "collateral": true,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Сумма до 100 млн ₽, срок до 30 лет. Требуется первоначальный взнос и подтверждение дохода."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": null,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": null,
+    "registration": "Гражданин РФ, проживающий по адресу в России.",
+    "documents": [
+      "паспорт гражданина РФ",
+      "свидетельство о доходах (справка с места работы)",
+      "документы на выбранную недвижимость"
+    ]
+  },
+  "features": [
+    {
+      "name": "Онлайн‑решение заявки",
+      "description": "Решение от 2 минут, оформление онлайн.",
+      "available": true
+    },
+    {
+      "name": "Скидка для зарплатных клиентов",
+      "description": "0,4 % к процентной ставке при переводе зарплаты в ВТБ.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Комиссия за перевод кредита не взимается."
+  },
+  "penalties": {
+    "latePayment": null,
+    "overLimit": null,
+    "description": null
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
+  "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Ипотека в ВТБ – покупка жилья в новостройке до 100 млн ₽, срок до 30 лет",
+  "seoDescription": "Кредит на покупку квартиры или дома в аккредитованном ВТБ списке новостроек. Ставка от 20,1 %, онлайн‑решение заявки за 2 минуты.",
+  "seoKeywords": [
+    "ипотека в ВТБ",
+    "покупка жилья в новостройке",
+    "срок до 30 лет",
+    "до 100 млн ₽"
+  ],
+  "metadata": {
+    "confidence": 0.9
+  }
 }

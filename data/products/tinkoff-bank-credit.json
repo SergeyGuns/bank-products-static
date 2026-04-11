@@ -1,5 +1,5 @@
 {
-  "id": "tinkoff-credit-кредит-насчленные",
+  "id": "tinkoff-credit-kredit-nalichnymi",
   "bankName": "Тинькофф Банк",
   "productType": "credit",
   "productName": "Кредит наличными",
@@ -10,17 +10,13 @@
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
-    "insurance": false,
-    "description": "Кредит без справок о доходах и поручителей. Нужен только паспорт."
+    "description": "Кредит без справок о доходах и поручителей, только паспорт. Сумма до 30 000 000 ₽, срок до 15 лет."
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "",
-  "seoDescription": "",
-  "seoKeywords": [],
   "metadata": {
     "confidence": 0.8
   }
