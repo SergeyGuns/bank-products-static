@@ -1,72 +1,51 @@
 {
-  "id": "vtb-mortgage-regular",
+  "id": "vtb-mortgage",
   "bankName": "ВТБ",
+  "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
   "productName": "Ипотека на покупку жилья в новостройке",
-  "productDescription": "Покупка жилья в аккредитованном ВТБ списке. Сумма до 100 млн ₽, срок до 30 лет.",
+  "productDescription": "По программе ипотечного кредитования на покупку жилья в новостройке на сумму до 100 млн рублей на срок до 30 лет вы можете выбрать новостройку из аккредитованного ВТБ списка.",
   "interestRates": [
     {
-      "value": 0,
-      "type": "floating",
-      "conditions": "Ставка зависит от суммы, срока и кредитной истории заемщика"
+      "value": 10.1,
+      "type": "fixed",
+      "conditions": "для новых зарплатных клиентов действует скидка 0,4% к процентной ставке"
     }
   ],
   "conditions": {
-    "minAmount": 500000,
     "maxAmount": 100000000,
-    "minTerm": 1,
-    "maxTerm": 30,
+    "minTerm": 12,
+    "maxTerm": 360,
     "currency": "RUB",
     "collateral": true,
     "guarantor": false,
     "insurance": false,
-    "description": "Ипотека на покупку жилья в новостройке. Сумма до 100 млн ₽, срок до 30 лет. Первоначальный взнос не требуется, но возможна скидка по ставке для новых зарплатных клиентов."
+    "description": "Сумма до 100 млн ₽, срок до 30 лет. Требуется залог жилья в новостройке."
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": 65,
-    "employmentType": "any",
-    "workExperience": 0,
-    "registration": "не требуется",
     "documents": [
       "паспорт",
-      "свидетельство о доходах"
+      "свидетельство о праве собственности на жильё"
     ]
   },
   "features": [
     {
-      "name": "Скидка 0,4% к ставке для новых зарплатных клиентов",
-      "description": "Для новых зарплатных клиентов ВТБ действует скидка 0,4% к процентной ставке по ипотеке.",
-      "available": true
-    },
-    {
-      "name": "Эскроу-счет",
-      "description": "Используется эскроу-счет для размещения первоначального взноса и перечисления средств подрядчику после завершения строительства.",
+      "name": "скидка для новых зарплатных клиентов",
+      "description": "Скидка 0,4% к процентной ставке по ипотеке.",
       "available": true
     }
   ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Комиссия за перевод кредита не взимается. Досрочное погашение без комиссии."
-  },
-  "penalties": {
-    "latePayment": "Штраф 1,5% от суммы просроченного платежа",
-    "overLimit": "Не применимо",
-    "description": "Штрафы при просрочке платежей"
-  },
+  "fees": {},
+  "penalties": {},
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека в ВТБ – покупка жилья в новостройке до 100 млн ₽",
-  "seoDescription": "Получите ипотеку в ВТБ на покупку жилья в новостройке. Сумма до 100 млн ₽, срок до 30 лет. Новые зарплатные клиенты получают скидку 0,4% к ставке.",
-  "seoKeywords": [
-    "ипотека",
-    "новостройка",
-    "ВТБ"
-  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoKeywords": [],
   "metadata": {}
 }
