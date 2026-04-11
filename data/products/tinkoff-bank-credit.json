@@ -1,62 +1,11 @@
 {
-  "id": "tinkoff-credit-any",
+  "id": "tinkoff-credit-Кредит-на-купку-авто",
   "bankName": "Тинькофф Банк",
-  "bankWebsite": "https://www.tinkoff.ru/",
+  "bankWebsite": "https://www.tinkoff.ru",
   "productType": "credit",
-  "productName": "Кредит на любые цели",
-  "productDescription": "Кредит наличными без справок и поручителей, предназначенный для покупки квартиры, ремонта, отдыха и других траты. Оформление онлайн, расчёт через калькулятор.",
-  "interestRates": [
-    {
-      "value": 0,
-      "type": "floating",
-      "min": 0,
-      "max": 0,
-      "conditions": "Ставка зависит от суммы и срока кредита"
-    }
-  ],
-  "conditions": {
-    "minAmount": 50000,
-    "maxAmount": 30000000,
-    "minTerm": 1,
-    "maxTerm": 15,
-    "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Минимальная сумма 50 000 руб.; максимальная до 30 000 000 руб.; срок от 1 года до 15 лет; без залога и поручителей"
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "documents": [
-      "паспорт"
-    ]
-  },
-  "features": [
-    {
-      "name": "Оформление онлайн",
-      "description": "Кредит можно оформить полностью через интернет-банк",
-      "available": true
-    },
-    {
-      "name": "Бесплатный расчёт",
-      "description": "Расчёт ежемесячного платежа доступен на калькуляторе",
-      "available": true
-    }
-  ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Нет дополнительных комиссий"
-  },
-  "penalties": {
-    "latePayment": "не применимо",
-    "overLimit": "не применимо",
-    "description": "При досрочном погашении проценты пересчитываются по ставке до востребования (0,01 %)"
-  },
+  "productName": "Кредит наличными",
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-12T12:00:00Z",
-  "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
   "priority": 50
 }
