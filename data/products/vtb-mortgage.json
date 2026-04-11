@@ -1,36 +1,75 @@
 {
-  "id": "vtb-mortgage-Ипотека на покупку жилья в новостройке",
+  "id": "vtb-mortgage-new-build",
   "bankName": "ВТБ",
-  "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
-  "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
   "productName": "Ипотека на покупку жилья в новостройке",
-  "productDescription": "Покупка жилья в аккредитованных новостройках. Скидка 0,4% к процентной ставке для новых зарплатных клиентов.",
+  "productDescription": "Покупка жилья в аккредитованном ВТБ списке. Сумма до 100 млн ₽, срок до 30 лет.",
   "interestRates": [
     {
-      "value": 10.1,
-      "type": "fixed",
-      "conditions": "Ставка по программе \"Ипотека на новых территориях\""
+      "value": 0,
+      "type": "floating",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка зависит от дохода и программы"
     }
   ],
   "conditions": {
-    "minAmount": 0,
+    "minAmount": 500000,
     "maxAmount": 100000000,
-    "minTerm": 12,
-    "maxTerm": 360,
+    "minTerm": 1,
+    "maxTerm": 30,
     "currency": "RUB",
-    "description": "Максимальная сумма до 100 млн ₽, срок до 30 лет. Ставка доступна при покупке новостройки из аккредитованного списка ВТБ."
+    "collateral": true,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Ипотека на новостройку до 100 млн ₽, срок до 30 лет. Требуется первоначальный взнос и залог."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": 65,
+    "minIncome": 0,
+    "employmentType": "any",
+    "workExperience": 0,
+    "registration": "не требуется",
     "documents": [
       "паспорт",
-      "справка о доходах"
+      "свидетельство о доходах"
     ]
+  },
+  "features": [
+    {
+      "name": "Скидка 0,4% для новых зарплатных клиентов",
+      "description": "Новая ставка по ипотеке с учётом зарплаты в ВТБ",
+      "available": true
+    },
+    {
+      "name": "Эскроу-счет",
+      "description": "Средства перечисляются продавцу после завершения строительства и регистрации дома",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Комиссия за перевод кредита не взимается"
+  },
+  "penalties": {
+    "latePayment": "штраф 1,5% от суммы просроченного платежа",
+    "overLimit": "нет",
+    "description": "Штрафы при просрочке платежей"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-11T12:00:00Z",
   "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Ипотека на новостройку ВТБ – до 100 млн ₽, срок до 30 лет",
+  "seoDescription": "Получите ипотеку в ВТБ для покупки жилья в новостройке. Сумма до 100 млн ₽, срок до 30 лет. Оформление онлайн.",
+  "seoKeywords": [
+    "ипотека",
+    "новостройка",
+    "ВТБ"
+  ],
+  "metadata": {}
 }
