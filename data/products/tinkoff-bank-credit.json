@@ -1,50 +1,45 @@
 {
-  "id": "tinkoff-credit-kredit-na-lyubye-celi",
+  "id": "tinkoff-credit-any",
   "bankName": "Тинькофф Банк",
   "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
   "productName": "Кредит на любые цели",
-  "productDescription": "Кредит наличными без справок о доходах и поручителей, предназначенный для покупки квартиры, ремонта, отдыха и других траты. Оформление онлайн, расчёт через калькулятор.",
+  "productDescription": "Кредит наличными без справок и поручителей, предназначенный для покупки квартиры, ремонта, отдыха и других траты. Оформление онлайн, расчёт через калькулятор.",
   "interestRates": [
     {
       "value": 0,
       "type": "floating",
-      "min": null,
-      "max": null,
-      "conditions": "срок кредита до 15 лет"
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка зависит от суммы и срока кредита"
     }
   ],
   "conditions": {
-    "minAmount": 0,
+    "minAmount": 50000,
     "maxAmount": 30000000,
     "minTerm": 1,
-    "maxTerm": 180,
+    "maxTerm": 15,
     "currency": "RUB",
     "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": "Кредит без справок о доходах и поручителей, срок до 15 лет."
+    "description": "Минимальная сумма 50 000 руб.; максимальная до 30 000 000 руб.; срок от 1 года до 15 лет; без залога и поручителей"
   },
   "borrowerRequirements": {
     "minAge": 18,
-    "maxAge": null,
-    "minIncome": null,
-    "employmentType": "any",
-    "workExperience": null,
-    "registration": "не требуется",
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Онлайн оформление",
-      "description": "Кредит можно оформить онлайн без посещения банка.",
+      "name": "Оформление онлайн",
+      "description": "Кредит можно оформить полностью через интернет-банк",
       "available": true
     },
     {
       "name": "Бесплатный расчёт",
-      "description": "Расчёт ежемесячного платежа доступен на калькуляторе.",
+      "description": "Расчёт ежемесячного платежа доступен на калькуляторе",
       "available": true
     }
   ],
@@ -52,25 +47,16 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Нет дополнительных комиссий за открытие и обслуживание."
+    "description": "Нет дополнительных комиссий"
   },
   "penalties": {
     "latePayment": "не применимо",
     "overLimit": "не применимо",
-    "description": "штрафные санкции отсутствуют"
+    "description": "При досрочном погашении проценты пересчитываются по ставке до востребования (0,01 %)"
   },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-12T12:00:00Z",
   "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "seoTitle": "Кредит на любые цели – Тинькофф Банк",
-  "seoDescription": "Получите кредит наличными без справок и поручителей в Тинькофф Банке. Минимальная сумма 0 руб., срок до 15 лет, расчёт онлайн.",
-  "seoKeywords": [
-    "кредит",
-    "на любые цели",
-    "тинькофф",
-    "без справок"
-  ],
-  "metadata": {}
+  "priority": 50
 }
