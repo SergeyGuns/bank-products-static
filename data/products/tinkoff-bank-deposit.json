@@ -1,0 +1,26 @@
+{
+  "id": "tinkoff-deposit-regular",
+  "bankName": "Тинькофф Банк",
+  "productType": "deposit",
+  "productName": "Регулярный вклад",
+  "interestRates": [
+    {
+      "value": 15.9,
+      "type": "fixed"
+    }
+  ],
+  "conditions": {
+    "minAmount": 10000,
+    "maxAmount": 5000000,
+    "currency": "RUB"
+  },
+  "borrowerRequirements": {
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
+  "extractedAt": "2026-04-11T12:34:56Z",
+  "isActive": true,
+  "priority": 50
+}

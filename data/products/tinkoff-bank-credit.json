@@ -1,10 +1,60 @@
 {
-  "id": "tinkoff-credit-кадр",
+  "id": "tinkoff-loan-cash",
   "bankName": "Тинькофф Банк",
+  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
+  "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит на любые цели",
+  "productName": "Кредит наличными на любые цели",
+  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Удобный расчет на калькуляторе и оформление онлайн.",
+  "conditions": {
+    "maxAmount": 30000000,
+    "minTerm": 1,
+    "maxTerm": 180,
+    "currency": "RUB",
+    "collateral": false,
+    "guarantor": false,
+    "insurance": false,
+    "description": "Кредит без справок о доходах и поручителей. Требуется только паспорт."
+  },
+  "borrowerRequirements": {
+    "minAge": 18,
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Быстрое одобрение",
+      "description": "Решение за минуту при онлайн-заявке.",
+      "available": true
+    },
+    {
+      "name": "Калькулятор платежей",
+      "description": "Удобный калькулятор на сайте для расчета ежемесячного платежа.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": false,
+    "description": "Нет комиссии за досрочное погашение."
+  },
+  "penalties": {
+    "latePayment": "Штраф в размере 2% от просроченной суммы.",
+    "description": "При просрочке начисляется штраф."
+  },
   "sourceUrl": "https://www.tinkoff.ru/loans/",
   "extractedAt": "2026-04-11T12:00:00Z",
+  "lastVerified": "2026-04-11T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "seoTitle": "Кредит наличными без справок | Тинькофф Банк",
+  "seoDescription": "Получите кредит наличными на любые цели в Тинькофф Банке. Без справок, поручителей и с быстрым одобрением.",
+  "seoKeywords": [
+    "кредит наличными",
+    "трудоустройство без справок",
+    "тинькофф банк"
+  ],
+  "metadata": {}
 }
