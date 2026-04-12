@@ -1,30 +1,28 @@
 {
-  "id": "vtb-mortgage",
+  "id": "vtb-credit-mortgage",
   "bankName": "ВТБ Банк",
   "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
   "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека ВТБ",
-  "productDescription": "Программа ипотечного кредитования с различными льготами: новостройки, вторичное жильё, семейная и ИТ‑ипотека, арктическая и военная ипотеки. Ставка от 10,1% до 30,1%, срок до 30 лет, максимальная сумма – 100 000 000 ₽.",
+  "productName": "Ипотека на покупку жилья",
+  "productDescription": "Получите ипотеку для покупки квартиры, дома или таунхауса с гибкими условиями и возможностью выбора программы.",
   "interestRates": [
     {
-      "value": 20.1,
-      "type": "floating",
-      "min": 10.1,
-      "max": 30.1,
-      "conditions": "Ставка зависит от выбранной программы и кредитного рейтинга заемщика."
+      "value": 10.1,
+      "type": "fixed",
+      "conditions": "Льготная ставка по программе \"Ипотека на новых территориях\""
     }
   ],
   "conditions": {
-    "minAmount": 1000000,
+    "minAmount": 0,
     "maxAmount": 100000000,
-    "minTerm": 12,
-    "maxTerm": 360,
+    "minTerm": 1,
+    "maxTerm": 30,
     "currency": "RUB",
     "collateral": true,
     "guarantor": false,
-    "insurance": true,
-    "description": "Ипотека предоставляется с залогом недвижимости. Для некоторых программ требуется страхование жилья."
+    "insurance": false,
+    "description": "Сумма до 100 млн ₽, срок до 30 лет. Возможность выбора программы с льготной ставкой."
   },
   "borrowerRequirements": {
     "minAge": 18,
@@ -32,27 +30,16 @@
     "minIncome": null,
     "employmentType": "any",
     "workExperience": null,
-    "registration": "Гражданин РФ, зарегистрирован в России.",
+    "registration": null,
     "documents": [
       "паспорт",
-      "свидетельство о доходах",
-      "документы на недвижимость"
+      "свидетельство о регистрации сделки"
     ]
   },
   "features": [
     {
-      "name": "Онлайн‑заявка",
-      "description": "Подать заявку и получить решение за несколько минут через сайт или приложение.",
-      "available": true
-    },
-    {
-      "name": "Эскроу‑счёт",
-      "description": "Безопасная сделка: деньги хранятся на спецсчёте до выполнения всех условий договора.",
-      "available": true
-    },
-    {
-      "name": "Льготные программы",
-      "description": "Скидки по ставке для зарплатных клиентов, ИТ‑специалистов и семей с детьми.",
+      "name": "Эскроу-счет",
+      "description": "Деньги хранятся на спецсчете до выполнения всех условий по договору.",
       "available": true
     }
   ],
@@ -60,27 +47,27 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за досрочное погашение отсутствует."
+    "description": "Комиссия за перевод кредита не взимается."
   },
   "penalties": {
-    "latePayment": "Штраф в размере 1% от просроченной суммы.",
+    "latePayment": null,
     "overLimit": null,
-    "description": "При просрочке начисляется штраф."
+    "description": null
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
-  "extractedAt": "2026-04-09T12:00:00Z",
-  "lastVerified": "2026-04-09T12:00:00Z",
+  "extractedAt": "2026-04-12T00:00:00Z",
+  "lastVerified": "2026-04-12T00:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека ВТБ – кредит на жильё с льготными ставками",
-  "seoDescription": "Получите ипотеку в ВТБ до 100 000 000 ₽, срок до 30 лет. Онлайн‑заявка и быстрый ответ.",
+  "seoTitle": "Ипотека на покупку жилья | ВТБ Банк",
+  "seoDescription": "Получите ипотеку до 100 млн ₽ с гибкими условиями и льготной ставкой. Оформление онлайн, быстрый расчёт.",
   "seoKeywords": [
     "ипотека",
     "ВТБ",
-    "льготы",
-    "срок 30 лет"
+    "покупка жилья",
+    "льготы"
   ],
   "metadata": {
-    "confidence": 0.7
+    "confidence": 0.9
   }
 }
