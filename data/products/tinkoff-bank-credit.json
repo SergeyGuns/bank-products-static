@@ -1,53 +1,31 @@
 {
-  "id": "tinkoff-credit-any",
+  "id": "tinkoff-ru-credit-any",
   "bankName": "Тинькофф Банк",
-  "bankLogoUrl": "https://www.tinkoff.ru/static/img/logo.svg",
   "bankWebsite": "https://www.tinkoff.ru/",
   "productType": "credit",
-  "productName": "Кредит наличными на любые цели",
-  "productDescription": "Деньги без справок и поручителей на покупку квартиры, ремонт, отдых и другие траты. Оформление онлайн.",
-  "conditions": {
-    "minAmount": 0,
-    "maxAmount": 30000000,
-    "minTerm": 1,
-    "maxTerm": 15,
-    "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": false,
-    "description": "Кредит без справок о доходах и поручителей. Требуется только паспорт."
-  },
-  "borrowerRequirements": {
-    "minAge": 18,
-    "employmentType": "any",
-    "documents": [
-      "паспорт"
-    ]
-  },
-  "features": [
+  "productName": "Ипотека на любые цели",
+  "interestRates": [
     {
-      "name": "Оформление онлайн",
-      "description": "Кредит оформляется полностью онлайн.",
-      "available": true
-    },
-    {
-      "name": "Бесплатная выдача на карту",
-      "description": "Деньги будут переведены на карту без комиссии.",
-      "available": true
+      "value": 0,
+      "type": "floating"
     }
   ],
-  "fees": {
-    "issuance": 0,
-    "maintenance": 0,
-    "earlyRepayment": false,
-    "description": "Нет дополнительных комиссий."
+  "conditions": {
+    "minAmount": 10000000,
+    "maxAmount": 400000000,
+    "minTerm": 3,
+    "maxTerm": 30,
+    "currency": "RUB",
+    "description": "Сумма кредита от 10 млн до 40 млн ₽, срок до 30 лет"
   },
-  "sourceUrl": "https://www.tinkoff.ru/loans/",
+  "borrowerRequirements": {
+    "documents": [
+      "паспорт",
+      "свидетельство о доходах"
+    ]
+  },
+  "sourceUrl": "https://www.tinkoff.ru/personal/ipoteka/",
   "extractedAt": "2026-04-12T12:00:00Z",
-  "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
-  "priority": 50,
-  "metadata": {
-    "confidence": 0.8
-  }
+  "priority": 50
 }
