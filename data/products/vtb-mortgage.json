@@ -1,46 +1,45 @@
 {
-  "id": "vtb-mortgage-ипотека",
+  "id": "vtb-mortgage-Ипотека_на_строительство_дома",
   "bankName": "ВТБ",
   "bankLogoUrl": "https://www.vtb.ru/static/img/logo.svg",
   "bankWebsite": "https://www.vtb.ru/",
   "productType": "mortgage",
-  "productName": "Ипотека",
-  "productDescription": "Программа ипотеки с господдержкой и льготными ставками для различных категорий заемщиков.",
+  "productName": "Ипотека на строительство дома",
+  "productDescription": "Построить дом с нуля на своем участке или завершить строительство от 20,1%.",
   "interestRates": [
     {
       "value": 20.1,
       "type": "fixed",
-      "conditions": "для новых зарплатных клиентов ВТБ действует скидка 0,4% к процентной ставке по ипотеке."
+      "conditions": ""
     }
   ],
   "conditions": {
-    "minAmount": 10000000,
+    "minAmount": 0,
     "maxAmount": 100000000,
-    "minTerm": 1,
-    "maxTerm": 30,
+    "minTerm": 12,
+    "maxTerm": 360,
     "currency": "RUB",
     "collateral": true,
     "guarantor": false,
-    "insurance": true,
-    "description": "Максимальная сумма заемных средств составляет 100 миллионов рублей, срок — до 30 лет. Залогом может быть собственное жилье."
+    "insurance": false,
+    "description": "Сумма до 100 млн ₽, срок до 30 лет. Максимальная сумма заемных средств составляет 100 миллионов рублей, а срок — до 30 лет."
   },
   "borrowerRequirements": {
     "minAge": 18,
+    "maxAge": null,
+    "minIncome": null,
     "employmentType": "any",
+    "workExperience": null,
+    "registration": null,
     "documents": [
       "паспорт",
-      "свидетельство о доходах"
+      "свидетельство о праве собственности на участок"
     ]
   },
   "features": [
     {
-      "name": "Онлайн-заявка",
-      "description": "Подайте заявку онлайн через сайт или приложение.",
-      "available": true
-    },
-    {
       "name": "Эскроу-счет",
-      "description": "Для каждой программы требуется эскроу-счет для размещения первоначального взноса.",
+      "description": "Для строительства дома требуется эскроу-счет, где размещается первоначальный взнос и кредитные средства.",
       "available": true
     }
   ],
@@ -48,26 +47,21 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": false,
-    "description": "Комиссия за перевод кредита не взимается."
+    "description": ""
   },
   "penalties": {
-    "latePayment": "При просрочке платежа начисляется штраф в размере 1% от суммы задолженности.",
-    "overLimit": "Если сумма превышает лимит, кредит может быть закрыт досрочно без комиссии.",
-    "description": "Штрафы за нарушение условий договора."
+    "latePayment": "",
+    "overLimit": "",
+    "description": ""
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
   "extractedAt": "2026-04-12T12:00:00Z",
   "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека ВТБ – льготные ставки и онлайн-заявка",
-  "seoDescription": "Получите ипотеку с господдержкой от ВТБ. Онлайн‑заявка, эскроу‑счет, скидки для зарплатных клиентов.",
-  "seoKeywords": [
-    "ипотека",
-    "ВТБ",
-    "льготные ставки",
-    "онлайн заявка"
-  ],
+  "seoTitle": "",
+  "seoDescription": "",
+  "seoKeywords": [],
   "metadata": {
     "confidence": 0.9
   }
