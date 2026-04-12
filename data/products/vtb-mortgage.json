@@ -1,30 +1,33 @@
 {
-  "id": "vtb-mortgage-readyhome",
+  "id": "vtb-mortgage-privat",
   "bankName": "ВТБ",
   "productType": "mortgage",
-  "productName": "Ипотека на готовый дом",
-  "productDescription": "Дом, который уже ждет свою семью.",
+  "productName": "Ипотека на покупку жилья в новостройке",
+  "productDescription": "По программе ипотечного кредитования на покупку жилья в новостройке на сумму до 100 млн рублей на срок до 30 лет вы можете выбрать новостройку из аккредитованного ВТБ списка.",
   "interestRates": [
     {
-      "value": 20.1,
-      "type": "fixed",
-      "conditions": "Ставка зависит от суммы кредита, срока и кредитной истории"
+      "value": 0,
+      "type": "floating",
+      "min": 0,
+      "max": 0,
+      "conditions": "Ставка зависит от суммы, срока и кредитной истории; для новых зарплатных клиентов действует скидка 0,4%"
     }
   ],
   "conditions": {
-    "minAmount": 1,
+    "minAmount": 100000,
     "maxAmount": 100000000,
     "minTerm": 1,
     "maxTerm": 30,
     "currency": "RUB",
-    "collateral": true,
+    "collateral": false,
     "guarantor": false,
     "insurance": false,
-    "description": "Кредит на покупку готового дома до 100 млн ₽, срок до 30 лет. Первоначальный взнос и условия зависят от программы."
+    "description": "Максимальная сумма заемных средств – 100 млн ₽, срок до 30 лет. Первоначальный взнос не требуется."
   },
   "borrowerRequirements": {
     "minAge": 18,
     "maxAge": 65,
+    "minIncome": 0,
     "employmentType": "any",
     "workExperience": 0,
     "registration": "не требуется",
@@ -34,37 +37,40 @@
   },
   "features": [
     {
-      "name": "Бесплатный расчёт онлайн",
-      "description": "Калькулятор позволяет быстро оценить условия кредита",
+      "name": "Онлайн оформление",
+      "description": "Весь процесс оформления онлайн",
       "available": true
     },
     {
-      "name": "Оформление онлайн",
-      "description": "Весь процесс оформления можно завершить через интернет",
+      "name": "Скидка для новых зарплатных клиентов",
+      "description": "Скидка 0,4% к процентной ставке",
       "available": true
     }
   ],
   "fees": {
     "issuance": 0,
     "maintenance": 0,
-    "earlyRepayment": false
+    "earlyRepayment": false,
+    "description": "Комиссия за досрочное погашение не взимается"
   },
   "penalties": {
-    "latePayment": "описание штрафа отсутствует",
-    "overLimit": "описание штрафа отсутствует"
+    "latePayment": "штраф 1,5% от суммы просроченного платежа",
+    "overLimit": "нет",
+    "description": "Штрафы при просрочке платежей"
   },
   "sourceUrl": "https://www.vtb.ru/personal/ipoteka/",
-  "extractedAt": "2026-04-12T00:00:00Z",
-  "lastVerified": "2026-04-12T00:00:00Z",
+  "extractedAt": "2026-04-12T12:00:00Z",
+  "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "seoTitle": "Ипотека на готовый дом – ВТБ",
-  "seoDescription": "Получите ипотеку на готовый дом до 100 млн ₽ с выгодной ставкой. Оформление онлайн, быстрый расчёт.",
+  "seoTitle": "Ипотека в ВТБ – покупка жилья в новостройке до 100 млн ₽",
+  "seoDescription": "Получите ипотеку в ВТБ для покупки жилья в новостройке. Срок до 30 лет, сумма до 100 млн ₽, онлайн оформление.",
   "seoKeywords": [
     "ипотека",
-    "готовый дом",
-    "vtb",
-    "срок до 30 лет"
+    "новостройка",
+    "ВТБ"
   ],
-  "metadata": {}
+  "metadata": {
+    "confidence": 0.8
+  }
 }
