@@ -1,24 +1,95 @@
 {
-  "id": "sberbank-deposit-лучший%",
+  "id": "sberbank-deposit-sbervklad",
   "bankName": "Сбербанк",
+  "bankLogoUrl": "https://www.sberbank.ru/ru/images/logo.svg",
+  "bankWebsite": "https://www.sberbank.ru/ru",
   "productType": "deposit",
-  "productName": "Лучший %",
+  "productName": "СберВклад",
+  "productDescription": "Ежемесячный вклад с фиксированной процентной ставкой, выплата процентов в конце срока на карту. Возможность открытия только онлайн.",
   "interestRates": [
     {
-      "value": 14,
+      "value": 12.4,
       "type": "fixed",
-      "conditions": "до конца срока"
+      "min": null,
+      "max": null,
+      "conditions": "для сроков 1 и 2 месяца"
+    },
+    {
+      "value": 13.4,
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "conditions": "для сроков 3 и 4 месяца"
+    },
+    {
+      "value": 12.5,
+      "type": "fixed",
+      "min": null,
+      "max": null,
+      "conditions": "для срока 5 месяцев"
     }
   ],
   "conditions": {
-    "minAmount": 300000,
-    "maxTerm": 4,
+    "minAmount": 10000,
+    "maxAmount": 5000000,
+    "minTerm": 1,
+    "maxTerm": 5,
     "currency": "RUB",
-    "description": "Выплата в конце срока, можно онлайн"
+    "collateral": false,
+    "guarantor": false,
+    "insurance": true,
+    "description": "Вклад застрахован государством до 1,4 млн ₽. Минимальная сумма входа – 10 000 ₽."
   },
-  "sourceUrl": "https://www.sravni.ru/vklady/",
-  "extractedAt": "2026-04-11T12:00:00Z",
-  "lastVerified": "2026-04-11T12:00:00Z",
+  "borrowerRequirements": {
+    "minAge": 18,
+    "maxAge": null,
+    "minIncome": null,
+    "employmentType": "any",
+    "workExperience": null,
+    "registration": null,
+    "documents": [
+      "паспорт"
+    ]
+  },
+  "features": [
+    {
+      "name": "Выплата процентов",
+      "description": "Проценты выплачиваются в конце срока на карту.",
+      "available": true
+    },
+    {
+      "name": "Частичное снятие",
+      "description": "Не доступно.",
+      "available": false
+    },
+    {
+      "name": "Пополнение",
+      "description": "Не доступно.",
+      "available": false
+    },
+    {
+      "name": "Досрочное закрытие",
+      "description": "Разрешено по ставке до востребования.",
+      "available": true
+    }
+  ],
+  "fees": {
+    "issuance": 0,
+    "maintenance": 0,
+    "earlyRepayment": true,
+    "description": "Нет дополнительных комиссий."
+  },
+  "penalties": {
+    "latePayment": null,
+    "overLimit": null,
+    "description": null
+  },
+  "sourceUrl": "https://www.sravni.ru/bank/sberbank-rossii/vklad/sbervklad--ezhemesyachno/",
+  "extractedAt": "2026-04-12T12:00:00Z",
+  "lastVerified": "2026-04-12T12:00:00Z",
   "isActive": true,
-  "priority": 50
+  "priority": 50,
+  "metadata": {
+    "confidence": 0.9
+  }
 }
