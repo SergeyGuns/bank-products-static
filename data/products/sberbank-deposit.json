@@ -1,57 +1,37 @@
 {
-  "id": "sberbank-rossii-deposit-СберВклад",
+  "id": "sberbank-deposit-Лучший%20%25",
   "bankName": "Сбербанк",
-  "bankLogoUrl": "https://www.sberbank.ru/ru/images/logo.svg",
-  "bankWebsite": "https://www.sberbank.ru/ru",
+  "bankWebsite": "https://www.sberbank.ru",
   "productType": "deposit",
-  "productName": "СберВклад",
-  "productDescription": "Ежемесячный вклад с фиксированной процентной ставкой, выплата процентов в конце срока. Вклад застрахован государством до 1,4 млн ₽.",
+  "productName": "Лучший % онлайн",
+  "productDescription": "Вклад в СберБанке с лучшей процентной ставкой, открываемый онлайн через Банки.ру. Вклады доступны для физических лиц и застрахованы до 1,4 млн рублей.",
   "interestRates": [
     {
-      "value": 12.4,
+      "value": 13.75,
       "type": "fixed",
-      "conditions": ""
-    },
-    {
-      "value": 13.4,
-      "type": "fixed",
-      "conditions": ""
+      "conditions": "ежемесячно начисление процентов"
     }
   ],
   "conditions": {
-    "minTerm": 1,
-    "maxTerm": 4,
+    "minAmount": 10000,
     "currency": "RUB",
-    "collateral": false,
-    "guarantor": false,
-    "insurance": true,
-    "description": "Все вклады застрахованы государством до 1,4 млн ₽"
+    "description": "Минимальная сумма вклада – 10 000 ₽; максимальный срок не указан, но обычно до 60 месяцев."
   },
   "borrowerRequirements": {
-    "employmentType": "any",
+    "minAge": 18,
     "documents": [
       "паспорт"
     ]
   },
   "features": [
     {
-      "name": "Выплата процентов в конце срока",
-      "description": "",
+      "name": "застрахованность",
+      "description": "Вклады застрахованы до 1,4 млн рублей АСВД",
       "available": true
     },
     {
-      "name": "Капитализация",
-      "description": "",
-      "available": false
-    },
-    {
-      "name": "Пополнение",
-      "description": "",
-      "available": false
-    },
-    {
-      "name": "Досрочное закрытие по ставке до востребования",
-      "description": "",
+      "name": "досрочное расторжение",
+      "description": "Может быть доступно на льготных условиях",
       "available": true
     }
   ],
@@ -59,19 +39,25 @@
     "issuance": 0,
     "maintenance": 0,
     "earlyRepayment": true,
-    "description": ""
+    "description": "Комиссии за досрочное расторжение могут применяться"
   },
   "penalties": {
-    "latePayment": "",
-    "overLimit": "",
-    "description": ""
+    "latePayment": "описание штрафа отсутствует",
+    "overLimit": "описание штрафа отсутствует",
+    "description": "Информация о штрафах не указана"
   },
-  "sourceUrl": "https://www.sravni.ru/bank/sberbank-rossii/vklad/sbervklad--ezhemesyachno/",
-  "extractedAt": "2026-04-12T12:00:00Z",
-  "lastVerified": "2026-04-12T12:00:00Z",
+  "sourceUrl": "https://www.banki.ru/products/deposits/sberbank/",
+  "extractedAt": "2026-04-13T12:00:00Z",
+  "lastVerified": "2026-04-13T12:00:00Z",
   "isActive": true,
   "priority": 50,
-  "metadata": {
-    "confidence": 0.8
-  }
+  "seoTitle": "Лучший % онлайн в Сбербанке – 13,75% годовых",
+  "seoDescription": "Откройте вклад «Лучший % онлайн» в Сбербанке с лучшей процентной ставкой 13,75 % годовых. Вклады застрахованы до 1,4 млн рублей.",
+  "seoKeywords": [
+    "Сбербанк",
+    "вклад",
+    "лучший процент",
+    "онлайн"
+  ],
+  "metadata": {}
 }
