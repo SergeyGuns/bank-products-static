@@ -2565,6 +2565,144 @@
       "validFrom": "2026-02-05",
       "status": "active",
       "__sourceFile": "src\\data\\pdfs\\savings\\-1770331449891.json"
+    },
+    {
+      "id": "psb--1778450038143",
+      "title": "Семейная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Семейная ипотека",
+      "fullDescription": "Продукт \"Семейная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Семейная ипотека от psb",
+        "description": "Семейная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450047778",
+      "title": "Семейная военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Семейная военная ипотека",
+      "fullDescription": "Продукт \"Семейная военная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Семейная военная ипотека от psb",
+        "description": "Семейная военная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450053968",
+      "title": "Военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Военная ипотека",
+      "fullDescription": "Продукт \"Военная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Военная ипотека от psb",
+        "description": "Военная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
     }
   ]
 }

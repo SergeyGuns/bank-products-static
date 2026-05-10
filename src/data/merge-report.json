@@ -1,15 +1,34 @@
 {
-  "timestamp": "2026-05-10T21:19:20.694Z",
-  "dryRun": true,
+  "timestamp": "2026-05-10T21:54:15.589Z",
+  "dryRun": false,
   "stats": {
-    "extracted": 2,
-    "toAdd": 0,
+    "extracted": 19,
+    "toAdd": 3,
     "skipped": 0,
-    "invalid": 2,
+    "invalid": 16,
     "totalBefore": 46,
-    "totalAfter": 46
+    "totalAfter": 49
   },
-  "added": [],
+  "added": [
+    {
+      "id": "psb--1778450038143",
+      "title": "Семейная ипотека",
+      "bankName": "psb",
+      "type": "mortgage"
+    },
+    {
+      "id": "psb--1778450047778",
+      "title": "Семейная военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage"
+    },
+    {
+      "id": "psb--1778450053968",
+      "title": "Военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage"
+    }
+  ],
   "skipped": [],
   "invalid": [
     {
@@ -20,6 +39,90 @@
     },
     {
       "product": "Открыть брокерский счет",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "Вторичное жилье",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "18,912 - 28,491%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "От 18,19%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "От 20,01%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "Новостройка",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "19,191 - 28,455%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "От 18,69%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "21,514 - 25,584%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "От 6%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "Госпрограмма. Новые субъекты",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "21,186 — 25,584%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "От 10,01 %",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "6,001 - 6,222%",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "До 5 330 000 ₽",
       "errors": [
         "missing/invalid type"
       ]

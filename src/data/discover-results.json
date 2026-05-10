@@ -1,5 +1,5 @@
 {
-  "scanned": 5,
+  "scanned": 24,
   "newProducts": [
     {
       "discoveredUrl": "https://www.vtb.ru/personal/cards/debit-cards/",
@@ -16,6 +16,486 @@
       "rate": null,
       "limit": null,
       "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/credits/",
+      "title": "Дополнительно",
+      "bankName": "psb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Вторичное жилье",
+      "bankName": "psb",
+      "rate": "28,491%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "18,912 - 28,491%",
+      "bankName": "psb",
+      "rate": "28,491%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 18,19%",
+      "bankName": "psb",
+      "rate": "18,19%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 20,01%",
+      "bankName": "psb",
+      "rate": "20,01%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Новостройка",
+      "bankName": "psb",
+      "rate": "28,455%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "19,191 - 28,455%",
+      "bankName": "psb",
+      "rate": "28,455%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 18,69%",
+      "bankName": "psb",
+      "rate": "18,69%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Семейная ипотека",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "21,514 - 25,584%",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 6%",
+      "bankName": "psb",
+      "rate": "6%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Госпрограмма. Новые субъекты",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "21,186 — 25,584%",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 10,01 %",
+      "bankName": "psb",
+      "rate": "10,01%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Семейная военная ипотека",
+      "bankName": "psb",
+      "rate": "6,222%",
+      "limit": "5 330 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "6,001 - 6,222%",
+      "bankName": "psb",
+      "rate": "6,222%",
+      "limit": "5 330 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "До 5 330 000 ₽",
+      "bankName": "psb",
+      "rate": null,
+      "limit": "5 330 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Военная ипотека",
+      "bankName": "psb",
+      "rate": "28,736%",
+      "limit": "2 120 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "18,201 - 28,736%",
+      "bankName": "psb",
+      "rate": "28,736%",
+      "limit": "2 120 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 18,2%",
+      "bankName": "psb",
+      "rate": "18,2%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "До 2 120 000 ₽",
+      "bankName": "psb",
+      "rate": null,
+      "limit": "2 120 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Госпрограмма. Военная ипотека. Новые субъекты",
+      "bankName": "psb",
+      "rate": "2,315%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "2,315% — 2,603%",
+      "bankName": "psb",
+      "rate": "2,315%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "До 6 млн ₽",
+      "bankName": "psb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Рефинансирование ипотеки",
+      "bankName": "psb",
+      "rate": "35,972%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "21,625-35,972%",
+      "bankName": "psb",
+      "rate": "35,972%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 18,89%",
+      "bankName": "psb",
+      "rate": "18,89%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "До 20 млн. ₽",
+      "bankName": "psb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Дальневосточная и арктическая ипотека",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "21,019-25,584%",
+      "bankName": "psb",
+      "rate": "25,584%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Военная ипотека. Рефинансирование",
+      "bankName": "psb",
+      "rate": "20,825%",
+      "limit": "5 305 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "6,001 - 20,825%",
+      "bankName": "psb",
+      "rate": "20,825%",
+      "limit": "5 305 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "От 6,0%",
+      "bankName": "psb",
+      "rate": "6,0%",
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "До 5 305 000 ₽",
+      "bankName": "psb",
+      "rate": null,
+      "limit": "5 305 000 ₽",
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Акции от застройщиков",
+      "bankName": "psb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://psb.ru/personal/mortgage/",
+      "title": "Легкая ипотека",
+      "bankName": "psb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://rshb.ru/natural/#/cards/credit",
+      "title": "Валюта",
+      "bankName": "roselhozbank",
+      "params": [
+        "Купить",
+        "Продать"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Телефон",
+      "bankName": "sovcombank",
+      "params": [
+        "8 800 100-00-06"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Адрес",
+      "bankName": "sovcombank",
+      "params": [
+        "Московская обл, г Мытищи, ул Воровского, д 1"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Сайт",
+      "bankName": "sovcombank",
+      "params": [
+        "www.sovcombank.ru"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Офисы в городе Мытищи",
+      "bankName": "sovcombank",
+      "params": [
+        "Отделения2Банкоматы2"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Лицензия",
+      "bankName": "sovcombank",
+      "params": [
+        "№ 963"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Финансовый рейтинг:",
+      "bankName": "sovcombank",
+      "params": [
+        "10 место по активам в России"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Народный рейтинг:",
+      "bankName": "sovcombank",
+      "params": [
+        "1 место в рейтинге"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Средняя оценка:",
+      "bankName": "sovcombank",
+      "params": [
+        "4.9 из 5 на основе 38856 отзывов"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "Эффективная ставка",
+        "Срок",
+        "Сумма"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Газпромбанк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 14.50%",
+        "1-61 день",
+        "5000-1 500 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "МТС Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 14.06%",
+        "91 день",
+        "10 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Свой Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.81%",
+        "91 день",
+        "30 000-30 000 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Банк НООСФЕРА",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.60%",
+        "100 дней",
+        "50 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "НС Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.55%",
+        "90 дней",
+        "50 000-3 000 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "БыстроБанк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.55%",
+        "181 день",
+        "150 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Локо-Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.50%",
+        "150 дней",
+        "300 000-30 000 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Реалист Банк",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.41%",
+        "91 день",
+        "10 000 ₽"
+      ],
+      "source": "heuristic-table"
+    },
+    {
+      "discoveredUrl": "https://www.banki.ru/banks/bank/sovcombank/deposits/",
+      "title": "Московский кредитный банк (МКБ)",
+      "bankName": "sovcombank",
+      "params": [
+        "до 13.40%",
+        "95 дней",
+        "10 000-3 000 000 ₽"
+      ],
+      "source": "heuristic-table"
     }
   ],
   "errors": [
@@ -38,7 +518,62 @@
       "bank": "vtb",
       "url": "https://www.vtb.ru/personal/mortgage/",
       "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "psb",
+      "url": "https://psb.ru/personal/cards/credit/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "psb",
+      "url": "https://psb.ru/personal/cards/debit/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "psb",
+      "url": "https://psb.ru/personal/deposits/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "sovcombank",
+      "url": "https://www.banki.ru/banks/bank/sovcombank/credit_cards/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "sovcombank",
+      "url": "https://www.banki.ru/banks/bank/sovcombank/debit_cards/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "sovcombank",
+      "url": "https://www.banki.ru/banks/bank/sovcombank/consumer_loans/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "sovcombank",
+      "url": "https://www.banki.ru/banks/bank/sovcombank/mortgage/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "domrf",
+      "url": "https://domrfbank.ru/products/cards",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "domrf",
+      "url": "https://domrfbank.ru/products/deposits",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "domrf",
+      "url": "https://domrfbank.ru/products/credits",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "domrf",
+      "url": "https://domrfbank.ru/products/mortgage",
+      "error": "Request failed with status code 404"
     }
   ],
-  "timestamp": "2026-05-10T21:19:15.752Z"
+  "timestamp": "2026-05-10T21:53:13.663Z"
 }

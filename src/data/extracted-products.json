@@ -1,7 +1,7 @@
 {
   "extracted": [
     {
-      "id": "vtb--1778447959985",
+      "id": "vtb--1778450018773",
       "title": "Гарантия защиты сделки",
       "bankName": "vtb",
       "type": "unknown",
@@ -47,7 +47,7 @@
       "status": "active"
     },
     {
-      "id": "vtb--1778447959124",
+      "id": "vtb--1778450020953",
       "title": "Открыть брокерский счет",
       "bankName": "vtb",
       "type": "unknown",
@@ -91,13 +91,800 @@
       },
       "validFrom": "2026-05-10",
       "status": "active"
+    },
+    {
+      "id": "psb--1778450023551",
+      "title": "Вторичное жилье",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "Вторичное жилье",
+      "fullDescription": "Продукт \"Вторичное жилье\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Вторичное жилье от psb",
+        "description": "Вторичное жилье"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450025475",
+      "title": "18,912 - 28,491%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "18,912 - 28,491%",
+      "fullDescription": "Продукт \"18,912 - 28,491%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "18,912 - 28,491% от psb",
+        "description": "18,912 - 28,491%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450027425",
+      "title": "От 18,19%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "От 18,19%",
+      "fullDescription": "Продукт \"От 18,19%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "От 18,19% от psb",
+        "description": "От 18,19%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450029865",
+      "title": "От 20,01%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "От 20,01%",
+      "fullDescription": "Продукт \"От 20,01%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "От 20,01% от psb",
+        "description": "От 20,01%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450032268",
+      "title": "Новостройка",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "Новостройка",
+      "fullDescription": "Продукт \"Новостройка\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Новостройка от psb",
+        "description": "Новостройка"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450034247",
+      "title": "19,191 - 28,455%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "19,191 - 28,455%",
+      "fullDescription": "Продукт \"19,191 - 28,455%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "19,191 - 28,455% от psb",
+        "description": "19,191 - 28,455%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450036176",
+      "title": "От 18,69%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "От 18,69%",
+      "fullDescription": "Продукт \"От 18,69%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "От 18,69% от psb",
+        "description": "От 18,69%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450038143",
+      "title": "Семейная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Семейная ипотека",
+      "fullDescription": "Продукт \"Семейная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Семейная ипотека от psb",
+        "description": "Семейная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450040183",
+      "title": "21,514 - 25,584%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "21,514 - 25,584%",
+      "fullDescription": "Продукт \"21,514 - 25,584%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "21,514 - 25,584% от psb",
+        "description": "21,514 - 25,584%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450042128",
+      "title": "От 6%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "От 6%",
+      "fullDescription": "Продукт \"От 6%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "От 6% от psb",
+        "description": "От 6%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450041055",
+      "title": "Госпрограмма. Новые субъекты",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "Госпрограмма. Новые субъекты",
+      "fullDescription": "Продукт \"Госпрограмма. Новые субъекты\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Госпрограмма. Новые субъекты от psb",
+        "description": "Госпрограмма. Новые субъекты"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450043482",
+      "title": "21,186 — 25,584%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "21,186 — 25,584%",
+      "fullDescription": "Продукт \"21,186 — 25,584%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "21,186 — 25,584% от psb",
+        "description": "21,186 — 25,584%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450045331",
+      "title": "От 10,01 %",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "От 10,01 %",
+      "fullDescription": "Продукт \"От 10,01 %\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "От 10,01 % от psb",
+        "description": "От 10,01 %"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450047778",
+      "title": "Семейная военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Семейная военная ипотека",
+      "fullDescription": "Продукт \"Семейная военная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Семейная военная ипотека от psb",
+        "description": "Семейная военная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450050145",
+      "title": "6,001 - 6,222%",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "6,001 - 6,222%",
+      "fullDescription": "Продукт \"6,001 - 6,222%\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "6,001 - 6,222% от psb",
+        "description": "6,001 - 6,222%"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450052030",
+      "title": "До 5 330 000 ₽",
+      "bankName": "psb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "До 5 330 000 ₽",
+      "fullDescription": "Продукт \"До 5 330 000 ₽\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "До 5 330 000 ₽ от psb",
+        "description": "До 5 330 000 ₽"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    },
+    {
+      "id": "psb--1778450053968",
+      "title": "Военная ипотека",
+      "bankName": "psb",
+      "type": "mortgage",
+      "featured": false,
+      "shortDescription": "Военная ипотека",
+      "fullDescription": "Продукт \"Военная ипотека\" от psb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "До 5 330 000 ₽",
+          "Кешбэк": "7%"
+        },
+        "fees": {
+          "Обслуживание": "бесплатно"
+        },
+        "requirements": {
+          "Документы": [
+            "Справка о доходах",
+            "СНИЛС"
+          ]
+        }
+      },
+      "features": [
+        "До 5 330 000 ₽",
+        "7%"
+      ],
+      "conditions": [
+        [
+          "Справка о доходах",
+          "СНИЛС"
+        ]
+      ],
+      "referralLink": "https://psb.ru/personal/mortgage/",
+      "meta": {
+        "title": "Военная ипотека от psb",
+        "description": "Военная ипотека"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
     }
   ],
-  "errors": [],
-  "timestamp": "2026-05-10T21:19:20.637Z",
+  "errors": [
+    {
+      "product": "Дополнительно",
+      "error": "не удалось загрузить страницу"
+    }
+  ],
+  "timestamp": "2026-05-10T21:54:15.485Z",
   "stats": {
-    "total": 2,
-    "success": 2,
-    "failed": 0
+    "total": 20,
+    "success": 19,
+    "failed": 1
   }
 }
