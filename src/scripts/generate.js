@@ -106,7 +106,8 @@ async function generateProductPages(products, productTemplate, distDir) {
 async function generateCategoryPages(categories, products, categoryTemplate, compareTemplate, distDir) {
     await Promise.all(categories.map(async category => {
         const categoryProducts = products.filter(p => p.type === category.id);
-        const categoryHtml = categoryTemplate({ category, products: categoryProducts, meta: category.meta });
+        const banks = [...new Set(categoryProducts.map(p => p.bankName))].sort((a, b) => a.localeCompare(b, 'ru'));
+        const categoryHtml = categoryTemplate({ category, products: categoryProducts, banks, meta: category.meta });
 
         await fs.writeFile(path.join(distDir, 'category', `${category.id}.html`), categoryHtml);
 
