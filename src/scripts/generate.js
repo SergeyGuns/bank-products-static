@@ -139,9 +139,17 @@ async function generateCategoryPages(categories, products, categoryTemplate, com
 }
 
 async function generateIndexPage(products, categories, indexTemplate, distDir) {
+    const stats = {
+      totalProducts: products.length,
+      lastUpdated: new Date().toISOString().split('T')[0],
+      categories: categories.length,
+      banks: [...new Set(products.map(p => p.bankName))].length,
+    };
+
     const indexHtml = indexTemplate({
         products,
         categories,
+        stats,
         meta: {
             title: 'Банковские продукты | Главная',
             description: 'Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты'
