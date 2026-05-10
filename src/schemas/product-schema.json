@@ -28,7 +28,7 @@
         "credit-cards",
         "debit-cards",
         "credits",
-        "deposits",  // Вклады и накопительные счета
+        "deposits",
         "mortgage",
         "auto-loans",
         "business-loans",
@@ -65,8 +65,7 @@
     },
     "imageUrl": {
       "type": "string",
-      "description": "URL изображения продукта",
-      "format": "uri"
+      "description": "URL изображения продукта"
     },
     "features": {
       "type": "array",
@@ -90,8 +89,7 @@
     },
     "referralLink": {
       "type": "string",
-      "description": "Реферальная ссылка на продукт",
-      "format": "uri"
+      "description": "Реферальная ссылка на продукт"
     },
     "version": {
       "type": "object",
@@ -100,13 +98,11 @@
       "properties": {
         "date": {
           "type": "string",
-          "description": "Дата обновления информации",
-          "format": "date"
+          "description": "Дата обновления информации"
         },
         "source": {
           "type": "string",
-          "description": "Источник информации",
-          "format": "uri"
+          "description": "Источник информации"
         },
         "updatedBy": {
           "type": "string",
@@ -156,82 +152,17 @@
               }
             ]
           }
-        },
-        "deposit_terms": {
-          "type": "object",
-          "description": "Условия вклада (для депозитов)",
-          "properties": {
-            "min_deposit_amount": {
-              "type": "string",
-              "description": "Минимальная сумма вклада",
-              "maxLength": 50
-            },
-            "max_deposit_amount": {
-              "type": "string",
-              "description": "Максимальная сумма вклада",
-              "maxLength": 50
-            },
-            "interest_rate": {
-              "type": "string",
-              "description": "Процентная ставка",
-              "maxLength": 20
-            },
-            "capitalization": {
-              "type": "string",
-              "description": "Капитализация процентов (да/нет)",
-              "enum": ["да", "нет", "по выбору клиента"]
-            },
-            "withdrawal_options": {
-              "type": "string",
-              "description": "Возможность частичных снятий",
-              "maxLength": 100
-            },
-            "replenishment_options": {
-              "type": "string",
-              "description": "Возможность пополнения",
-              "maxLength": 100
-            },
-            "term_months": {
-              "type": "string",
-              "description": "Срок вклада в месяцах",
-              "maxLength": 10
-            }
-          },
-          "additionalProperties": false
-        },
-        "cashback": {
-          "type": "object",
-          "description": "Параметры кэшбэка (для карт)",
-          "additionalProperties": {
-            "anyOf": [
-              {
-                "type": "string",
-                "maxLength": 200
-              },
-              {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 200
-                },
-                "maxItems": 20
-              }
-            ]
-          }
         }
       },
       "required": ["main"]
     },
     "validFrom": {
       "type": "string",
-      "description": "Дата начала действия продукта",
-      "format": "date"
+      "description": "Дата начала действия продукта"
     },
     "validUntil": {
       "type": "string",
-      "description": "Дата окончания действия продукта (если прекращен)",
-      "format": "date"
+      "description": "Дата окончания действия продукта (если прекращен)"
     },
     "status": {
       "type": "string",
