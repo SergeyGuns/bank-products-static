@@ -1,0 +1,44 @@
+{
+  "scanned": 5,
+  "newProducts": [
+    {
+      "discoveredUrl": "https://www.vtb.ru/personal/cards/debit-cards/",
+      "title": "Гарантия защиты сделки",
+      "bankName": "vtb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    },
+    {
+      "discoveredUrl": "https://www.vtb.ru/personal/cards/debit-cards/",
+      "title": "Открыть брокерский счет",
+      "bankName": "vtb",
+      "rate": null,
+      "limit": null,
+      "source": "heuristic-card"
+    }
+  ],
+  "errors": [
+    {
+      "bank": "vtb",
+      "url": "https://www.vtb.ru/personal/cards/credit-cards/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "vtb",
+      "url": "https://www.vtb.ru/personal/deposits-and-accounts/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "vtb",
+      "url": "https://www.vtb.ru/personal/loans/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "bank": "vtb",
+      "url": "https://www.vtb.ru/personal/mortgage/",
+      "error": "Request failed with status code 404"
+    }
+  ],
+  "timestamp": "2026-05-10T21:11:47.198Z"
+}
