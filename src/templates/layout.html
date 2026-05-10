@@ -10,6 +10,21 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
+        <style>
+            .best-offer { background-color: #e6f9f0 !important; }
+            .best-offer td { font-weight: 600; color: #065f46; }
+            .best-offer-card { border: 2px solid #10b981 !important; box-shadow: 0 0 12px rgba(16,185,129,0.3); }
+            .best-offer-card::before { content: '★ Лучшее предложение'; display: block; color: #065f46; font-weight: 600; font-size: 0.85em; margin-bottom: 0.5rem; }
+            [data-theme="dark"] { --color-background: #1a1a2e; --color-text: #e0e0e0; --color-card-bg: #16213e; --color-border: #0f3460; --color-primary: #e94560; }
+            [data-theme="dark"] body { background: var(--color-background); color: var(--color-text); }
+            [data-theme="dark"] .card { background: var(--color-card-bg); border-color: var(--color-border); }
+            [data-theme="dark"] .header { background: var(--color-card-bg); }
+            [data-theme="dark"] a { color: #7ec8e3; }
+            [data-theme="dark"] .comparison-table thead tr { background-color: #0f3460; }
+            [data-theme="dark"] .comparison-table tbody tr:nth-of-type(even) { background-color: #16213e; }
+            [data-theme="dark"] .best-offer { background-color: #0d3320 !important; }
+            [data-theme="dark"] .best-offer td { color: #34d399; }
+        </style>
     </head>
     <body>
         <!-- Yandex.Metrika counter -->
@@ -458,5 +473,7 @@
         </script>
         <script src="/js/compare-sort.js"></script>
         <script src="/js/category-filter.js"></script>
+        <script src="/js/best-offer.js"></script>
+        <script src="/js/dark-mode.js"></script>
     </body>
 </html>
