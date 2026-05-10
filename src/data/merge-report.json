@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-05-10T21:16:17.704Z",
+  "dryRun": true,
+  "stats": {
+    "extracted": 1,
+    "toAdd": 0,
+    "skipped": 0,
+    "invalid": 1,
+    "totalBefore": 46,
+    "totalAfter": 46
+  },
+  "added": [],
+  "skipped": [],
+  "invalid": [
+    {
+      "product": "Гарантия защиты сделки",
+      "errors": [
+        "missing/invalid type"
+      ]
+    }
+  ]
+}
