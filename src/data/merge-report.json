@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-05-10T21:16:17.704Z",
+  "timestamp": "2026-05-10T21:19:20.694Z",
   "dryRun": true,
   "stats": {
-    "extracted": 1,
+    "extracted": 2,
     "toAdd": 0,
     "skipped": 0,
-    "invalid": 1,
+    "invalid": 2,
     "totalBefore": 46,
     "totalAfter": 46
   },
@@ -14,6 +14,12 @@
   "invalid": [
     {
       "product": "Гарантия защиты сделки",
+      "errors": [
+        "missing/invalid type"
+      ]
+    },
+    {
+      "product": "Открыть брокерский счет",
       "errors": [
         "missing/invalid type"
       ]

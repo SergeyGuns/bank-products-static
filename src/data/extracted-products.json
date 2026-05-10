@@ -1,7 +1,7 @@
 {
   "extracted": [
     {
-      "id": "vtb--1778447634190",
+      "id": "vtb--1778447959985",
       "title": "Гарантия защиты сделки",
       "bankName": "vtb",
       "type": "unknown",
@@ -45,13 +45,59 @@
       },
       "validFrom": "2026-05-10",
       "status": "active"
+    },
+    {
+      "id": "vtb--1778447959124",
+      "title": "Открыть брокерский счет",
+      "bankName": "vtb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "Открыть брокерский счет",
+      "fullDescription": "Продукт \"Открыть брокерский счет\" от vtb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "до 3 000 ₽",
+          "Кешбэк": "0%"
+        },
+        "fees": {
+          "Обслуживание": "обслуживание\n0 ₽"
+        },
+        "requirements": {
+          "Документы": [
+            "Паспорт РФ",
+            "Справка о доходах"
+          ]
+        }
+      },
+      "features": [
+        "до 3 000 ₽",
+        "0%"
+      ],
+      "conditions": [
+        [
+          "Паспорт РФ",
+          "Справка о доходах"
+        ]
+      ],
+      "referralLink": "https://www.vtb.ru/personal/cards/debit-cards/",
+      "meta": {
+        "title": "Открыть брокерский счет от vtb",
+        "description": "Открыть брокерский счет"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
     }
   ],
   "errors": [],
-  "timestamp": "2026-05-10T21:13:55.723Z",
+  "timestamp": "2026-05-10T21:19:20.637Z",
   "stats": {
-    "total": 1,
-    "success": 1,
+    "total": 2,
+    "success": 2,
     "failed": 0
   }
 }
