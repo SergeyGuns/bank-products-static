@@ -126,6 +126,7 @@ async function generateCategoryPages(categories, products, categoryTemplate, com
                 products: categoryProducts,
                 parametersList,
                 isCreditOrDebitCard: ['credit-cards', 'debit-cards'].includes(category.id),
+                compareScripts: true,
                 meta: {
                     title: `Сравнение ${category.title} | Выбор лучших предложений`,
                     description: `Сравните ${category.title} от разных банков и выберите самое выгодное предложение`

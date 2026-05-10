@@ -1,18 +1,20 @@
-{{!< layout}}
 <h1>Сравнение банковских продуктов</h1>
 
 <p>Выберите категорию продуктов для сравнения:</p>
 
 <ul class="compare-list">
-<li><a href="/compare/page.html">page</a></li>\n<li><a href="/compare/auto-loans.html">Автокредиты</a></li>\n<li><a href="/compare/consumer-loans.html">Потребительские кредиты</a></li>\n<li><a href="/compare/credit-cards.html">Кредитные карты</a></li>\n<li><a href="/compare/credits.html">Кредиты</a></li>\n<li><a href="/compare/debit-cards.html">Дебетовые карты</a></li>\n<li><a href="/compare/deposits.html">Вклады</a></li>\n<li><a href="/compare/mortgage.html">Ипотека</a></li>\n
+<li><a href="/compare/credit-cards.html">Кредитные карты</a></li>
+<li><a href="/compare/debit-cards.html">Дебетовые карты</a></li>
+<li><a href="/compare/credits.html">Кредиты</a></li>
 </ul>
 
 <style>
+.best-offer { background-color: #e6f9f0 !important; }
+.best-offer td { font-weight: 600; color: #065f46; }
 .compare-list {
   list-style-type: none;
   padding: 0;
 }
-
 .compare-list li {
   margin: 10px 0;
   padding: 10px;
@@ -20,17 +22,13 @@
   border-radius: 5px;
   border-left: 4px solid #1e40af;
 }
-
 .compare-list a {
   text-decoration: none;
   color: #1e40af;
   font-weight: 500;
   font-size: 1.1em;
 }
-
 .compare-list a:hover {
   text-decoration: underline;
 }
 </style>
-
-{{> footer}}
