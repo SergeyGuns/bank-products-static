@@ -1,0 +1,13 @@
+{
+  "searched": 1,
+  "found": 0,
+  "added": 0,
+  "errors": [
+    {
+      "bank": "СберБанк",
+      "type": "credit-cards",
+      "error": "нет результатов поиска"
+    }
+  ],
+  "products": []
+}

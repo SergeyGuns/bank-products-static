@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-05-10",
+  "sources": [
+    {
+      "bank": "СберБанк",
+      "website": "https://www.sberbank.ru",
+      "products": {
+        "credit-cards": "https://www.sberbank.ru/ru/person/cards/credit",
+        "debit-cards": "https://www.sberbank.ru/ru/person/cards/debit",
+        "consumer-loans": "https://www.sberbank.ru/ru/person/credits",
+        "mortgage": "https://www.sberbank.ru/ru/person/ipoteka",
+        "deposits": "https://www.sberbank.ru/ru/person/deposits"
+      }
+    },
+    {
+      "bank": "Т-Банк",
+      "website": "https://tbank.ru",
+      "products": {
+        "credit-cards": "https://tbank.ru/credit-cards/",
+        "debit-cards": "https://tbank.ru/debit-cards/",
+        "consumer-loans": "https://tbank.ru/loans/",
+        "mortgage": "https://tbank.ru/mortgage/",
+        "deposits": "https://tbank.ru/deposits/"
+      }
+    },
+    {
+      "bank": "ВТБ",
+      "website": "https://www.vtb.ru",
+      "products": {
+        "credit-cards": "https://www.vtb.ru/personal/cards/credit-cards/",
+        "debit-cards": "https://www.vtb.ru/personal/cards/debit-cards/",
+        "consumer-loans": "https://www.vtb.ru/personal/loans/",
+        "mortgage": "https://www.vtb.ru/personal/mortgage/",
+        "deposits": "https://www.vtb.ru/personal/deposits-and-accounts/"
+      }
+    },
+    {
+      "bank": "Газпромбанк",
+      "website": "https://www.gazprombank.ru",
+      "products": {
+        "credit-cards": "https://www.gazprombank.ru/personal/cards/credit/",
+        "debit-cards": "https://www.gazprombank.ru/personal/cards/debit/",
+        "consumer-loans": "https://www.gazprombank.ru/personal/loans/",
+        "mortgage": "https://www.gazprombank.ru/personal/mortgage/",
+        "deposits": "https://www.gazprombank.ru/personal/deposits/"
+      }
+    },
+    {
+      "bank": "Альфа-Банк",
+      "website": "https://alfabank.ru",
+      "products": {
+        "credit-cards": "https://alfabank.ru/retail/cards/credit/",
+        "debit-cards": "https://alfabank.ru/retail/cards/debit/",
+        "consumer-loans": "https://alfabank.ru/retail/loans/",
+        "mortgage": "https://alfabank.ru/retail/ipoteka/",
+        "deposits": "https://alfabank.ru/retail/deposits/"
+      }
+    },
+    {
+      "bank": "ПСБ",
+      "website": "https://psb.ru",
+      "products": {
+        "credit-cards": "https://psb.ru/personal/cards/credit/",
+        "debit-cards": "https://psb.ru/personal/cards/debit/",
+        "consumer-loans": "https://psb.ru/personal/credits/",
+        "mortgage": "https://psb.ru/personal/mortgage/",
+        "deposits": "https://psb.ru/personal/deposits/"
+      }
+    },
+    {
+      "bank": "Райффайзенбанк",
+      "website": "https://www.raiffeisen.ru",
+      "products": {
+        "credit-cards": "https://www.raiffeisen.ru/retail/cards/credit/",
+        "debit-cards": "https://www.raiffeisen.ru/retail/cards/debit/",
+        "consumer-loans": "https://www.raiffeisen.ru/retail/loans/",
+        "mortgage": "https://www.raiffeisen.ru/retail/mortgage/",
+        "deposits": "https://www.raiffeisen.ru/retail/deposits/"
+      }
+    },
+    {
+      "bank": "МТС Банк",
+      "website": "https://www.mtsbank.ru",
+      "products": {
+        "credit-cards": "https://www.mtsbank.ru/retail/cards/credit/",
+        "debit-cards": "https://www.mtsbank.ru/retail/cards/debit/",
+        "consumer-loans": "https://www.mtsbank.ru/retail/loans/",
+        "mortgage": "https://www.mtsbank.ru/retail/mortgage/",
+        "deposits": "https://www.mtsbank.ru/retail/deposits/"
+      }
+    }
+  ],
+  "aggregators": [
+    {
+      "name": "Банки.ру",
+      "url": "https://www.banki.ru",
+      "searchPattern": "https://www.banki.ru/products/credit-cards/"
+    },
+    {
+      "name": "Сравни.ру",
+      "url": "https://www.sravni.ru",
+      "searchPattern": "https://www.sravni.ru/kreditnye-karty/"
+    }
+  ]
+}
