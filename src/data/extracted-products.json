@@ -1,0 +1,57 @@
+{
+  "extracted": [
+    {
+      "id": "vtb--1778447634190",
+      "title": "Гарантия защиты сделки",
+      "bankName": "vtb",
+      "type": "unknown",
+      "featured": false,
+      "shortDescription": "Гарантия защиты сделки",
+      "fullDescription": "Продукт \"Гарантия защиты сделки\" от vtb",
+      "parameters": {
+        "main": {
+          "Сумма кредита": "до 3 000 ₽",
+          "Кешбэк": "0%"
+        },
+        "fees": {
+          "Обслуживание": "обслуживание\n0 ₽"
+        },
+        "requirements": {
+          "Документы": [
+            "Паспорт РФ",
+            "Справка о доходах"
+          ]
+        }
+      },
+      "features": [
+        "до 3 000 ₽",
+        "0%"
+      ],
+      "conditions": [
+        [
+          "Паспорт РФ",
+          "Справка о доходах"
+        ]
+      ],
+      "referralLink": "https://www.vtb.ru/personal/cards/debit-cards/",
+      "meta": {
+        "title": "Гарантия защиты сделки от vtb",
+        "description": "Гарантия защиты сделки"
+      },
+      "version": {
+        "date": "2026-05-10",
+        "source": "agent-extraction",
+        "updatedBy": "discovery-pipeline"
+      },
+      "validFrom": "2026-05-10",
+      "status": "active"
+    }
+  ],
+  "errors": [],
+  "timestamp": "2026-05-10T21:13:55.723Z",
+  "stats": {
+    "total": 1,
+    "success": 1,
+    "failed": 0
+  }
+}
