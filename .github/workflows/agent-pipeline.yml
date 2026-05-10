@@ -1,0 +1,60 @@
+name: Agent Data Pipeline
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'
+  workflow_dispatch:
+
+jobs:
+  agent-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci --ignore-scripts
+
+      - name: Run Discovery Agent
+        run: node src/scripts/agent-discover.js
+
+      - name: Run Extraction Agent
+        run: node src/scripts/agent-extract.js --limit 20
+
+      - name: Run Merge Agent (dry-run)
+        run: node src/scripts/agent-merge.js --dry-run
+
+      - name: Run Merge Agent
+        run: node src/scripts/agent-merge.js
+
+      - name: Validate data
+        run: node src/scripts/validate-data.js
+
+      - name: Build site
+        run: node src/scripts/generate.js
+
+      - name: Run tests
+        run: npx jest --passWithNoTests
+
+      - name: Commit changes
+        run: |
+          git config user.name "Agent Pipeline"
+          git config user.email "agent@bank-select.ru"
+          git checkout -b data-update/$(date +%Y-%m-%d)
+          git add src/data/
+          git diff --cached --quiet || git commit -m "data: weekly auto-update via agent pipeline"
+          git push origin data-update/$(date +%Y-%m-%d)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: "data: weekly product update"
+          body: "Автоматическое обновление данных через Agent Pipeline"
+          branch: data-update/${{ github.run_id }}
+          base: main
