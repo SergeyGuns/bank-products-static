@@ -7,7 +7,7 @@
     "serve": "node src/scripts/server.js",
     "watch": "nodemon --watch src -e js(json,html) --exec \"npm run dev\"",
     "test": "playwright test && jest",
-    "test:jest": "jest",
+    "test:jest": "jest --testPathIgnorePatterns='tests/e2e'",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "publish": "npm run build && gh-pages -d dist --repo https://github.com/SergeyGuns/bank-products-static.git",
