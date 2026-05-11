@@ -1,34 +1,95 @@
-<h1>Сравнение банковских продуктов</h1>
+{{#> layout}}
+<div class="container">
+    <div class="compare-header text-center mb-8">
+        <h1 class="mb-2">Сравнение {{category.title}}</h1>
+        <p class="text-light">Сравните условия от разных банков и выберите лучшее предложение</p>
+    </div>
 
-<p>Выберите категорию продуктов для сравнения:</p>
+    {{#if products.length}}
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Банк / Продукт</th>
+                    {{#each parametersList.main}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                    {{#each parametersList.fees}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                    {{#each parametersList.requirements}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr class="{{#if featured}}best-offer{{/if}}">
+                    <td>
+                        <strong>{{bankName}}</strong><br>
+                        <small>{{title}}</small>
+                        {{#if featured}}<br><span class="badge badge-primary">★ Лучшее</span>{{/if}}
+                    </td>
+                    {{#each ../parametersList.main}}
+                    <td>{{lookup ../parameters.main this}}</td>
+                    {{/each}}
+                    {{#each ../parametersList.fees}}
+                    <td>{{lookup ../parameters.fees this}}</td>
+                    {{/each}}
+                    {{#each ../parametersList.requirements}}
+                    <td>{{lookup ../parameters.requirements this}}</td>
+                    {{/each}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
 
-<ul class="compare-list">
-<li><a href="/compare/credit-cards.html">Кредитные карты</a></li>
-<li><a href="/compare/debit-cards.html">Дебетовые карты</a></li>
-<li><a href="/compare/credits.html">Кредиты</a></li>
-</ul>
+    <div class="compare-actions text-center mt-8">
+        <a href="/category/{{category.id}}.html" class="btn btn-outline">← Назад к категории</a>
+    </div>
+    {{else}}
+    <div class="text-center">
+        <p class="text-light">Пока нет продуктов для сравнения в этой категории.</p>
+        <a href="/category/{{category.id}}.html" class="btn btn-primary mt-4">Посмотреть продукты</a>
+    </div>
+    {{/if}}
+</div>
 
 <style>
-.best-offer { background-color: #e6f9f0 !important; }
-.best-offer td { font-weight: 600; color: #065f46; }
-.compare-list {
-  list-style-type: none;
-  padding: 0;
+.comparison-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 }
-.compare-list li {
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #f8fafc;
-  border-radius: 5px;
-  border-left: 4px solid #1e40af;
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
 }
-.compare-list a {
-  text-decoration: none;
-  color: #1e40af;
-  font-weight: 500;
-  font-size: 1.1em;
+.comparison-table thead tr {
+    background: #1e40af;
+    color: #fff;
 }
-.compare-list a:hover {
-  text-decoration: underline;
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+.comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+.comparison-table tbody tr.best-offer {
+    background: #e6f9f0;
+}
+.comparison-table tbody tr.best-offer td {
+    font-weight: 600;
+    color: #065f46;
 }
 </style>
+
+{{> compare-scripts}}
+{{/layout}}
