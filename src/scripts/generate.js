@@ -163,7 +163,10 @@ async function generateStaticPages(templateMap, distDir) {
     const staticPages = [
         { template: templateMap['404.html'], name: '404.html', meta: { title: '404 - Страница не найдена', description: 'Запрашиваемая страница не существует' } },
         { template: templateMap['add.html'], name: 'add.html', meta: { title: 'Добавление продукта', description: 'Страница для добавления нового продукта' } },
-        { template: templateMap['calculator.html'], name: 'calculator.html', meta: { title: 'Кредитный калькулятор', description: 'Кредитный калькулятор' } }
+        { template: templateMap['calculator.html'], name: 'calculator.html', meta: { title: 'Кредитный калькулятор', description: 'Кредитный калькулятор' } },
+        { template: templateMap['about.html'], name: 'about.html', meta: { title: 'О проекте | Bank-Select', description: 'Информация о сервисе Bank-Select' } },
+        { template: templateMap['contacts.html'], name: 'contacts.html', meta: { title: 'Контакты | Bank-Select', description: 'Свяжитесь с нами' } },
+        { template: templateMap['privacy.html'], name: 'privacy.html', meta: { title: 'Политика конфиденциальности | Bank-Select', description: 'Политика конфиденциальности' } },
     ];
 
     await Promise.all(staticPages.map(({ template, name, meta }) =>
