@@ -32,8 +32,11 @@
         "mortgage",
         "auto-loans",
         "business-loans",
+        "consumer-loans",
         "investment-products",
-        "insurance-products"
+        "insurance-products",
+        "digital-services",
+        "savings"
       ]
     },
     "bankName": {

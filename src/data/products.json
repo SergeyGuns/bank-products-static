@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": "газпромбанк--1770331449890",
+      "id": "gazprombank-1770331449890",
       "title": "Автокредит \"Выгодный старт\"",
       "bankName": "Газпромбанк",
       "type": "auto-loans",
@@ -66,7 +66,9 @@
       ],
       "referralLink": "https://райффайзенбанк.ru",
       "parameters": {
-        "main": {},
+        "main": {
+          "Процентная ставка": "уточняйте на сайте банка"
+        },
         "fees": {},
         "requirements": {}
       },
@@ -84,7 +86,7 @@
       "__sourceFile": "src\\data\\pdfs\\business-loans\\-1770330816182.json"
     },
     {
-      "id": "сбербанк--1770331449885",
+      "id": "sberbank-1770331449885",
       "title": "Потребительский кредит \"Универсальный\"",
       "bankName": "СберБанк",
       "type": "consumer-loans",
@@ -136,7 +138,7 @@
       "__sourceFile": "src\\data\\pdfs\\consumer-loans\\-1770331449884.json"
     },
     {
-      "id": "втб--1770331449888",
+      "id": "vtb-1770331449888",
       "title": "Кредит \"На любые цели\"",
       "bankName": "ВТБ",
       "type": "consumer-loans",
@@ -567,7 +569,7 @@
     },
     {
       "id": "psb-loan-any-purpose-123",
-      "type": "credits",
+      "type": "consumer-loans",
       "featured": true,
       "title": "Потребительский кредит на любые цели",
       "bankName": "ПСБ",
@@ -627,7 +629,7 @@
     },
     {
       "id": "sberbank-personal-loan-standard-2024-02-03",
-      "type": "credits",
+      "type": "consumer-loans",
       "bankName": "СберБанк",
       "title": "Стандартный потребительский кредит",
       "featured": true,
@@ -1109,7 +1111,7 @@
       "__sourceFile": "src\\data\\pdfs\\deposits\\sberbank\\sberbank-deposit-maximum-2024-02-03.json"
     },
     {
-      "status": "What did you want to see here?",
+      "status": "active",
       "id": "tbank-1770255305331",
       "type": "deposits",
       "bankName": "Т-Банк",
@@ -1251,7 +1253,9 @@
       ],
       "referralLink": "https://ситибанк.ru",
       "parameters": {
-        "main": {},
+        "main": {
+          "Процентная ставка": "уточняйте на сайте банка"
+        },
         "fees": {},
         "requirements": {}
       },
@@ -1269,7 +1273,7 @@
       "__sourceFile": "src\\data\\pdfs\\digital-services\\-1770330816184.json"
     },
     {
-      "id": "псб--1770331449894",
+      "id": "psb-1770331449894",
       "title": "Страхование жизни и здоровья",
       "bankName": "ПСБ",
       "type": "insurance-products",
@@ -1316,7 +1320,7 @@
       "__sourceFile": "src\\data\\pdfs\\insurance\\-1770331449894.json"
     },
     {
-      "id": "тинькофф банк--1770331449892",
+      "id": "tin-koff-bank-1770331449892",
       "title": "Инвестиционный продукт \"Долгосрочный рост\"",
       "bankName": "Т-Банк",
       "type": "investment-products",
@@ -1363,7 +1367,7 @@
       "__sourceFile": "src\\data\\pdfs\\investments\\-1770331449892.json"
     },
     {
-      "status": "What did you want to see here?",
+      "status": "active",
       "id": "tbank-1770255305333",
       "type": "consumer-loans",
       "bankName": "Т-Банк",
@@ -1618,7 +1622,7 @@
       "__sourceFile": "src\\data\\pdfs\\mortgage\\vtb\\vtb-mortgage-family-2024-02-03.json"
     },
     {
-      "status": "What did you want to see here?",
+      "status": "active",
       "id": "tbank-1770255305334",
       "type": "mortgage",
       "bankName": "Т-Банк",
@@ -1643,7 +1647,9 @@
       ],
       "referralLink": "https://tbank.ru",
       "parameters": {
-        "main": {},
+        "main": {
+          "Процентная ставка": "уточняйте на сайте банка"
+        },
         "fees": {},
         "requirements": {}
       },
@@ -1651,7 +1657,7 @@
       "fullDescription": "Ипотека от Т-Банк. Подробные условия уточняйте на сайте банка."
     },
     {
-      "id": "альфа-банк--1770331449891",
+      "id": "al-fa-bank-1770331449891",
       "title": "Сберегательный счет \"Максимум\"",
       "bankName": "Альфа-Банк",
       "type": "savings",
@@ -1724,10 +1730,7 @@
         "7%"
       ],
       "conditions": [
-        [
-          "Справка о доходах",
-          "СНИЛС"
-        ]
+        "Справка о доходах, СНИЛС"
       ],
       "referralLink": "https://psb.ru/personal/mortgage/",
       "meta": {
@@ -1743,7 +1746,7 @@
       "status": "active"
     },
     {
-      "id": "сбербанк-credit-cards-1778452394772-n8ck6",
+      "id": "sberbank-credit-cards-1778452394772-n8ck6",
       "title": "Кредитная СберКарта",
       "bankName": "СберБанк",
       "type": "credit-cards",
