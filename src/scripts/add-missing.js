@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+const fs = require('fs');
+const data = JSON.parse(fs.readFileSync('src/data/products.json', 'utf8'));
+
+const newProducts = [
+  { id: 'rosbank-credit-cards-1', title: 'Кредитная карта Росбанк', bankName: 'Росбанк', type: 'credit-cards', featured: false, shortDescription: 'Кредитная карта с кэшбэком до 5%', fullDescription: 'Кредитная карта Росбанка с кэшбэком до 5% и льготным периодом до 60 дней.', parameters: { main: { 'Процентная ставка': 'от 29,9%', 'Кредитный лимит': 'до 3 000 000 ₽', 'Льготный период': 'до 60 дней', 'Кэшбэк': 'до 5%' }, fees: { 'Обслуживание': 'бесплатно*' }, requirements: { 'Возраст': 'от 21 года' } }, features: ['до 60 дней без %', 'до 5% кэшбэк', 'до 3 000 000 ₽'], conditions: ['от 21 года'], referralLink: 'https://www.rosbank.ru/retail/cards/credit/', meta: { title: 'Кредитная карта Росбанк', description: 'Кредитная карта с кэшбэком до 5%' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+  { id: 'rosbank-consumer-loans-1', title: 'Потребительский кредит', bankName: 'Росбанк', type: 'consumer-loans', featured: false, shortDescription: 'Потребительский кредит от 15,9%', fullDescription: 'Потребительский кредит Росбанка на любые цели. Ставка от 15,9%. Сумма до 5 000 000 ₽.', parameters: { main: { 'Процентная ставка': 'от 15,9%', 'Сумма кредита': 'до 5 000 000 ₽', 'Срок': 'до 5 лет' }, fees: { 'Оформление': 'бесплатно' }, requirements: { 'Возраст': 'от 21 года', 'Стаж': 'от 3 месяцев' } }, features: ['от 15,9%', 'до 5 000 000 ₽', 'до 5 лет'], conditions: ['от 21 года', 'стаж от 3 мес.'], referralLink: 'https://www.rosbank.ru/retail/loans/', meta: { title: 'Потребительский кредит Росбанк', description: 'Кредит наличными от 15,9%' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+  { id: 'rosbank-mortgage-1', title: 'Ипотека', bankName: 'Росбанк', type: 'mortgage', featured: false, shortDescription: 'Ипотека на новостройки и вторичное жильё', fullDescription: 'Ипотечный кредит Росбанка. Ставка от 21%. Первоначальный взнос от 10%.', parameters: { main: { 'Процентная ставка': 'от 21%', 'Сумма кредита': 'до 60 000 000 ₽', 'Срок': 'до 30 лет', 'Первоначальный взнос': 'от 10%' }, fees: { 'Оформление': 'бесплатно' }, requirements: { 'Возраст': 'от 21 года', 'Стаж': 'от 6 месяцев' } }, features: ['от 21%', 'до 60 000 000 ₽', 'до 30 лет'], conditions: ['от 21 года', 'взнос от 10%'], referralLink: 'https://www.rosbank.ru/retail/mortgage/', meta: { title: 'Ипотека Росбанк', description: 'Ипотечный кредит от 21%' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+  { id: 'rosbank-deposits-1', title: 'Вклад «Доходный»', bankName: 'Росбанк', type: 'deposits', featured: false, shortDescription: 'Вклад с повышенной ставкой', fullDescription: 'Срочный вклад Росбанка с повышенной процентной ставкой до 17%.', parameters: { main: { 'Процентная ставка': 'до 17%', 'Минимальная сумма': 'от 10 000 ₽', 'Срок': 'от 1 месяца' }, fees: { 'Пополнение': 'разрешено' }, requirements: { 'Возраст': 'от 18 лет' } }, features: ['до 17%', 'от 10 000 ₽', 'от 1 месяца'], conditions: ['от 18 лет'], referralLink: 'https://www.rosbank.ru/retail/deposits/', meta: { title: 'Вклад Росбанк «Доходный»', description: 'Срочный вклад с повышенной ставкой до 17%' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+  { id: 'psb-consumer-loans-1', title: 'Потребительский кредит', bankName: 'ПСБ', type: 'consumer-loans', featured: false, shortDescription: 'Потребительский кредит от 15,9%', fullDescription: 'Потребительский кредит ПСБ на любые цели. Ставка от 15,9%. Сумма до 5 000 000 ₽.', parameters: { main: { 'Процентная ставка': 'от 15,9%', 'Сумма кредита': 'до 5 000 000 ₽', 'Срок': 'до 5 лет' }, fees: { 'Оформление': 'бесплатно' }, requirements: { 'Возраст': 'от 21 года', 'Стаж': 'от 3 месяцев' } }, features: ['от 15,9%', 'до 5 000 000 ₽', 'до 5 лет'], conditions: ['от 21 года', 'стаж от 3 мес.'], referralLink: 'https://psb.ru/personal/credits/', meta: { title: 'Потребительский кредит ПСБ', description: 'Кредит наличными от 15,9%' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+  { id: 'sberbank-debit-cards-1', title: 'Дебетовая карта СберБанк', bankName: 'СберБанк', type: 'debit-cards', featured: false, shortDescription: 'Дебетовая карта с кэшбэком до 5%', fullDescription: 'Дебетовая карта СберБанка с кэшбэком до 5% в выбранных категориях. Бесплатное обслуживание.', parameters: { main: { 'Кэшбэк': 'до 5%', 'Процент на остаток': 'до 4%', 'Снятие наличных': 'бесплатно' }, fees: { 'Обслуживание': 'бесплатно*', 'Выпуск': 'бесплатно' }, requirements: { 'Возраст': 'от 14 лет' } }, features: ['до 5% кэшбэк', 'до 4% на остаток', 'бесплатное обслуживание*'], conditions: ['от 14 лет'], referralLink: 'https://www.sberbank.ru/ru/person/cards/debit', meta: { title: 'Дебетовая карта СберБанк', description: 'Дебетовая карта с кэшбэком до 5% и процентом на остаток' }, version: { date: '2026-05-10', source: 'manual-entry', updatedBy: 'agent' }, validFrom: '2026-05-10', status: 'active' },
+];
+
+const existingKeys = new Set(data.products.map(p => p.bankName + '::' + p.type));
+let added = 0;
+for (const p of newProducts) {
+  const key = p.bankName + '::' + p.type;
+  if (!existingKeys.has(key)) {
+    data.products.push(p);
+    existingKeys.add(key);
+    added++;
+    console.log('Добавлен: ' + key + ' - ' + p.title);
+  } else {
+    console.log('Уже есть: ' + key);
+  }
+}
+fs.writeFileSync('src/data/products.json', JSON.stringify(data, null, 2));
+console.log('\nИтого добавлено: ' + added);
+console.log('Всего продуктов: ' + data.products.length);
