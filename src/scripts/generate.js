@@ -18,10 +18,29 @@ async function main() {
         const distDir = path.join(__dirname, '../../dist');
 
         // Чтение данных
+        const templatesDir = path.join(baseDir, 'templates');
+        
+        // Рекурсивное чтение шаблонов из подпапок
+        const readTemplatesRecursively = async (dir, prefix = '') => {
+            const entries = await fs.readdir(dir, { withFileTypes: true });
+            let files = [];
+            for (const entry of entries) {
+                const fullPath = path.join(dir, entry.name);
+                const relPath = prefix ? `${prefix}/${entry.name}` : entry.name;
+                if (entry.isDirectory()) {
+                    const subFiles = await readTemplatesRecursively(fullPath, relPath);
+                    files = files.concat(subFiles);
+                } else {
+                    files.push(relPath);
+                }
+            }
+            return files;
+        };
+        
         const [products, categories, templates] = await Promise.all([
             fs.readFile(path.join(baseDir, 'data/products.json'), 'utf-8'),
             fs.readFile(path.join(baseDir, 'data/categories.json'), 'utf-8'),
-            fs.readdir(path.join(baseDir, 'templates'))
+            readTemplatesRecursively(templatesDir)
         ]);
 
         const { products: productList } = JSON.parse(products);
@@ -32,6 +51,30 @@ async function main() {
             (acc[product.type] = acc[product.type] || []).push(product);
             return acc;
         }, {});
+
+        // Очистка dist/ от старых файлов
+        const cleanDir = async (dir) => {
+            const items = await fs.readdir(dir, { withFileTypes: true });
+            for (const item of items) {
+                const fullPath = path.join(dir, item.name);
+                if (item.isDirectory()) {
+                    await cleanDir(fullPath);
+                    // Удаляем пустые директории
+                    const remaining = await fs.readdir(fullPath);
+                    if (remaining.length === 0) {
+                        await fs.rmdir(fullPath);
+                    }
+                } else {
+                    await fs.unlink(fullPath);
+                }
+            }
+        };
+        
+        try {
+            await cleanDir(distDir);
+        } catch (e) {
+            // distDir может не существовать
+        }
 
         // Создание директорий
         await Promise.all([
@@ -123,6 +166,7 @@ async function generateCategoryPages(categories, products, categoryTemplate, com
             }
 
             const compareHtml = compareTemplate({
+                category,
                 products: categoryProducts,
                 parametersList,
                 isCreditOrDebitCard: ['credit-cards', 'debit-cards'].includes(category.id),
@@ -167,6 +211,8 @@ async function generateStaticPages(templateMap, distDir) {
         { template: templateMap['about.html'], name: 'about.html', meta: { title: 'О проекте | Bank-Select', description: 'Информация о сервисе Bank-Select' } },
         { template: templateMap['contacts.html'], name: 'contacts.html', meta: { title: 'Контакты | Bank-Select', description: 'Свяжитесь с нами' } },
         { template: templateMap['privacy.html'], name: 'privacy.html', meta: { title: 'Политика конфиденциальности | Bank-Select', description: 'Политика конфиденциальности' } },
+        { template: templateMap['articles/credit-chose.html'], name: 'articles/credit-chose.html', meta: { title: 'Как правильно выбрать кредит', description: 'Рекомендации по выбору кредита' } },
+        { template: templateMap['articles/credit-card-chose.html'], name: 'articles/credit-card-chose.html', meta: { title: 'Как выбрать кредитную карту', description: 'Рекомендации по выбору кредитной карты' } },
     ];
 
     await Promise.all(staticPages.map(({ template, name, meta }) =>
