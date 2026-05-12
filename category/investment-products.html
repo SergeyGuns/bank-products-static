@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Кредит на любые цели с минимальными требованиями" />
+        <meta name="description" content="Инвестиционные решения для роста капитала" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Потребительский кредит &quot;Универсальный&quot; от СберБанк" />
-        <meta property="og:description" content="Кредит на любые цели с минимальными требованиями" />
+        <meta property="og:title" content="Инвестиционные продукты | Сравнение" />
+        <meta property="og:description" content="Инвестиционные решения для роста капитала" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,69 +126,35 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Потребительский кредит &quot;Универсальный&quot;</h1>
-        <p class="text-light mb-4">СберБанк</p>
-        <img src="/img/products/.jpg" alt="Потребительский кредит &quot;Универсальный&quot;" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">consumer-loans</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Инвестиции</h1>
+        <p class="text-light">Инвестиционные продукты и вложения</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>Процентная ставка:</strong> от 12.9%
-            </div>
-            <div class="mb-2">
-                <strong>Сумма кредита:</strong> до 5 000 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Срок кредита:</strong> до 7 лет
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Т-Банк">Т-Банк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>Выдача кредита:</strong> бесплатно
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="Т-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/t-bank.svg" alt="Инвестиционный продукт &quot;Долгосрочный рост&quot;" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Инвестиционный продукт &quot;Долгосрочный рост&quot;</h2>
+            <p class="text-light mb-2">Т-Банк</p>
+            <ul class="mb-4">
+                <li>1000 ₽</li>
+                <li>низкий, средний, высокий</li>
+                <li>доходность, сохранность, рост</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tin-koff-bank-1770331449892.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Обслуживание счёта:</strong> бесплатно при определенных условиях
-            </div>
-            <div class="mb-2">
-                <strong>Досрочное погашение:</strong> бесплатно
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>Возраст:</strong>
-                от 21 года
-            </div>
-            <div class="mb-2">
-                <strong>Стаж:</strong>
-                от 6 месяцев на последнем месте работы
-            </div>
-            <div class="mb-2">
-                <strong>Документы:</strong>
-                <ul>
-                    <li>Паспорт РФ</li>
-                    <li>Второй документ</li>
-                </ul>
-            </div>
-        </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/consumer-loans.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

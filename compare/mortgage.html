@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Сравните Кредитные карты от разных банков и выберите самое выгодное предложение" />
+        <meta name="description" content="Сравните Ипотека от разных банков и выберите самое выгодное предложение" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Сравнение Кредитные карты | Выбор лучших предложений" />
-        <meta property="og:description" content="Сравните Кредитные карты от разных банков и выберите самое выгодное предложение" />
+        <meta property="og:title" content="Сравнение Ипотека | Выбор лучших предложений" />
+        <meta property="og:description" content="Сравните Ипотека от разных банков и выберите самое выгодное предложение" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -128,7 +128,7 @@
         <main>
             <div><div class="container">
     <div class="compare-header text-center mb-8">
-        <h1 class="mb-2">Сравнение Кредитные карты</h1>
+        <h1 class="mb-2">Сравнение Ипотека</h1>
         <p class="text-light">Сравните условия от разных банков и выберите лучшее предложение</p>
     </div>
 
@@ -137,216 +137,456 @@
             <thead>
                 <tr>
                     <th>Банк / Продукт</th>
+                    <th>interest_rate</th>
+                    <th>min_down_payment</th>
+                    <th>loan_term</th>
+                    <th>min_loan_amount</th>
+                    <th>max_loan_amount</th>
                     <th>Процентная ставка</th>
-                    <th>Кредитный лимит</th>
-                    <th>Льготный период</th>
-                    <th>Кэшбэк</th>
-                    <th>Обслуживание</th>
+                    <th>Первоначальный взнос</th>
+                    <th>Срок кредита</th>
+                    <th>application_fee</th>
+                    <th>issuance_fee</th>
+                    <th>early_repayment_fee</th>
+                    <th>Оформление</th>
+                    <th>Страхование</th>
+                    <th>Оценка недвижимости</th>
+                    <th>client_category</th>
+                    <th>age_requirement</th>
+                    <th>work_experience</th>
+                    <th>documents_required</th>
                     <th>Возраст</th>
+                    <th>Стаж</th>
+                    <th>Документы</th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="">
-                    <td>
-                        <strong>Райффайзенбанк</strong><br>
-                        <small>Кредитная карта «Халва»</small>
-                        
-                    </td>
-                    <td>от 29,9%</td>
-                    <td>до 1 000 000 ₽</td>
-                    <td>до 55 дней</td>
-                    <td>до 10%</td>
-                    <td>бесплатно</td>
-                    <td>от 20 года</td>
-                </tr>
-                <tr class="">
-                    <td>
-                        <strong>МТС Банк</strong><br>
-                        <small>Кредитная карта МТС</small>
-                        
-                    </td>
-                    <td>от 29,9%</td>
-                    <td>до 500 000 ₽</td>
-                    <td>до 120 дней</td>
-                    <td>до 5%</td>
-                    <td>бесплатно</td>
-                    <td>от 20 года</td>
-                </tr>
                 <tr class="best-offer">
                     <td>
-                        <strong>ПСБ</strong><br>
-                        <small>Кредитная карта 180 дней без %</small>
+                        <strong>Газпромбанк</strong><br>
+                        <small>Ипотека на новостройку</small>
                         <br><span class="badge badge-primary">★ Лучшее</span>
                     </td>
-                    <td>59,99% годовых после льготного периода</td>
-                    <td>до 1 000 000 ₽</td>
-                    <td>до 180 дней</td>
-                    <td></td>
-                    <td>бесплатно навсегда</td>
-                    <td>от 18 лет</td>
+                    <td>от 9.0%</td>
+                    <td>20%</td>
+                    <td>от 1 до 30 лет</td>
+                    <td>500 000 ₽</td>
+                    <td>60 000 000 ₽</td>
+                    <td>от 10.5%</td>
+                    <td>от 15%</td>
+                    <td>до 30 лет</td>
+                    <td>Бесплатно</td>
+                    <td>0.7% от суммы кредита</td>
+                    <td>Бесплатно</td>
+                    <td>от 0 ₽</td>
+                    <td>обязательно</td>
+                    <td>от 0 ₽</td>
+                    <td>Физические лица</td>
+                    <td>от 21 до 65 лет</td>
+                    <td>не менее 6 месяцев на последнем месте</td>
+                    <td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Трудовая книжка</td>
+                    <td>от 21 года</td>
+                    <td>от 12 месяцев</td>
+                    <td>Паспорт РФ,Справка 2-НДФЛ или по форме банка</td>
                 </tr>
                 <tr class="best-offer">
-                    <td>
-                        <strong>Т-Банк</strong><br>
-                        <small>Кредитная карта AliExpress от Т-Банка</small>
-                        <br><span class="badge badge-primary">★ Лучшее</span>
-                    </td>
-                    <td>от 29,885% до 59,858% годовых</td>
-                    <td>до 1,000,000 рублей</td>
-                    <td>до 55 дней</td>
-                    <td>до 10%</td>
-                    <td>бесплатно при определенных условиях</td>
-                    <td>от 18 лет</td>
-                </tr>
-                <tr class="best-offer">
-                    <td>
-                        <strong>Трансабанк</strong><br>
-                        <small>Кредитная карта ALL Games</small>
-                        <br><span class="badge badge-primary">★ Лучшее</span>
-                    </td>
-                    <td>29,855% до 59,999% годовых</td>
-                    <td>до 1 000 000 рублей</td>
-                    <td>не применим</td>
-                    <td></td>
-                    <td>бесплатно при определенных условиях</td>
-                    <td>от 18 лет</td>
-                </tr>
-                <tr class="best-offer">
-                    <td>
-                        <strong>Транспортный кредитный банк</strong><br>
-                        <small>Кредитная карта Lamoda</small>
-                        <br><span class="badge badge-primary">★ Лучшее</span>
-                    </td>
-                    <td>от 29,885% годовых</td>
-                    <td>до 1,000,000 ₽</td>
-                    <td>до 55 дней</td>
-                    <td></td>
-                    <td>бесплатно при определенных условиях</td>
-                    <td>от 18 лет</td>
-                </tr>
-                <tr class="">
                     <td>
                         <strong>СберБанк</strong><br>
-                        <small>Кредитная СберКарта</small>
+                        <small>Стандартная ипотека</small>
+                        <br><span class="badge badge-primary">★ Лучшее</span>
+                    </td>
+                    <td>от 9.5%</td>
+                    <td>15%</td>
+                    <td>от 1 до 30 лет</td>
+                    <td>300 000 ₽</td>
+                    <td>60 000 000 ₽</td>
+                    <td>от 10.5%</td>
+                    <td>от 15%</td>
+                    <td>до 30 лет</td>
+                    <td>Бесплатно</td>
+                    <td>1% от суммы кредита</td>
+                    <td>Бесплатно</td>
+                    <td>от 0 ₽</td>
+                    <td>обязательно</td>
+                    <td>от 0 ₽</td>
+                    <td>Физические лица</td>
+                    <td>от 21 до 65 лет</td>
+                    <td>не менее 6 месяцев на последнем месте</td>
+                    <td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Трудовая книжка</td>
+                    <td>от 21 года</td>
+                    <td>от 12 месяцев</td>
+                    <td>Паспорт РФ,Справка 2-НДФЛ или по форме банка</td>
+                </tr>
+                <tr class="best-offer">
+                    <td>
+                        <strong>ВТБ</strong><br>
+                        <small>Семейная ипотека</small>
+                        <br><span class="badge badge-primary">★ Лучшее</span>
+                    </td>
+                    <td>от 8.5%</td>
+                    <td>15%</td>
+                    <td>от 1 до 30 лет</td>
+                    <td>300 000 ₽</td>
+                    <td>12 000 000 ₽</td>
+                    <td>от 10.5%</td>
+                    <td>от 15%</td>
+                    <td>до 30 лет</td>
+                    <td>Бесплатно</td>
+                    <td>0.5% от суммы кредита</td>
+                    <td>Бесплатно</td>
+                    <td>от 0 ₽</td>
+                    <td>обязательно</td>
+                    <td>от 0 ₽</td>
+                    <td>Физические лица</td>
+                    <td>от 21 до 65 лет</td>
+                    <td>не менее 6 месяцев на последнем месте</td>
+                    <td>Паспорт гражданина РФ,Справка 2-НДФЛ или по форме банка,ИНН,Свидетельства о рождении детей</td>
+                    <td>от 21 года</td>
+                    <td>от 12 месяцев</td>
+                    <td>Паспорт РФ,Справка 2-НДФЛ или по форме банка</td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>Т-Банк</strong><br>
+                        <small>mortgages tbank</small>
                         
                     </td>
-                    <td>от 9,8%</td>
-                    <td>до 1 000 000 ₽</td>
-                    <td>до 120 дней</td>
-                    <td>до 30%</td>
-                    <td>бесплатно</td>
-                    <td>от 18 лет</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>уточняйте на сайте банка</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>ПСБ</strong><br>
+                        <small>Семейная ипотека</small>
+                        
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>Справка о доходах,СНИЛС</td>
                 </tr>
                 <tr class="">
                     <td>
                         <strong>Альфа-Банк</strong><br>
-                        <small>Кредитная карта 100 дней</small>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 1 000 000 ₽</td>
-                    <td>до 100 дней</td>
-                    <td>до 5%</td>
-                    <td>бесплатно*</td>
-                    <td>от 18 лет</td>
-                </tr>
-                <tr class="">
-                    <td>
-                        <strong>ВТБ</strong><br>
-                        <small>Кредитная карта Мультикарта</small>
-                        
-                    </td>
-                    <td>от 29,9%</td>
-                    <td>до 10 000 000 ₽</td>
-                    <td>до 110 дней</td>
-                    <td>до 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 20,1%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>бесплатно</td>
+                    <td>обязательно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td>от 6 месяцев</td>
+                    <td>паспорт РФ, справка о доходах</td>
                 </tr>
                 <tr class="">
                     <td>
-                        <strong>Газпромбанк</strong><br>
-                        <small>Кредитная карта GPB</small>
+                        <strong>МТС Банк</strong><br>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 3 000 000 ₽</td>
-                    <td>до 60 дней</td>
-                    <td>до 7%</td>
-                    <td>от 0 ₽/мес*</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 20,5%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td>обязательно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td>от 6 месяцев</td>
+                    <td>паспорт РФ, справка о доходах</td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>Райффайзенбанк</strong><br>
+                        <small>Ипотека</small>
+                        
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 20,9%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td>обязательно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td>от 6 месяцев</td>
+                    <td>паспорт РФ, справка о доходах</td>
                 </tr>
                 <tr class="">
                     <td>
                         <strong>Росбанк</strong><br>
-                        <small>Кредитная карта Росбанк</small>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 3 000 000 ₽</td>
-                    <td>до 60 дней</td>
-                    <td>до 5%</td>
-                    <td>бесплатно*</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td>от 6 месяцев</td>
+                    <td></td>
                 </tr>
-                <tr class="best-offer">
+                <tr class="">
                     <td>
                         <strong>Совкомбанк</strong><br>
-                        <small>Кредитная карта «Халва»</small>
-                        <br><span class="badge badge-primary">★ Лучшее</span>
+                        <small>Ипотека</small>
+                        
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 500 000 ₽</td>
-                    <td>до 120 дней</td>
-                    <td>до 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 20,5%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>бесплатно</td>
-                    <td>от 20 года</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr class="">
                     <td>
                         <strong>Открытие</strong><br>
-                        <small>Кредитная карта Открытие</small>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 5 000 000 ₽</td>
-                    <td>до 55 дней</td>
-                    <td>до 5%</td>
-                    <td>бесплатно*</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 20,5%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr class="">
                     <td>
                         <strong>Россельхозбанк</strong><br>
-                        <small>Кредитная карта Россельхозбанк</small>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 3 000 000 ₽</td>
-                    <td>до 55 дней</td>
-                    <td>до 5%</td>
-                    <td>бесплатно*</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>Трансабанк</strong><br>
+                        <small>Ипотека</small>
+                        
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>Транспортный кредитный банк</strong><br>
+                        <small>Ипотека</small>
+                        
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
                 </tr>
                 <tr class="">
                     <td>
                         <strong>Ситибанк</strong><br>
-                        <small>Кредитная карта Citibank</small>
+                        <small>Ипотека</small>
                         
                     </td>
-                    <td>от 29,9%</td>
-                    <td>до 3 000 000 ₽</td>
-                    <td>до 60 дней</td>
-                    <td>до 3%</td>
-                    <td>бесплатно*</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21%</td>
+                    <td>от 10%</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                     <td>от 21 года</td>
+                    <td></td>
+                    <td></td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div class="compare-actions text-center mt-8">
-        <a href="/category/credit-cards.html" class="btn btn-outline">← Назад к категории</a>
+        <a href="/category/mortgage.html" class="btn btn-outline">← Назад к категории</a>
     </div>
 </div>
 

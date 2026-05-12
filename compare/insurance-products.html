@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Информация об инвестиционном счете &quot;Рост&quot; от Пример Банка. Условия, комиссии, доступные инструменты." />
+        <meta name="description" content="Сравните Страхование от разных банков и выберите самое выгодное предложение" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Инвестиционный счет &quot;Рост&quot; от Пример Банка | Bank Select" />
-        <meta property="og:description" content="Информация об инвестиционном счете &quot;Рост&quot; от Пример Банка. Условия, комиссии, доступные инструменты." />
+        <meta property="og:title" content="Сравнение Страхование | Выбор лучших предложений" />
+        <meta property="og:description" content="Сравните Страхование от разных банков и выберите самое выгодное предложение" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,76 +126,91 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Инвестиционный счет &quot;Рост&quot;</h1>
-        <p class="text-light mb-4">Пример Банка</p>
-        <img src="/img/products/sample-investment.jpg" alt="Инвестиционный счет &quot;Рост&quot;" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">investment-products</div>
+            <div><div class="container">
+    <div class="compare-header text-center mb-8">
+        <h1 class="mb-2">Сравнение Страхование</h1>
+        <p class="text-light">Сравните условия от разных банков и выберите лучшее предложение</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>min_investment:</strong> 10 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>commission_rate:</strong> от 0.05%
-            </div>
-            <div class="mb-2">
-                <strong>custody_fee:</strong> 0.15% годовых
-            </div>
-            <div class="mb-2">
-                <strong>investment_options:</strong> акции, облигации, ETF
-            </div>
-        </div>
-
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Банк / Продукт</th>
+                    <th>Покрытие</th>
+                    <th>Территория действия</th>
+                    <th>Срок действия</th>
+                    <th>Страховая премия</th>
+                    <th>Оформление</th>
+                    <th>Возраст</th>
+                    <th>Медицинская справка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>
+                        <strong>ПСБ</strong><br>
+                        <small>Страхование жизни и здоровья</small>
+                        
+                    </td>
+                    <td>до 10 000 000 ₽</td>
+                    <td>Россия</td>
+                    <td>от 1 года</td>
+                    <td>от 10 000 ₽ в год</td>
+                    <td>бесплатно</td>
+                    <td>от 18 до 65 лет</td>
+                    <td>в зависимости от суммы</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>opening_fee:</strong> Бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>management_fee:</strong> 0.15% годовых
-            </div>
-            <div class="mb-2">
-                <strong>transaction_commission:</strong> от 0.05%
-            </div>
-            <div class="mb-2">
-                <strong>custody_fee:</strong> 0.15% годовых
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>client_category:</strong>
-                Физические лица
-            </div>
-            <div class="mb-2">
-                <strong>age_requirement:</strong>
-                от 18 лет
-            </div>
-            <div class="mb-2">
-                <strong>documents_required:</strong>
-                <ul>
-                    <li>Паспорт гражданина РФ</li>
-                    <li>ИНН</li>
-                    <li>Анкета инвестора</li>
-                </ul>
-            </div>
-        </div>
+    <div class="compare-actions text-center mt-8">
+        <a href="/category/insurance-products.html" class="btn btn-outline">← Назад к категории</a>
     </div>
+</div>
 
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/investment-products.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+<style>
+.comparison-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+.comparison-table thead tr {
+    background: #1e40af;
+    color: #fff;
+}
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+.comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+.comparison-table tbody tr.best-offer {
+    background: #e6f9f0;
+}
+.comparison-table tbody tr.best-offer td {
+    font-weight: 600;
+    color: #065f46;
+}
+</style>
+
+<style>
+.best-offer { background-color: #e6f9f0 !important; }
+.best-offer td { font-weight: 600; color: #065f46; }
+</style>
+<script src="/js/compare-sort.js"></script>
+<script src="/js/best-offer.js"></script>
 </div>
         </main>
 

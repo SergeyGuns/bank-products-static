@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Инвестиционный счет с подбором портфеля" />
+        <meta name="description" content="Выгодные ипотечные программы от ведущих банков" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Инвестиционный продукт &quot;Долгосрочный рост&quot; от Тинькофф Банк" />
-        <meta property="og:description" content="Инвестиционный счет с подбором портфеля" />
+        <meta property="og:title" content="Ипотека | Сравнение условий" />
+        <meta property="og:description" content="Выгодные ипотечные программы от ведущих банков" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,59 +126,225 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Инвестиционный продукт &quot;Долгосрочный рост&quot;</h1>
-        <p class="text-light mb-4">Т-Банк</p>
-        <img src="/img/products/.jpg" alt="Инвестиционный продукт &quot;Долгосрочный рост&quot;" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">investment-products</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Ипотека</h1>
+        <p class="text-light">Ипотечные кредиты на покупку жилья</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>Минимальная сумма:</strong> 1000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Уровень риска:</strong> низкий, средний, высокий
-            </div>
-            <div class="mb-2">
-                <strong>Цель инвестиций:</strong> доходность, сохранность, рост
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Альфа-Банк">Альфа-Банк</option>
+            <option value="ВТБ">ВТБ</option>
+            <option value="Газпромбанк">Газпромбанк</option>
+            <option value="МТС Банк">МТС Банк</option>
+            <option value="Открытие">Открытие</option>
+            <option value="ПСБ">ПСБ</option>
+            <option value="Райффайзенбанк">Райффайзенбанк</option>
+            <option value="Росбанк">Росбанк</option>
+            <option value="Россельхозбанк">Россельхозбанк</option>
+            <option value="СберБанк">СберБанк</option>
+            <option value="Ситибанк">Ситибанк</option>
+            <option value="Совкомбанк">Совкомбанк</option>
+            <option value="Т-Банк">Т-Банк</option>
+            <option value="Трансабанк">Трансабанк</option>
+            <option value="Транспортный кредитный банк">Транспортный кредитный банк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>Обслуживание:</strong> 0.3% в год
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="Газпромбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/gazprombank.svg" alt="Ипотека на новостройку" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека на новостройку</h2>
+            <p class="text-light mb-2">Газпромбанк</p>
+            <ul class="mb-4">
+                <li>Ставка от 9.0%</li>
+                <li>Первоначальный взнос от 20%</li>
+                <li>Срок до 30 лет</li>
+                <li>Для новостроек</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/gazprombank-mortgage-new-building-2024-02-03.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Переводы:</strong> бесплатно
+        </article>
+        <article class="card card-hover" data-bank="СберБанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sberbank.svg" alt="Стандартная ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Стандартная ипотека</h2>
+            <p class="text-light mb-2">СберБанк</p>
+            <ul class="mb-4">
+                <li>Ставка от 9.5%</li>
+                <li>Первоначальный взнос от 15%</li>
+                <li>Срок до 30 лет</li>
+                <li>Материнский капитал</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sberbank-mortgage-standard-2024-02-03.html" class="btn btn-primary">Подробнее</a>
             </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>Возраст:</strong>
-                от 18 лет
+        </article>
+        <article class="card card-hover" data-bank="ВТБ">
+            <img class="card-bank-logo mb-4" src="/img/banks/vtb.svg" alt="Семейная ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Семейная ипотека</h2>
+            <p class="text-light mb-2">ВТБ</p>
+            <ul class="mb-4">
+                <li>Ставка от 8.5%</li>
+                <li>Первоначальный взнос от 15%</li>
+                <li>Срок до 30 лет</li>
+                <li>Для семей с детьми</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/vtb-mortgage-family-2024-02-03.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Образование:</strong>
-                не требуется
+        </article>
+        <article class="card card-hover" data-bank="Т-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/t-bank.svg" alt="mortgages tbank" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">mortgages tbank</h2>
+            <p class="text-light mb-2">Т-Банк</p>
+            <ul class="mb-4">
+                <li>Условия уточняйте на сайте</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tbank-1770255305334.html" class="btn btn-primary">Подробнее</a>
             </div>
-        </div>
+        </article>
+        <article class="card card-hover" data-bank="ПСБ">
+            <img class="card-bank-logo mb-4" src="/img/banks/psb.svg" alt="Семейная ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Семейная ипотека</h2>
+            <p class="text-light mb-2">ПСБ</p>
+            <ul class="mb-4">
+                <li>До 5 330 000 ₽</li>
+                <li>7%</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/psb--1778450038143.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Альфа-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/alfa-bank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Альфа-Банк</p>
+            <ul class="mb-4">
+                <li>от 20,1%</li>
+                <li>до 120 000 000 ₽</li>
+                <li>до 30 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/alfa-bank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="МТС Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/mts-bank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">МТС Банк</p>
+            <ul class="mb-4">
+                <li>от 20,5%</li>
+                <li>до 60 000 000 ₽</li>
+                <li>до 30 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/mts-bank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Райффайзенбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/raiffeisen.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Райффайзенбанк</p>
+            <ul class="mb-4">
+                <li>от 20,9%</li>
+                <li>до 60 000 000 ₽</li>
+                <li>до 30 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/raiffeisenbank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Росбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/rosbank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Росбанк</p>
+            <ul class="mb-4">
+                <li>от 21%</li>
+                <li>до 60 000 000 ₽</li>
+                <li>до 30 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rosbank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Совкомбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sovcombank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Совкомбанк</p>
+            <ul class="mb-4">
+                <li>от 20,5%</li>
+                <li>до 60 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sovcombank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Открытие">
+            <img class="card-bank-logo mb-4" src="/img/banks/otkrytie.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Открытие</p>
+            <ul class="mb-4">
+                <li>от 20,5%</li>
+                <li>до 60 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/otkritie-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Россельхозбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/rosselkhozbank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Россельхозбанк</p>
+            <ul class="mb-4">
+                <li>от 21%</li>
+                <li>до 60 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rshb-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Трансабанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/transbank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Трансабанк</p>
+            <ul class="mb-4">
+                <li>от 21%</li>
+                <li>до 30 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/transbank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Транспортный кредитный банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/transport-credit-bank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Транспортный кредитный банк</p>
+            <ul class="mb-4">
+                <li>от 21%</li>
+                <li>до 30 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tcb-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ситибанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/citibank.svg" alt="Ипотека" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека</h2>
+            <p class="text-light mb-2">Ситибанк</p>
+            <ul class="mb-4">
+                <li>от 21%</li>
+                <li>до 60 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/citibank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/investment-products.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

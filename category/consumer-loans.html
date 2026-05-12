@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Премиальная кредитная карта с высоким лимитом и выгодными условиями" />
+        <meta name="description" content="Потребительские кредиты без залога и поручителей" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Кредитная карта Platinum Premium от Т-Банк" />
-        <meta property="og:description" content="Премиальная кредитная карта с высоким лимитом и выгодными условиями" />
+        <meta property="og:title" content="Потребительские кредиты | Сравнение" />
+        <meta property="og:description" content="Потребительские кредиты без залога и поручителей" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,87 +126,225 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Кредитная карта Platinum Premium</h1>
-        <p class="text-light mb-4">Т-Банк</p>
-        <img src="https://bank-select.ru/images/products/platinum-premium.jpg" alt="Кредитная карта Platinum Premium" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">credit-cards</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Потребительские кредиты</h1>
+        <p class="text-light">Потребительские кредиты на любые цели</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>Кредитный лимит:</strong> до 2,000,000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Льготный период:</strong> не применим
-            </div>
-            <div class="mb-2">
-                <strong>Процентная ставка:</strong> от 29,885% до 39,625% годовых
-            </div>
-            <div class="mb-2">
-                <strong>Кэшбэк:</strong> до 10%
-            </div>
-            <div class="mb-2">
-                <strong>Процент на остаток:</strong> до 12% годовых
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Альфа-Банк">Альфа-Банк</option>
+            <option value="ВТБ">ВТБ</option>
+            <option value="МТС Банк">МТС Банк</option>
+            <option value="Открытие">Открытие</option>
+            <option value="ПСБ">ПСБ</option>
+            <option value="Росбанк">Росбанк</option>
+            <option value="Россельхозбанк">Россельхозбанк</option>
+            <option value="СберБанк">СберБанк</option>
+            <option value="Ситибанк">Ситибанк</option>
+            <option value="Совкомбанк">Совкомбанк</option>
+            <option value="Т-Банк">Т-Банк</option>
+            <option value="Трансабанк">Трансабанк</option>
+            <option value="Транспортный кредитный банк">Транспортный кредитный банк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>Выпуск карты:</strong> бесплатно
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="СберБанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sberbank.svg" alt="Потребительский кредит &quot;Универсальный&quot;" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит &quot;Универсальный&quot;</h2>
+            <p class="text-light mb-2">СберБанк</p>
+            <ul class="mb-4">
+                <li>от 12.9%</li>
+                <li>до 5 000 000 ₽</li>
+                <li>до 7 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sberbank-1770331449885.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Снятие наличных:</strong> 2%
+        </article>
+        <article class="card card-hover" data-bank="ВТБ">
+            <img class="card-bank-logo mb-4" src="/img/banks/vtb.svg" alt="Кредит &quot;На любые цели&quot;" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Кредит &quot;На любые цели&quot;</h2>
+            <p class="text-light mb-2">ВТБ</p>
+            <ul class="mb-4">
+                <li>от 9.9%</li>
+                <li>до 10 000 000 ₽</li>
+                <li>до 10 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/vtb-1770331449888.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Переводы:</strong> 1%, минимум 390 ₽
+        </article>
+        <article class="card card-hover" data-bank="ПСБ">
+            <img class="card-bank-logo mb-4" src="/img/banks/psb.svg" alt="Потребительский кредит на любые цели" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит на любые цели</h2>
+            <p class="text-light mb-2">ПСБ</p>
+            <ul class="mb-4">
+                <li>Сумма от 100 000 до 5 000 000 ₽</li>
+                <li>Срок от 1 года до 7 лет</li>
+                <li>Процентная ставка от 27,9% годовых</li>
+                <li>Возможность рефинансирования</li>
+                <li>Без обеспечения</li>
+                <li>Без справок о доходах (при определенных условиях)</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/psb-loan-any-purpose-123.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Минимальный платеж:</strong> не более 8% от задолженности, минимум 5,000 ₽
+        </article>
+        <article class="card card-hover" data-bank="СберБанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sberbank.svg" alt="Стандартный потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Стандартный потребительский кредит</h2>
+            <p class="text-light mb-2">СберБанк</p>
+            <ul class="mb-4">
+                <li>Ставка от 12.9%</li>
+                <li>Сумма до 5 000 000 ₽</li>
+                <li>Без обеспечения до 500 000 ₽</li>
+                <li>До 5 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sberbank-personal-loan-standard-2024-02-03.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Штрафы и неустойки:</strong> 20% годовых
+        </article>
+        <article class="card card-hover" data-bank="Т-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/t-bank.svg" alt="loans tbank" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">loans tbank</h2>
+            <p class="text-light mb-2">Т-Банк</p>
+            <ul class="mb-4">
+                <li>до 18 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tbank-1770255305333.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Обслуживание:</strong> бесплатно при определенных условиях
+        </article>
+        <article class="card card-hover" data-bank="Альфа-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/alfa-bank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Альфа-Банк</p>
+            <ul class="mb-4">
+                <li>от 13,9%</li>
+                <li>до 5 000 000 ₽</li>
+                <li>до 5 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/alfa-bank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>Возраст:</strong>
-                от 18 лет
+        </article>
+        <article class="card card-hover" data-bank="МТС Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/mts-bank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">МТС Банк</p>
+            <ul class="mb-4">
+                <li>от 12,9%</li>
+                <li>до 5 000 000 ₽</li>
+                <li>до 5 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/mts-bank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Документы:</strong>
-                <ul>
-                    <li>Паспорт РФ</li>
-                </ul>
+        </article>
+        <article class="card card-hover" data-bank="Росбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/rosbank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Росбанк</p>
+            <ul class="mb-4">
+                <li>от 15,9%</li>
+                <li>до 5 000 000 ₽</li>
+                <li>до 5 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rosbank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Доход:</strong>
-                подтверждённый
+        </article>
+        <article class="card card-hover" data-bank="ПСБ">
+            <img class="card-bank-logo mb-4" src="/img/banks/psb.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">ПСБ</p>
+            <ul class="mb-4">
+                <li>от 15,9%</li>
+                <li>до 5 000 000 ₽</li>
+                <li>до 5 лет</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/psb-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>Стаж:</strong>
-                от 6 месяцев
+        </article>
+        <article class="card card-hover" data-bank="Ситибанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/citibank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Ситибанк</p>
+            <ul class="mb-4">
+                <li>от 14,9%</li>
+                <li>до 4 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/citibank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-        </div>
+        </article>
+        <article class="card card-hover" data-bank="Трансабанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/transbank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Трансабанк</p>
+            <ul class="mb-4">
+                <li>от 16,9%</li>
+                <li>до 3 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/transbank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Транспортный кредитный банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/transport-credit-bank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Транспортный кредитный банк</p>
+            <ul class="mb-4">
+                <li>от 17,9%</li>
+                <li>до 3 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tcb-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Совкомбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sovcombank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Совкомбанк</p>
+            <ul class="mb-4">
+                <li>от 12,9%</li>
+                <li>до 5 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sovcombank-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Открытие">
+            <img class="card-bank-logo mb-4" src="/img/banks/otkrytie.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Открытие</p>
+            <ul class="mb-4">
+                <li>от 15,9%</li>
+                <li>до 5 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/otkritie-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Россельхозбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/rosselkhozbank.svg" alt="Потребительский кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Потребительский кредит</h2>
+            <p class="text-light mb-2">Россельхозбанк</p>
+            <ul class="mb-4">
+                <li>от 16,9%</li>
+                <li>до 5 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rshb-consumer-loans-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/credit-cards.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

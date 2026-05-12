@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Информация о программе страхования жизни и здоровья от Пример Банка. Условия, покрытие, стоимость." />
+        <meta name="description" content="Современные цифровые банковские продукты" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Страхование жизни и здоровья от Пример Банка | Bank Select" />
-        <meta property="og:description" content="Информация о программе страхования жизни и здоровья от Пример Банка. Условия, покрытие, стоимость." />
+        <meta property="og:title" content="Цифровые сервисы | Сравнение" />
+        <meta property="og:description" content="Современные цифровые банковские продукты" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,74 +126,34 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Страхование жизни и здоровья</h1>
-        <p class="text-light mb-4">Пример Банка</p>
-        <img src="/img/products/sample-insurance.jpg" alt="Страхование жизни и здоровья" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">insurance-products</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Цифровые сервисы</h1>
+        <p class="text-light">Премиальные счета и цифровые продукты</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>coverage_amount:</strong> до 5 000 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>premium_rate:</strong> от 0.5% от страховой суммы
-            </div>
-            <div class="mb-2">
-                <strong>policy_term:</strong> 1 год
-            </div>
-            <div class="mb-2">
-                <strong>age_range:</strong> 18-65 лет
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Ситибанк">Ситибанк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>premium:</strong> от 2500 ₽ в год
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="Ситибанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/citibank.svg" alt="Премиальный банковский счет" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Премиальный банковский счет</h2>
+            <p class="text-light mb-2">Ситибанк</p>
+            <ul class="mb-4">
+                <li>Продукт digital-services</li>
+                <li>От банка Ситибанк</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/citibank-premium-account-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>additional_services:</strong> оплачивается отдельно
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>client_category:</strong>
-                Физические лица
-            </div>
-            <div class="mb-2">
-                <strong>age_requirement:</strong>
-                от 18 до 65 лет
-            </div>
-            <div class="mb-2">
-                <strong>health_requirements:</strong>
-                прохождение медицинского осмотра при страховой сумме свыше 3 000 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>documents_required:</strong>
-                <ul>
-                    <li>Паспорт гражданина РФ</li>
-                    <li>Медицинская справка (при необходимости)</li>
-                    <li>Анкета страхователя</li>
-                </ul>
-            </div>
-        </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/insurance-products.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

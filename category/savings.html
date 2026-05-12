@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Семейная военная ипотека" />
+        <meta name="description" content="Надежные сберегательные счета с конкурентными ставками" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Семейная военная ипотека от psb" />
-        <meta property="og:description" content="Семейная военная ипотека" />
+        <meta property="og:title" content="Сберегательные счета | Сравнение" />
+        <meta property="og:description" content="Надежные сберегательные счета с конкурентными ставками" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,52 +126,35 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Семейная военная ипотека</h1>
-        <p class="text-light mb-4">ПСБ</p>
-        <img src="" alt="Семейная военная ипотека" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">mortgage</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Сберегательные счета</h1>
+        <p class="text-light">Сберегательные счета с процентом</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>Сумма кредита:</strong> До 5 330 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Кешбэк:</strong> 7%
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Альфа-Банк">Альфа-Банк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>Обслуживание:</strong> бесплатно
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="Альфа-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/alfa-bank.svg" alt="Сберегательный счет &quot;Максимум&quot;" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Сберегательный счет &quot;Максимум&quot;</h2>
+            <p class="text-light mb-2">Альфа-Банк</p>
+            <ul class="mb-4">
+                <li>до 8% годовых</li>
+                <li>1000 ₽</li>
+                <li>ежемесячная</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/al-fa-bank-1770331449891.html" class="btn btn-primary">Подробнее</a>
             </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>Документы:</strong>
-                <ul>
-                    <li>Справка о доходах</li>
-                    <li>СНИЛС</li>
-                </ul>
-            </div>
-        </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/mortgage.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

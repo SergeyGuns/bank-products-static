@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Информация об ипотечном кредите на готовое жилье от Пример Банка. Условия, ставки, требования к заёмщику." />
+        <meta name="description" content="Кредитование малого и среднего бизнеса" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Ипотека на готовое жилье от Пример Банка | Bank Select" />
-        <meta property="og:description" content="Информация об ипотечном кредите на готовое жилье от Пример Банка. Условия, ставки, требования к заёмщику." />
+        <meta property="og:title" content="Бизнес-кредиты | Сравнение условий" />
+        <meta property="og:description" content="Кредитование малого и среднего бизнеса" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,114 +126,34 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Ипотека на готовое жилье</h1>
-        <p class="text-light mb-4">Пример Банка</p>
-        <img src="/img/products/sample-mortgage.jpg" alt="Ипотека на готовое жилье" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">mortgage</div>
+            <div><div class="container">
+    <div class="category-header text-center mb-8">
+        <h1 class="mb-2">Бизнес-кредиты</h1>
+        <p class="text-light">Кредиты для бизнеса и предпринимателей</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>interest_rate:</strong> 9.5%
-            </div>
-            <div class="mb-2">
-                <strong>min_down_payment:</strong> 15%
-            </div>
-            <div class="mb-2">
-                <strong>loan_term:</strong> от 1 до 30 лет
-            </div>
-            <div class="mb-2">
-                <strong>min_loan_amount:</strong> 300 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>max_loan_amount:</strong> 60 000 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Процентная ставка:</strong> от 10.5%
-            </div>
-            <div class="mb-2">
-                <strong>Первоначальный взнос:</strong> от 15%
-            </div>
-            <div class="mb-2">
-                <strong>Срок кредита:</strong> до 30 лет
-            </div>
-        </div>
-
+    <div class="filters mb-6">
+        <select class="select input" id="bankFilter">
+            <option value="all">Все банки</option>
+            <option value="Райффайзенбанк">Райффайзенбанк</option>
+        </select>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>application_fee:</strong> Бесплатно
+    <div class="grid grid-cols-2">
+        <article class="card card-hover" data-bank="Райффайзенбанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/raiffeisen.svg" alt="Бизнес-кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Бизнес-кредит</h2>
+            <p class="text-light mb-2">Райффайзенбанк</p>
+            <ul class="mb-4">
+                <li>Продукт business-loans</li>
+                <li>От банка Райффайзенбанк</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/raiffeisen-business-loan-1.html" class="btn btn-primary">Подробнее</a>
             </div>
-            <div class="mb-2">
-                <strong>issuance_fee:</strong> 1% от суммы кредита
-            </div>
-            <div class="mb-2">
-                <strong>early_repayment_fee:</strong> Бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>Оформление:</strong> от 0 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Страхование:</strong> обязательно
-            </div>
-            <div class="mb-2">
-                <strong>Оценка недвижимости:</strong> от 0 ₽
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>client_category:</strong>
-                Физические лица
-            </div>
-            <div class="mb-2">
-                <strong>age_requirement:</strong>
-                от 21 до 65 лет
-            </div>
-            <div class="mb-2">
-                <strong>work_experience:</strong>
-                не менее 6 месяцев на последнем месте
-            </div>
-            <div class="mb-2">
-                <strong>documents_required:</strong>
-                <ul>
-                    <li>Паспорт гражданина РФ</li>
-                    <li>Справка 2-НДФЛ или по форме банка</li>
-                    <li>ИНН</li>
-                    <li>Трудовая книжка</li>
-                </ul>
-            </div>
-            <div class="mb-2">
-                <strong>Возраст:</strong>
-                от 21 года
-            </div>
-            <div class="mb-2">
-                <strong>Стаж:</strong>
-                от 12 месяцев
-            </div>
-            <div class="mb-2">
-                <strong>Документы:</strong>
-                <ul>
-                    <li>Паспорт РФ</li>
-                    <li>Справка 2-НДФЛ или по форме банка</li>
-                </ul>
-            </div>
-        </div>
+        </article>
     </div>
-
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/mortgage.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+</div>
 </div>
         </main>
 

@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Информация о накопительном вкладе &quot;Выгодный&quot; от Пример Банка. Условия, процентные ставки, требования." />
+        <meta name="description" content="Сравните Цифровые сервисы от разных банков и выберите самое выгодное предложение" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Накопительный вклад &quot;Выгодный&quot; от Пример Банка | Bank Select" />
-        <meta property="og:description" content="Информация о накопительном вкладе &quot;Выгодный&quot; от Пример Банка. Условия, процентные ставки, требования." />
+        <meta property="og:title" content="Сравнение Цифровые сервисы | Выбор лучших предложений" />
+        <meta property="og:description" content="Сравните Цифровые сервисы от разных банков и выберите самое выгодное предложение" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,100 +126,79 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Накопительный вклад &quot;Выгодный&quot;</h1>
-        <p class="text-light mb-4">Пример Банка</p>
-        <img src="/img/products/sample-deposit.jpg" alt="Накопительный вклад &quot;Выгодный&quot;" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">deposits</div>
+            <div><div class="container">
+    <div class="compare-header text-center mb-8">
+        <h1 class="mb-2">Сравнение Цифровые сервисы</h1>
+        <p class="text-light">Сравните условия от разных банков и выберите лучшее предложение</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>interest_rate:</strong> 8.5%
-            </div>
-            <div class="mb-2">
-                <strong>min_amount:</strong> 10 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>max_amount:</strong> 5 000 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>term:</strong> от 3 до 36 месяцев
-            </div>
-            <div class="mb-2">
-                <strong>Процентная ставка:</strong> до 15%
-            </div>
-            <div class="mb-2">
-                <strong>Минимальная сумма:</strong> от 1 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>Срок вклада:</strong> от 3 месяцев до 3 лет
-            </div>
-        </div>
-
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Банк / Продукт</th>
+                    <th>Процентная ставка</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>
+                        <strong>Ситибанк</strong><br>
+                        <small>Премиальный банковский счет</small>
+                        
+                    </td>
+                    <td>уточняйте на сайте банка</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>opening_fee:</strong> Бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>maintenance_fee:</strong> Бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>early_closure_fee:</strong> 3% от суммы вклада
-            </div>
-            <div class="mb-2">
-                <strong>Открытие вклада:</strong> бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>Обслуживание:</strong> бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>Закрытие вклада:</strong> бесплатно
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>client_category:</strong>
-                Физические лица
-            </div>
-            <div class="mb-2">
-                <strong>documents_required:</strong>
-                <ul>
-                    <li>Паспорт гражданина РФ</li>
-                    <li>ИНН (при наличии)</li>
-                </ul>
-            </div>
-            <div class="mb-2">
-                <strong>age_requirement:</strong>
-                от 18 лет
-            </div>
-            <div class="mb-2">
-                <strong>Возраст:</strong>
-                от 18 лет
-            </div>
-            <div class="mb-2">
-                <strong>Документы:</strong>
-                <ul>
-                    <li>Паспорт РФ</li>
-                </ul>
-            </div>
-        </div>
+    <div class="compare-actions text-center mt-8">
+        <a href="/category/digital-services.html" class="btn btn-outline">← Назад к категории</a>
     </div>
+</div>
 
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/deposits.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+<style>
+.comparison-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+.comparison-table thead tr {
+    background: #1e40af;
+    color: #fff;
+}
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+.comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+.comparison-table tbody tr.best-offer {
+    background: #e6f9f0;
+}
+.comparison-table tbody tr.best-offer td {
+    font-weight: 600;
+    color: #065f46;
+}
+</style>
+
+<style>
+.best-offer { background-color: #e6f9f0 !important; }
+.best-offer td { font-weight: 600; color: #065f46; }
+</style>
+<script src="/js/compare-sort.js"></script>
+<script src="/js/best-offer.js"></script>
 </div>
         </main>
 

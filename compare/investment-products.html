@@ -3,10 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Информация об автокредите на новый автомобиль от Пример Банка. Условия, ставки, требования к заёмщику." />
+        <meta name="description" content="Сравните Инвестиции от разных банков и выберите самое выгодное предложение" />
         <!-- Open Graph теги -->
-        <meta property="og:title" content="Автокредит на новый автомобиль от Пример Банка | Bank Select" />
-        <meta property="og:description" content="Информация об автокредите на новый автомобиль от Пример Банка. Условия, ставки, требования к заёмщику." />
+        <meta property="og:title" content="Сравнение Инвестиции | Выбор лучших предложений" />
+        <meta property="og:description" content="Сравните Инвестиции от разных банков и выберите самое выгодное предложение" />
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="manifest" href="/manifest.webmanifest" />
         <link rel="stylesheet" href="/css/theme.css" />
@@ -126,81 +126,91 @@
         </header>
 
         <main>
-            <div><article class="container">
-    <div class="product-header text-center mb-8">
-        <h1 class="mb-2">Автокредит на новый автомобиль</h1>
-        <p class="text-light mb-4">Пример Банка</p>
-        <img src="/img/products/sample-auto-loan.jpg" alt="Автокредит на новый автомобиль" class="mb-4" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';this.style.maxWidth='200px';">
-        <div class="badge badge-primary">auto-loans</div>
+            <div><div class="container">
+    <div class="compare-header text-center mb-8">
+        <h1 class="mb-2">Сравнение Инвестиции</h1>
+        <p class="text-light">Сравните условия от разных банков и выберите лучшее предложение</p>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Основные параметры</h2>
-            <div class="mb-2">
-                <strong>interest_rate:</strong> 8.9%
-            </div>
-            <div class="mb-2">
-                <strong>min_down_payment:</strong> 10%
-            </div>
-            <div class="mb-2">
-                <strong>loan_term:</strong> от 1 до 7 лет
-            </div>
-            <div class="mb-2">
-                <strong>min_loan_amount:</strong> 200 000 ₽
-            </div>
-            <div class="mb-2">
-                <strong>max_loan_amount:</strong> 5 000 000 ₽
-            </div>
-        </div>
-
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Банк / Продукт</th>
+                    <th>Минимальная сумма</th>
+                    <th>Уровень риска</th>
+                    <th>Цель инвестиций</th>
+                    <th>Обслуживание</th>
+                    <th>Переводы</th>
+                    <th>Возраст</th>
+                    <th>Образование</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="">
+                    <td>
+                        <strong>Т-Банк</strong><br>
+                        <small>Инвестиционный продукт &quot;Долгосрочный рост&quot;</small>
+                        
+                    </td>
+                    <td>1000 ₽</td>
+                    <td>низкий, средний, высокий</td>
+                    <td>доходность, сохранность, рост</td>
+                    <td>0.3% в год</td>
+                    <td>бесплатно</td>
+                    <td>от 18 лет</td>
+                    <td>не требуется</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="grid grid-cols-2 mb-8">
-        <div class="card">
-            <h2 class="mb-4">Комиссии и обслуживание</h2>
-            <div class="mb-2">
-                <strong>application_fee:</strong> Бесплатно
-            </div>
-            <div class="mb-2">
-                <strong>issuance_fee:</strong> 0.5% от суммы кредита
-            </div>
-            <div class="mb-2">
-                <strong>early_repayment_fee:</strong> Бесплатно
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="mb-4">Требования</h2>
-            <div class="mb-2">
-                <strong>client_category:</strong>
-                Физические лица
-            </div>
-            <div class="mb-2">
-                <strong>age_requirement:</strong>
-                от 21 до 65 лет
-            </div>
-            <div class="mb-2">
-                <strong>work_experience:</strong>
-                не менее 6 месяцев на последнем месте
-            </div>
-            <div class="mb-2">
-                <strong>documents_required:</strong>
-                <ul>
-                    <li>Паспорт гражданина РФ</li>
-                    <li>Водительское удостоверение</li>
-                    <li>Справка 2-НДФЛ или по форме банка</li>
-                    <li>ИНН</li>
-                </ul>
-            </div>
-        </div>
+    <div class="compare-actions text-center mt-8">
+        <a href="/category/investment-products.html" class="btn btn-outline">← Назад к категории</a>
     </div>
+</div>
 
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/auto-loans.html" class="btn btn-outline ml-4">Сравнить с другими</a>
-    </div>
-</article>
+<style>
+.comparison-table-container {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+}
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+.comparison-table thead tr {
+    background: #1e40af;
+    color: #fff;
+}
+.comparison-table th,
+.comparison-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+    vertical-align: top;
+}
+.comparison-table tbody tr:hover {
+    background: #f8fafc;
+}
+.comparison-table tbody tr.best-offer {
+    background: #e6f9f0;
+}
+.comparison-table tbody tr.best-offer td {
+    font-weight: 600;
+    color: #065f46;
+}
+</style>
+
+<style>
+.best-offer { background-color: #e6f9f0 !important; }
+.best-offer td { font-weight: 600; color: #065f46; }
+</style>
+<script src="/js/compare-sort.js"></script>
+<script src="/js/best-offer.js"></script>
 </div>
         </main>
 
