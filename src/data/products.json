@@ -23,7 +23,7 @@
           "Стаж": "от 6 месяцев на последнем месте работы"
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/gazprombank.svg",
       "features": [
         "от 7.9%",
         "от 10%",
@@ -56,7 +56,7 @@
       "featured": false,
       "shortDescription": "Бизнес-кредит",
       "fullDescription": "Информация о продукте Бизнес-кредит от Райффайзенбанк",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/raiffeisen.svg",
       "features": [
         "Продукт business-loans",
         "От банка Райффайзенбанк"
@@ -113,7 +113,7 @@
           ]
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/sberbank.svg",
       "features": [
         "от 12.9%",
         "до 5 000 000 ₽",
@@ -167,7 +167,7 @@
           ]
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/vtb.svg",
       "features": [
         "от 9.9%",
         "до 10 000 000 ₽",
@@ -200,7 +200,7 @@
       "featured": false,
       "shortDescription": "Кредитная карта Халва с рассрочкой до 36 мес.",
       "fullDescription": "Кредитная карта Халва от Райффайзенбанка. Рассрочка до 36 месяцев у партнёров. Кэшбэк до 10%.",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/raiffeisen.svg",
       "features": [
         "рассрочка до 36 мес.",
         "кэшбэк до 10%",
@@ -247,7 +247,7 @@
       "featured": false,
       "shortDescription": "Кредитная карта с кэшбэком до 5%",
       "fullDescription": "Кредитная карта МТС Банка с кэшбэком до 5% и льготным периодом до 120 дней.",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/mts-bank.svg",
       "features": [
         "до 120 дней без %",
         "до 5% кэшбэк",
@@ -293,7 +293,7 @@
       "featured": true,
       "shortDescription": "Кредитная карта с льготным периодом до 180 дней и кешбэком до 26%.",
       "fullDescription": "Кредитная карта ПСБ с льготным периодом до 180 дней. Карта предоставляет возможность пользоваться кредитными средствами без процентов в течение льготного периода. Кредитный лимит до 1 000 000 рублей. Кешбэк до 26% за покупки в супермаркетах.",
-      "imageUrl": "https://bank-select.ru/images/products/psb-180-days-no-percent.jpg",
+      "imageUrl": "/static/img/banks/psb.svg",
       "features": [
         "Льготный период до 180 дней",
         "Кредитный лимит до 1 000 000 ₽",
@@ -350,7 +350,7 @@
       "bankName": "Т-Банк",
       "shortDescription": "Премиальная кредитная карта для покупок в интернете и с доставкой.",
       "fullDescription": "Кредитная карта AliExpress от Т-Банка с лимитом задолженности до 1,000,000 рублей и высокими процентами начисления на покупки. Бесплатные услуги: мобильное приложение, интернет-банк, обработка в чате и по электронной почте.",
-      "imageUrl": "https://bank-select.ru/images/products/aliexpress-credit-card.jpg",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "features": [
         "Лимит задолженности до 1,000,000 рублей",
         "Высокие проценты на покупки: от 29,885% до 59,858%",
@@ -406,7 +406,7 @@
       "bankName": "Трансабанк",
       "shortDescription": "Кредитная карта с высокими лимитами и удобными условиями.",
       "fullDescription": "ALL Games — это кредитная карта от ТрансаБанка, которая предлагает высокие лимиты задолженности и удобные условия для игроков в интернет-играх. Карта подходит для тех, кто хочет с легкостью финансируть свои игры без лишних забот.",
-      "imageUrl": "https://bank-select.ru/images/products/all-games.jpg",
+      "imageUrl": "/static/img/banks/transbank.svg",
       "features": [
         "Высокий кредитный лимит до 1 000 000 рублей",
         "Удобные условия для игроков в интернет-играх"
@@ -461,7 +461,7 @@
       "bankName": "Транспортный кредитный банк",
       "shortDescription": "Кредитная карта с лимитом до 1 миллиона рублей и полной стоимостью кредита от 29,885% годовых.",
       "fullDescription": "Кредитная карта Lamoda предлагает возможность совершать покупки в интернет-магазине Ламода без немедленного оплаты. Кредитный лимит до 1 миллиона рублей с полной стоимостью кредита от 29,885% годовых.",
-      "imageUrl": "https://bank-select.ru/images/products/lamoda-credit-card.jpg",
+      "imageUrl": "/static/img/banks/transport-credit-bank.svg",
       "features": [
         "Кредитный лимит до 1 миллиона рублей",
         "Полная стоимость кредита от 29,885% годовых",
@@ -515,7 +515,7 @@
       "featured": true,
       "shortDescription": "Кредит на покупку нового автомобиля премиум-класса",
       "fullDescription": "Автокредит Газпромбанка для приобретения нового автомобиля премиум-класса. Предусматривает минимальный первоначальный взнос и выгодную процентную ставку. Возможность досрочного погашения без штрафов.",
-      "imageUrl": "/img/bank-logos/gazprombank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/gazprombank.svg",
       "features": [
         "Ставка от 7.9%",
         "Первоначальный взнос от 10%",
@@ -575,7 +575,7 @@
       "bankName": "ПСБ",
       "shortDescription": "Кредит наличными на любые цели с суммой от 100 тыс. до 5 млн руб.",
       "fullDescription": "Потребительский кредит от ПСБ на любые цели с суммой от 100 тысяч до 5 миллионов рублей. Кредит предоставляется на срок от 1 года до 7 лет. Процентная ставка определяется индивидуально с учетом кредитоспособности заемщика.",
-      "imageUrl": "https://bank-select.ru/images/products/psb-consumer-loan.jpg",
+      "imageUrl": "/static/img/banks/psb.svg",
       "features": [
         "Сумма от 100 000 до 5 000 000 ₽",
         "Срок от 1 года до 7 лет",
@@ -635,7 +635,7 @@
       "featured": true,
       "shortDescription": "Нецелевой займ на любые нужды под залог поручительства",
       "fullDescription": "Потребительский кредит СберБанка на любые цели без предоставления целевого назначения. Возможность получения без обеспечения при сумме до 500 000 рублей. Выгодные процентные ставки для зарплатных клиентов банка.",
-      "imageUrl": "/img/bank-logos/sberbank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/sberbank.svg",
       "features": [
         "Ставка от 12.9%",
         "Сумма до 5 000 000 ₽",
@@ -697,7 +697,7 @@
       "bankName": "Т-Банк",
       "shortDescription": "Кредит наличными",
       "fullDescription": "Кредит наличными. Валюта кредита: Рубли Российской Федерации. Сумма кредита: От 500,000 до 5,000,000 рублей. Срок кредита: От 12 месяцев до 60 месяцев (5 лет). Процентная ставка: От 29.9% до 44.9% годовых. Полная стоимость кредита: От 29.802% до 44.802% годовых. Комиссия за выдачу и обслуживание кредита не взимается. Штраф за неоплату регулярного платежа: 0.1% от просроченной задолженности. Срок рассмотрения заявки: От 1 до 5 дней. Требования к заемщику: Гражданство РФ, возраст от 21 года, постоянная регистрация и проживание в городе с отделением Т-Банка, наличие мобильного и стационарного телефонов, постоянный доход от 10,000 рублей, трудовой стаж не менее 3 месяцев. Документы: Паспорт РФ, СНИЛС, справка о доходах. Способы погашения: Через банкоматы, интернет-банк, мобильный банк, отделения Т-Банка или партнеров.",
-      "imageUrl": "https://bank-select.ru/images/products/%3Csvg xmlns='http://www.w3.org/2000/svg' height='47' viewBox='0 0 33 50' width='34' class='dI24uu' data-test-id='Main-Header-Main-DesktopLogo'%3E%3Cpath clip-rule='evenodd' d='M0 49.982v-6.825h32.61v6.825H0zm11.646-28.764h9.064L16.39 7.526h-.17l-4.573 13.692h-.001zm10.587-16.22l9.615 28.887h-7.115l-2.16-6.866H9.698l-2.33 6.867H.679l10.09-28.887C11.746 2.197 12.887 0 16.559 0s4.744 2.206 5.674 4.999v-.001z' fill='%23ef3124' fill-rule='evenodd'%3E%3C/path%3E%3C/svg%3E",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "parameters": {
         "main": {
           "Процентная ставка": "от 29.9% до 44.9%",
@@ -750,7 +750,7 @@
       "featured": true,
       "shortDescription": "Кредит для погашения долгов в других банках под более выгодные условия",
       "fullDescription": "Потребительский кредит ВТБ для рефинансирования задолженности по кредитам в других банках. Позволяет объединить несколько займов в один с более выгодной процентной ставкой и удобным графиком платежей.",
-      "imageUrl": "/img/bank-logos/vtb_logo_icon.svg",
+      "imageUrl": "/static/img/banks/vtb.svg",
       "features": [
         "Ставка от 11.9%",
         "Сумма до 3 000 000 ₽",
@@ -815,7 +815,7 @@
       "featured": false,
       "shortDescription": "Дебетовая карта \"Свобода\"",
       "fullDescription": "Информация о продукте Дебетовая карта \"Свобода\" от Росбанк",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/rosbank.svg",
       "features": [
         "Продукт debit-cards",
         "От банка Росбанк"
@@ -863,7 +863,7 @@
       "bankName": "ПСБ",
       "shortDescription": "Дебетовая карта с кешбэком до 5% в трех категориях и 1% за перевод зарплаты.",
       "fullDescription": "Дебетовая карта ПСБ с кешбэком до 5% в трех выбранных категориях и 1% за перевод зарплаты на карту ПСБ. Карта предоставляет возможность получать вознаграждение за повседневные покупки.",
-      "imageUrl": "https://bank-select.ru/images/products/psb-your-cashback.jpg",
+      "imageUrl": "/static/img/banks/psb.svg",
       "features": [
         "Кешбэк до 5% в трех категориях",
         "Дополнительный 1% за перевод зарплаты на карту ПСБ",
@@ -920,7 +920,7 @@
       "featured": false,
       "shortDescription": "Вклад \"Максимальный\"",
       "fullDescription": "Информация о продукте Вклад \"Максимальный\" от Райффайзенбанк",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/raiffeisen.svg",
       "features": [
         "Продукт deposits",
         "От банка Райффайзенбанк"
@@ -968,7 +968,7 @@
       "featured": true,
       "shortDescription": "Вклад с прогрессивной ставкой в зависимости от суммы",
       "fullDescription": "Накопительный вклад Газпромбанка с прогрессивной системой процентных ставок, зависящих от суммы вклада. Чем больше сумма, тем выше ставка. Проценты начисляются с капитализацией ежемесячно.",
-      "imageUrl": "/img/bank-logos/gazprombank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/gazprombank.svg",
       "features": [
         "Ставка до 8.5%",
         "Прогрессивная ставка",
@@ -1043,7 +1043,7 @@
       "featured": true,
       "shortDescription": "Выгодный вклад с возможностью пополнения и капитализацией процентов",
       "fullDescription": "Накопительный вклад СберБанка с возможностью пополнения и частичного снятия. Проценты начисляются с капитализацией ежемесячно. Подходит для среднесрочного хранения средств с получением дохода.",
-      "imageUrl": "/img/bank-logos/sberbank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/sberbank.svg",
       "features": [
         "Процент до 8.5%",
         "Ежемесячная капитализация",
@@ -1147,7 +1147,7 @@
         }
       },
       "title": "deposits tbank",
-      "imageUrl": "/img/products/deposits.jpg",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "features": [
         "до 15%",
         "от 1 000 ₽",
@@ -1166,7 +1166,7 @@
       "featured": true,
       "shortDescription": "Вклад с высокой ставкой и возможностью пополнения",
       "fullDescription": "Накопительный вклад ВТБ с возможностью пополнения и частичного снятия. Проценты начисляются с капитализацией ежемесячно. Подходит для среднесрочного хранения средств с получением дохода.",
-      "imageUrl": "/img/bank-logos/vtb_logo_icon.svg",
+      "imageUrl": "/static/img/banks/vtb.svg",
       "features": [
         "Процент до 8.0%",
         "Ежемесячная капитализация",
@@ -1243,7 +1243,7 @@
       "featured": false,
       "shortDescription": "Премиальный банковский счет",
       "fullDescription": "Информация о продукте Премиальный банковский счет от Ситибанк",
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/citibank.svg",
       "features": [
         "Продукт digital-services",
         "От банка Ситибанк"
@@ -1295,7 +1295,7 @@
           "Медицинская справка": "в зависимости от суммы"
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/psb.svg",
       "features": [
         "до 10 000 000 ₽",
         "Россия",
@@ -1342,7 +1342,7 @@
           "Образование": "не требуется"
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "features": [
         "1000 ₽",
         "низкий, средний, высокий",
@@ -1383,7 +1383,7 @@
       },
       "__sourceFile": "src\\data\\pdfs\\loans\\tbank\\tbank-unknown-2026-02-05.json",
       "title": "loans tbank",
-      "imageUrl": "/img/products/loans.jpg",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "features": [
         "до 18 лет"
       ],
@@ -1411,7 +1411,7 @@
       "featured": true,
       "shortDescription": "Ипотечный кредит на приобретение квартиры в новом строящемся доме",
       "fullDescription": "Ипотечный продукт Газпромбанка для приобретения квартиры в новостройке. Предусматривает различные программы государственной поддержки, включая семейную ипотеку и ипотеку для молодых специалистов.",
-      "imageUrl": "/img/bank-logos/gazprombank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/gazprombank.svg",
       "features": [
         "Ставка от 9.0%",
         "Первоначальный взнос от 20%",
@@ -1483,7 +1483,7 @@
       "featured": true,
       "shortDescription": "Ипотечный кредит на приобретение готового жилья с государственной поддержкой",
       "fullDescription": "Ипотечный продукт СберБанка для приобретения квартиры, дома или комнаты на первичном или вторичном рынке. Предусматривает различные программы государственной поддержки, включая семейную ипотеку, ипотеку для молодых специалистов и другие.",
-      "imageUrl": "/img/bank-logos/sberbank_logo_icon.svg",
+      "imageUrl": "/static/img/banks/sberbank.svg",
       "features": [
         "Ставка от 9.5%",
         "Первоначальный взнос от 15%",
@@ -1555,7 +1555,7 @@
       "featured": true,
       "shortDescription": "Ипотека с государственной поддержкой для семей с детьми",
       "fullDescription": "Ипотечный продукт ВТБ для семей с детьми, родившимися после 1 января 2018 года. Предусматривает сниженную процентную ставку и возможность использования материнского капитала в качестве первоначального взноса.",
-      "imageUrl": "/img/bank-logos/vtb_logo_icon.svg",
+      "imageUrl": "/static/img/banks/vtb.svg",
       "features": [
         "Ставка от 8.5%",
         "Первоначальный взнос от 15%",
@@ -1638,7 +1638,7 @@
       },
       "__sourceFile": "src\\data\\pdfs\\mortgages\\tbank\\tbank-unknown-2026-02-05.json",
       "title": "mortgages tbank",
-      "imageUrl": "/img/products/mortgages.jpg",
+      "imageUrl": "/static/img/banks/t-bank.svg",
       "features": [
         "Условия уточняйте на сайте"
       ],
@@ -1678,7 +1678,7 @@
           "Возраст": "от 18 лет"
         }
       },
-      "imageUrl": "/img/products/.jpg",
+      "imageUrl": "/static/img/banks/alfa-bank.svg",
       "features": [
         "до 8% годовых",
         "1000 ₽",
@@ -1743,7 +1743,8 @@
         "updatedBy": "discovery-pipeline"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/psb.svg"
     },
     {
       "id": "sberbank-credit-cards-1778452394772-n8ck6",
@@ -1788,7 +1789,8 @@
         "updatedBy": "web-scrape"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sberbank.svg"
     },
     {
       "id": "alfa-bank-credit-cards-1",
@@ -1834,7 +1836,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/alfa-bank.svg"
     },
     {
       "id": "alfa-bank-debit-cards-1",
@@ -1879,7 +1882,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/alfa-bank.svg"
     },
     {
       "id": "alfa-bank-consumer-loans-1",
@@ -1925,7 +1929,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/alfa-bank.svg"
     },
     {
       "id": "alfa-bank-mortgage-1",
@@ -1972,7 +1977,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/alfa-bank.svg"
     },
     {
       "id": "alfa-bank-deposits-1",
@@ -2017,7 +2023,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/alfa-bank.svg"
     },
     {
       "id": "vtb-credit-cards-1",
@@ -2063,7 +2070,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/vtb.svg"
     },
     {
       "id": "vtb-debit-cards-1",
@@ -2108,7 +2116,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/vtb.svg"
     },
     {
       "id": "gazprombank-credit-cards-1",
@@ -2154,7 +2163,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/gazprombank.svg"
     },
     {
       "id": "gazprombank-debit-cards-1",
@@ -2199,7 +2209,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/gazprombank.svg"
     },
     {
       "id": "mts-bank-debit-cards-1",
@@ -2244,7 +2255,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/mts-bank.svg"
     },
     {
       "id": "mts-bank-consumer-loans-1",
@@ -2290,7 +2302,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/mts-bank.svg"
     },
     {
       "id": "mts-bank-mortgage-1",
@@ -2337,7 +2350,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/mts-bank.svg"
     },
     {
       "id": "mts-bank-deposits-1",
@@ -2382,7 +2396,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/mts-bank.svg"
     },
     {
       "id": "raiffeisenbank-debit-cards-1",
@@ -2427,7 +2442,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/raiffeisen.svg"
     },
     {
       "id": "raiffeisenbank-mortgage-1",
@@ -2474,7 +2490,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/raiffeisen.svg"
     },
     {
       "id": "rosbank-credit-cards-1",
@@ -2517,7 +2534,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosbank.svg"
     },
     {
       "id": "rosbank-consumer-loans-1",
@@ -2561,7 +2579,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosbank.svg"
     },
     {
       "id": "rosbank-mortgage-1",
@@ -2606,7 +2625,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosbank.svg"
     },
     {
       "id": "rosbank-deposits-1",
@@ -2648,7 +2668,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosbank.svg"
     },
     {
       "id": "psb-consumer-loans-1",
@@ -2692,7 +2713,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/psb.svg"
     },
     {
       "id": "sberbank-debit-cards-1",
@@ -2735,7 +2757,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-10",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sberbank.svg"
     },
     {
       "id": "citibank-debit-cards-1",
@@ -2775,7 +2798,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/citibank.svg"
     },
     {
       "id": "citibank-consumer-loans-1",
@@ -2816,7 +2840,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/citibank.svg"
     },
     {
       "id": "citibank-deposits-1",
@@ -2857,7 +2882,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/citibank.svg"
     },
     {
       "id": "transbank-debit-cards-1",
@@ -2897,7 +2923,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transbank.svg"
     },
     {
       "id": "transbank-consumer-loans-1",
@@ -2938,7 +2965,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transbank.svg"
     },
     {
       "id": "transbank-deposits-1",
@@ -2979,7 +3007,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transbank.svg"
     },
     {
       "id": "tcb-debit-cards-1",
@@ -3019,7 +3048,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transport-credit-bank.svg"
     },
     {
       "id": "tcb-consumer-loans-1",
@@ -3060,7 +3090,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transport-credit-bank.svg"
     },
     {
       "id": "tcb-deposits-1",
@@ -3101,7 +3132,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transport-credit-bank.svg"
     },
     {
       "id": "sovcombank-credit-cards-1",
@@ -3145,7 +3177,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sovcombank.svg"
     },
     {
       "id": "sovcombank-debit-cards-1",
@@ -3186,7 +3219,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sovcombank.svg"
     },
     {
       "id": "sovcombank-consumer-loans-1",
@@ -3227,7 +3261,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sovcombank.svg"
     },
     {
       "id": "sovcombank-mortgage-1",
@@ -3269,7 +3304,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sovcombank.svg"
     },
     {
       "id": "sovcombank-deposits-1",
@@ -3310,7 +3346,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/sovcombank.svg"
     },
     {
       "id": "otkritie-credit-cards-1",
@@ -3353,7 +3390,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/otkrytie.svg"
     },
     {
       "id": "otkritie-debit-cards-1",
@@ -3393,7 +3431,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/otkrytie.svg"
     },
     {
       "id": "otkritie-consumer-loans-1",
@@ -3434,7 +3473,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/otkrytie.svg"
     },
     {
       "id": "otkritie-mortgage-1",
@@ -3476,7 +3516,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/otkrytie.svg"
     },
     {
       "id": "otkritie-deposits-1",
@@ -3517,7 +3558,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/otkrytie.svg"
     },
     {
       "id": "rshb-credit-cards-1",
@@ -3559,7 +3601,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosselkhozbank.svg"
     },
     {
       "id": "rshb-debit-cards-1",
@@ -3599,7 +3642,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosselkhozbank.svg"
     },
     {
       "id": "rshb-consumer-loans-1",
@@ -3640,7 +3684,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosselkhozbank.svg"
     },
     {
       "id": "rshb-mortgage-1",
@@ -3682,7 +3727,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosselkhozbank.svg"
     },
     {
       "id": "rshb-deposits-1",
@@ -3723,7 +3769,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/rosselkhozbank.svg"
     },
     {
       "id": "transbank-mortgage-1",
@@ -3765,7 +3812,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transbank.svg"
     },
     {
       "id": "tcb-mortgage-1",
@@ -3807,7 +3855,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/transport-credit-bank.svg"
     },
     {
       "id": "citibank-credit-cards-1",
@@ -3849,7 +3898,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/citibank.svg"
     },
     {
       "id": "citibank-mortgage-1",
@@ -3891,7 +3941,8 @@
         "updatedBy": "agent"
       },
       "validFrom": "2026-05-11",
-      "status": "active"
+      "status": "active",
+      "imageUrl": "/static/img/banks/citibank.svg"
     }
   ]
 }

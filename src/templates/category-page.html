@@ -21,13 +21,16 @@
             <h2 class="mb-2">{{title}}</h2>
             <p class="text-light mb-2">{{bankName}}</p>
             <ul class="mb-4">
+                {{#if features.length}}
                 {{#each features}}
                 <li>{{this}}</li>
                 {{/each}}
+                {{else}}
+                <li class="text-light">Подробнее на странице продукта</li>
+                {{/if}}
             </ul>
             <div class="card-actions">
                 <a href="/products/{{id}}.html" class="btn btn-primary">Подробнее</a>
-                <span class="badge badge-primary ml-2">{{type}}</span>
             </div>
         </article>
         {{/each}}
