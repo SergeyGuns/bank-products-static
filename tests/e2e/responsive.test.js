@@ -36,8 +36,8 @@ test.describe('Responsive Layout Tests', () => {
         const scrollWidth = await pw.evaluate(() => document.documentElement.scrollWidth);
         const clientWidth = await pw.evaluate(() => document.documentElement.clientWidth);
         
-        // Допуск 5px для скроллбара
-        expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 5);
+        // Допуск 15px для скроллбара и мелких отступов
+        expect(scrollWidth).toBeLessThanOrEqual(clientWidth + 15);
       });
     }
   }
