@@ -180,7 +180,32 @@
         </div>
     </div>
 
-    <!-- График платежей -->
+    <!-- Графики -->
+    <div class="card mt-8" id="chartsCard" style="display: none;">
+        <h2 class="mb-4">Визуализация погашения</h2>
+        <div class="grid grid-cols-2">
+            <div>
+                <h3 class="mb-2" style="font-size:var(--md-sys-typescale-title-small-size);">Структура платежа</h3>
+                <div class="chart-container" style="position:relative;height:250px;">
+                    <canvas id="paymentStructureChart"></canvas>
+                </div>
+            </div>
+            <div>
+                <h3 class="mb-2" style="font-size:var(--md-sys-typescale-title-small-size);">Остаток долга</h3>
+                <div class="chart-container" style="position:relative;height:250px;">
+                    <canvas id="balanceLineChart"></canvas>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h3 class="mb-2" style="font-size:var(--md-sys-typescale-title-small-size);">Основной долг vs Проценты</h3>
+            <div class="chart-container" style="position:relative;height:280px;">
+                <canvas id="principalVsInterestChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- График платежей (таблица) -->
     <div class="card mt-8" id="scheduleCard" style="display: none;">
         <h2 class="mb-4">График платежей</h2>
         <div class="comparison-table-container">
@@ -269,7 +294,200 @@
 }
 </style>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <script>
+(function() {
+    'use strict';
+
+    const colors = {
+        primary: '#1E40AF',
+        primaryLight: 'rgba(30, 64, 175, 0.2)',
+        error: '#BA1A1A',
+        errorLight: 'rgba(186, 26, 26, 0.2)',
+        warning: '#F59E0B',
+        success: '#10B981',
+        secondary: '#575E71',
+        gridLight: 'rgba(0,0,0,0.08)',
+        gridDark: 'rgba(255,255,255,0.08)',
+        textLight: '#1C1B1F',
+        textDark: '#E6E1E5'
+    };
+
+    function getTextColor() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? colors.textDark : colors.textLight;
+    }
+    function getGridColor() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? colors.gridDark : colors.gridLight;
+    }
+
+    // Store chart instances for cleanup
+    let charts = {};
+
+    function destroyCharts() {
+        Object.values(charts).forEach(chart => chart.destroy());
+        charts = {};
+    }
+
+    function initCharts(scheduleData) {
+        if (typeof Chart === 'undefined') return;
+        destroyCharts();
+
+        const labels = scheduleData.map(d => d.month + ' мес');
+        const principalData = scheduleData.map(d => d.principal);
+        const interestData = scheduleData.map(d => d.interest);
+        const balanceData = scheduleData.map(d => d.balance);
+
+        // 1. Payment structure doughnut
+        const totalPrincipal = principalData.reduce((a, b) => a + b, 0);
+        const totalInterest = interestData.reduce((a, b) => a + b, 0);
+
+        const structureCtx = document.getElementById('paymentStructureChart');
+        if (structureCtx) {
+            charts.structure = new Chart(structureCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Основной долг', 'Проценты'],
+                    datasets: [{
+                        data: [Math.round(totalPrincipal), Math.round(totalInterest)],
+                        backgroundColor: [colors.primary, colors.error],
+                        borderWidth: 0,
+                        hoverOffset: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: getTextColor(), padding: 12, usePointStyle: true }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ctx.label + ': ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 2. Balance line chart
+        const balanceCtx = document.getElementById('balanceLineChart');
+        if (balanceCtx) {
+            charts.balance = new Chart(balanceCtx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Остаток долга',
+                        data: balanceData,
+                        borderColor: colors.primary,
+                        backgroundColor: colors.primaryLight,
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 0,
+                        pointHoverRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return 'Остаток: ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: { color: getGridColor() },
+                            ticks: {
+                                color: getTextColor(),
+                                callback: v => (v / 1000000).toFixed(1) + ' млн'
+                            }
+                        },
+                        x: {
+                            grid: { display: false },
+                            ticks: {
+                                color: getTextColor(),
+                                maxTicksLimit: 10
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // 3. Principal vs Interest stacked bar
+        const pvsiCtx = document.getElementById('principalVsInterestChart');
+        if (pvsiCtx) {
+            charts.pvsi = new Chart(pvsiCtx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Основной долг',
+                            data: principalData,
+                            backgroundColor: colors.primary,
+                            borderRadius: 3
+                        },
+                        {
+                            label: 'Проценты',
+                            data: interestData,
+                            backgroundColor: colors.error,
+                            borderRadius: 3
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: getTextColor() }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(ctx) {
+                                    return ctx.dataset.label + ': ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                            grid: { display: false },
+                            ticks: {
+                                color: getTextColor(),
+                                maxTicksLimit: 12
+                            }
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            grid: { color: getGridColor() },
+                            ticks: {
+                                color: getTextColor(),
+                                callback: v => (v / 1000).toFixed(0) + ' тыс'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }
+
 function calculateLoan() {
     const loanAmount = parseFloat(document.getElementById('loanAmount').value);
     const interestRateInput = parseFloat(document.getElementById('interestRate').value);
@@ -308,6 +526,9 @@ function calculateLoan() {
     const today = new Date();
     let actualTerm = loanTerm;
 
+    // Collect data for charts
+    const chartData = [];
+
     for (let i = 0; i < loanTerm; i++) {
         const interest = balance * interestRate;
         let principal = monthlyPayment - interest;
@@ -324,6 +545,17 @@ function calculateLoan() {
         if (balance < 0.01) {
             balance = 0;
             actualTerm = i + 1;
+        }
+
+        // Store chart data (sample every month for short loans, every 6 months for long)
+        const shouldStore = actualTerm <= 60 || (i + 1) % 6 === 0 || i === 0 || balance === 0;
+        if (shouldStore) {
+            chartData.push({
+                month: i + 1,
+                principal: Math.round(principal),
+                interest: Math.round(interest),
+                balance: Math.round(Math.max(0, balance))
+            });
         }
 
         const paymentDate = new Date(today);
@@ -350,7 +582,17 @@ function calculateLoan() {
     document.getElementById('overpayment').textContent = overpayment.toLocaleString('ru-RU', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' ₽';
 
     document.getElementById('scheduleCard').style.display = 'block';
+    document.getElementById('chartsCard').style.display = 'block';
+
+    // Initialize charts
+    initCharts(chartData);
 }
+
+// Initialize on DOM ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {});
+} else {}
+})();
 </script>
 </div>
         </main>
