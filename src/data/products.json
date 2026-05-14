@@ -113,7 +113,7 @@
           ]
         }
       },
-      "imageUrl": "/img/banks/sberbank.svg",
+      "imageUrl": "/img/banks/sberbank.png",
       "features": [
         "от 12.9%",
         "до 5 000 000 ₽",
@@ -167,7 +167,7 @@
           ]
         }
       },
-      "imageUrl": "/img/banks/vtb.svg",
+      "imageUrl": "/img/banks/vtb.png",
       "features": [
         "от 9.9%",
         "до 10 000 000 ₽",
@@ -635,7 +635,7 @@
       "featured": true,
       "shortDescription": "Нецелевой займ на любые нужды под залог поручительства",
       "fullDescription": "Потребительский кредит СберБанка на любые цели без предоставления целевого назначения. Возможность получения без обеспечения при сумме до 500 000 рублей. Выгодные процентные ставки для зарплатных клиентов банка.",
-      "imageUrl": "/img/banks/sberbank.svg",
+      "imageUrl": "/img/banks/sberbank.png",
       "features": [
         "Ставка от 12.9%",
         "Сумма до 5 000 000 ₽",
@@ -750,7 +750,7 @@
       "featured": true,
       "shortDescription": "Кредит для погашения долгов в других банках под более выгодные условия",
       "fullDescription": "Потребительский кредит ВТБ для рефинансирования задолженности по кредитам в других банках. Позволяет объединить несколько займов в один с более выгодной процентной ставкой и удобным графиком платежей.",
-      "imageUrl": "/img/banks/vtb.svg",
+      "imageUrl": "/img/banks/vtb.png",
       "features": [
         "Ставка от 11.9%",
         "Сумма до 3 000 000 ₽",
@@ -1043,7 +1043,7 @@
       "featured": true,
       "shortDescription": "Выгодный вклад с возможностью пополнения и капитализацией процентов",
       "fullDescription": "Накопительный вклад СберБанка с возможностью пополнения и частичного снятия. Проценты начисляются с капитализацией ежемесячно. Подходит для среднесрочного хранения средств с получением дохода.",
-      "imageUrl": "/img/banks/sberbank.svg",
+      "imageUrl": "/img/banks/sberbank.png",
       "features": [
         "Процент до 8.5%",
         "Ежемесячная капитализация",
@@ -1166,7 +1166,7 @@
       "featured": true,
       "shortDescription": "Вклад с высокой ставкой и возможностью пополнения",
       "fullDescription": "Накопительный вклад ВТБ с возможностью пополнения и частичного снятия. Проценты начисляются с капитализацией ежемесячно. Подходит для среднесрочного хранения средств с получением дохода.",
-      "imageUrl": "/img/banks/vtb.svg",
+      "imageUrl": "/img/banks/vtb.png",
       "features": [
         "Процент до 8.0%",
         "Ежемесячная капитализация",
@@ -1483,7 +1483,7 @@
       "featured": true,
       "shortDescription": "Ипотечный кредит на приобретение готового жилья с государственной поддержкой",
       "fullDescription": "Ипотечный продукт СберБанка для приобретения квартиры, дома или комнаты на первичном или вторичном рынке. Предусматривает различные программы государственной поддержки, включая семейную ипотеку, ипотеку для молодых специалистов и другие.",
-      "imageUrl": "/img/banks/sberbank.svg",
+      "imageUrl": "/img/banks/sberbank.png",
       "features": [
         "Ставка от 9.5%",
         "Первоначальный взнос от 15%",
@@ -1555,7 +1555,7 @@
       "featured": true,
       "shortDescription": "Ипотека с государственной поддержкой для семей с детьми",
       "fullDescription": "Ипотечный продукт ВТБ для семей с детьми, родившимися после 1 января 2018 года. Предусматривает сниженную процентную ставку и возможность использования материнского капитала в качестве первоначального взноса.",
-      "imageUrl": "/img/banks/vtb.svg",
+      "imageUrl": "/img/banks/vtb.png",
       "features": [
         "Ставка от 8.5%",
         "Первоначальный взнос от 15%",
@@ -1790,7 +1790,7 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/sberbank.svg"
+      "imageUrl": "/img/banks/sberbank.png"
     },
     {
       "id": "alfa-bank-credit-cards-1",
@@ -2071,7 +2071,7 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/vtb.svg"
+      "imageUrl": "/img/banks/vtb.png"
     },
     {
       "id": "vtb-debit-cards-1",
@@ -2117,7 +2117,7 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/vtb.svg"
+      "imageUrl": "/img/banks/vtb.png"
     },
     {
       "id": "gazprombank-credit-cards-1",
@@ -2758,7 +2758,7 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/sberbank.svg"
+      "imageUrl": "/img/banks/sberbank.png"
     },
     {
       "id": "citibank-debit-cards-1",
@@ -3178,7 +3178,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.svg"
+      "imageUrl": "/img/banks/sovcombank.png"
     },
     {
       "id": "sovcombank-debit-cards-1",
@@ -3220,7 +3220,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.svg"
+      "imageUrl": "/img/banks/sovcombank.png"
     },
     {
       "id": "sovcombank-consumer-loans-1",
@@ -3262,7 +3262,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.svg"
+      "imageUrl": "/img/banks/sovcombank.png"
     },
     {
       "id": "sovcombank-mortgage-1",
@@ -3305,7 +3305,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.svg"
+      "imageUrl": "/img/banks/sovcombank.png"
     },
     {
       "id": "sovcombank-deposits-1",
@@ -3347,7 +3347,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.svg"
+      "imageUrl": "/img/banks/sovcombank.png"
     },
     {
       "id": "otkritie-credit-cards-1",
@@ -3391,7 +3391,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkrytie.svg"
+      "imageUrl": "/img/banks/otkritie.svg"
     },
     {
       "id": "otkritie-debit-cards-1",
@@ -3432,7 +3432,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkrytie.svg"
+      "imageUrl": "/img/banks/otkritie.svg"
     },
     {
       "id": "otkritie-consumer-loans-1",
@@ -3474,7 +3474,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkrytie.svg"
+      "imageUrl": "/img/banks/otkritie.svg"
     },
     {
       "id": "otkritie-mortgage-1",
@@ -3517,7 +3517,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkrytie.svg"
+      "imageUrl": "/img/banks/otkritie.svg"
     },
     {
       "id": "otkritie-deposits-1",
@@ -3559,7 +3559,7 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkrytie.svg"
+      "imageUrl": "/img/banks/otkritie.svg"
     },
     {
       "id": "rshb-credit-cards-1",
