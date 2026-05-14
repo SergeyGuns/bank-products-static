@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40" viewBox="0 0 120 40">
-  <rect width="120" height="40" rx="4" fill="#3366ff" opacity="0.1"/>
-  <rect x="1" y="1" width="118" height="38" rx="3" fill="none" stroke="#3366ff" stroke-width="1.5" opacity="0.3"/>
-  <text x="60" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="600" fill="#3366ff" text-anchor="middle">ТБ</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="48" viewBox="0 0 160 48">
+  <rect width="160" height="48" rx="6" fill="#3366FF" opacity="0.08"/>
+  <rect x="1" y="1" width="158" height="46" rx="5" fill="none" stroke="#3366FF" stroke-width="1.5" opacity="0.25"/>
+  <text x="80" y="30" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="600" fill="#3366FF" text-anchor="middle">Т-БАНК</text>
 </svg>
