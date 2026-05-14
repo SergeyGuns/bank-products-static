@@ -2,20 +2,511 @@
 <div class="container">
     <div class="page-header text-center mb-8">
         <h1 class="mb-2">Как правильно выбрать кредит</h1>
-        <p class="text-light">Рекомендации по выбору кредита</p>
+        <p class="text-light">Рекомендации и наглядные графики для принятия решения</p>
     </div>
+
     <div class="content">
-        <h2>На что обратить внимание</h2>
-        <p>При выборе кредита важно учитывать несколько ключевых факторов:</p>
-        <ul>
-            <li><strong>Процентная ставка</strong> — чем ниже, тем меньше переплата</li>
-            <li><strong>Срок кредита</strong> — дольше срок, меньше ежемесячный платеж, но больше общая переплата</li>
-            <li><strong>Сумма кредита</strong> — оцените свои реальные потребности</li>
-            <li><strong>Условия досрочного погашения</strong> — возможность погасить кредит раньше срока</li>
-            <li><strong>Дополнительные комиссии</strong> — за выдачу, обслуживание, снятие наличных</li>
-        </ul>
-        <a href="/category/credits.html" class="btn btn-primary mt-4">Сравнить кредиты</a>
+        <!-- Секция 1: Сравнение переплат -->
+        <h2>Сравнение переплат по ставкам</h2>
+        <p>Одна и та же сумма кредита при разных ставках может дать существенно разную переплату. График ниже показывает общую сумму выплат при кредите <strong>1 000 000 ₽ на 5 лет</strong>:</p>
+
+        <div class="card card-elevated mb-6">
+            <div class="chart-container" style="position:relative;height:320px;">
+                <canvas id="overpaymentChart"></canvas>
+            </div>
+            <p class="text-light mt-4" style="font-size:0.85em;">* Расчёт для аннуитетного платежа. Чем выше ставка, тем больше переплата.</p>
+        </div>
+
+        <!-- Секция 2: График погашения -->
+        <h2>Как меняется структура платежа</h2>
+        <p>В начале срока большая часть платежа идёт на проценты, а ближе к концу — на погашение основного долга. Это типичная картина для аннуитетного кредита:</p>
+
+        <div class="card card-elevated mb-6">
+            <div class="chart-container" style="position:relative;height:320px;">
+                <canvas id="amortizationChart"></canvas>
+            </div>
+            <p class="text-light mt-4" style="font-size:0.85em;">* Кредит 1 000 000 ₽, ставка 15%, срок 5 лет. Синий — основной долг, красный — проценты.</p>
+        </div>
+
+        <!-- Секция 3: Остаток долга -->
+        <h2>Динамика погашения долга</h2>
+        <p>График показывает, как уменьшается остаток долга со временем. Обратите внимание: в первые годы долг снижается медленно — это нормально для аннуитетной схемы:</p>
+
+        <div class="card card-elevated mb-6">
+            <div class="chart-container" style="position:relative;height:320px;">
+                <canvas id="balanceChart"></canvas>
+            </div>
+            <p class="text-light mt-4" style="font-size:0.85em;">* Кредит 1 000 000 ₽, ставка 15%, срок 5 лет.</p>
+        </div>
+
+        <!-- Секция 4: Сравнение сроков -->
+        <h2>Срок кредита: компромисс</h2>
+        <p>Увеличение срока снижает ежемесячный платёж, но увеличивает общую переплату. Сравним варианты для кредита <strong>1 000 000 ₽ под 15%</strong>:</p>
+
+        <div class="card card-elevated mb-6">
+            <div class="chart-container" style="position:relative;height:320px;">
+                <canvas id="termChart"></canvas>
+            </div>
+            <p class="text-light mt-4" style="font-size:0.85em;">* Синий столбец — ежемесячный платёж, оранжевый — общая переплата.</p>
+        </div>
+
+        <!-- Секция 5: Структура переплаты -->
+        <h2>Из чего складывается переплата</h2>
+        <p>Переплата по кредиту — это не только проценты. Комиссии и страховки могут существенно увеличить стоимость кредита:</p>
+
+        <div class="card card-elevated mb-6">
+            <div class="chart-container" style="position:relative;height:300px;max-width:500px;margin:0 auto;">
+                <canvas id="structureChart"></canvas>
+            </div>
+            <p class="text-light mt-4" style="font-size:0.85em;">* Типичная структура переплаты по потребительскому кредиту.</p>
+        </div>
+
+        <!-- Секция 6: Рекомендации -->
+        <h2>Практические рекомендации</h2>
+        <div class="grid grid-cols-2 mt-4">
+            <div class="card card-outlined">
+                <h3 class="mb-2">✅ Что делать</h3>
+                <ul>
+                    <li>Сравнивайте ПСК (полную стоимость кредита), а не только ставку</li>
+                    <li>Используйте досрочное погашение — это существенно снижает переплату</li>
+                    <li>Выбирайте минимальный срок, который позволяет ваш бюджет</li>
+                    <li>Проверяйте наличие скрытых комиссий и страховок</li>
+                </ul>
+            </div>
+            <div class="card card-outlined">
+                <h3 class="mb-2">❌ Чего избегать</h3>
+                <ul>
+                    <li>Не берите кредит на максимальный срок «на всякий случай»</li>
+                    <li>Не игнорируйте условия досрочного погашения</li>
+                    <li>Не сравнивайте только ежемесячные платежи — смотрите на общую переплату</li>
+                    <li>Не забывайте про страховку — она может добавить 5-15% к стоимости</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center mt-8">
+            <a href="/category/credits.html" class="btn btn-primary">Сравнить кредиты</a>
+            <a href="/calculator.html" class="btn btn-outline ml-4">Кредитный калькулятор</a>
+        </div>
     </div>
 </div>
-<style>.content{max-width:800px;margin:0 auto}.content h2{margin-top:2rem;margin-bottom:1rem}.content p{margin-bottom:1rem;line-height:1.6}.content ul{margin-bottom:1rem;padding-left:1.5rem}.content li{margin-bottom:0.5rem}</style>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+(function() {
+    'use strict';
+
+    // M3 color palette
+    const colors = {
+        primary: '#1E40AF',
+        primaryLight: 'rgba(30, 64, 175, 0.2)',
+        secondary: '#575E71',
+        tertiary: '#725572',
+        error: '#BA1A1A',
+        errorLight: 'rgba(186, 26, 26, 0.2)',
+        warning: '#F59E0B',
+        warningLight: 'rgba(245, 158, 11, 0.2)',
+        success: '#10B981',
+        successLight: 'rgba(16, 185, 129, 0.2)',
+        outline: '#757680',
+        gridLight: 'rgba(0,0,0,0.08)',
+        gridDark: 'rgba(255,255,255,0.08)',
+        textLight: '#1C1B1F',
+        textDark: '#E6E1E5'
+    };
+
+    function getTextColor() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? colors.textDark : colors.textLight;
+    }
+    function getGridColor() {
+        return document.documentElement.getAttribute('data-theme') === 'dark' ? colors.gridDark : colors.gridLight;
+    }
+
+    // Chart 1: Overpayment comparison by rate
+    function initOverpaymentChart() {
+        const ctx = document.getElementById('overpaymentChart');
+        if (!ctx) return;
+
+        const rates = [10, 12, 15, 18, 20, 25];
+        const principal = 1000000;
+        const years = 5;
+        const months = years * 12;
+
+        const data = rates.map(rate => {
+            const monthlyRate = rate / 100 / 12;
+            const payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+            return Math.round(payment * months);
+        });
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: rates.map(r => r + '%'),
+                datasets: [{
+                    label: 'Общая сумма выплат (₽)',
+                    data: data,
+                    backgroundColor: rates.map((r, i) => {
+                        const opacity = 0.4 + (i / rates.length) * 0.6;
+                        return `rgba(30, 64, 175, ${opacity})`;
+                    }),
+                    borderRadius: 6,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                const value = ctx.raw;
+                                const overpayment = value - principal;
+                                return [
+                                    'Выплата: ' + value.toLocaleString('ru-RU') + ' ₽',
+                                    'Переплата: ' + overpayment.toLocaleString('ru-RU') + ' ₽'
+                                ];
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 800000,
+                        grid: { color: getGridColor() },
+                        ticks: {
+                            color: getTextColor(),
+                            callback: v => (v / 1000000).toFixed(1) + ' млн'
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: getTextColor() }
+                    }
+                }
+            }
+        });
+    }
+
+    // Chart 2: Amortization structure (stacked bar)
+    function initAmortizationChart() {
+        const ctx = document.getElementById('amortizationChart');
+        if (!ctx) return;
+
+        const principal = 1000000;
+        const rate = 15;
+        const months = 60;
+        const monthlyRate = rate / 100 / 12;
+        const payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+
+        // Show every 6 months
+        const labels = [];
+        const principalData = [];
+        const interestData = [];
+        let balance = principal;
+
+        for (let i = 1; i <= months; i++) {
+            const interest = balance * monthlyRate;
+            const principalPart = payment - interest;
+            balance -= principalPart;
+
+            if (i % 6 === 0 || i === 1) {
+                labels.push(i + ' мес');
+                principalData.push(Math.round(principalPart));
+                interestData.push(Math.round(interest));
+            }
+        }
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                        label: 'Основной долг',
+                        data: principalData,
+                        backgroundColor: colors.primary,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Проценты',
+                        data: interestData,
+                        backgroundColor: colors.error,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: getTextColor() }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return ctx.dataset.label + ': ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        grid: { display: false },
+                        ticks: { color: getTextColor() }
+                    },
+                    y: {
+                        stacked: true,
+                        beginAtZero: true,
+                        grid: { color: getGridColor() },
+                        ticks: {
+                            color: getTextColor(),
+                            callback: v => (v / 1000).toFixed(0) + ' тыс'
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Chart 3: Balance over time (line)
+    function initBalanceChart() {
+        const ctx = document.getElementById('balanceChart');
+        if (!ctx) return;
+
+        const principal = 1000000;
+        const rate = 15;
+        const months = 60;
+        const monthlyRate = rate / 100 / 12;
+        const payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+
+        const labels = [];
+        const balanceData = [];
+        let balance = principal;
+
+        for (let i = 0; i <= months; i++) {
+            if (i % 6 === 0 || i === months) {
+                labels.push(i + ' мес');
+                balanceData.push(Math.round(Math.max(0, balance)));
+            }
+            if (i < months) {
+                const interest = balance * monthlyRate;
+                balance -= (payment - interest);
+            }
+        }
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Остаток долга',
+                    data: balanceData,
+                    borderColor: colors.primary,
+                    backgroundColor: colors.primaryLight,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 3,
+                    pointHoverRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return 'Остаток: ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: getGridColor() },
+                        ticks: {
+                            color: getTextColor(),
+                            callback: v => (v / 1000000).toFixed(1) + ' млн'
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: getTextColor() }
+                    }
+                }
+            }
+        });
+    }
+
+    // Chart 4: Term comparison (grouped bar)
+    function initTermChart() {
+        const ctx = document.getElementById('termChart');
+        if (!ctx) return;
+
+        const principal = 1000000;
+        const rate = 15;
+        const terms = [1, 2, 3, 5, 7, 10];
+
+        const payments = [];
+        const overpayments = [];
+
+        terms.forEach(years => {
+            const months = years * 12;
+            const monthlyRate = rate / 100 / 12;
+            const payment = principal * monthlyRate * Math.pow(1 + monthlyRate, months) / (Math.pow(1 + monthlyRate, months) - 1);
+            payments.push(Math.round(payment));
+            overpayments.push(Math.round(payment * months - principal));
+        });
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: terms.map(t => t + ' лет'),
+                datasets: [
+                    {
+                        label: 'Ежемесячный платёж',
+                        data: payments,
+                        backgroundColor: colors.primary,
+                        borderRadius: 4,
+                        yAxisID: 'y'
+                    },
+                    {
+                        label: 'Общая переплата',
+                        data: overpayments,
+                        backgroundColor: colors.warning,
+                        borderRadius: 4,
+                        yAxisID: 'y1'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: { color: getTextColor() }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return ctx.dataset.label + ': ' + ctx.raw.toLocaleString('ru-RU') + ' ₽';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        beginAtZero: true,
+                        grid: { color: getGridColor() },
+                        ticks: {
+                            color: getTextColor(),
+                            callback: v => (v / 1000).toFixed(0) + ' тыс'
+                        },
+                        title: { display: true, text: 'Платёж (₽)', color: getTextColor() }
+                    },
+                    y1: {
+                        type: 'linear',
+                        position: 'right',
+                        beginAtZero: true,
+                        grid: { display: false },
+                        ticks: {
+                            color: getTextColor(),
+                            callback: v => (v / 1000).toFixed(0) + ' тыс'
+                        },
+                        title: { display: true, text: 'Переплата (₽)', color: getTextColor() }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: getTextColor() }
+                    }
+                }
+            }
+        });
+    }
+
+    // Chart 5: Overpayment structure (doughnut)
+    function initStructureChart() {
+        const ctx = document.getElementById('structureChart');
+        if (!ctx) return;
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Проценты', 'Страховка', 'Комиссии', 'Другое'],
+                datasets: [{
+                    data: [72, 15, 8, 5],
+                    backgroundColor: [
+                        colors.primary,
+                        colors.warning,
+                        colors.error,
+                        colors.secondary
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: getTextColor(),
+                            padding: 16,
+                            usePointStyle: true
+                        }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(ctx) {
+                                return ctx.label + ': ' + ctx.raw + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Initialize all charts when DOM is ready
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initCharts);
+    } else {
+        initCharts();
+    }
+
+    function initCharts() {
+        // Check if Chart.js is loaded
+        if (typeof Chart === 'undefined') {
+            console.warn('Chart.js not loaded');
+            return;
+        }
+        initOverpaymentChart();
+        initAmortizationChart();
+        initBalanceChart();
+        initTermChart();
+        initStructureChart();
+    }
+})();
+</script>
+
+<style>
+.content{max-width:900px;margin:0 auto}
+.content h2{margin-top:2.5rem;margin-bottom:1rem;font-size:var(--md-sys-typescale-headline-small-size)}
+.content p{margin-bottom:1rem;line-height:1.7;color:var(--md-sys-color-on-surface-variant)}
+.content ul{margin-bottom:1rem;padding-left:1.5rem}
+.content li{margin-bottom:0.5rem}
+.chart-container{margin:16px 0}
+</style>
 {{/layout}}
