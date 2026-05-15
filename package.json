@@ -10,7 +10,7 @@
     "test:jest": "jest --testPathIgnorePatterns='tests/e2e'",
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
-    "publish": "npm run build && gh-pages -d dist",
+    "publish": "npm run build && node deploy.js",
     "validate": "node src/scripts/validate-data.js",
     "migrate": "node src/scripts/migrate-data-structure.js",
     "restructure": "node src/scripts/restructure-data.js",
