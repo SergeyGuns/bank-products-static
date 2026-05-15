@@ -1,0 +1,22 @@
+{
+  "lastUpdate": "2026-05-15T14:32:00+03:00",
+  "totalProducts": 107,
+  "totalBanks": 28,
+  "productsWithSummary": 107,
+  "productsWithGoodContent": 97,
+  "productsNeedImprovement": 0,
+  "pdfDocumentsFound": 45,
+  "pdfDocumentsParsed": 5,
+  "newBanksAdded": [
+    "ЮниКредит Банк",
+    "Хоум Банк",
+    "Почта Банк",
+    "Новикомбанк",
+    "Роскосмосбанк",
+    "Экспобанк",
+    "Инвестторгбанк"
+  ],
+  "iterationsCompleted": 2,
+  "siteStatus": "200 OK",
+  "notes": "Iteration 2: added 8 new banks (10 products), improved 3 products, parsed 1 new PDF"
+}
