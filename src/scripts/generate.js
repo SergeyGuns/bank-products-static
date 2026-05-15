@@ -259,6 +259,12 @@ async function generateStaticPages(templateMap, distDir) {
         { template: templateMap['privacy.html'], name: 'privacy.html', meta: { title: 'Политика конфиденциальности | Bank-Select', description: 'Политика конфиденциальности' } },
         { template: templateMap['articles/credit-chose.html'], name: 'articles/credit-chose.html', meta: { title: 'Как правильно выбрать кредит', description: 'Рекомендации по выбору кредита' } },
         { template: templateMap['articles/credit-card-chose.html'], name: 'articles/credit-card-chose.html', meta: { title: 'Как выбрать кредитную карту', description: 'Рекомендации по выбору кредитной карты' } },
+        { template: templateMap['articles/lending-intro.html'], name: 'articles/lending-intro.html', meta: { title: 'Льготное кредитование: как государство платит за ваш заём', description: 'Разбор механизма субсидирования ставок, законодательная база и ключевые критерии' } },
+        { template: templateMap['articles/mortgage-2026.html'], name: 'articles/mortgage-2026.html', meta: { title: 'Семейная и специализированная ипотека в 2026 году', description: 'Обзор программ льготной ипотеки: семейная, сельская, ИТ, арктическая' } },
+        { template: templateMap['articles/business-1764.html'], name: 'articles/business-1764.html', meta: { title: 'Программа 1764: льготные кредиты для бизнеса', description: 'Динамическая ставка для МСП, лимиты, подпрограммы, примеры расчёта' } },
+        { template: templateMap['articles/it-credit-469.html'], name: 'articles/it-credit-469.html', meta: { title: 'Льготные кредиты для ИТ-сектора и стартапов под 3%', description: 'Программа Взлёт: кредиты для малых технологических компаний' } },
+        { template: templateMap['articles/apk-1528.html'], name: 'articles/apk-1528.html', meta: { title: 'Программа 1528: льготные кредиты для сельского хозяйства', description: 'Субсидированные кредиты для сельхозпроизводителей' } },
+        { template: templateMap['articles/umbrella-guarantees.html'], name: 'articles/umbrella-guarantees.html', meta: { title: 'Зонтичные поручительства: кредит без залога', description: 'Государственные гарантии для МСП с недостаточным обеспечением' } },
     ];
 
     await Promise.all(staticPages.map(({ template, name, meta }) =>
