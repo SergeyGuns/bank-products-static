@@ -45,7 +45,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\auto-loans\\-1770331449890.json"
+      "__sourceFile": "src\\data\\pdfs\\auto-loans\\-1770331449890.json",
+      "summary": "Автокредит \"Выгодный старт\" от Газпромбанк: от 7.9%, до 7 лет"
     },
     {
       "id": "raiffeisen-business-loan-1",
@@ -54,12 +55,11 @@
       "bankName": "Райффайзенбанк",
       "source": "manual-addition",
       "featured": false,
-      "shortDescription": "Бизнес-кредит",
+      "shortDescription": "Бизнес-кредит на развитие бизнеса",
       "fullDescription": "Информация о продукте Бизнес-кредит от Райффайзенбанк",
       "imageUrl": "/img/banks/raiffeisen.svg",
       "features": [
-        "Продукт business-loans",
-        "От банка Райффайзенбанк"
+        "Процентная ставка: уточняйте на сайте банка"
       ],
       "conditions": [
         "Условия зависят от продукта"
@@ -83,7 +83,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\business-loans\\-1770330816182.json"
+      "__sourceFile": "src\\data\\pdfs\\business-loans\\-1770330816182.json",
+      "summary": "Бизнес-кредит от Райффайзенбанк: уточняйте на сайте банка"
     },
     {
       "id": "sberbank-1770331449885",
@@ -135,7 +136,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\consumer-loans\\-1770331449884.json"
+      "__sourceFile": "src\\data\\pdfs\\consumer-loans\\-1770331449884.json",
+      "summary": "Потребительский кредит \"Универсальный\" от СберБанк: от 12.9%, до 5 000 000 ₽, до 7 лет"
     },
     {
       "id": "vtb-1770331449888",
@@ -189,7 +191,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\consumer-loans\\-1770331449888.json"
+      "__sourceFile": "src\\data\\pdfs\\consumer-loans\\-1770331449888.json",
+      "summary": "Кредит \"На любые цели\" от ВТБ: от 9.9%, до 10 000 000 ₽, до 10 лет, кэшбэк до 10%"
     },
     {
       "id": "raiffeisen-credit-card-1",
@@ -236,7 +239,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\-1770330816176.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\-1770330816176.json",
+      "summary": "Кредитная карта «Халва» от Райффайзенбанк: от 29.9%, до 1 000 000 ₽, до 55 дней, кэшбэк до 10%"
     },
     {
       "id": "mts-credit-card-1",
@@ -283,7 +287,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\-1770330816179.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\-1770330816179.json",
+      "summary": "Кредитная карта МТС от МТС Банк: от 29.9%, до 500 000 ₽, до 120 дней, кэшбэк до 5%"
     },
     {
       "id": "psb-cc-180-days-no-percent-121",
@@ -341,7 +346,8 @@
         "title": "Кредитная карта 180 дней без % от ПСБ",
         "description": "Кредитная карта с льготным периодом до 180 дней и кешбэком до 26% от ПСБ"
       },
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\psb\\psb-kreditnaya-karta-180-dney-bez-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\psb\\psb-kreditnaya-karta-180-dney-bez-2026-02-03.json",
+      "summary": "Кредитная карта 180 дней без % от ПСБ: 59.99%, до 1 000 000 ₽, до 180 дней, кэшбэк до 26%"
     },
     {
       "id": "aliexpress-credit-card",
@@ -397,7 +403,8 @@
       },
       "validFrom": "2026-02-03",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\t-bank\\t-bank-kreditnaya-karta-aliexpress-ot-t-banka-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\t-bank\\t-bank-kreditnaya-karta-aliexpress-ot-t-banka-2026-02-03.json",
+      "summary": "Кредитная карта AliExpress от Т-Банка от Т-Банк: от 29.885%, до 1 000 000 ₽, до 55 дней, кэшбэк до 10%"
     },
     {
       "id": "all-games",
@@ -453,7 +460,8 @@
       },
       "validFrom": "2026-02-03",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\transabank\\transabank-kreditnaya-karta-all-games-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\transabank\\transabank-kreditnaya-karta-all-games-2026-02-03.json",
+      "summary": "Кредитная карта ALL Games от Трансабанк: от 29.855%, до 1 000 000 ₽, -"
     },
     {
       "id": "lamoda-credit-card",
@@ -508,7 +516,8 @@
       },
       "validFrom": "2026-02-03",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credit-cards\\transportnyy-kreditnyy-kompaniya\\transportnyy-kreditnyy-kompaniya-kreditnaya-karta-lamoda-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credit-cards\\transportnyy-kreditnyy-kompaniya\\transportnyy-kreditnyy-kompaniya-kreditnaya-karta-lamoda-2026-02-03.json",
+      "summary": "Кредитная карта Lamoda от Транспортный кредитный банк: от 29.885%, до 1 000 000 ₽, до 55 дней, кэшбэк -"
     },
     {
       "id": "gazprombank-auto-loan-premium-2024-02-03",
@@ -568,7 +577,8 @@
         "title": "Автокредит Премиум от Газпромбанка | Bank Select",
         "description": "Информация об автокредите Премиум от Газпромбанка. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\credits\\gazprombank\\gazprombank-auto-loan-premium-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credits\\gazprombank\\gazprombank-auto-loan-premium-2024-02-03.json",
+      "summary": "Автокредит Премиум от Газпромбанк: Ставка от 7.9%, Первоначальный взнос от 10%, Срок до 7 лет"
     },
     {
       "id": "psb-loan-any-purpose-123",
@@ -628,7 +638,8 @@
       },
       "validFrom": "2026-02-03",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\credits\\psb\\psb-potrebitelьskiy-kredit-na-lyubye-tseli-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credits\\psb\\psb-potrebitelьskiy-kredit-na-lyubye-tseli-2026-02-03.json",
+      "summary": "Потребительский кредит на любые цели от ПСБ: от 15,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "sberbank-personal-loan-standard-2024-02-03",
@@ -693,7 +704,8 @@
         "title": "Стандартный потребительский кредит от СберБанка | Bank Select",
         "description": "Информация о потребительском кредите от СберБанка. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\credits\\sberbank\\sberbank-personal-loan-standard-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credits\\sberbank\\sberbank-personal-loan-standard-2024-02-03.json",
+      "summary": "Стандартный потребительский кредит от СберБанк: от 12.9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "t-kn-5-0",
@@ -746,7 +758,8 @@
       "conditions": [
         "Условия могут отличаться в зависимости от категории клиента"
       ],
-      "referralLink": "https://т-банк.ru"
+      "referralLink": "https://т-банк.ru",
+      "summary": "Кредит наличными от Т-Банк: от 29.9% до 44.9%, от 500,000 до 5,000,000 рублей, от 12 месяцев до 60 месяцев (5 лет)"
     },
     {
       "id": "vtb-personal-loan-refinancing-2024-02-03",
@@ -810,7 +823,8 @@
         "title": "Кредит на рефинансирование от ВТБ | Bank Select",
         "description": "Информация о кредите на рефинансирование от ВТБ. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\credits\\vtb\\vtb-personal-loan-refinancing-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\credits\\vtb\\vtb-personal-loan-refinancing-2024-02-03.json",
+      "summary": "Кредит на рефинансирование от ВТБ: до 10%"
     },
     {
       "id": "rosbank-debit-card-1",
@@ -819,12 +833,13 @@
       "bankName": "Росбанк",
       "source": "manual-addition",
       "featured": false,
-      "shortDescription": "Дебетовая карта \"Свобода\"",
+      "shortDescription": "Дебетовая карта с кэшбэком и процентом на остаток",
       "fullDescription": "Информация о продукте Дебетовая карта \"Свобода\" от Росбанк",
       "imageUrl": "/img/banks/rosbank.svg",
       "features": [
-        "Продукт debit-cards",
-        "От банка Росбанк"
+        "Процент на остаток: до 7%",
+        "Кэшбэк: до 10%",
+        "Снятие наличных: бесплатно в банкоматах банка"
       ],
       "conditions": [
         "Условия зависят от продукта"
@@ -859,7 +874,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\debit-cards\\-1770330816183.json"
+      "__sourceFile": "src\\data\\pdfs\\debit-cards\\-1770330816183.json",
+      "summary": "Дебетовая карта \"Свобода\" от Росбанк: до 10%"
     },
     {
       "id": "psb-db-your-cashback-122",
@@ -881,7 +897,7 @@
         "Документы: паспорт РФ",
         "Для бесплатного обслуживания: выполнение одного из условий"
       ],
-      "referralLink": "https://www.psbank.ru/personal/cards/debit/your-cashback",
+      "referralLink": "https://pxl.leads.su/click/565e34ba9a90de6ab045cc9e0f987c9c?erid=2W5zFFyE2ME",
       "parameters": {
         "main": {
           "Процент кешбэка": "до 5% в трех категориях",
@@ -915,7 +931,8 @@
       },
       "validFrom": "2026-02-03",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\debit-cards\\psb\\psb-debetovaya-karta-tvoy-keshbek-2026-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\debit-cards\\psb\\psb-debetovaya-karta-tvoy-keshbek-2026-02-03.json",
+      "summary": "Дебетовая карта Твой кешбэк от ПСБ: до 5%, на остаток до 7%"
     },
     {
       "id": "raiffeisen-deposit-1",
@@ -924,12 +941,14 @@
       "bankName": "Райффайзенбанк",
       "source": "manual-addition",
       "featured": false,
-      "shortDescription": "Вклад \"Максимальный\"",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Информация о продукте Вклад \"Максимальный\" от Райффайзенбанк",
       "imageUrl": "/img/banks/raiffeisen.svg",
       "features": [
-        "Продукт deposits",
-        "От банка Райффайзенбанк"
+        "Процентная ставка: до 15%",
+        "Минимальная сумма: от 1 000 ₽",
+        "Срок вклада: от 3 месяцев до 3 лет",
+        "Ставка: до 12.5%"
       ],
       "conditions": [
         "Условия зависят от продукта"
@@ -966,7 +985,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\deposits\\-1770330816181.json"
+      "__sourceFile": "src\\data\\pdfs\\deposits\\-1770330816181.json",
+      "summary": "Вклад \"Максимальный\" от Райффайзенбанк: до 15%, от 1 месяца"
     },
     {
       "id": "gazprombank-deposit-profit-2024-02-03",
@@ -1044,7 +1064,8 @@
         "title": "Вклад Процент Профи от Газпромбанка | Bank Select",
         "description": "Информация о вкладе Процент Профи от Газпромбанка. Условия, процентные ставки, требования."
       },
-      "__sourceFile": "src\\data\\pdfs\\deposits\\gazprombank\\gazprombank-deposit-profit-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\deposits\\gazprombank\\gazprombank-deposit-profit-2024-02-03.json",
+      "summary": "Вклад Процент Профи от Газпромбанк: до 15%, до 1 500 000 ₽, от 1 до 61 дня"
     },
     {
       "id": "sberbank-deposit-maximum-2024-02-03",
@@ -1121,7 +1142,8 @@
         "title": "Вклад Максимальный от СберБанка | Bank Select",
         "description": "Информация о вкладе Максимальный от СберБанка. Условия, процентные ставки, требования."
       },
-      "__sourceFile": "src\\data\\pdfs\\deposits\\sberbank\\sberbank-deposit-maximum-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\deposits\\sberbank\\sberbank-deposit-maximum-2024-02-03.json",
+      "summary": "Вклад Максимальный от СберБанк: до 15%, от 1 месяца"
     },
     {
       "status": "active",
@@ -1171,7 +1193,8 @@
       "conditions": [
         "Условия могут отличаться в зависимости от категории клиента"
       ],
-      "referralLink": "https://tbank.ru"
+      "referralLink": "https://tbank.ru",
+      "summary": "deposits tbank от Т-Банк: до 15%, от 1 месяца"
     },
     {
       "id": "vtb-deposit-capital-2024-02-03",
@@ -1249,7 +1272,8 @@
         "title": "Вклад Капитал от ВТБ | Bank Select",
         "description": "Информация о вкладе Капитал от ВТБ. Условия, процентные ставки, требования."
       },
-      "__sourceFile": "src\\data\\pdfs\\deposits\\vtb\\vtb-deposit-capital-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\deposits\\vtb\\vtb-deposit-capital-2024-02-03.json",
+      "summary": "Вклад Капитал от ВТБ: до 15%, от 1 месяца, кэшбэк до 10%"
     },
     {
       "id": "citibank-premium-account-1",
@@ -1258,12 +1282,11 @@
       "bankName": "Ситибанк",
       "source": "manual-addition",
       "featured": false,
-      "shortDescription": "Премиальный банковский счет",
+      "shortDescription": "Цифровой банковский сервис",
       "fullDescription": "Информация о продукте Премиальный банковский счет от Ситибанк",
       "imageUrl": "/img/banks/citibank.svg",
       "features": [
-        "Продукт digital-services",
-        "От банка Ситибанк"
+        "Процентная ставка: уточняйте на сайте банка"
       ],
       "conditions": [
         "Условия зависят от продукта"
@@ -1287,7 +1310,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\digital-services\\-1770330816184.json"
+      "__sourceFile": "src\\data\\pdfs\\digital-services\\-1770330816184.json",
+      "summary": "Премиальный банковский счет от Ситибанк: уточняйте на сайте банка"
     },
     {
       "id": "psb-1770331449894",
@@ -1334,7 +1358,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\insurance\\-1770331449894.json"
+      "__sourceFile": "src\\data\\pdfs\\insurance\\-1770331449894.json",
+      "summary": "Страхование жизни и здоровья от ПСБ: до 10 000 000 ₽, Россия, от 1 года"
     },
     {
       "id": "tin-koff-bank-1770331449892",
@@ -1381,7 +1406,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\investments\\-1770331449892.json"
+      "__sourceFile": "src\\data\\pdfs\\investments\\-1770331449892.json",
+      "summary": "Инвестиционный продукт \"Долгосрочный рост\" от Т-Банк: 1000 ₽, низкий, средний, высокий, доходность, сохранность, рост"
     },
     {
       "status": "active",
@@ -1402,7 +1428,10 @@
       "title": "loans tbank",
       "imageUrl": "/img/banks/t-bank.svg",
       "features": [
-        "до 18 лет"
+        "Срок: до 18 лет",
+        "Процентная ставка: от 12,9%",
+        "Сумма кредита: до 5 000 000 ₽",
+        "Срок кредита: до 5 лет"
       ],
       "conditions": [
         "Условия могут отличаться в зависимости от категории клиента"
@@ -1421,7 +1450,8 @@
         "requirements": {}
       },
       "shortDescription": "Потребительский кредит от Т-Банк",
-      "fullDescription": "Потребительский кредит от Т-Банк. Срок: до 18 лет"
+      "fullDescription": "Потребительский кредит от Т-Банк. Срок: до 18 лет",
+      "summary": "loans tbank от Т-Банк: от 12,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "gazprombank-mortgage-new-building-2024-02-03",
@@ -1495,7 +1525,8 @@
         "title": "Ипотека на новостройку от Газпромбанка | Bank Select",
         "description": "Информация об ипотеке на новостройку от Газпромбанка. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\mortgage\\gazprombank\\gazprombank-mortgage-new-building-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\mortgage\\gazprombank\\gazprombank-mortgage-new-building-2024-02-03.json",
+      "summary": "Ипотека на новостройку от Газпромбанк: от 10.2%, до 60 млн ₽, до 30 лет"
     },
     {
       "id": "sberbank-mortgage-standard-2024-02-03",
@@ -1567,7 +1598,8 @@
         "title": "Стандартная ипотека от СберБанка | Bank Select",
         "description": "Информация об ипотечном кредите от СберБанка. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\mortgage\\sberbank\\sberbank-mortgage-standard-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\mortgage\\sberbank\\sberbank-mortgage-standard-2024-02-03.json",
+      "summary": "Стандартная ипотека от СберБанк: от 10.5%, до 30 лет"
     },
     {
       "id": "vtb-mortgage-family-2024-02-03",
@@ -1642,7 +1674,8 @@
         "title": "Семейная ипотека от ВТБ | Bank Select",
         "description": "Информация о семейной ипотеке от ВТБ. Условия, ставки, требования к заёмщику."
       },
-      "__sourceFile": "src\\data\\pdfs\\mortgage\\vtb\\vtb-mortgage-family-2024-02-03.json"
+      "__sourceFile": "src\\data\\pdfs\\mortgage\\vtb\\vtb-mortgage-family-2024-02-03.json",
+      "summary": "Семейная ипотека от ВТБ: от 21%, до 30 лет, кэшбэк до 10%"
     },
     {
       "status": "active",
@@ -1663,7 +1696,10 @@
       "title": "mortgages tbank",
       "imageUrl": "/img/banks/t-bank.svg",
       "features": [
-        "Условия уточняйте на сайте"
+        "Процентная ставка: от 10.4%",
+        "ПСК: 17.02%–24.14%",
+        "Первоначальный взнос: от 15.1%",
+        "Сумма кредита: до 30 млн ₽"
       ],
       "conditions": [
         "Условия могут отличаться в зависимости от категории клиента"
@@ -1679,8 +1715,9 @@
         "fees": {},
         "requirements": {}
       },
-      "shortDescription": "Ипотека от Т-Банк",
-      "fullDescription": "Ипотека от Т-Банк. Подробные условия уточняйте на сайте банка."
+      "shortDescription": "Ипотека на покупку жилья с господдержкой",
+      "fullDescription": "Ипотека от Т-Банк. Подробные условия уточняйте на сайте банка.",
+      "summary": "mortgages tbank от Т-Банк: от 10.4%, до 30 млн ₽"
     },
     {
       "id": "al-fa-bank-1770331449891",
@@ -1726,7 +1763,8 @@
       },
       "validFrom": "2026-02-05",
       "status": "active",
-      "__sourceFile": "src\\data\\pdfs\\savings\\-1770331449891.json"
+      "__sourceFile": "src\\data\\pdfs\\savings\\-1770331449891.json",
+      "summary": "Сберегательный счет \"Максимум\" от Альфа-Банк: до 8% годовых"
     },
     {
       "id": "psb--1778450038143",
@@ -1734,7 +1772,7 @@
       "bankName": "ПСБ",
       "type": "mortgage",
       "featured": false,
-      "shortDescription": "Семейная ипотека",
+      "shortDescription": "Ипотека на покупку жилья с господдержкой",
       "fullDescription": "Продукт \"Семейная ипотека\" от psb",
       "parameters": {
         "main": {
@@ -1773,7 +1811,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/psb.svg"
+      "imageUrl": "/img/banks/psb.svg",
+      "summary": "Семейная ипотека от ПСБ: от 19.6%, До 5 330 000 ₽"
     },
     {
       "id": "sberbank-credit-cards-1778452394772-n8ck6",
@@ -1819,7 +1858,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/sberbank.png"
+      "imageUrl": "/img/banks/sberbank.png",
+      "summary": "Кредитная СберКарта от СберБанк: от 9.8%, до 1 000 000 ₽, до 120 дней, кэшбэк до 30%"
     },
     {
       "id": "alfa-bank-credit-cards-1",
@@ -1866,7 +1906,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/alfa-bank.svg"
+      "imageUrl": "/img/banks/alfa-bank.svg",
+      "summary": "Кредитная карта 100 дней от Альфа-Банк: от 29.9%, до 1 000 000 ₽, до 100 дней, кэшбэк до 5%"
     },
     {
       "id": "alfa-bank-debit-cards-1",
@@ -1912,7 +1953,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/alfa-bank.svg"
+      "imageUrl": "/img/banks/alfa-bank.svg",
+      "summary": "Альфа-Карта от Альфа-Банк: до 10%, на остаток до 6%"
     },
     {
       "id": "alfa-bank-consumer-loans-1",
@@ -1960,7 +2002,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/alfa-bank.svg"
+      "imageUrl": "/img/banks/alfa-bank.svg",
+      "summary": "Потребительский кредит от Альфа-Банк: от 13,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "alfa-bank-mortgage-1",
@@ -2009,7 +2052,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/alfa-bank.svg"
+      "imageUrl": "/img/banks/alfa-bank.svg",
+      "summary": "Ипотека от Альфа-Банк: от 9.29%, до 50 млн ₽, до 30 лет"
     },
     {
       "id": "alfa-bank-deposits-1",
@@ -2017,7 +2061,7 @@
       "bankName": "Альфа-Банк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с максимальной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Альфа-Банка с повышенной процентной ставкой. Пополнение и частичное снятие без потери процентов.",
       "parameters": {
         "main": {
@@ -2056,7 +2100,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/alfa-bank.svg"
+      "imageUrl": "/img/banks/alfa-bank.svg",
+      "summary": "Вклад «Лучший» от Альфа-Банк: до 18%, от 1 месяца"
     },
     {
       "id": "vtb-credit-cards-1",
@@ -2103,7 +2148,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/vtb.png"
+      "imageUrl": "/img/banks/vtb.png",
+      "summary": "Кредитная карта Мультикарта от ВТБ: от 29.9%, до 10 000 000 ₽, до 110 дней, кэшбэк до 10%"
     },
     {
       "id": "vtb-debit-cards-1",
@@ -2149,7 +2195,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/vtb.png"
+      "imageUrl": "/img/banks/vtb.png",
+      "summary": "Дебетовая карта Мультикарта от ВТБ: до 5%, на остаток до 5%"
     },
     {
       "id": "gazprombank-credit-cards-1",
@@ -2196,7 +2243,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/gazprombank.svg"
+      "imageUrl": "/img/banks/gazprombank.svg",
+      "summary": "Кредитная карта GPB от Газпромбанк: от 29.9%, до 3 000 000 ₽, до 60 дней, кэшбэк до 7%"
     },
     {
       "id": "gazprombank-debit-cards-1",
@@ -2242,7 +2290,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/gazprombank.svg"
+      "imageUrl": "/img/banks/gazprombank.svg",
+      "summary": "Дебетовая карта GPB от Газпромбанк: до 5%, на остаток до 4%"
     },
     {
       "id": "mts-bank-debit-cards-1",
@@ -2288,7 +2337,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/mts-bank.svg"
+      "imageUrl": "/img/banks/mts-bank.svg",
+      "summary": "Дебетовая карта МТС Деньги от МТС Банк: до 5%, на остаток до 5%"
     },
     {
       "id": "mts-bank-consumer-loans-1",
@@ -2336,7 +2386,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/mts-bank.svg"
+      "imageUrl": "/img/banks/mts-bank.svg",
+      "summary": "Потребительский кредит от МТС Банк: от 12,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "mts-bank-mortgage-1",
@@ -2385,7 +2436,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/mts-bank.svg"
+      "imageUrl": "/img/banks/mts-bank.svg",
+      "summary": "Ипотека от МТС Банк: от 23.3%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "mts-bank-deposits-1",
@@ -2393,7 +2445,7 @@
       "bankName": "МТС Банк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад МТС Банка с повышенной процентной ставкой. Пополнение разрешено. Частичное снятие без потери процентов.",
       "parameters": {
         "main": {
@@ -2432,7 +2484,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/mts-bank.svg"
+      "imageUrl": "/img/banks/mts-bank.svg",
+      "summary": "Вклад «Надёжный» от МТС Банк: до 17%, от 1 месяца"
     },
     {
       "id": "raiffeisenbank-debit-cards-1",
@@ -2478,7 +2531,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/raiffeisen.svg"
+      "imageUrl": "/img/banks/raiffeisen.svg",
+      "summary": "Дебетовая карта от Райффайзенбанк: до 5%, на остаток до 4%"
     },
     {
       "id": "raiffeisenbank-mortgage-1",
@@ -2526,7 +2580,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/raiffeisen.svg"
+      "imageUrl": "/img/banks/raiffeisen.svg",
+      "summary": "Ипотека от Райффайзенбанк: от 20,9%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "rosbank-credit-cards-1",
@@ -2570,7 +2625,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/rosbank.svg"
+      "imageUrl": "/img/banks/rosbank.svg",
+      "summary": "Кредитная карта Росбанк от Росбанк: от 29.9%, до 3 000 000 ₽, до 60 дней, кэшбэк до 5%"
     },
     {
       "id": "rosbank-consumer-loans-1",
@@ -2616,7 +2672,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/rosbank.svg"
+      "imageUrl": "/img/banks/rosbank.svg",
+      "summary": "Потребительский кредит от Росбанк: от 15,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "rosbank-mortgage-1",
@@ -2662,7 +2719,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/rosbank.svg"
+      "imageUrl": "/img/banks/rosbank.svg",
+      "summary": "Ипотека от Росбанк: от 21%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "rosbank-deposits-1",
@@ -2670,7 +2728,7 @@
       "bankName": "Росбанк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Росбанка с повышенной процентной ставкой до 17%.",
       "parameters": {
         "main": {
@@ -2706,7 +2764,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/rosbank.svg"
+      "imageUrl": "/img/banks/rosbank.svg",
+      "summary": "Вклад «Доходный» от Росбанк: до 17%, от 1 месяца"
     },
     {
       "id": "psb-consumer-loans-1",
@@ -2752,7 +2811,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/psb.svg"
+      "imageUrl": "/img/banks/psb.svg",
+      "summary": "Потребительский кредит от ПСБ: от 15,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "sberbank-debit-cards-1",
@@ -2796,7 +2856,8 @@
       },
       "validFrom": "2026-05-10",
       "status": "active",
-      "imageUrl": "/img/banks/sberbank.png"
+      "imageUrl": "/img/banks/sberbank.png",
+      "summary": "Дебетовая карта СберБанк от СберБанк: до 5%, на остаток до 4%"
     },
     {
       "id": "citibank-debit-cards-1",
@@ -2804,7 +2865,7 @@
       "bankName": "Ситибанк",
       "type": "debit-cards",
       "featured": false,
-      "shortDescription": "Дебетовая карта с кэшбэком",
+      "shortDescription": "Дебетовая карта с кэшбэком и процентом на остаток",
       "fullDescription": "Дебетовая карта Ситибанка с кэшбэком до 3% и бесплатным обслуживанием.",
       "parameters": {
         "main": {
@@ -2838,7 +2899,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/citibank.svg"
+      "imageUrl": "/img/banks/citibank.svg",
+      "summary": "Дебетовая карта Citibank от Ситибанк: до 3%"
     },
     {
       "id": "citibank-consumer-loans-1",
@@ -2881,7 +2943,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/citibank.svg"
+      "imageUrl": "/img/banks/citibank.svg",
+      "summary": "Потребительский кредит от Ситибанк: от 14,9%, до 4 000 000 ₽, до 5 лет"
     },
     {
       "id": "citibank-deposits-1",
@@ -2889,7 +2952,7 @@
       "bankName": "Ситибанк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Ситибанка с повышенной ставкой до 16%.",
       "parameters": {
         "main": {
@@ -2924,7 +2987,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/citibank.svg"
+      "imageUrl": "/img/banks/citibank.svg",
+      "summary": "Вклад «Надёжный» от Ситибанк: до 16%, от 1 месяца"
     },
     {
       "id": "transbank-debit-cards-1",
@@ -2932,7 +2996,7 @@
       "bankName": "Трансабанк",
       "type": "debit-cards",
       "featured": false,
-      "shortDescription": "Дебетовая карта с кэшбэком",
+      "shortDescription": "Дебетовая карта с кэшбэком и процентом на остаток",
       "fullDescription": "Дебетовая карта Трансабанка с кэшбэком до 3%.",
       "parameters": {
         "main": {
@@ -2966,7 +3030,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transbank.svg"
+      "imageUrl": "/img/banks/transbank.svg",
+      "summary": "Дебетовая карта от Трансабанк: до 3%"
     },
     {
       "id": "transbank-consumer-loans-1",
@@ -3009,7 +3074,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transbank.svg"
+      "imageUrl": "/img/banks/transbank.svg",
+      "summary": "Потребительский кредит от Трансабанк: от 16,9%, до 3 000 000 ₽, до 5 лет"
     },
     {
       "id": "transbank-deposits-1",
@@ -3017,7 +3083,7 @@
       "bankName": "Трансабанк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Трансабанка с повышенной ставкой до 15%.",
       "parameters": {
         "main": {
@@ -3052,7 +3118,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transbank.svg"
+      "imageUrl": "/img/banks/transbank.svg",
+      "summary": "Вклад от Трансабанк: до 15%, от 1 месяца"
     },
     {
       "id": "tcb-debit-cards-1",
@@ -3060,7 +3127,7 @@
       "bankName": "Транспортный кредитный банк",
       "type": "debit-cards",
       "featured": false,
-      "shortDescription": "Дебетовая карта с кэшбэком",
+      "shortDescription": "Дебетовая карта с кэшбэком и процентом на остаток",
       "fullDescription": "Дебетовая карта ТКБ с кэшбэком до 5%.",
       "parameters": {
         "main": {
@@ -3094,7 +3161,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transport-credit-bank.svg"
+      "imageUrl": "/img/banks/transport-credit-bank.svg",
+      "summary": "Дебетовая карта от Транспортный кредитный банк: до 5%"
     },
     {
       "id": "tcb-consumer-loans-1",
@@ -3137,7 +3205,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transport-credit-bank.svg"
+      "imageUrl": "/img/banks/transport-credit-bank.svg",
+      "summary": "Потребительский кредит от Транспортный кредитный банк: от 17,9%, до 3 000 000 ₽, до 5 лет"
     },
     {
       "id": "tcb-deposits-1",
@@ -3145,7 +3214,7 @@
       "bankName": "Транспортный кредитный банк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад ТКБ с повышенной ставкой до 16%.",
       "parameters": {
         "main": {
@@ -3180,7 +3249,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transport-credit-bank.svg"
+      "imageUrl": "/img/banks/transport-credit-bank.svg",
+      "summary": "Вклад от Транспортный кредитный банк: до 16%, от 1 месяца"
     },
     {
       "id": "sovcombank-credit-cards-1",
@@ -3225,7 +3295,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.png"
+      "imageUrl": "/img/banks/sovcombank.png",
+      "summary": "Кредитная карта «Халва» от Совкомбанк: от 29.9%, до 500 000 ₽, до 120 дней, кэшбэк до 10%"
     },
     {
       "id": "sovcombank-debit-cards-1",
@@ -3268,7 +3339,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.png"
+      "imageUrl": "/img/banks/sovcombank.png",
+      "summary": "Дебетовая карта «Халва» от Совкомбанк: до 7%, на остаток до 7%"
     },
     {
       "id": "sovcombank-consumer-loans-1",
@@ -3311,7 +3383,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.png"
+      "imageUrl": "/img/banks/sovcombank.png",
+      "summary": "Потребительский кредит от Совкомбанк: от 12,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "sovcombank-mortgage-1",
@@ -3355,7 +3428,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.png"
+      "imageUrl": "/img/banks/sovcombank.png",
+      "summary": "Ипотека от Совкомбанк: от 20.49%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "sovcombank-deposits-1",
@@ -3363,7 +3437,7 @@
       "bankName": "Совкомбанк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с максимальной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Совкомбанка с максимальной ставкой до 18%.",
       "parameters": {
         "main": {
@@ -3398,7 +3472,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/sovcombank.png"
+      "imageUrl": "/img/banks/sovcombank.png",
+      "summary": "Вклад «Максимальный» от Совкомбанк: до 18%, от 1 месяца"
     },
     {
       "id": "otkritie-credit-cards-1",
@@ -3442,7 +3517,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkritie.svg"
+      "imageUrl": "/img/banks/otkritie.svg",
+      "summary": "Кредитная карта Открытие от Открытие: от 29.9%, до 5 000 000 ₽, до 55 дней, кэшбэк до 5%"
     },
     {
       "id": "otkritie-debit-cards-1",
@@ -3484,7 +3560,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkritie.svg"
+      "imageUrl": "/img/banks/otkritie.svg",
+      "summary": "Дебетовая карта Открытие от Открытие: до 5%, на остаток до 5%"
     },
     {
       "id": "otkritie-consumer-loans-1",
@@ -3527,7 +3604,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkritie.svg"
+      "imageUrl": "/img/banks/otkritie.svg",
+      "summary": "Потребительский кредит от Открытие: от 15,9%, до 5 000 000 ₽, до 5 лет"
     },
     {
       "id": "otkritie-mortgage-1",
@@ -3570,7 +3648,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkritie.svg"
+      "imageUrl": "/img/banks/otkritie.svg",
+      "summary": "Ипотека от Открытие: от 20,5%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "otkritie-deposits-1",
@@ -3578,7 +3657,7 @@
       "bankName": "Открытие",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад банка Открытие с повышенной ставкой до 17%.",
       "parameters": {
         "main": {
@@ -3613,7 +3692,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/otkritie.svg"
+      "imageUrl": "/img/banks/otkritie.svg",
+      "summary": "Вклад «Выгодный» от Открытие: до 17%, от 1 месяца"
     },
     {
       "id": "rshb-credit-cards-1",
@@ -3656,7 +3736,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/rosselkhozbank.svg"
+      "imageUrl": "/img/banks/rosselkhozbank.svg",
+      "summary": "Кредитная карта Россельхозбанк от Россельхозбанк: от 29.9%, до 3 000 000 ₽, до 55 дней, кэшбэк до 5%"
     },
     {
       "id": "rshb-debit-cards-1",
@@ -3698,7 +3779,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/rosselkhozbank.svg"
+      "imageUrl": "/img/banks/rosselkhozbank.svg",
+      "summary": "Дебетовая карта Россельхозбанк от Россельхозбанк: до 3%, на остаток до 3%"
     },
     {
       "id": "rshb-consumer-loans-1",
@@ -3741,7 +3823,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/rosselkhozbank.svg"
+      "imageUrl": "/img/banks/rosselkhozbank.svg",
+      "summary": "Потребительский кредит от Россельхозбанк: от 16,9%, до 5 000 000 ₽, до 7 лет"
     },
     {
       "id": "rshb-mortgage-1",
@@ -3784,7 +3867,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/rosselkhozbank.svg"
+      "imageUrl": "/img/banks/rosselkhozbank.svg",
+      "summary": "Ипотека от Россельхозбанк: от 9%, до 60 млн ₽, до 30 лет"
     },
     {
       "id": "rshb-deposits-1",
@@ -3792,7 +3876,7 @@
       "bankName": "Россельхозбанк",
       "type": "deposits",
       "featured": false,
-      "shortDescription": "Вклад с повышенной ставкой",
+      "shortDescription": "Вклад с конкурентной процентной ставкой",
       "fullDescription": "Срочный вклад Россельхозбанка с повышенной ставкой до 16%.",
       "parameters": {
         "main": {
@@ -3827,7 +3911,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/rosselkhozbank.svg"
+      "imageUrl": "/img/banks/rosselkhozbank.svg",
+      "summary": "Вклад «Доходный» от Россельхозбанк: до 16%, от 1 месяца"
     },
     {
       "id": "transbank-mortgage-1",
@@ -3870,7 +3955,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transbank.svg"
+      "imageUrl": "/img/banks/transbank.svg",
+      "summary": "Ипотека от Трансабанк: от 21%, до 30 000 000 ₽, до 30 лет"
     },
     {
       "id": "tcb-mortgage-1",
@@ -3913,7 +3999,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/transport-credit-bank.svg"
+      "imageUrl": "/img/banks/transport-credit-bank.svg",
+      "summary": "Ипотека от Транспортный кредитный банк: от 21%, до 30 000 000 ₽, до 30 лет"
     },
     {
       "id": "citibank-credit-cards-1",
@@ -3956,7 +4043,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/citibank.svg"
+      "imageUrl": "/img/banks/citibank.svg",
+      "summary": "Кредитная карта Citibank от Ситибанк: от 29.9%, до 3 000 000 ₽, до 60 дней, кэшбэк до 3%"
     },
     {
       "id": "citibank-mortgage-1",
@@ -3999,7 +4087,8 @@
       },
       "validFrom": "2026-05-11",
       "status": "active",
-      "imageUrl": "/img/banks/citibank.svg"
+      "imageUrl": "/img/banks/citibank.svg",
+      "summary": "Ипотека от Ситибанк: от 21%, до 60 000 000 ₽, до 30 лет"
     },
     {
       "id": "tbank-debit-s7",
@@ -4052,7 +4141,8 @@
         "updatedBy": "manual-addition"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Дебетовая карта S7 от Т-Банка от Т-Банк: на остаток до 6% годовых"
     },
     {
       "id": "rencredit-cc-1",
@@ -4105,7 +4195,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Кредитная карта 120 дней от Ренессанс Кредит: от 29.9%, до 500 000 ₽, до 120 дней, кэшбэк до 10%"
     },
     {
       "id": "rencredit-consumer-1",
@@ -4155,7 +4246,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Потребительский кредит от Ренессанс Кредит: от 14.9%, до 500 000 ₽, до 5 лет"
     },
     {
       "id": "domrf-mortgage-1",
@@ -4208,7 +4300,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Ипотека от Дом.рф от Дом.рф: от 4.9%, до 60 млн ₽, до 30 лет"
     },
     {
       "id": "akbars-debit-1",
@@ -4258,7 +4351,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Дебетовая карта Ак Барс от Ак Барс: до 5%, на остаток до 5% годовых"
     },
     {
       "id": "akbars-cc-1",
@@ -4309,7 +4403,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Кредитная карта Ак Барс от Ак Барс: от 29.9%, до 1 000 000 ₽, до 60 дней, кэшбэк до 5%"
     },
     {
       "id": "smp-debit-1",
@@ -4359,7 +4454,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Дебетовая карта СМП Банк от СМП Банк: до 10%, на остаток до 5% годовых"
     },
     {
       "id": "rossiya-debit-1",
@@ -4408,7 +4504,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Дебетовая карта Банк Россия от Банк Россия: до 5%, на остаток до 4% годовых"
     },
     {
       "id": "tbank-debit-yandex-plus",
@@ -4458,7 +4555,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Дебетовая карта Яндекс Плюс от Т-Банка от Т-Банк: до 10%, на остаток до 6% годовых"
     },
     {
       "id": "sberbank-debit-salary",
@@ -4510,7 +4608,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Зарплатная карта СберБанк от СберБанк: до 10%, на остаток до 7% годовых"
     },
     {
       "id": "rencredit-deposit-1",
@@ -4562,7 +4661,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Вклад Ренессанс Кредит от Ренессанс Кредит: до 14%, до 10 млн ₽, от 3 до 24 месяцев"
     },
     {
       "id": "akbars-deposit-1",
@@ -4611,7 +4711,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Вклад Ак Барс от Ак Барс: до 13.5%, от 1 до 24 месяцев"
     },
     {
       "id": "domrf-consumer-1",
@@ -4663,7 +4764,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Потребительский кредит Дом.рф от Дом.рф: от 15.9%, до 3 млн ₽, до 7 лет"
     },
     {
       "id": "rossiya-consumer-1",
@@ -4712,7 +4814,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Потребительский кредит Банк Россия от Банк Россия: от 16.9%, до 5 млн ₽, до 7 лет"
     },
     {
       "id": "akbars-mortgage-1",
@@ -4765,7 +4868,8 @@
         "updatedBy": "product-expansion"
       },
       "validFrom": "2026-05-15",
-      "status": "active"
+      "status": "active",
+      "summary": "Ипотека Ак Барс от Ак Барс: от 10.5%, до 30 млн ₽, до 30 лет"
     }
   ]
 }
