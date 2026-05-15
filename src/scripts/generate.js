@@ -11,6 +11,16 @@ const Handlebars = require('handlebars');
 Handlebars.registerHelper('add', (a, b) => a + b);
 Handlebars.registerHelper('isArray', value => Array.isArray(value));
 Handlebars.registerHelper('length', arr => Array.isArray(arr) ? arr.length : 0);
+// Comparison helpers
+Handlebars.registerHelper('eq', (a, b) => a === b);
+Handlebars.registerHelper('ne', (a, b) => a !== b);
+Handlebars.registerHelper('gt', (a, b) => a > b);
+Handlebars.registerHelper('gte', (a, b) => a >= b);
+Handlebars.registerHelper('lt', (a, b) => a < b);
+Handlebars.registerHelper('lte', (a, b) => a <= b);
+Handlebars.registerHelper('and', (a, b) => a && b);
+Handlebars.registerHelper('or', (a, b) => a || b);
+Handlebars.registerHelper('not', a => !a);
 
 async function main() {
     try {
@@ -141,9 +151,45 @@ async function main() {
 }
 
 async function generateProductPages(products, productTemplate, distDir) {
-    await Promise.all(products.map(product =>
-        fs.writeFile(path.join(distDir, 'products', `${product.id}.html`), productTemplate({ product, meta: product.meta }))
-    ));
+    const typeLabels = {
+        'credit-cards': 'Кредитные карты',
+        'debit-cards': 'Дебетовые карты',
+        'mortgage': 'Ипотека',
+        'consumer-loans': 'Кредиты',
+        'deposits': 'Вклады',
+        'auto-loans': 'Автокредиты',
+        'business-loans': 'Бизнес-кредиты',
+        'credits': 'Кредиты',
+        'digital-services': 'Цифровые сервисы',
+        'insurance-products': 'Страхование',
+        'investment-products': 'Инвестиции',
+        'savings': 'Сбережения',
+    };
+    const typeSchema = {
+        'credit-cards': 'CreditCard',
+        'debit-cards': 'PaymentCard',
+        'mortgage': 'MortgageLoan',
+        'consumer-loans': 'LoanOrCredit',
+        'deposits': 'DepositAccount',
+        'auto-loans': 'LoanOrCredit',
+        'business-loans': 'LoanOrCredit',
+        'credits': 'LoanOrCredit',
+        'digital-services': 'Service',
+        'insurance-products': 'InsurancePolicy',
+        'investment-products': 'InvestmentFund',
+        'savings': 'DepositAccount',
+    };
+    await Promise.all(products.map(product => {
+        const enriched = {
+            ...product,
+            typeLabel: typeLabels[product.type] || 'Продукты',
+            schemaType: typeSchema[product.type] || 'Product',
+        };
+        return fs.writeFile(
+            path.join(distDir, 'products', `${product.id}.html`),
+            productTemplate({ product: enriched, meta: product.meta, currentPath: `/products/${product.id}.html` })
+        );
+    }));
 }
 
 async function generateCategoryPages(categories, products, categoryTemplate, compareTemplate, distDir) {
