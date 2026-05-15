@@ -491,6 +491,56 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bank-select.ru/products/unicredit-cc-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/unicredit-consumer-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/homebank-cc-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/homebank-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/pochta-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/pochta-consumer-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/novikom-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/roscosmos-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/expo-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://bank-select.ru/products/investtorg-debit-1.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bank-select.ru/category/credit-cards.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
