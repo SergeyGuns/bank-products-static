@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Выгодные ипотечные программы от ведущих банков" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ипотека | Сравнение условий" />
+        <meta name="twitter:description" content="Выгодные ипотечные программы от ведущих банков" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="Ипотека | Сравнение условий" />
         <meta property="og:description" content="Выгодные ипотечные программы от ведущих банков" />
@@ -127,9 +138,11 @@
     <div class="filters mb-6">
         <select class="select input" id="bankFilter">
             <option value="all">Все банки</option>
+            <option value="Ак Барс">Ак Барс</option>
             <option value="Альфа-Банк">Альфа-Банк</option>
             <option value="ВТБ">ВТБ</option>
             <option value="Газпромбанк">Газпромбанк</option>
+            <option value="Дом.рф">Дом.рф</option>
             <option value="МТС Банк">МТС Банк</option>
             <option value="Открытие">Открытие</option>
             <option value="ПСБ">ПСБ</option>
@@ -333,6 +346,34 @@
             </ul>
             <div class="card-actions">
                 <a href="/products/citibank-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Дом.рф">
+            <img class="card-bank-logo mb-4" src="/img/banks/domrf.svg" alt="Ипотека от Дом.рф" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека от Дом.рф</h2>
+            <p class="text-light mb-2">Дом.рф</p>
+            <ul class="mb-4">
+                <li>Ставки от 4.9% с господдержкой</li>
+                <li>Семейная ипотека</li>
+                <li>ИТ-ипотека</li>
+                <li>Первоначальный взнос от 10%</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/domrf-mortgage-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ак Барс">
+            <img class="card-bank-logo mb-4" src="/img/banks/akbars.svg" alt="Ипотека Ак Барс" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Ипотека Ак Барс</h2>
+            <p class="text-light mb-2">Ак Барс</p>
+            <ul class="mb-4">
+                <li>Ставка от 10.5%</li>
+                <li>Первоначальный взнос от 10%</li>
+                <li>Срок до 30 лет</li>
+                <li>Семейная ипотека</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/akbars-mortgage-1.html" class="btn btn-primary">Подробнее</a>
             </div>
         </article>
     </div>

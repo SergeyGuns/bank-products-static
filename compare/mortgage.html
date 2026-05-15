@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Сравните Ипотека от разных банков и выберите самое выгодное предложение" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Сравнение Ипотека | Выбор лучших предложений" />
+        <meta name="twitter:description" content="Сравните Ипотека от разных банков и выберите самое выгодное предложение" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="Сравнение Ипотека | Выбор лучших предложений" />
         <meta property="og:description" content="Сравните Ипотека от разных банков и выберите самое выгодное предложение" />
@@ -137,6 +148,8 @@
                     <th>Процентная ставка</th>
                     <th>Первоначальный взнос</th>
                     <th>Срок кредита</th>
+                    <th>ПСК</th>
+                    <th>Сумма кредита</th>
                     <th>application_fee</th>
                     <th>issuance_fee</th>
                     <th>early_repayment_fee</th>
@@ -164,9 +177,11 @@
                     <td>от 1 до 30 лет</td>
                     <td>500 000 ₽</td>
                     <td>60 000 000 ₽</td>
-                    <td>от 10.5%</td>
-                    <td>от 15%</td>
+                    <td>от 10.2%</td>
+                    <td>от 10%</td>
                     <td>до 30 лет</td>
+                    <td>17.5%–25.58%</td>
+                    <td>до 60 млн ₽</td>
                     <td>Бесплатно</td>
                     <td>0.7% от суммы кредита</td>
                     <td>Бесплатно</td>
@@ -195,6 +210,8 @@
                     <td>от 10.5%</td>
                     <td>от 15%</td>
                     <td>до 30 лет</td>
+                    <td></td>
+                    <td></td>
                     <td>Бесплатно</td>
                     <td>1% от суммы кредита</td>
                     <td>Бесплатно</td>
@@ -220,9 +237,11 @@
                     <td>от 1 до 30 лет</td>
                     <td>300 000 ₽</td>
                     <td>12 000 000 ₽</td>
-                    <td>от 10.5%</td>
-                    <td>от 15%</td>
+                    <td>от 21%</td>
+                    <td>от 30.1%</td>
                     <td>до 30 лет</td>
+                    <td>22.15%–29.62%</td>
+                    <td></td>
                     <td>Бесплатно</td>
                     <td>0.5% от суммы кредита</td>
                     <td>Бесплатно</td>
@@ -248,9 +267,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>уточняйте на сайте банка</td>
+                    <td>от 10.4%</td>
+                    <td>от 15.1%</td>
                     <td></td>
-                    <td></td>
+                    <td>17.02%–24.14%</td>
+                    <td>до 30 млн ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -276,9 +297,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td>от 19.6%</td>
+                    <td>от 30.01%</td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>19.51%–37.28%</td>
+                    <td>До 5 330 000 ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -304,9 +327,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>от 20,1%</td>
+                    <td>от 9.29%</td>
                     <td>от 10%</td>
                     <td></td>
+                    <td>18.29%–33.82%</td>
+                    <td>до 50 млн ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -332,9 +357,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>от 20,5%</td>
-                    <td>от 10%</td>
+                    <td>от 23.3%</td>
+                    <td>от 20.1%</td>
                     <td></td>
+                    <td>24.3%–26.27%</td>
+                    <td>до 60 000 000 ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -364,6 +391,8 @@
                     <td>от 10%</td>
                     <td></td>
                     <td></td>
+                    <td>до 60 000 000 ₽</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>бесплатно</td>
@@ -392,6 +421,8 @@
                     <td>от 10%</td>
                     <td></td>
                     <td></td>
+                    <td>до 60 000 000 ₽</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>бесплатно</td>
@@ -416,9 +447,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>от 20,5%</td>
-                    <td>от 10%</td>
+                    <td>от 20.49%</td>
+                    <td>от 30.01%</td>
                     <td></td>
+                    <td>23.43%–25.35%</td>
+                    <td>до 60 000 000 ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -448,6 +481,8 @@
                     <td>от 10%</td>
                     <td></td>
                     <td></td>
+                    <td>до 60 000 000 ₽</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>бесплатно</td>
@@ -472,9 +507,11 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td>от 21%</td>
-                    <td>от 10%</td>
+                    <td>от 9%</td>
+                    <td>от 15%</td>
                     <td></td>
+                    <td></td>
+                    <td>до 60 млн ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -504,6 +541,8 @@
                     <td>от 10%</td>
                     <td></td>
                     <td></td>
+                    <td>до 30 000 000 ₽</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>бесплатно</td>
@@ -531,6 +570,8 @@
                     <td>от 21%</td>
                     <td>от 10%</td>
                     <td></td>
+                    <td></td>
+                    <td>до 30 000 000 ₽</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -560,6 +601,8 @@
                     <td>от 10%</td>
                     <td></td>
                     <td></td>
+                    <td>до 60 000 000 ₽</td>
+                    <td></td>
                     <td></td>
                     <td></td>
                     <td>бесплатно</td>
@@ -572,6 +615,66 @@
                     <td>от 21 года</td>
                     <td></td>
                     <td></td>
+                </tr>
+                <tr class="best-offer">
+                    <td>
+                        <strong>Дом.рф</strong><br>
+                        <small>Ипотека от Дом.рф</small>
+                        <br><span class="badge badge-primary">★ Лучшее</span>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 4.9%</td>
+                    <td>от 10%</td>
+                    <td>до 30 лет</td>
+                    <td></td>
+                    <td>до 60 млн ₽</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td>обязательно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td></td>
+                    <td>Паспорт РФ,Справка о доходах</td>
+                </tr>
+                <tr class="">
+                    <td>
+                        <strong>Ак Барс</strong><br>
+                        <small>Ипотека Ак Барс</small>
+                        
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 10.5%</td>
+                    <td>от 10%</td>
+                    <td>до 30 лет</td>
+                    <td></td>
+                    <td>до 30 млн ₽</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>бесплатно</td>
+                    <td>обязательно</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>от 21 года</td>
+                    <td></td>
+                    <td>Паспорт РФ,Справка о доходах</td>
                 </tr>
             </tbody>
         </table>

@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Сравните кредитные карты разных банков и выберите подходящую" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Кредитные карты | Сравнение и оформление" />
+        <meta name="twitter:description" content="Сравните кредитные карты разных банков и выберите подходящую" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="Кредитные карты | Сравнение и оформление" />
         <meta property="og:description" content="Сравните кредитные карты разных банков и выберите подходящую" />
@@ -127,6 +138,7 @@
     <div class="filters mb-6">
         <select class="select input" id="bankFilter">
             <option value="all">Все банки</option>
+            <option value="Ак Барс">Ак Барс</option>
             <option value="Альфа-Банк">Альфа-Банк</option>
             <option value="ВТБ">ВТБ</option>
             <option value="Газпромбанк">Газпромбанк</option>
@@ -134,6 +146,7 @@
             <option value="Открытие">Открытие</option>
             <option value="ПСБ">ПСБ</option>
             <option value="Райффайзенбанк">Райффайзенбанк</option>
+            <option value="Ренессанс Кредит">Ренессанс Кредит</option>
             <option value="Росбанк">Росбанк</option>
             <option value="Россельхозбанк">Россельхозбанк</option>
             <option value="СберБанк">СберБанк</option>
@@ -337,6 +350,33 @@
             </ul>
             <div class="card-actions">
                 <a href="/products/citibank-credit-cards-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ренессанс Кредит">
+            <img class="card-bank-logo mb-4" src="/img/banks/rencredit.svg" alt="Кредитная карта 120 дней" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Кредитная карта 120 дней</h2>
+            <p class="text-light mb-2">Ренессанс Кредит</p>
+            <ul class="mb-4">
+                <li>Льготный период до 120 дней</li>
+                <li>Кэшбэк до 10% в категориях</li>
+                <li>Кредитный лимит до 500 000 ₽</li>
+                <li>Бесплатное обслуживание при обороте от 15 000 ₽/мес</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rencredit-cc-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ак Барс">
+            <img class="card-bank-logo mb-4" src="/img/banks/akbars.svg" alt="Кредитная карта Ак Барс" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Кредитная карта Ак Барс</h2>
+            <p class="text-light mb-2">Ак Барс</p>
+            <ul class="mb-4">
+                <li>Льготный период до 60 дней</li>
+                <li>Кэшбэк до 5%</li>
+                <li>Кредитный лимит до 1 000 000 ₽</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/akbars-cc-1.html" class="btn btn-primary">Подробнее</a>
             </div>
         </article>
     </div>

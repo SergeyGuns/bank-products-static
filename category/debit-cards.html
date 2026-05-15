@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Лучшие дебетовые карты с кэшбэком и процентом на остаток" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Дебетовые карты | Сравнение и выбор" />
+        <meta name="twitter:description" content="Лучшие дебетовые карты с кэшбэком и процентом на остаток" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="Дебетовые карты | Сравнение и выбор" />
         <meta property="og:description" content="Лучшие дебетовые карты с кэшбэком и процентом на остаток" />
@@ -127,7 +138,9 @@
     <div class="filters mb-6">
         <select class="select input" id="bankFilter">
             <option value="all">Все банки</option>
+            <option value="Ак Барс">Ак Барс</option>
             <option value="Альфа-Банк">Альфа-Банк</option>
+            <option value="Банк Россия">Банк Россия</option>
             <option value="ВТБ">ВТБ</option>
             <option value="Газпромбанк">Газпромбанк</option>
             <option value="МТС Банк">МТС Банк</option>
@@ -138,7 +151,9 @@
             <option value="Россельхозбанк">Россельхозбанк</option>
             <option value="СберБанк">СберБанк</option>
             <option value="Ситибанк">Ситибанк</option>
+            <option value="СМП Банк">СМП Банк</option>
             <option value="Совкомбанк">Совкомбанк</option>
+            <option value="Т-Банк">Т-Банк</option>
             <option value="Трансабанк">Трансабанк</option>
             <option value="Транспортный кредитный банк">Транспортный кредитный банк</option>
         </select>
@@ -320,6 +335,89 @@
             </ul>
             <div class="card-actions">
                 <a href="/products/rshb-debit-cards-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Т-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/tbank.svg" alt="Дебетовая карта S7 от Т-Банка" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Дебетовая карта S7 от Т-Банка</h2>
+            <p class="text-light mb-2">Т-Банк</p>
+            <ul class="mb-4">
+                <li>Кэшбэк милями S7 за покупки</li>
+                <li>Повышенный кэшбэк на авиабилеты</li>
+                <li>Бесплатное обслуживание при выполнении условий</li>
+                <li>Процент на остаток по карте</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tbank-debit-s7.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ак Барс">
+            <img class="card-bank-logo mb-4" src="/img/banks/akbars.svg" alt="Дебетовая карта Ак Барс" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Дебетовая карта Ак Барс</h2>
+            <p class="text-light mb-2">Ак Барс</p>
+            <ul class="mb-4">
+                <li>Кэшбэк до 5%</li>
+                <li>Процент на остаток до 5%</li>
+                <li>Бесплатное обслуживание</li>
+                <li>Снятие наличных без комиссии</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/akbars-debit-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="СМП Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/smp.svg" alt="Дебетовая карта СМП Банк" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Дебетовая карта СМП Банк</h2>
+            <p class="text-light mb-2">СМП Банк</p>
+            <ul class="mb-4">
+                <li>Кэшбэк до 10% на АЗС</li>
+                <li>Кэшбэк до 5% в супермаркетах</li>
+                <li>Процент на остаток до 5%</li>
+                <li>Бесплатное обслуживание</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/smp-debit-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Банк Россия">
+            <img class="card-bank-logo mb-4" src="/img/banks/rossiya.svg" alt="Дебетовая карта Банк Россия" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Дебетовая карта Банк Россия</h2>
+            <p class="text-light mb-2">Банк Россия</p>
+            <ul class="mb-4">
+                <li>Кэшбэк до 5%</li>
+                <li>Процент на остаток до 4%</li>
+                <li>Бесплатное обслуживание</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rossiya-debit-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Т-Банк">
+            <img class="card-bank-logo mb-4" src="/img/banks/tbank.svg" alt="Дебетовая карта Яндекс Плюс от Т-Банка" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Дебетовая карта Яндекс Плюс от Т-Банка</h2>
+            <p class="text-light mb-2">Т-Банк</p>
+            <ul class="mb-4">
+                <li>Яндекс Плюс в подарок</li>
+                <li>Кэшбэк до 10%</li>
+                <li>Процент на остаток до 6%</li>
+                <li>Бесплатное обслуживание</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/tbank-debit-yandex-plus.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="СберБанк">
+            <img class="card-bank-logo mb-4" src="/img/banks/sberbank.svg" alt="Зарплатная карта СберБанк" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Зарплатная карта СберБанк</h2>
+            <p class="text-light mb-2">СберБанк</p>
+            <ul class="mb-4">
+                <li>Повышенный процент на остаток до 7%</li>
+                <li>Кэшбэк до 10% для зарплатных клиентов</li>
+                <li>Бесплатное обслуживание</li>
+                <li>Бесплатные переводы</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/sberbank-debit-salary.html" class="btn btn-primary">Подробнее</a>
             </div>
         </article>
     </div>

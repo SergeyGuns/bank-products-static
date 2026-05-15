@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="Лучшие вклады с высокими процентными ставками" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Вклады | Сравнение ставок" />
+        <meta name="twitter:description" content="Лучшие вклады с высокими процентными ставками" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="Вклады | Сравнение ставок" />
         <meta property="og:description" content="Лучшие вклады с высокими процентными ставками" />
@@ -127,12 +138,14 @@
     <div class="filters mb-6">
         <select class="select input" id="bankFilter">
             <option value="all">Все банки</option>
+            <option value="Ак Барс">Ак Барс</option>
             <option value="Альфа-Банк">Альфа-Банк</option>
             <option value="ВТБ">ВТБ</option>
             <option value="Газпромбанк">Газпромбанк</option>
             <option value="МТС Банк">МТС Банк</option>
             <option value="Открытие">Открытие</option>
             <option value="Райффайзенбанк">Райффайзенбанк</option>
+            <option value="Ренессанс Кредит">Ренессанс Кредит</option>
             <option value="Росбанк">Росбанк</option>
             <option value="Россельхозбанк">Россельхозбанк</option>
             <option value="СберБанк">СберБанк</option>
@@ -321,6 +334,34 @@
             </ul>
             <div class="card-actions">
                 <a href="/products/rshb-deposits-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ренессанс Кредит">
+            <img class="card-bank-logo mb-4" src="/img/banks/rencredit.svg" alt="Вклад Ренессанс Кредит" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Вклад Ренессанс Кредит</h2>
+            <p class="text-light mb-2">Ренессанс Кредит</p>
+            <ul class="mb-4">
+                <li>Ставка до 14%</li>
+                <li>Срок от 3 месяцев</li>
+                <li>Пополнение без ограничений</li>
+                <li>Частичное снятие до 50%</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/rencredit-deposit-1.html" class="btn btn-primary">Подробнее</a>
+            </div>
+        </article>
+        <article class="card card-hover" data-bank="Ак Барс">
+            <img class="card-bank-logo mb-4" src="/img/banks/akbars.svg" alt="Вклад Ак Барс" loading="lazy" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+            <h2 class="mb-2">Вклад Ак Барс</h2>
+            <p class="text-light mb-2">Ак Барс</p>
+            <ul class="mb-4">
+                <li>Ставка до 13.5%</li>
+                <li>Срок от 1 месяца</li>
+                <li>Пополнение доступно</li>
+                <li>Капитализация процентов</li>
+            </ul>
+            <div class="card-actions">
+                <a href="/products/akbars-deposit-1.html" class="btn btn-primary">Подробнее</a>
             </div>
         </article>
     </div>
