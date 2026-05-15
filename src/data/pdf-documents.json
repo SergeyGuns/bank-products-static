@@ -1,0 +1,86 @@
+[
+  {
+    "bank": "Газпромбанк",
+    "url": "https://www.gazprombank.ru/personal/take_credit/mortgage/documents/",
+    "pdfs": []
+  },
+  {
+    "bank": "СберБанк",
+    "url": "https://www.sberbank.ru/ru/person/credits/home/documents",
+    "pdfs": []
+  },
+  {
+    "bank": "ВТБ",
+    "url": "https://www.vtb.ru/personal/ipoteka/documents/",
+    "pdfs": [
+      {
+        "url": "https://www.vtb.ru/media-files/vtb.ru/sitepages/ir/disclosure/documents/Polozhenie_ob_organizatsii_obrabotki_personalnykh_dannykh_vypiska.pdf",
+        "text": "Положение об организации обработки персональных данных в Банке ВТБ (ПАО) (выписка)"
+      }
+    ]
+  },
+  {
+    "bank": "Альфа-Банк",
+    "url": "https://alfabank.ru/get-money/mortgage/documents/",
+    "pdfs": []
+  },
+  {
+    "bank": "Т-Банк",
+    "url": "https://www.tbank.ru/personal/mortgage/documents/",
+    "pdfs": []
+  },
+  {
+    "bank": "ПСБ",
+    "url": "https://www.psbank.ru/personal/mortgage/documents",
+    "pdfs": []
+  },
+  {
+    "bank": "МТС Банк",
+    "url": "https://www.mtsbank.ru/personal/ipoteka/documents/",
+    "error": "Navigation timeout of 20000 ms exceeded",
+    "pdfs": []
+  },
+  {
+    "bank": "Райффайзенбанк",
+    "url": "https://www.raiffeisen.ru/retail/mortgage/documents/",
+    "pdfs": [
+      {
+        "url": "https://www.raiffeisen.ru/static/common/default/sogl_dlya_posetiteley_saita.pdf",
+        "text": "с условиями обработки файлов cookie"
+      },
+      {
+        "url": "https://www.raiffeisen.ru/common/img/uploaded/files/about/sogl_dlya_posetiteley_saita.pdf",
+        "text": "Продолжая пользование сайтом, я выражаю согласие на обработку моих персональных данных."
+      },
+      {
+        "url": "https://www.raiffeisen.ru/static/common/about/disclaimer/policy_processing_of_personal_data.pdf",
+        "text": "Политика в отношении обработки персональных данных."
+      }
+    ]
+  },
+  {
+    "bank": "Росбанк",
+    "url": "https://www.rosbank.ru/personal/ipoteka/documents/",
+    "pdfs": [
+      {
+        "url": "https://cdn.tbank.ru/static/documents/e4f5df1b-5401-4091-b6ca-8af82e27ed4b.pdf",
+        "text": "Политика обработки персональных данных Т‑Банка"
+      }
+    ]
+  },
+  {
+    "bank": "Совкомбанк",
+    "url": "https://sovcombank.ru/personal/ipoteka/documents/",
+    "pdfs": []
+  },
+  {
+    "bank": "Открытие",
+    "url": "https://www.open.ru/personal/mortgage/documents/",
+    "pdfs": []
+  },
+  {
+    "bank": "Россельхозбанк",
+    "url": "https://www.rshb.ru/personal/ipoteka/documents/",
+    "pdfs": []
+  }
+]
