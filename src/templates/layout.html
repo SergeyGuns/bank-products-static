@@ -4,6 +4,17 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="{{#if meta}}{{meta.description}}{{else}}Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты{{/if}}" />
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="{{#if meta}}{{meta.title}}{{else}}Банковские продукты{{/if}}" />
+        <meta name="twitter:description" content="{{#if meta}}{{meta.description}}{{else}}Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты{{/if}}" />
+        <!-- Canonical -->
+        <link rel="canonical" href="https://bank-select.ru{{#if canonical}}{{canonical}}{{else}}{{@root.currentPath}}{{/if}}" />
+        <!-- Preload critical resources -->
+        <link rel="preconnect" href="https://mc.yandex.ru" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://mc.yandex.ru" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <!-- Open Graph теги -->
         <meta property="og:title" content="{{#if meta}}{{meta.title}}{{else}}Банковские продукты{{/if}}" />
         <meta property="og:description" content="{{#if meta}}{{meta.description}}{{else}}Лучшие банковские продукты - кредитные карты, дебетовые карты и кредиты{{/if}}" />

@@ -1,5 +1,68 @@
 {{#> layout}}
+<!-- Schema.org JSON-LD для банковского продукта -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "{{#if (eq product.type 'credit-cards')}}CreditCard{{else if (eq product.type 'debit-cards')}}PaymentCard{{else if (eq product.type 'mortgage')}}MortgageLoan{{else if (eq product.type 'consumer-loans')}}LoanOrCredit{{else}}Product{{/if}}",
+    "name": "{{product.title}}",
+    "description": "{{product.shortDescription}}",
+    "brand": {
+        "@type": "Brand",
+        "name": "{{product.bankName}}"
+    },
+    "image": "https://bank-select.ru{{product.imageUrl}}",
+    "url": "https://bank-select.ru{{@root.currentPath}}",
+    "provider": {
+        "@type": "BankOrCreditUnion",
+        "name": "{{product.bankName}}"
+    }{{#if product.parameters.main}},
+    "offers": {
+        "@type": "Offer",
+        "url": "{{product.referralLink}}",
+        "priceCurrency": "RUB"{{#if product.parameters.main.Процентная ставка}},
+        "description": "Ставка: {{product.parameters.main.Процентная ставка}}"{{/if}}
+    }{{/if}}
+}
+</script>
+
+<!-- Хлебные крошки (BreadcrumbList) -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://bank-select.ru/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{{#if (eq product.type 'credit-cards')}}Кредитные карты{{else if (eq product.type 'debit-cards')}}Дебетовые карты{{else if (eq product.type 'mortgage')}}Ипотека{{else if (eq product.type 'consumer-loans')}}Кредиты{{else if (eq product.type 'deposits')}}Вклады{{else}}Продукты{{/if}}",
+            "item": "https://bank-select.ru/category/{{product.type}}.html"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "{{product.title}}",
+            "item": "https://bank-select.ru{{@root.currentPath}}"
+        }
+    ]
+}
+</script>
+
 <article class="container">
+    <!-- Хлебные крошки (визуальные) -->
+    <nav class="breadcrumbs mb-4" aria-label="Хлебные крошки">
+        <a href="/">Главная</a>
+        <span class="separator">/</span>
+        <a href="/category/{{product.type}}.html">{{#if (eq product.type 'credit-cards')}}Кредитные карты{{else if (eq product.type 'debit-cards')}}Дебетовые карты{{else if (eq product.type 'mortgage')}}Ипотека{{else if (eq product.type 'consumer-loans')}}Кредиты{{else if (eq product.type 'deposits')}}Вклады{{else}}Продукты{{/if}}</a>
+        <span class="separator">/</span>
+        <span class="current">{{product.title}}</span>
+    </nav>
+
     <div class="product-header text-center mb-8">
         <h1 class="mb-2">{{product.title}}</h1>
         <p class="text-light mb-4">{{product.bankName}}</p>
@@ -67,9 +130,53 @@
         </div>
     </div>
 
-    <div class="text-center">
-        <a href="#" class="btn btn-primary">Оформить карту</a>
-        <a href="/compare/{{product.type}}.html" class="btn btn-outline ml-4">Сравнить с другими</a>
+    <!-- Блок преимуществ -->
+    {{#if product.features}}
+    <div class="card mb-8">
+        <h2 class="mb-4">Преимущества</h2>
+        <ul class="feature-list">
+            {{#each product.features}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+    </div>
+    {{/if}}
+
+    <!-- Кнопки действий -->
+    <div class="text-center mb-8">
+        <a href="{{product.referralLink}}" class="btn btn-primary btn-lg" target="_blank" rel="noopener sponsored">Оформить продукт</a>
+        <a href="/compare/{{product.type}}.html" class="btn btn-outline btn-lg ml-4">Сравнить с другими</a>
+    </div>
+
+    <!-- Похожие продукты -->
+    {{#if similarProducts}}
+    <div class="similar-products mb-8">
+        <h2 class="mb-4">Похожие продукты</h2>
+        <div class="grid grid-cols-3">
+            {{#each similarProducts}}
+            <div class="card product-card">
+                <img src="{{this.imageUrl}}" alt="{{this.title}}" onerror="this.src='/static/logo.svg';this.style.opacity='0.5';">
+                <h3><a href="/product/{{this.id}}.html">{{this.title}}</a></h3>
+                <p class="text-light">{{this.bankName}}</p>
+                <div class="product-params">
+                    {{#each this.parameters.main}}
+                    <div><strong>{{@key}}:</strong> {{this}}</div>
+                    {{/each}}
+                </div>
+                <a href="{{this.referralLink}}" class="btn btn-sm btn-primary mt-2" target="_blank" rel="noopener sponsored">Оформить</a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    {{/if}}
+
+    <!-- Дисклеймер -->
+    <div class="disclaimer card mb-8">
+        <p class="text-small text-light">
+            <strong>Важно:</strong> Условия продуктов могут меняться. Актуальную информацию уточняйте на официальном сайте банка.
+            Ставки и условия приведены по состоянию на {{product.version.date}} и носят информационный характер.
+            Bank-Select.ru является информационным агрегатом и не является кредитной организацией.
+        </p>
     </div>
 </article>
 {{/layout}}
