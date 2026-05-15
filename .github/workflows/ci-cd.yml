@@ -1,37 +1,27 @@
-name: CI/CD Pipeline
+name: CI/CD
 
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
-    branches:
-      - master
+    branches: [master]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci --ignore-scripts
+      - run: npm ci --ignore-scripts
+      - run: npm run build
+      - run: npm run test:jest
 
-      - name: Run build
-        run: npm run build
-
-      - name: Run tests
-        run: npm run test:jest
-
-      - name: Upload dist as artifact
+      - name: Upload dist
         uses: actions/upload-artifact@v4
         with:
           name: dist
@@ -42,25 +32,30 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master' && github.event_name == 'push'
-
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: https://bank-select.ru
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci --ignore-scripts
+      - run: npm ci --ignore-scripts
+      - run: npm run build
 
-      - name: Build
-        run: npm run build
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+        uses: actions/deploy-pages@v4
