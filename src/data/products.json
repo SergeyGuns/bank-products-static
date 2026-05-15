@@ -77,9 +77,9 @@
         "description": "Информация о Бизнес-кредит"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -129,9 +129,9 @@
         "description": "Кредит на любые цели с минимальными требованиями"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "system-generated",
-        "updatedBy": "automated-addition"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -183,9 +183,9 @@
         "description": "Кредит наличными на любые цели"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "system-generated",
-        "updatedBy": "automated-addition"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -213,7 +213,7 @@
       "referralLink": "https://райффайзенбанк.ru",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 1 000 000 ₽",
           "Льготный период": "до 55 дней",
           "Кэшбэк": "до 10%"
@@ -230,9 +230,9 @@
         "description": "Информация о Кредитная карта \"Халва\""
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -260,7 +260,7 @@
       "referralLink": "https://мтсбанк.ru",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 500 000 ₽",
           "Льготный период": "до 120 дней",
           "Кэшбэк": "до 5%"
@@ -277,9 +277,9 @@
         "description": "Информация о Кредитная карта \"Халва\""
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -307,16 +307,17 @@
       ],
       "referralLink": "https://www.psbank.ru/personal/creditcards",
       "version": {
-        "date": "2026-02-03",
-        "source": "https://www.psbank.ru/personal/creditcards",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
           "Кредитный лимит": "до 1 000 000 ₽",
           "Льготный период": "до 180 дней",
-          "Процентная ставка": "59,99% годовых после льготного периода",
-          "ПСК": "59,467%"
+          "Процентная ставка": "59.99%",
+          "ПСК": "59,467%",
+          "Кэшбэк": "до 26%"
         },
         "fees": {
           "Выпуск карты": "бесплатно",
@@ -364,8 +365,8 @@
       "referralLink": "https://tbank.ru/credit-cards/aliexpress/",
       "parameters": {
         "main": {
-          "Кредитный лимит": "до 1,000,000 рублей",
-          "Процентная ставка": "от 29,885% до 59,858% годовых",
+          "Кредитный лимит": "до 1 000 000 ₽",
+          "Процентная ставка": "от 29.885%",
           "Льготный период": "до 55 дней",
           "Кэшбэк": "до 10%",
           "Процент на остаток": "до 12% годовых"
@@ -390,9 +391,9 @@
         "description": "Премиальная кредитная карта для покупок в интернете с высокими процентами и бесплатными услугами"
       },
       "version": {
-        "date": "2026-02-03",
-        "source": "https://bank-select.ru",
-        "updatedBy": "migration-script"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-03",
       "status": "active",
@@ -419,9 +420,10 @@
       "referralLink": "https://transbank.ru/credit-cards/all-games/",
       "parameters": {
         "main": {
-          "Кредитный лимит": "до 1 000 000 рублей",
-          "Льготный период": "не применим",
-          "Процентная ставка": "29,855% до 59,999% годовых"
+          "Кредитный лимит": "до 1 000 000 ₽",
+          "Льготный период": "-",
+          "Процентная ставка": "от 29.855%",
+          "Кэшбэк": "-"
         },
         "fees": {
           "Выпуск карты": "бесплатно",
@@ -445,9 +447,9 @@
         "description": "Высокий кредитный лимит и удобные условия для игроков в интернет-играх"
       },
       "version": {
-        "date": "2026-02-03",
-        "source": "https://bank-select.ru",
-        "updatedBy": "migration-script"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-03",
       "status": "active",
@@ -475,9 +477,10 @@
       "referralLink": "https://www.lamoda.ru/credit-card/",
       "parameters": {
         "main": {
-          "Кредитный лимит": "до 1,000,000 ₽",
-          "Процентная ставка": "от 29,885% годовых",
-          "Льготный период": "до 55 дней"
+          "Кредитный лимит": "до 1 000 000 ₽",
+          "Процентная ставка": "от 29.885%",
+          "Льготный период": "до 55 дней",
+          "Кэшбэк": "-"
         },
         "fees": {
           "Выпуск карты": "бесплатно",
@@ -499,9 +502,9 @@
         "description": "Кредитная карта с лимитом до 1 миллиона рублей и полной стоимостью кредита от 29,885% годовых."
       },
       "version": {
-        "date": "2026-02-03",
-        "source": "https://bank-select.ru",
-        "updatedBy": "migration-script"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-03",
       "status": "active",
@@ -593,9 +596,9 @@
       "referralLink": "https://www.psbank.ru/personal/credits/consumer",
       "parameters": {
         "main": {
-          "Сумма кредита": "от 100 000 до 5 000 000 ₽",
-          "Срок кредита": "от 12 до 84 месяцев",
-          "Процентная ставка": "от 27,9% годовых",
+          "Сумма кредита": "до 5 000 000 ₽",
+          "Срок кредита": "до 5 лет",
+          "Процентная ставка": "от 15,9%",
           "ПСК": "от 27,376% до 39,999% годовых"
         },
         "fees": {
@@ -619,9 +622,9 @@
         "description": "Кредит наличными от ПСБ на любые цели с суммой от 100 тыс. до 5 млн руб. и ставкой от 27,9%"
       },
       "version": {
-        "date": "2026-02-03",
-        "source": "https://bank-select.ru",
-        "updatedBy": "migration-script"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-03",
       "status": "active",
@@ -650,9 +653,9 @@
       ],
       "referralLink": "https://sber.ru/personal-loans",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://sber.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -661,7 +664,10 @@
           "min_loan_amount": "50 000 ₽",
           "max_loan_amount": "5 000 000 ₽",
           "min_age": "21 год",
-          "max_age": "65 лет"
+          "max_age": "65 лет",
+          "Процентная ставка": "от 12.9%",
+          "Сумма кредита": "до 5 000 000 ₽",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "application_fee": "Бесплатно",
@@ -826,7 +832,7 @@
       "referralLink": "https://росбанк.ru",
       "parameters": {
         "main": {
-          "Процент на остаток": "до 7% годовых",
+          "Процент на остаток": "до 7%",
           "Кэшбэк": "до 10%",
           "Снятие наличных": "бесплатно в банкоматах банка"
         },
@@ -847,9 +853,9 @@
         "description": "Информация о Дебетовая карта \"Свобода\""
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -881,8 +887,8 @@
           "Процент кешбэка": "до 5% в трех категориях",
           "Дополнительный кешбэк": "1% за перевод зарплаты на карту ПСБ",
           "Максимальный кешбэк в месяц": "до 5000 баллов",
-          "Процент на остаток": "до 7% годовых",
-          "Кэшбэк": "до 10%",
+          "Процент на остаток": "до 7%",
+          "Кэшбэк": "до 5%",
           "Снятие наличных": "бесплатно в банкоматах банка"
         },
         "fees": {
@@ -903,9 +909,9 @@
         "description": "Дебетовая карта с кешбэком до 5% в трех категориях и 1% за перевод зарплаты от ПСБ"
       },
       "version": {
-        "date": "2026-02-03",
-        "source": "https://bank-select.ru",
-        "updatedBy": "migration-script"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-03",
       "status": "active",
@@ -933,7 +939,9 @@
         "main": {
           "Процентная ставка": "до 15%",
           "Минимальная сумма": "от 1 000 ₽",
-          "Срок вклада": "от 3 месяцев до 3 лет"
+          "Срок вклада": "от 3 месяцев до 3 лет",
+          "Ставка": "до 12.5%",
+          "Срок": "от 1 месяца"
         },
         "fees": {
           "Открытие вклада": "бесплатно",
@@ -952,9 +960,9 @@
         "description": "Информация о Вклад \"Максимальный\""
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -983,9 +991,9 @@
       ],
       "referralLink": "https://gazprombank.ru/deposits",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://gazprombank.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -994,8 +1002,11 @@
           "max_amount": "10 000 000 ₽",
           "term": "от 3 до 24 месяцев",
           "Процентная ставка": "до 15%",
-          "Минимальная сумма": "от 1 000 ₽",
-          "Срок вклада": "от 3 месяцев до 3 лет"
+          "Минимальная сумма": "от 5 000 ₽",
+          "Срок вклада": "от 3 месяцев до 3 лет",
+          "Ставка": "до 14.5%",
+          "Срок": "от 1 до 61 дня",
+          "Максимальная сумма": "до 1 500 000 ₽"
         },
         "fees": {
           "opening_fee": "Бесплатно",
@@ -1058,9 +1069,9 @@
       ],
       "referralLink": "https://sber.ru/deposits",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://sber.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -1070,7 +1081,9 @@
           "term": "от 3 до 36 месяцев",
           "Процентная ставка": "до 15%",
           "Минимальная сумма": "от 1 000 ₽",
-          "Срок вклада": "от 3 месяцев до 3 лет"
+          "Срок вклада": "от 3 месяцев до 3 лет",
+          "Ставка": "до 13.7%",
+          "Срок": "от 1 месяца"
         },
         "fees": {
           "opening_fee": "Бесплатно",
@@ -1116,9 +1129,9 @@
       "type": "deposits",
       "bankName": "Т-Банк",
       "version": {
-        "date": "2026-02-05",
-        "source": "API://tbank/deposits",
-        "updatedBy": "scraper"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "meta": {
@@ -1132,7 +1145,9 @@
         "main": {
           "Процентная ставка": "до 15%",
           "Минимальная сумма": "от 1 000 ₽",
-          "Срок вклада": "от 3 месяцев до 3 лет"
+          "Срок вклада": "от 3 месяцев до 3 лет",
+          "Ставка": "до 13.7%",
+          "Срок": "от 1 месяца"
         },
         "fees": {
           "Открытие вклада": "бесплатно",
@@ -1181,9 +1196,9 @@
       ],
       "referralLink": "https://vtb.ru/deposits",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://vtb.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -1194,7 +1209,9 @@
           "Процентная ставка": "до 15%",
           "Минимальная сумма": "от 1 000 ₽",
           "Срок вклада": "от 3 месяцев до 3 лет",
-          "Кэшбэк": "до 10%"
+          "Кэшбэк": "до 10%",
+          "Ставка": "до 13.7%",
+          "Срок": "от 1 месяца"
         },
         "fees": {
           "opening_fee": "Бесплатно",
@@ -1264,9 +1281,9 @@
         "description": "Информация о Премиальный банковский счет"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "manual-addition",
-        "updatedBy": "aggregator-import"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -1311,9 +1328,9 @@
         "description": "Комплексное страхование жизни и здоровья"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "system-generated",
-        "updatedBy": "automated-addition"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -1358,9 +1375,9 @@
         "description": "Инвестиционный счет с подбором портфеля"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "system-generated",
-        "updatedBy": "automated-addition"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -1372,9 +1389,9 @@
       "type": "consumer-loans",
       "bankName": "Т-Банк",
       "version": {
-        "date": "2026-05-10",
-        "source": "cleanup-enrich",
-        "updatedBy": "web-scrape"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "meta": {
@@ -1393,7 +1410,10 @@
       "referralLink": "https://tbank.ru",
       "parameters": {
         "main": {
-          "Срок": "до 18 лет"
+          "Срок": "до 18 лет",
+          "Процентная ставка": "от 12,9%",
+          "Сумма кредита": "до 5 000 000 ₽",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -1426,9 +1446,9 @@
       ],
       "referralLink": "https://gazprombank.ru/mortgage",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://gazprombank.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -1437,9 +1457,11 @@
           "loan_term": "от 1 до 30 лет",
           "min_loan_amount": "500 000 ₽",
           "max_loan_amount": "60 000 000 ₽",
-          "Процентная ставка": "от 10.5%",
-          "Первоначальный взнос": "от 15%",
-          "Срок кредита": "до 30 лет"
+          "Процентная ставка": "от 10.2%",
+          "Первоначальный взнос": "от 10%",
+          "Срок кредита": "до 30 лет",
+          "ПСК": "17.5%–25.58%",
+          "Сумма кредита": "до 60 млн ₽"
         },
         "fees": {
           "application_fee": "Бесплатно",
@@ -1570,9 +1592,9 @@
       ],
       "referralLink": "https://vtb.ru/mortgage",
       "version": {
-        "date": "2024-02-03",
-        "source": "https://vtb.ru",
-        "updatedBy": "system"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "parameters": {
         "main": {
@@ -1581,10 +1603,11 @@
           "loan_term": "от 1 до 30 лет",
           "min_loan_amount": "300 000 ₽",
           "max_loan_amount": "12 000 000 ₽",
-          "Процентная ставка": "от 10.5%",
-          "Первоначальный взнос": "от 15%",
+          "Процентная ставка": "от 21%",
+          "Первоначальный взнос": "от 30.1%",
           "Срок кредита": "до 30 лет",
-          "Кэшбэк": "до 10%"
+          "Кэшбэк": "до 10%",
+          "ПСК": "22.15%–29.62%"
         },
         "fees": {
           "application_fee": "Бесплатно",
@@ -1627,9 +1650,9 @@
       "type": "mortgage",
       "bankName": "Т-Банк",
       "version": {
-        "date": "2026-02-05",
-        "source": "API://tbank/mortgages",
-        "updatedBy": "scraper"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "meta": {
@@ -1648,7 +1671,10 @@
       "referralLink": "https://tbank.ru",
       "parameters": {
         "main": {
-          "Процентная ставка": "уточняйте на сайте банка"
+          "Процентная ставка": "от 10.4%",
+          "ПСК": "17.02%–24.14%",
+          "Первоначальный взнос": "от 15.1%",
+          "Сумма кредита": "до 30 млн ₽"
         },
         "fees": {},
         "requirements": {}
@@ -1694,9 +1720,9 @@
         "description": "Сберегательный счет с высоким процентом"
       },
       "version": {
-        "date": "2026-02-05",
-        "source": "system-generated",
-        "updatedBy": "automated-addition"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-02-05",
       "status": "active",
@@ -1713,7 +1739,10 @@
       "parameters": {
         "main": {
           "Сумма кредита": "До 5 330 000 ₽",
-          "Кешбэк": "7%"
+          "Кешбэк": "7%",
+          "Процентная ставка": "от 19.6%",
+          "ПСК": "19.51%–37.28%",
+          "Первоначальный взнос": "от 30.01%"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -1738,9 +1767,9 @@
         "description": "Семейная ипотека"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "agent-extraction",
-        "updatedBy": "discovery-pipeline"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1756,7 +1785,7 @@
       "fullDescription": "Кредитная СберКарта с льготным периодом до 120 дней. Кэшбэк до 30% бонусами. Обслуживание бесплатное.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 9,8%",
+          "Процентная ставка": "от 9.8%",
           "Кредитный лимит": "до 1 000 000 ₽",
           "Льготный период": "до 120 дней",
           "Кэшбэк": "до 30%"
@@ -1784,9 +1813,9 @@
         "description": "credit-cards от СберБанк"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "cleanup-enrich",
-        "updatedBy": "web-scrape"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1802,7 +1831,7 @@
       "fullDescription": "Кредитная карта Альфа-Банка с льготным периодом до 100 дней. Кэшбэк 5% в выбранных категориях. Обслуживание бесплатное при выполнении условий.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 1 000 000 ₽",
           "Льготный период": "до 100 дней",
           "Кэшбэк": "до 5%"
@@ -1831,9 +1860,9 @@
         "description": "Кредитная карта с льготным периодом 100 дней и кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1851,7 +1880,7 @@
         "main": {
           "Кэшбэк": "до 10%",
           "Процент на остаток": "до 6%",
-          "Снятие наличных": "бесплатно до 50 тыс/мес"
+          "Снятие наличных": "до 50 тыс/мес"
         },
         "fees": {
           "Обслуживание": "бесплатно*",
@@ -1877,9 +1906,9 @@
         "description": "Дебетовая карта с кэшбэком до 10% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1897,7 +1926,8 @@
         "main": {
           "Процентная ставка": "от 13,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно",
@@ -1924,9 +1954,9 @@
         "description": "Кредит наличными без залога и поручителей от 13,9%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1942,10 +1972,11 @@
       "fullDescription": "Ипотечный кредит Альфа-Банка на покупку жилья в новостройках и на вторичном рынке. Ставка от 20,1%. Первоначальный взнос от 10%.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 20,1%",
-          "Сумма кредита": "до 120 000 000 ₽",
+          "Процентная ставка": "от 9.29%",
+          "Сумма кредита": "до 50 млн ₽",
           "Срок": "до 30 лет",
-          "Первоначальный взнос": "от 10%"
+          "Первоначальный взнос": "от 10%",
+          "ПСК": "18.29%–33.82%"
         },
         "fees": {
           "Оформление": "бесплатно",
@@ -1972,9 +2003,9 @@
         "description": "Ипотечный кредит на новостройки и вторичное жильё от 20,1%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -1991,8 +2022,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 18%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 1 месяца"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.7%"
         },
         "fees": {
           "Пополнение": "без ограничений",
@@ -2018,9 +2050,9 @@
         "description": "Срочный вклад с максимальной ставкой до 18%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2036,7 +2068,7 @@
       "fullDescription": "Кредитная карта ВТБ с кэшбэком до 10% в выбранных категориях. Льготный период до 110 дней. Обслуживание бесплатное.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 10 000 000 ₽",
           "Льготный период": "до 110 дней",
           "Кэшбэк": "до 10%"
@@ -2065,9 +2097,9 @@
         "description": "Кредитная карта с кэшбэком до 10% и льготным периодом 110 дней"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2111,9 +2143,9 @@
         "description": "Дебетовая карта с кэшбэком до 5% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2129,7 +2161,7 @@
       "fullDescription": "Кредитная карта Газпромбанка с кэшбэком до 7% на все покупки. Льготный период до 60 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 3 000 000 ₽",
           "Льготный период": "до 60 дней",
           "Кэшбэк": "до 7%"
@@ -2158,9 +2190,9 @@
         "description": "Кредитная карта с кэшбэком до 7% и льготным периодом 60 дней"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2204,9 +2236,9 @@
         "description": "Дебетовая карта с кэшбэком до 5% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2250,9 +2282,9 @@
         "description": "Дебетовая карта с кэшбэком до 5% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2270,7 +2302,8 @@
         "main": {
           "Процентная ставка": "от 12,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно",
@@ -2297,9 +2330,9 @@
         "description": "Кредит наличными без залога и поручителей от 12,9%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2315,10 +2348,11 @@
       "fullDescription": "Ипотечный кредит МТС Банка на покупку жилья. Ставка от 20,5%. Первоначальный взнос от 10%.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 20,5%",
+          "Процентная ставка": "от 23.3%",
           "Сумма кредита": "до 60 000 000 ₽",
           "Срок": "до 30 лет",
-          "Первоначальный взнос": "от 10%"
+          "Первоначальный взнос": "от 20.1%",
+          "ПСК": "24.3%–26.27%"
         },
         "fees": {
           "Оформление": "бесплатно",
@@ -2345,9 +2379,9 @@
         "description": "Ипотечный кредит на новостройки и вторичное жильё от 20,5%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2364,8 +2398,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 17%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 1 месяца"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.7%"
         },
         "fees": {
           "Пополнение": "без ограничений",
@@ -2391,9 +2426,9 @@
         "description": "Срочный вклад с повышенной ставкой до 17%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2437,9 +2472,9 @@
         "description": "Дебетовая карта с кэшбэком до 5% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2503,7 +2538,7 @@
       "fullDescription": "Кредитная карта Росбанка с кэшбэком до 5% и льготным периодом до 60 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 3 000 000 ₽",
           "Льготный период": "до 60 дней",
           "Кэшбэк": "до 5%"
@@ -2529,9 +2564,9 @@
         "description": "Кредитная карта с кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2549,7 +2584,8 @@
         "main": {
           "Процентная ставка": "от 15,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -2574,9 +2610,9 @@
         "description": "Кредит наличными от 15,9%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2639,8 +2675,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 17%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 1 месяца"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.0%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -2663,9 +2700,9 @@
         "description": "Срочный вклад с повышенной ставкой до 17%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2683,7 +2720,8 @@
         "main": {
           "Процентная ставка": "от 15,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -2708,9 +2746,9 @@
         "description": "Кредит наличными от 15,9%"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2752,9 +2790,9 @@
         "description": "Дебетовая карта с кэшбэком до 5% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-10",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-10",
       "status": "active",
@@ -2771,7 +2809,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 3%",
-          "Процент на остаток": "до 3%"
+          "Процент на остаток": "до 3%",
+          "Снятие наличных": "-"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -2793,9 +2832,9 @@
         "description": "Дебетовая карта с кэшбэком до 3%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -2813,7 +2852,8 @@
         "main": {
           "Процентная ставка": "от 14,9%",
           "Сумма кредита": "до 4 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -2835,9 +2875,9 @@
         "description": "Кредит наличными от 14,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -2854,8 +2894,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 16%",
-          "Минимальная сумма": "от 50 000 ₽",
-          "Срок": "от 3 месяцев"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.7%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -2877,9 +2918,9 @@
         "description": "Срочный вклад с повышенной ставкой до 16%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -2896,7 +2937,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 3%",
-          "Процент на остаток": "до 3%"
+          "Процент на остаток": "до 3%",
+          "Снятие наличных": "-"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -2918,9 +2960,9 @@
         "description": "Дебетовая карта с кэшбэком до 3%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -2938,7 +2980,8 @@
         "main": {
           "Процентная ставка": "от 16,9%",
           "Сумма кредита": "до 3 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -2960,9 +3003,9 @@
         "description": "Кредит наличными от 16,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -2979,8 +3022,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 15%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 3 месяцев"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 12.0%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -3002,9 +3046,9 @@
         "description": "Срочный вклад с повышенной ставкой до 15%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3021,7 +3065,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 5%",
-          "Процент на остаток": "до 4%"
+          "Процент на остаток": "до 4%",
+          "Снятие наличных": "-"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -3043,9 +3088,9 @@
         "description": "Дебетовая карта с кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3063,7 +3108,8 @@
         "main": {
           "Процентная ставка": "от 17,9%",
           "Сумма кредита": "до 3 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3085,9 +3131,9 @@
         "description": "Кредит наличными от 17,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3104,8 +3150,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 16%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 3 месяцев"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 12.0%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -3127,9 +3174,9 @@
         "description": "Срочный вклад с повышенной ставкой до 16%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3145,7 +3192,7 @@
       "fullDescription": "Кредитная карта Халва от Совкомбанка. Рассрочка до 36 месяцев у партнёров. Кэшбэк до 10%. Льготный период до 120 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 500 000 ₽",
           "Льготный период": "до 120 дней",
           "Кэшбэк": "до 10%",
@@ -3172,9 +3219,9 @@
         "description": "Кредитная карта Халва — рассрочка до 36 месяцев и кэшбэк до 10%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3191,7 +3238,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 7%",
-          "Процент на остаток": "до 7%"
+          "Процент на остаток": "до 7%",
+          "Снятие наличных": "бесплатно"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -3214,9 +3262,9 @@
         "description": "Дебетовая карта с кэшбэком до 7% и процентом на остаток"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3234,7 +3282,8 @@
         "main": {
           "Процентная ставка": "от 12,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3256,9 +3305,9 @@
         "description": "Кредит наличными от 12,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3274,10 +3323,11 @@
       "fullDescription": "Ипотечный кредит Совкомбанка. Ставка от 20,5%. Первоначальный взнос от 10%.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 20,5%",
+          "Процентная ставка": "от 20.49%",
           "Сумма кредита": "до 60 000 000 ₽",
           "Срок": "до 30 лет",
-          "Первоначальный взнос": "от 10%"
+          "Первоначальный взнос": "от 30.01%",
+          "ПСК": "23.43%–25.35%"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3299,9 +3349,9 @@
         "description": "Ипотечный кредит от 20,5%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3318,8 +3368,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 18%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 1 месяца"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.7%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -3341,9 +3392,9 @@
         "description": "Срочный вклад с максимальной ставкой до 18%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3359,7 +3410,7 @@
       "fullDescription": "Кредитная карта банка Открытие с кэшбэком до 5% и льготным периодом до 55 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 5 000 000 ₽",
           "Льготный период": "до 55 дней",
           "Кэшбэк": "до 5%"
@@ -3385,9 +3436,9 @@
         "description": "Кредитная карта с кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3404,7 +3455,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 5%",
-          "Процент на остаток": "до 5%"
+          "Процент на остаток": "до 5%",
+          "Снятие наличных": "-"
         },
         "fees": {
           "Обслуживание": "бесплатно*"
@@ -3426,9 +3478,9 @@
         "description": "Дебетовая карта с кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3446,7 +3498,8 @@
         "main": {
           "Процентная ставка": "от 15,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 5 лет"
+          "Срок": "до 5 лет",
+          "Срок кредита": "до 5 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3468,9 +3521,9 @@
         "description": "Кредит наличными от 15,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3530,8 +3583,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 17%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 3 месяцев"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.5%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -3553,9 +3607,9 @@
         "description": "Срочный вклад с повышенной ставкой до 17%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3571,7 +3625,7 @@
       "fullDescription": "Кредитная карта Россельхозбанка с кэшбэком до 5% и льготным периодом до 55 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 3 000 000 ₽",
           "Льготный период": "до 55 дней",
           "Кэшбэк": "до 5%"
@@ -3596,9 +3650,9 @@
         "description": "Кредитная карта с кэшбэком до 5%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3615,7 +3669,8 @@
       "parameters": {
         "main": {
           "Кэшбэк": "до 3%",
-          "Процент на остаток": "до 3%"
+          "Процент на остаток": "до 3%",
+          "Снятие наличных": "-"
         },
         "fees": {
           "Обслуживание": "бесплатно"
@@ -3637,9 +3692,9 @@
         "description": "Дебетовая карта с кэшбэком до 3%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3657,7 +3712,8 @@
         "main": {
           "Процентная ставка": "от 16,9%",
           "Сумма кредита": "до 5 000 000 ₽",
-          "Срок": "до 7 лет"
+          "Срок": "до 7 лет",
+          "Срок кредита": "до 7 лет"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3679,9 +3735,9 @@
         "description": "Кредит наличными от 16,9%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3697,10 +3753,10 @@
       "fullDescription": "Ипотечный кредит Россельхозбанка. Ставка от 21%. Первоначальный взнос от 10%.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 21%",
-          "Сумма кредита": "до 60 000 000 ₽",
+          "Процентная ставка": "от 9%",
+          "Сумма кредита": "до 60 млн ₽",
           "Срок": "до 30 лет",
-          "Первоначальный взнос": "от 10%"
+          "Первоначальный взнос": "от 15%"
         },
         "fees": {
           "Оформление": "бесплатно"
@@ -3722,9 +3778,9 @@
         "description": "Ипотечный кредит от 21%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3741,8 +3797,9 @@
       "parameters": {
         "main": {
           "Процентная ставка": "до 16%",
-          "Минимальная сумма": "от 10 000 ₽",
-          "Срок": "от 3 месяцев"
+          "Минимальная сумма": "от 1 000 ₽",
+          "Срок": "от 1 месяца",
+          "Ставка": "до 13.7%"
         },
         "fees": {
           "Пополнение": "разрешено"
@@ -3764,9 +3821,9 @@
         "description": "Срочный вклад с повышенной ставкой до 16%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3868,7 +3925,7 @@
       "fullDescription": "Кредитная карта Ситибанка с кэшбэком до 3% и льготным периодом до 60 дней.",
       "parameters": {
         "main": {
-          "Процентная ставка": "от 29,9%",
+          "Процентная ставка": "от 29.9%",
           "Кредитный лимит": "до 3 000 000 ₽",
           "Льготный период": "до 60 дней",
           "Кэшбэк": "до 3%"
@@ -3893,9 +3950,9 @@
         "description": "Кредитная карта с кэшбэком до 3%"
       },
       "version": {
-        "date": "2026-05-11",
-        "source": "manual-entry",
-        "updatedBy": "agent"
+        "date": "2026-05-15",
+        "source": "banki.ru-scrape",
+        "updatedBy": "automated-scrape"
       },
       "validFrom": "2026-05-11",
       "status": "active",
@@ -3943,6 +4000,59 @@
       "validFrom": "2026-05-11",
       "status": "active",
       "imageUrl": "/img/banks/citibank.svg"
+    },
+    {
+      "id": "tbank-debit-s7",
+      "title": "Дебетовая карта S7 от Т-Банка",
+      "type": "debit-cards",
+      "bankName": "Т-Банк",
+      "source": "partner-link",
+      "featured": true,
+      "shortDescription": "Дебетовая карта с кэшбэками на путешествия и программы лояльности S7",
+      "fullDescription": "Дебетовая карта Т-Банка в партнёрстве с авиакомпанией S7. Кэшбэк милями за покупки, бонусы на авиабилеты, повышенный кэшбэк в категориях путешествий.",
+      "imageUrl": "/img/banks/tbank.svg",
+      "features": [
+        "Кэшбэк милями S7 за покупки",
+        "Повышенный кэшбэк на авиабилеты",
+        "Бесплатное обслуживание при выполнении условий",
+        "Процент на остаток по карте"
+      ],
+      "conditions": [
+        "Возраст от 18 лет",
+        "Паспорт РФ",
+        "Бесплатное обслуживание при обороте от 10 000 ₽/мес"
+      ],
+      "referralLink": "https://pxl.leads.su/click/abcb94a63cc4691e2dd61eea872f1156?erid=2W5zFJevmaY",
+      "parameters": {
+        "main": {
+          "Кэшбэк милями": "до 5% милями S7",
+          "Кэшбэк на авиабилеты": "до 10%",
+          "Процент на остаток": "до 6% годовых",
+          "Снятие наличных": "бесплатно в банкоматах Т-Банка"
+        },
+        "fees": {
+          "Выпуск карты": "бесплатно",
+          "Обслуживание": "бесплатно при обороте от 10 000 ₽/мес, иначе 99 ₽/мес",
+          "Снятие наличных": "бесплатно в банкоматах Т-Банка и партнёров"
+        },
+        "requirements": {
+          "Возраст": "от 18 лет",
+          "Документы": [
+            "Паспорт РФ"
+          ]
+        }
+      },
+      "meta": {
+        "title": "Дебетовая карта S7 от Т-Банка — кэшбэк милями",
+        "description": "Дебетовая карта Т-Банка с кэбэком милями S7 за покупки. До 5% милями, до 10% на авиабилеты."
+      },
+      "version": {
+        "date": "2026-05-15",
+        "source": "partner-link",
+        "updatedBy": "manual-addition"
+      },
+      "validFrom": "2026-05-15",
+      "status": "active"
     }
   ]
 }
